@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technologies — Nine One Sports</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+/* ═════════ SHARED HELPERS ═════════ */
+.t-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.t-num::after {
+  content: '';
+  flex: 0 0 32px;
+  height: 1px;
+  background: var(--blue);
+}
+.t-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+.t-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--graphite);
+  margin-bottom: 32px;
+  max-width: 460px;
+}
+.t-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: gap 0.25s;
+}
+.t-link:hover { gap: 18px; }
+.t-link span {
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ═════════ HERO ═════════ */
+.t-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-color: #050810;
+  background-image: url('../assets/images/tech-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.t-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, transparent 70%),
+    linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 50%);
+  z-index: 0;
+}
+.t-hero-eyebrow {
+  animation: heroIn 0.8s 0.2s ease both;
+}
+.t-hero-title {
+  animation: heroIn 0.9s 0.35s ease both;
+}
+.t-hero-title .dot { color: var(--blue); }
+.t-hero-sub {
+  animation: heroIn 0.9s 0.55s ease both;
+}
+.t-hero-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  animation: heroIn 0.9s 0.75s ease both;
+}
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═════════ SYSTEM SECTIONS ═════════ */
+.t-sys {
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 120px 64px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  align-items: center;
+}
+.t-sys-features {
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+}
+.t-sys-features li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.t-sys-features li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--blue);
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+.t-sys-img {
+  aspect-ratio: 4 / 3;
+  background:
+    radial-gradient(ellipse at 60% 40%, rgba(45,125,255,0.12) 0%, transparent 70%),
+    linear-gradient(160deg, #0b1118 0%, #080c12 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.t-sys-img::after {
+  content: '[ ' attr(data-label) ' ]';
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+/* ═════════ DIGITAL PLATFORM FULL-WIDTH OVERLAY ═════════ */
+.t-dp-section {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('../assets/images/tech-platform.jpg?v=2');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: #0A0A0A;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 80px;
+}
+.t-dp-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.1) 60%, transparent 100%);
+  z-index: 1;
+}
+.t-dp-section .t-sys-text {
+  position: relative;
+  z-index: 2;
+  padding-left: 64px;
+  max-width: 480px;
+}
+.t-dp-section .t-sys-text * {
+  text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.9);
+}
+/* ═════════ SMART RACKET FULL-WIDTH OVERLAY ═════════ */
+.t-sr-section {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('../assets/images/tech-smart-racket.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 80px;
+}
+.t-sr-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to left, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.1) 60%, transparent 100%),
+    linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%);
+  z-index: 1;
+}
+.t-sr-section .t-sys-text {
+  position: relative;
+  z-index: 2;
+  align-self: flex-end;
+  padding-right: 64px;
+  max-width: 480px;
+}
+.t-sr-section .t-sys-text * {
+  text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.9);
+}
+
+/* ═════════ SMART VENUE FULL-WIDTH OVERLAY ═════════ */
+.t-sv-section {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('../assets/images/tech-smart-venue.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 80px;
+}
+.t-sv-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.1) 60%, transparent 100%),
+    linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%);
+  z-index: 1;
+}
+.t-sv-section .t-sys-text {
+  position: relative;
+  z-index: 2;
+  padding-left: 64px;
+  max-width: 480px;
+}
+.t-sv-section .t-sys-text * {
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+.t-sv-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.t-sv-lines line {
+  stroke: #2D7DFF;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  opacity: 0.3;
+}
+.t-sv-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2D7DFF;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+.t-sv-dot::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.7);
+}
+.t-sv-card {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 18px);
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.85);
+  border: 1px solid rgba(45,125,255,0.6);
+  padding: 12px 16px;
+  min-width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 4;
+}
+.t-sv-dot.flip .t-sv-card {
+  left: auto;
+  right: calc(100% + 18px);
+}
+.t-sv-dot:hover { animation-play-state: paused; }
+.t-sv-dot:hover .t-sv-card {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+.t-sv-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #2D7DFF;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+.t-sv-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--white);
+  line-height: 1.45;
+  max-width: 200px;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(45,125,255,0.6); }
+  70%  { box-shadow: 0 0 0 12px rgba(45,125,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(45,125,255,0); }
+}
+
+/* ═════════ CTA ═════════ */
+.t-cta {
+  background: var(--black);
+  padding: 96px 64px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.t-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(45,125,255,0.10) 0%, transparent 65%);
+  z-index: 0;
+}
+.t-cta-left,
+.t-cta-right {
+  position: relative;
+  z-index: 1;
+}
+.t-cta-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: #2D7DFF;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.t-cta-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0;
+}
+.t-cta-title .dot { color: #2D7DFF; }
+.t-cta-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(245,245,243,0.6);
+  margin: 0;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.t-cta-body:first-of-type { padding-top: 0; }
+.t-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--lime);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  transition: background 0.2s;
+}
+.t-cta-btn:hover { background: var(--lime-light); }
+
+/* ═════════ SUB-FEATURE BLOCKS ═════════ */
+.t-feature {
+  margin-top: 20px;
+}
+.t-feature-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.t-feature-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.t-feature-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--graphite);
+}
+.t-cta-closing {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  color: #2D7DFF;
+  margin: 32px 0 0;
+  max-width: none;
+}
+
+/* ═════════ RESPONSIVE ═════════ */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .t-hero-content { left: 24px; right: 24px; bottom: 48px; max-width: none; }
+  .t-sys {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 80px 24px;
+  }
+  .t-cta { padding: 80px 24px; grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* Technologies page: active nav link uses brand blue */
+.nav-links a.active { color: #2D7DFF; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav scrolled">
+  <a href="../index.html" class="nav-logo-wrap">
+    <img src="../assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="technologies.html" class="active">Technologies</a></li>
+      <li><a href="ecosystem.html">Ecosystem</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn-nav-primary">
+        Build With Us
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section class="t-hero">
+  <div class="t-hero-content">
+    <p class="t-hero-eyebrow">Technologies</p>
+    <h1 class="t-hero-title">
+      <span style="display:block;font-size:clamp(10px,1.2vw,16px);font-weight:300;letter-spacing:0.4em;color:rgba(245,245,243,0.2);margin-bottom:12px">Technology should</span>
+      <span style="display:block;font-size:clamp(36px,5vw,72px);font-weight:900;letter-spacing:-0.02em;line-height:0.92">Deepen</span>
+      <span style="display:block;font-size:clamp(36px,5vw,72px);font-weight:900;letter-spacing:-0.02em;line-height:0.92;padding-left:48px">Movement,</span>
+      <span style="display:block;font-size:clamp(12px,1.5vw,20px);font-weight:300;letter-spacing:0.05em;color:rgba(245,245,243,0.35);margin-top:16px">Not distract from it.</span>
+      <span style="display:block;font-size:clamp(10px,1.1vw,14px);font-weight:600;letter-spacing:0.3em;color:#2D7DFF;margin-top:20px">That's what we build.</span>
+    </h1>
+  </div>
+
+</section>
+
+<!-- ════ 01 SMART VENUE ════ -->
+<section class="t-sv-section" id="smart-venue">
+  <div class="t-sys-text">
+    <p class="t-num">01</p>
+    <h2 class="t-title">The court that sees everything.</h2>
+    <p class="t-body">Sensors in the columns. Cameras overhead. Embedded technology beneath the surface. Every movement on court — captured, tracked and understood.</p>
+  </div>
+  <svg class="t-sv-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <line x1="55" y1="25" x2="88" y2="45"/>
+    <line x1="88" y1="45" x2="70" y2="65"/>
+    <line x1="70" y1="65" x2="45" y2="78"/>
+    <line x1="45" y1="78" x2="55" y2="25"/>
+    <line x1="55" y1="25" x2="70" y2="65"/>
+  </svg>
+  <div class="t-sv-dot" style="left:55%;top:25%">
+    <div class="t-sv-card">
+      <div class="t-sv-card-title">AI Camera</div>
+      <div class="t-sv-card-desc">Computer vision tracking every rally in real time.</div>
+    </div>
+  </div>
+  <div class="t-sv-dot" style="left:70%;top:65%">
+    <div class="t-sv-card">
+      <div class="t-sv-card-title">Turf Sensor</div>
+      <div class="t-sv-card-desc">Surface telemetry for wear, bounce and conditions.</div>
+    </div>
+  </div>
+  <div class="t-sv-dot flip" style="left:88%;top:45%">
+    <div class="t-sv-card">
+      <div class="t-sv-card-title">Environment Sensor</div>
+      <div class="t-sv-card-desc">Temperature, humidity and air quality monitoring.</div>
+    </div>
+  </div>
+  <div class="t-sv-dot" style="left:45%;top:78%">
+    <div class="t-sv-card">
+      <div class="t-sv-card-title">Access Control</div>
+      <div class="t-sv-card-desc">Member entry and court booking, fully automated.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 02 SMART RACKET ════ -->
+<section class="t-sr-section" id="smart-racket">
+  <div class="t-sys-text">
+    <p class="t-num">02</p>
+    <h2 class="t-title">Your game. Made visible.</h2>
+    <p class="t-body">Every swing. Every angle. Every session. Captured by the racket in your hand — and connected to everything around you.</p>
+    <div class="t-feature">
+      <div class="t-feature-title">Coach smarter.</div>
+      <div class="t-feature-desc">Objective data on every player's progress — beyond wins and losses.</div>
+    </div>
+    <div class="t-feature">
+      <div class="t-feature-title">Train with awareness.</div>
+      <div class="t-feature-desc">Track intensity, effort and recovery across every session.</div>
+    </div>
+    <div class="t-feature">
+      <div class="t-feature-title">Move without risk.</div>
+      <div class="t-feature-desc">Identify patterns that lead to injury before they become a problem.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 03 DIGITAL PLATFORM ════ -->
+<section class="t-dp-section" id="platform">
+  <div class="t-sys-text">
+    <p class="t-num">03</p>
+    <h2 class="t-title">Built for clubs. Designed for players.</h2>
+    <div class="t-feature">
+      <div class="t-feature-eyebrow">For Clubs</div>
+      <div class="t-feature-title">Run smarter.</div>
+      <div class="t-feature-desc">Bookings, members, operations and cross-club business intelligence — everything a modern club needs to grow.</div>
+    </div>
+    <div class="t-feature">
+      <div class="t-feature-eyebrow">For Players</div>
+      <div class="t-feature-title">Play more. Share it.</div>
+      <div class="t-feature-desc">AI coaching that improves your game. Automatic highlights from every session. One tap to Instagram, Facebook or TikTok.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 04 CONNECTED SYSTEM ════ -->
+<section class="t-cta">
+  <div class="t-cta-left">
+    <p class="t-cta-eyebrow">Connected System</p>
+    <h2 class="t-cta-title">Everything connects<span class="dot">.</span></h2>
+  </div>
+  <div class="t-cta-right">
+    <p class="t-cta-body">Smart Venue captures the court.</p>
+    <p class="t-cta-body">Smart Racket captures the player.</p>
+    <p class="t-cta-body">The platform connects them both.</p>
+    <p class="t-cta-closing">The more people play, the smarter the system becomes.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo-area">
+      <img src="../assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Business</h4>
+        <ul>
+          <li><a href="sports.html">Sports</a></li>
+          <li><a href="technologies.html">Technologies</a></li>
+          <li><a href="ecosystem.html">Ecosystem</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Build With Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 NINE ONE. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
