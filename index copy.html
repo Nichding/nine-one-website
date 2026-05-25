@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine One Sports — Move Together.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+/* ── HERO ── */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.2) 100%),
+    linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+  z-index: 1;
+}
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/images/hero-bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+.hero-headline {
+  margin-bottom: 28px;
+  text-shadow: 0 2px 40px rgba(255,255,255,0.15), 0 1px 8px rgba(255,255,255,0.08);
+  animation: heroIn 1s 0.3s ease both;
+}
+.hero-headline .lime-dot { color: var(--lime); }
+.hero-sub {
+  margin-bottom: 40px;
+  animation: heroIn 1s 0.55s ease both;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  animation: heroIn 1s 0.75s ease both;
+}
+@keyframes heroIn {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ── SECTION 01 SPORTS ── */
+.sec-sports {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  min-height: 600px;
+}
+.sec-sports-text {
+  background: var(--black);
+  padding: 96px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sec-sports-visual {
+  position: relative;
+  overflow: hidden;
+  background: #0d1008;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.sec-sports-visual::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(to right, #0A0A0A 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+.sec-sports-visual-main {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background-image: url('assets/images/sports-main.jpg');
+  background-size: cover;
+  background-position: left center;
+  position: relative;
+  overflow: hidden;
+}
+.sec-sports-visual-sub {
+  background-image: url('assets/images/sports-sub.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.sec-sports-visual-sub2 {
+  background-image: url('assets/images/sports-sub2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.sec-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.sec-body {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--graphite);
+  max-width: 380px;
+  margin-bottom: 36px;
+}
+.sec-body-emphasis {
+  font-size: 16.8px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.4;
+  margin-top: 4px;
+  margin-bottom: 36px;
+  letter-spacing: -0.005em;
+}
+.sec-why-strong {
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.sec-why-tagline.italic {
+  font-style: italic;
+}
+
+/* ── SECTION 02 TECHNOLOGIES ── */
+.sec-tech {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+.sec-tech-visual {
+  order: -1;
+  background-image: url('assets/images/tech-visual.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.sec-tech-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, #0A0A0A 100%);
+  z-index: 1;
+}
+
+.sec-tech-text {
+  background: var(--black);
+  padding: 96px 80px 96px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ── SECTION 03 ECOSYSTEM ── */
+.sec-ecosystem {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url('assets/images/ecosystem-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.sec-ecosystem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.3) 100%);
+  z-index: 0;
+}
+.sec-ecosystem-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 48px;
+  max-width: 620px;
+}
+
+/* ── SECTION 04 WHY WE EXIST ── */
+.sec-why {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.sec-why-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.2) 100%),
+    linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 40%),
+    url('assets/images/why-bg.jpg') center / cover no-repeat;
+  z-index: 0;
+}
+.sec-why-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 48px;
+  max-width: 620px;
+}
+.sec-why-content * {
+  text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.9);
+}
+.sec-why-body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--graphite);
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+.sec-why-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .sec-sports, .sec-tech { grid-template-columns: 1fr; }
+  .sec-tech-visual { order: 0; height: 320px; }
+  .sec-sports-visual { height: 320px; grid-template-rows: 1fr; }
+  .sec-sports-visual-main { grid-row: 1; }
+  .nav-links { display: none; }
+  .hero-content { padding: 0 24px 64px; }
+}
+
+/* Technologies section: suppress lime accents, apply blue */
+#technologies .sec-num::after { display: none; }
+#technologies .btn-text-arrow { color: var(--blue); }
+#technologies .btn-text-arrow span { background: var(--blue); }
+#technologies .btn-text-arrow span::after {
+  border-right-color: var(--blue);
+  border-top-color: var(--blue);
+}
+
+/* Ecosystem section: replace lime accents with mono white */
+#ecosystem .sec-num { color: var(--white); }
+#ecosystem .sec-num::after { background: var(--white); }
+#ecosystem .btn-text-arrow { color: var(--white); }
+#ecosystem .btn-text-arrow span { background: var(--white); }
+#ecosystem .btn-text-arrow span::after {
+  border-right-color: var(--white);
+  border-top-color: var(--white);
+}
+
+/* Why We Exist section: replace lime accents with mono white */
+#why .btn-text-arrow { color: var(--white); }
+#why .btn-text-arrow span { background: var(--white); }
+#why .btn-text-arrow span::after {
+  border-right-color: var(--white);
+  border-top-color: var(--white);
+}
+
+/* Why We Exist — unified typography */
+#why .sec-num {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #F5F5F3;
+}
+#why .sec-num::after { display: none; }
+#why .sec-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #F5F5F3;
+  margin-bottom: 24px;
+}
+#why .sec-why-body {
+  margin-bottom: 0;
+  max-width: 560px;
+}
+#why .sec-why-body p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(245,245,243,0.6);
+  margin-bottom: 20px;
+}
+#why .sec-why-strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #F5F5F3;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+#why .sec-why-tagline {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(245,245,243,0.5);
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════ NAV ════════════ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo-wrap">
+    <img src="assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="pages/sports.html">Sports</a></li>
+      <li><a href="pages/technologies.html">Technologies</a></li>
+      <li><a href="pages/ecosystem.html">Ecosystem</a></li>
+      <li><a href="pages/about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="pages/contact.html" class="btn-nav-primary">
+        Build With Us
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════ HERO ════════════ -->
+<section class="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1 class="hero-headline">
+      MOVE<br>
+      TOGETHER<span class="lime-dot">.</span>
+    </h1>
+    <p class="hero-sub">Movement brings people together. We build what makes it possible.</p>
+    <div class="hero-actions">
+      <a href="pages/about.html" class="btn-primary" style="background:#F5F5F3;color:#0A0A0A">
+        About Us
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ 01 SPORTS ════════════ -->
+<section class="sec-sports" id="sports">
+  <div class="sec-sports-text">
+    <p class="sec-num reveal">01</p>
+    <h2 class="sec-title reveal reveal-delay-1">SPORTS</h2>
+    <p class="sec-body reveal reveal-delay-2">
+      Connection starts with space. We build the courts where it happens.
+    </p>
+    <a href="pages/sports.html" class="btn-text-arrow reveal reveal-delay-3">
+      Build With Us <span></span>
+    </a>
+  </div>
+  <div class="sec-sports-visual">
+    <div class="sec-sports-visual-main"></div>
+    <div class="sec-sports-visual-sub"></div>
+    <div class="sec-sports-visual-sub2"></div>
+  </div>
+</section>
+
+<!-- ════════════ 02 TECHNOLOGIES ════════════ -->
+<section class="sec-tech" id="technologies">
+  <div class="sec-tech-visual"></div>
+  <div class="sec-tech-text">
+    <p class="sec-num reveal" style="color:var(--blue)">
+      02
+      <span style="width:32px;height:1px;background:var(--blue);display:inline-block;margin-left:0"></span>
+    </p>
+    <h2 class="sec-title reveal reveal-delay-1">TECHNOLOGIES</h2>
+    <p class="sec-body reveal reveal-delay-2">
+      Technology should deepen movement, not distract from it. That's what we build.
+    </p>
+    <a href="pages/technologies.html" class="btn-text-arrow reveal reveal-delay-3" style="color:var(--blue)">
+      Explore Technologies
+      <span style="background:var(--blue)"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ════════════ 03 ECOSYSTEM ════════════ -->
+<section class="sec-ecosystem" id="ecosystem">
+  <div class="sec-ecosystem-content">
+    <p class="sec-num reveal">03</p>
+    <h2 class="sec-title reveal reveal-delay-1">ECOSYSTEM</h2>
+    <p class="sec-body reveal reveal-delay-2" style="margin-bottom:0">
+      Every court. Every player. Every movement.
+    </p>
+    <p class="sec-body-emphasis reveal reveal-delay-2">Connected.</p>
+    <div style="margin-top:32px" class="reveal reveal-delay-3">
+      <a href="pages/ecosystem.html" class="btn-text-arrow">
+        Explore Ecosystem <span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ 04 WHY WE EXIST ════════════ -->
+<section class="sec-why" id="why">
+  <div class="sec-why-bg"></div>
+  <div class="sec-why-content">
+    <p class="sec-num reveal">04</p>
+    <h2 class="sec-title reveal reveal-delay-1">WHY WE EXIST</h2>
+    <div style="width:32px;height:2px;background:#F5F5F3;margin-bottom:32px"></div>
+    <div class="sec-why-body reveal reveal-delay-2">
+      <p>Sport has always had the power to bring people together.</p>
+      <p>But the spaces, systems and tools to make that happen at scale — those are still being built.</p>
+      <p class="sec-why-strong">That's why Nine One exists.</p>
+    </div>
+    <p class="sec-why-tagline italic reveal reveal-delay-3">
+      Padel is the starting point. Movement is the future.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo-area">
+      <img src="assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Business</h4>
+        <ul>
+          <li><a href="pages/sports.html">Sports</a></li>
+          <li><a href="pages/technologies.html">Technologies</a></li>
+          <li><a href="pages/ecosystem.html">Ecosystem</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Build With Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 NINE ONE. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
