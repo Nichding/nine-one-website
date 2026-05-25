@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '/<section class=\"sec-why\"/,/<\\\\/section>/' index.html)",
+      "Bash(grep -v \"{$\\\\|^[0-9]*:\\\\.\")",
+      "Bash(awk '/^\\\\.eco-|^\\\\.s-|font-weight/ {print NR\": \"$0}' pages/ecosystem.html)",
+      "Bash(grep -rln \"Josefin\\\\|Satoshi\\\\|Montserrat\" --include=\"*.html\" --include=\"*.css\" .)",
+      "Bash(grep -n \"fonts.googleapis.com/css2\" index.html pages/*.html css/main.css)",
+      "Bash(rsync -av --exclude=nine-one-website --exclude=.git --exclude=.DS_Store '/Users/nicholas/Library/CloudStorage/GoogleDrive-nicholas.ding@nineonesports.co.nz/My Drive/Claude Code/Nine One Sports Website/' '/Users/nicholas/Library/CloudStorage/GoogleDrive-nicholas.ding@nineonesports.co.nz/My Drive/Claude Code/Nine One Sports Website/nine-one-website/')"
+    ]
+  }
+}
