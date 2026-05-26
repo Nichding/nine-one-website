@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Nine One Sports</title>
+<meta name="description" content="Nine One Sports is a New Zealand company building padel infrastructure and the digital ecosystem that powers it. Padel is the starting point. Movement is the future.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="About Nine One Sports — NZ Padel Infrastructure">
+<meta property="og:description" content="Nine One Sports is a New Zealand company building padel infrastructure and the digital ecosystem that powers it. Padel is the starting point. Movement is the future.">
+<meta property="og:url" content="https://nineonesports.co.nz/pages/about">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nine One Sports">
+<title>About Nine One Sports — NZ Padel Infrastructure</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/main.css?v=2">
 <style>
 /* ═════════ SHARED HELPERS ═════════ */
 .a-eyebrow {
@@ -62,9 +69,12 @@
 }
 .a-hero-content {
   position: relative;
+  left: 0;
+  bottom: 0;
   z-index: 2;
   max-width: 1200px;
   width: 100%;
+  padding: 0 64px 80px;
 }
 .a-hero-content * {
   text-shadow: 0 2px 20px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.9);
@@ -484,7 +494,6 @@
 
 /* ═════════ RESPONSIVE ═════════ */
 @media (max-width: 900px) {
-  .nav-links { display: none; }
   .a-hero-content { padding: 0 24px 100px; }
   .a-cta { padding: 80px 24px; }
   .a-dir-content { padding: 48px 24px; max-width: none; }
@@ -507,6 +516,9 @@
   <a href="../index.html" class="nav-logo-wrap">
     <img src="../assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
   </a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="sports.html">Sports</a></li>
@@ -634,6 +646,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js"></script>
+<script src="../js/main.js?v=2"></script>
 </body>
 </html>

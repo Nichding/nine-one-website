@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ecosystem — Nine One Sports</title>
+<meta name="description" content="Every court, every player, every movement — connected. The Nine One ecosystem ties venues, athletes and communities into one platform.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Connected Padel Ecosystem — Nine One Sports">
+<meta property="og:description" content="Every court, every player, every movement — connected. The Nine One ecosystem ties venues, athletes and communities into one platform.">
+<meta property="og:url" content="https://nineonesports.co.nz/pages/ecosystem">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nine One Sports">
+<title>Connected Padel Ecosystem — Nine One Sports</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/main.css?v=2">
 <style>
 /* ═════════ SCROLL REVEAL ═════════ */
 .eco-reveal {
@@ -343,7 +350,6 @@
   .eco-snowball { grid-template-columns: 1fr; gap: 48px; }
 }
 @media (max-width: 900px) {
-  .nav-links { display: none; }
   .eco-hero-content { left: 24px; right: 24px; bottom: 48px; max-width: none; }
   .eco-snowball { padding: 64px 24px; }
   .eco-partners, .eco-cta { padding: 64px 24px; }
@@ -360,6 +366,9 @@
   <a href="../index.html" class="nav-logo-wrap">
     <img src="../assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
   </a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="sports.html">Sports</a></li>
@@ -533,7 +542,7 @@
   </div>
 </footer>
 
-<script src="../js/main.js"></script>
+<script src="../js/main.js?v=2"></script>
 <script>
   // ─── Scroll reveal ───
   (function () {

@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nine One Sports</title>
+<meta name="description" content="The Build With Us portal is coming soon. Contact Nine One Sports to discuss padel courts, air domes and smart venue technology in New Zealand.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Build With Us — Nine One Sports">
+<meta property="og:description" content="The Build With Us portal is coming soon. Contact Nine One Sports to discuss padel courts, air domes and smart venue technology in New Zealand.">
+<meta property="og:url" content="https://nineonesports.co.nz/pages/build">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nine One Sports">
+<title>Build With Us — Nine One Sports</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/main.css?v=2">
 <style>
 .coming-soon {
   height: 100vh;
@@ -28,6 +35,10 @@
 }
 .cs-title .lime { color: var(--lime); }
 .cs-sub { font-size: 14px; color: var(--graphite); }
+@media (max-width: 900px) {
+  .coming-soon { padding: 24px; gap: 20px; }
+  .cs-sub { font-size: 13px; padding: 0 8px; line-height: 1.6; }
+}
 </style>
 </head>
 <body>
@@ -35,6 +46,9 @@
   <a href="../index.html" class="nav-logo-wrap">
     <img src="../assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
   </a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="sports.html">Sports</a></li>
@@ -52,6 +66,6 @@
   <h1 class="cs-title">Move<br>Together<span class="lime">.</span></h1>
   <p class="cs-sub">This page is being built. <a href="../index.html" style="color:var(--lime)">Return home →</a></p>
 </div>
-<script src="../js/main.js"></script>
+<script src="../js/main.js?v=2"></script>
 </body>
 </html>

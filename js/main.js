@@ -33,3 +33,21 @@ if (sections.length && navLinks.length) {
   }, { threshold: 0.4 });
   sections.forEach(s => sectionObs.observe(s));
 }
+
+// Mobile nav toggle (hamburger)
+const navToggle = document.querySelector('.nav-toggle');
+const navEl = document.querySelector('.nav');
+if (navToggle && navEl) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navEl.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  navEl.querySelectorAll('.nav-links a, .nav-actions a').forEach(a => {
+    a.addEventListener('click', () => {
+      navEl.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+}

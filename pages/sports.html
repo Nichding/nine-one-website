@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sports — Nine One Sports</title>
+<meta name="description" content="Indoor, outdoor, permanent and temporary padel court systems engineered for clubs, tournaments and air domes. End-to-end design from concept to court.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Padel Courts & Venue Systems — Nine One Sports">
+<meta property="og:description" content="Indoor, outdoor, permanent and temporary padel court systems engineered for clubs, tournaments and air domes. End-to-end design from concept to court.">
+<meta property="og:url" content="https://nineonesports.co.nz/pages/sports">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nine One Sports">
+<title>Padel Courts & Venue Systems — Nine One Sports</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/main.css?v=2">
 <style>
 /* ═════════ SHARED HELPERS ═════════ */
 .s-num {
@@ -507,7 +514,6 @@
   .s-why-cards { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
-  .nav-links { display: none; }
   .s-hero-content { left: 24px; right: 24px; bottom: 48px; max-width: none; }
   .s-hero-bottom { left: 24px; right: 24px; bottom: 24px; }
   .s-courts, .s-why, .s-club, .s-build {
@@ -529,6 +535,9 @@
   <a href="../index.html" class="nav-logo-wrap">
     <img src="../assets/logo-white.svg" alt="Nine One" loading="lazy" style="height: 57px; width: auto;">
   </a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="sports.html" class="active">Sports</a></li>
@@ -773,7 +782,7 @@
   </div>
 </footer>
 
-<script src="../js/main.js"></script>
+<script src="../js/main.js?v=2"></script>
 <script>
   (function () {
     var dots = document.querySelectorAll('.s-hero-dots span');
