@@ -277,6 +277,15 @@
   .sec-sports-visual { height: 320px; grid-template-rows: 1fr; }
   .sec-sports-visual-main { grid-row: 1; }
   .hero-content { left: 24px; right: 24px; bottom: 48px; max-width: none; padding: 0; }
+  /* Left-align all section text to match hero (x=24px) */
+  .sec-sports-text { padding: 80px 24px; }
+  .sec-tech-text { padding: 80px 24px; }
+  .sec-ecosystem-content { padding: 0 24px; max-width: none; }
+  .sec-why-content { padding: 0 24px; max-width: none; }
+  .sec-sports-text .sec-body,
+  .sec-tech-text .sec-body,
+  .sec-ecosystem-content .sec-body,
+  .sec-why-content .sec-why-body { max-width: none; }
 }
 
 /* Technologies section: suppress lime accents, apply blue */
@@ -491,9 +500,7 @@
   <div class="footer-bottom">
     <span class="footer-copy">© 2026 NINE ONE. All rights reserved.</span>
     <div class="footer-social">
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">YouTube</a>
+      <a href="https://www.linkedin.com/company/nine-one-sports" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="footer-legal">
       <a href="#">Privacy Policy</a>
