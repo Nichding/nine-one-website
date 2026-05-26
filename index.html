@@ -35,25 +35,42 @@
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
+  bottom: 80px;
+  left: 64px;
   z-index: 2;
-  max-width: 680px;
+  max-width: 600px;
+  padding: 0;
 }
 .hero-headline {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   text-shadow: 0 2px 40px rgba(255,255,255,0.15), 0 1px 8px rgba(255,255,255,0.08);
   animation: heroIn 1s 0.3s ease both;
 }
 .hero-headline .lime-dot { color: var(--lime); }
 .hero-sub {
-  margin-bottom: 40px;
+  margin-bottom: 0;
   animation: heroIn 1s 0.55s ease both;
 }
-.hero-actions {
-  display: flex;
+.hero-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--lime);
+  display: inline-flex;
   align-items: center;
-  gap: 28px;
+  gap: 14px;
+  transition: gap 0.25s;
   animation: heroIn 1s 0.75s ease both;
+}
+.hero-link:hover { gap: 18px; }
+.hero-link span {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
 }
 @keyframes heroIn {
   from { opacity:0; transform:translateY(28px); }
@@ -253,7 +270,7 @@
   .sec-sports-visual { height: 320px; grid-template-rows: 1fr; }
   .sec-sports-visual-main { grid-row: 1; }
   .nav-links { display: none; }
-  .hero-content { padding: 0 24px 64px; }
+  .hero-content { left: 24px; right: 24px; bottom: 48px; max-width: none; padding: 0; }
 }
 
 /* Technologies section: suppress lime accents, apply blue */
@@ -361,14 +378,7 @@
       TOGETHER<span class="lime-dot">.</span>
     </h1>
     <p class="hero-sub">Movement brings people together. We build what makes it possible.</p>
-    <div class="hero-actions">
-      <a href="pages/about.html" class="btn-primary" style="background:#F5F5F3;color:#0A0A0A">
-        About Us
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M2 7h10M8 3l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
+    <a href="pages/about.html" class="hero-link">About Us <span></span></a>
   </div>
 </section>
 
