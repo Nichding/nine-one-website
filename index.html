@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVWD4QKPGJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-NVWD4QKPGJ");
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Nine One Sports — New Zealand's leading sports infrastructure and intelligent movement platform. Padel courts, smart rackets, club systems and AI analytics. Move Together.">
@@ -56,8 +64,14 @@
 }
 .hero-headline .lime-dot { color: var(--lime); }
 .hero-sub {
-  margin-bottom: 0;
+  margin-bottom: 28px;
   animation: heroIn 1s 0.55s ease both;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  animation: heroIn 1s 0.75s ease both;
 }
 .hero-link {
   font-family: 'Inter', sans-serif;
@@ -70,7 +84,6 @@
   align-items: center;
   gap: 14px;
   transition: gap 0.25s;
-  animation: heroIn 1s 0.75s ease both;
 }
 .hero-link:hover { gap: 18px; }
 .hero-link span {

@@ -1,0 +1,37 @@
+name: Notion Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.md"
+      - "notion_os/**"
+      - "scripts/notion_sync.py"
+      - "requirements.txt"
+      - ".github/workflows/notion-sync.yml"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sync markdown to Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_ROOT_PAGE_ID: ${{ secrets.NOTION_ROOT_PAGE_ID }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/notion_sync.py --root .
