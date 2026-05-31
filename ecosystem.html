@@ -11,207 +11,202 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nine One Sports — NZ Sports Infrastructure & Intelligent Movement Platform</title>
-<meta name="description" content="Nine One Sports — New Zealand's leading sports infrastructure and intelligent movement platform. Padel courts, smart rackets, club systems and AI analytics. Move Together.">
-<link rel="canonical" href="https://nineonesports.co.nz/">
+<title>Ecosystem — Connected Sports Intelligence Platform | Nine One Sports</title>
+<meta name="description" content="Courts, clubs, intelligence and community as one connected ecosystem. The network that gets more valuable every time someone plays.">
+<link rel="canonical" href="https://nineonesports.co.nz/ecosystem">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nine One Sports">
-<meta property="og:title" content="Nine One Sports — NZ Sports Infrastructure & Intelligent Movement Platform">
-<meta property="og:description" content="Nine One Sports — New Zealand's leading sports infrastructure and intelligent movement platform. Padel courts, smart rackets, club systems and AI analytics. Move Together.">
-<meta property="og:url" content="https://nineonesports.co.nz/">
+<meta property="og:title" content="Ecosystem — Connected Sports Intelligence Platform | Nine One Sports">
+<meta property="og:description" content="Courts, clubs, intelligence and community as one connected ecosystem. The network that gets more valuable every time someone plays.">
+<meta property="og:url" content="https://nineonesports.co.nz/ecosystem">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap">
 <style>
 /* ════════════════════════════════════════════════
-   NINE ONE · Home · Tier 4 Master · V2.0.1
-   60% Soft White / 30% Black / 10% Accent
-   Inter only · Light-led · Calm Movement
+   NINE ONE · Ecosystem · Tier 4 Master · V2.0.1
+   60% Soft White / 30% Black / 10% Accent · Inter only
+   Master narrative (D-007) — NOT a third sub-brand.
+   Lime + Blue may co-appear, ONLY with BLACK isolation (D-004).
+   IA mirrors pages/ecosystem.html
    ════════════════════════════════════════════════ */
 :root{
-  --black:#0A0A0A;
-  --white:#F5F5F3;
-  --paper:#EEEDE8;
-  --ink:#1A1A1A;
-  --graphite:#6F706C;
-  --muted:#A6A7A1;
-  --warmgrey:#D9D9D6;
-  --lime:#C7F000;
-  --lime-soft:#EEF7B2;
-  --blue:#2D7DFF;
-  --blue-soft:#CFE1FF;
-  --line:#EEEDE8;
-  --nav-h:110px;
-  --gut:64px;
-  --maxw:1440px;
+  --black:#0A0A0A; --white:#F5F5F3; --paper:#EEEDE8;
+  --ink:#1A1A1A; --graphite:#6F706C; --muted:#A6A7A1; --warmgrey:#D9D9D6;
+  --lime:#C7F000; --lime-soft:#EEF7B2; --blue:#2D7DFF; --blue-soft:#CFE1FF;
+  --line:#EEEDE8; --nav-h:110px; --gut:64px; --maxw:1440px;
   --mono:'Inter',sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{
-  background:var(--white);
-  color:var(--ink);
-  font-family:'Inter',sans-serif;
-  font-weight:400;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  overflow-x:hidden;
-}
+body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;
+  font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img,svg{display:block;}
 
-.shell{max-width:var(--maxw);margin:0 auto;}
+/* dual-track ecosystem accents (lime→blue) */
+.grad{background:linear-gradient(95deg,var(--lime) 0%,#C7F000 38%,var(--blue) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.grad-line{height:2px;background:linear-gradient(90deg,var(--lime),var(--blue));border:none;}
 
-/* ─── EYEBROW ─── */
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:12px;font-weight:600;line-height:1.4;
-  letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--graphite);
-}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;
+  line-height:1.4;letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--lime),var(--blue));flex:none;}
+
+.alink{display:inline-flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--ink);transition:gap .2s;}
+.alink:hover{gap:18px;}
+.alink svg{width:16px;height:16px;}
+
+/* placeholders */
+.ph{position:absolute;inset:0;background-color:var(--paper);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:46px 46px;}
+.ph.warm{background-color:#EEEDE8;
+  background-image:linear-gradient(rgba(120,110,90,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(120,110,90,0.10) 1px,transparent 1px);}
+.ph-label{position:absolute;left:22px;bottom:18px;z-index:3;font-family:var(--mono);
+  font-size:11.5px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--graphite);}
 
 /* ════════ NAV ════════ */
-.nav{
-  position:static;
-  height:var(--nav-h);
-  background:var(--white);
-  border-bottom:1px solid transparent;
-}
-.nav-inner{
-  max-width:var(--maxw);margin:0 auto;height:100%;
-  padding:0 var(--gut);
-  display:flex;align-items:center;justify-content:space-between;
-}
+.nav{position:static;height:var(--nav-h);background:var(--white);border-bottom:1px solid transparent;}
+.nav-inner{max-width:var(--maxw);margin:0 auto;height:100%;padding:0 var(--gut);
+  display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand-icon{width:42px;height:auto;display:block;}
 .nav-inner .brand-icon{width:148px;}
 .nav-inner .brand-word{display:none;}
 .brand-icon svg{width:100%;height:auto;display:block;}
-.brand-word{
-  font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);
-}
+.brand-word{font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);}
 .nav-links{display:flex;align-items:center;gap:38px;list-style:none;}
-.nav-links a{
-  font-size:15px;font-weight:500;color:var(--graphite);
-  letter-spacing:-0.005em;transition:color .2s;position:relative;
-}
+.nav-links a{font-size:15px;font-weight:500;color:var(--graphite);letter-spacing:-0.005em;transition:color .2s;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a.active{color:var(--ink);font-weight:600;}
-.nav-cta{
-  font-size:15px;font-weight:600;letter-spacing:-0.005em;
-  color:var(--ink);background:transparent;
-  border:1.5px solid var(--ink);border-radius:999px;
-  padding:11px 24px;transition:background .2s,color .2s;
-}
+.nav-cta{font-size:15px;font-weight:600;letter-spacing:-0.005em;color:var(--ink);background:transparent;
+  border:1.5px solid var(--ink);border-radius:999px;padding:11px 24px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:var(--ink);color:var(--white);}
 
-/* ════════ HERO (single full-bleed image · text overlaid, Aesop-quiet) ════════ */
-.hero{position:relative;}
-.hero-figure{position:relative;width:100%;height:90vh;min-height:600px;overflow:hidden;}
-.hero-figure img{width:100%;height:100%;object-fit:cover;display:block;}
-.hero-overlay{position:absolute;left:64px;bottom:80px;z-index:3;max-width:760px;}
-.hero-eyebrow{display:block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
-  letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,245,243,0.85);
-  margin-bottom:24px;text-shadow:0 1px 4px rgba(0,0,0,0.4);}
-.hero h1{font-family:'Inter',sans-serif;font-size:clamp(78px,7vw,96px);font-weight:900;font-style:normal;
-  line-height:0.98;letter-spacing:-0.025em;text-transform:none;color:#F5F5F3;margin:0;
-  text-shadow:0 1px 4px rgba(0,0,0,0.4);}
-.hero-link{display:inline-block;margin-top:32px;font-family:'Inter',sans-serif;font-size:12px;
-  font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,245,243,0.85);
-  text-shadow:0 1px 4px rgba(0,0,0,0.4);border-bottom:1px solid transparent;padding-bottom:3px;
-  transition:border-color .25s ease;}
-.hero-link:hover{border-bottom-color:rgba(245,245,243,0.85);}
+/* ════════ 01 HERO (single full-bleed image · ink text overlaid, Aesop-quiet) ════════ */
+.ehero{position:relative;}
+.ehero-figure{position:relative;width:100%;height:88vh;min-height:600px;overflow:hidden;}
+.ehero-figure img{width:100%;height:100%;object-fit:cover;display:block;}
+.ehero-overlay{position:absolute;left:64px;bottom:80px;z-index:3;max-width:760px;}
+.ehero-eyebrow{display:block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);margin-bottom:24px;}
+.ehero h1{font-family:'Inter',sans-serif;font-size:clamp(78px,7vw,96px);font-weight:900;
+  line-height:0.98;letter-spacing:-0.025em;color:var(--ink);margin:0;}
+.ehero-link{display:inline-block;margin-top:32px;font-family:'Inter',sans-serif;font-size:12px;
+  font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);
+  border-bottom:1px solid transparent;padding-bottom:3px;transition:border-color .25s ease;}
+.ehero-link:hover{border-bottom-color:var(--ink);}
 
-/* ─── editorial eyebrow ─── */
-.ed-eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:12px;font-weight:600;
-  letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);}
-.ed-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex:none;}
-.ed-eyebrow .dot.blue{background:var(--blue);}
-.ed-eyebrow .dot.lime{background:var(--lime);}
+/* dual-track feature (full-bleed editorial · image carries lime+blue, black isolates) */
+.dual{position:relative;overflow:hidden;border-top:1px solid var(--line);}
+.dual .dual-img{position:relative;display:block;width:100%;height:auto;z-index:0;}
+.dual-scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(0,0,0,0.66) 0%,transparent 52%),
+             linear-gradient(to right,rgba(0,0,0,0.5) 0%,transparent 56%);}
+.dual-inner{position:absolute;left:50%;transform:translateX(-50%);bottom:0;z-index:2;
+  max-width:var(--maxw);width:100%;padding:0 var(--gut) 80px;}
+.dual-box{max-width:560px;}
+.dual .eyebrow{color:rgba(245,245,243,0.9);}
+.dual .eyebrow .dot{background:linear-gradient(135deg,var(--lime),var(--blue));}
+.dual h2{font-size:clamp(38px,4.6vw,60px);font-weight:850;line-height:1.03;letter-spacing:-0.02em;
+  color:var(--white);margin:20px 0 18px;max-width:15ch;text-shadow:0 2px 18px rgba(0,0,0,0.5);}
+.dual p{font-size:17px;line-height:1.66;color:rgba(245,245,243,0.92);max-width:48ch;text-shadow:0 2px 12px rgba(0,0,0,0.55);}
 
-/* ─── editorial text link ─── */
-.ed-link{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);}
-.ed-link svg{width:22px;height:12px;stroke:var(--ink);transition:transform .25s ease;}
-.ed-link:hover svg{transform:translateX(7px);}
-.ed-link.lime svg{stroke:var(--lime);}
-.ed-link.blue svg{stroke:var(--blue);}
+/* ════════ 02 SNOWBALL ════════ */
+.snow{border-top:1px solid var(--line);}
+.snow-inner{max-width:var(--maxw);margin:0 auto;padding:120px var(--gut);
+  display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start;}
+.snow-left h2{font-size:50px;font-weight:850;line-height:1.06;letter-spacing:-0.02em;color:var(--ink);margin:22px 0 30px;max-width:13ch;}
+.snow-left p{font-size:18px;line-height:1.68;color:var(--graphite);margin-bottom:16px;max-width:44ch;}
+.snow-steps{display:flex;flex-direction:column;}
+.snow-step{display:grid;grid-template-columns:auto 1fr;column-gap:32px;align-items:baseline;
+  padding:34px 0;border-top:1px solid var(--line);}
+.snow-step:first-child{border-top:none;padding-top:0;}
+.snow-step-num{font-size:44px;font-weight:900;letter-spacing:-0.02em;line-height:1;color:var(--ink);}
+.snow-step-title{font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink);margin-bottom:10px;}
+.snow-step-desc{font-size:14.5px;line-height:1.7;color:var(--graphite);}
+.snow-accent{margin-top:8px;width:100%;}
 
-/* ════════ EDITORIAL SECTIONS (alternating image / text) ════════ */
-.ed-sec{width:100%;border-top:1px solid var(--line);}
-.ed-sec.sand{background:var(--paper);}
-.ed-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:80vh;}
-.ed-figure{position:relative;overflow:hidden;min-height:480px;}
-.ed-figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.ed-panel{display:flex;flex-direction:column;justify-content:center;
-  padding:120px clamp(48px,7vw,112px);}
-.ed-title{font-size:clamp(40px,4vw,54px);font-weight:800;line-height:1.07;letter-spacing:-0.015em;
-  color:var(--ink);margin:24px 0 26px;max-width:18ch;}
-.ed-body{font-size:17px;line-height:1.72;color:var(--ink);max-width:44ch;margin-bottom:36px;}
+/* ════════ 03 PARTNERS ════════ */
+.partners{background:var(--paper);border-top:1px solid var(--line);}
+.partners-inner{max-width:var(--maxw);margin:0 auto;padding:120px var(--gut);}
+.partners-head{text-align:center;margin-bottom:56px;}
+.partners-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1160px;margin:0 auto;}
+.pcard{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:44px;position:relative;overflow:hidden;}
+.pcard .grad-line{position:absolute;top:0;left:0;right:0;}
+.picon{width:46px;height:46px;margin-bottom:26px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--warmgrey);border-radius:9px;}
+.picon svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.pcard h3{font-size:26px;font-weight:850;line-height:1.18;letter-spacing:-0.015em;color:var(--ink);margin-bottom:16px;max-width:18ch;}
+.pcard p{font-size:15px;line-height:1.7;color:var(--graphite);}
 
-@media(max-width:900px){
-  .hero-figure{height:78vh;min-height:480px;}
-  .hero-overlay{left:var(--gut);bottom:56px;}
-  .ed-grid{grid-template-columns:1fr;min-height:0;}
-  .ed-grid .ed-figure{order:-1;min-height:62vh;}
-  .ed-grid.img-right .ed-figure{order:-1;}
-  .ed-panel{padding:72px var(--gut);}
-}
+/* ════════ 04 CLOSING ════════ */
+.closing{position:relative;text-align:center;padding:150px var(--gut);border-top:1px solid var(--line);overflow:hidden;}
+.closing-arc{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:760px;max-width:96%;z-index:0;pointer-events:none;}
+.closing-arc svg{width:100%;height:auto;display:block;}
+.closing-content{position:relative;z-index:1;}
+.closing h2{font-size:62px;font-weight:900;line-height:1.04;letter-spacing:-0.025em;color:var(--ink);margin:22px 0 22px;}
+.closing-lines{max-width:560px;margin:0 auto;}
+.closing-lines p{font-size:18px;font-style:italic;line-height:1.6;color:var(--graphite);margin-bottom:6px;}
+.closing-tag{margin-top:34px;font-size:13px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;line-height:1.8;}
+.closing-tag .main{display:block;color:var(--ink);}
+.closing-tag .sub{display:block;font-weight:500;color:var(--graphite);letter-spacing:0.14em;}
+
+/* ════════ 05 CTA ════════ */
+.ecta{background:var(--paper);border-top:1px solid var(--line);}
+.ecta-inner{max-width:var(--maxw);margin:0 auto;padding:120px var(--gut);}
+.ecta-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1160px;margin:0 auto;}
+.ecard{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:48px;display:flex;flex-direction:column;
+  transition:border-color .25s,transform .25s,box-shadow .25s;}
+.ecard:hover{border-color:var(--ink);transform:translateY(-4px);box-shadow:0 22px 46px -28px rgba(10,10,10,0.3);}
+.ecard .e-eyebrow{font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);margin-bottom:16px;}
+.ecard .e-body{font-size:24px;font-weight:800;letter-spacing:-0.015em;color:var(--ink);margin-bottom:auto;line-height:1.2;}
+.ecard .e-btn{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;margin-top:40px;
+  font-size:15px;font-weight:600;color:var(--ink);transition:gap .2s;}
+.ecard:hover .e-btn{gap:17px;}
+.ecard .e-btn svg{width:16px;height:16px;}
 
 /* ════════ FOOTER ════════ */
 .footer{background:var(--black);color:var(--white);}
 .footer-inner{max-width:var(--maxw);margin:0 auto;padding:104px var(--gut) 48px;}
-.footer-slogan{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
-  padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;
-}
-.footer-slogan h2{
-  font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);
-}
-.footer-slogan h2 .accent{color:var(--lime);}
-.footer-slogan .f-cta{
-  display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
-  font-size:15px;font-weight:600;color:var(--black);background:var(--white);
-  padding:14px 28px;border-radius:999px;transition:background .2s;
-}
+.footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
+  padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
+.footer-slogan h2{font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);}
+.footer-slogan h2 .accent{background:linear-gradient(95deg,var(--lime),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
+  font-size:15px;font-weight:600;color:var(--black);background:var(--white);padding:14px 28px;border-radius:999px;transition:background .2s,color .2s;}
 .footer-slogan .f-cta:hover{background:var(--lime);}
 .footer-slogan .f-cta svg{width:15px;height:15px;}
-.footer-grid{
-  display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;
-  padding:80px 0 80px;
-}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0 80px;}
 .footer-brand .brand-word{color:var(--white);}
 .footer-brand .brand-icon svg path{fill:var(--white);}
 .footer-brand .brand-icon{width:148px;}
 .footer-brand .brand-word{display:none;}
 .footer-tagline{font-size:15px;color:#A6A7A1;line-height:1.6;margin-top:20px;max-width:30ch;}
-.footer-col h4{
-  font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
-  color:#A6A7A1;margin-bottom:22px;
-}
+.footer-col h4{font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A6A7A1;margin-bottom:22px;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
 .footer-col a{font-size:16px;color:var(--white);opacity:0.78;transition:opacity .2s;}
 .footer-col a:hover{opacity:1;}
-.footer-bottom{
-  display:flex;align-items:center;justify-content:space-between;gap:24px;
-  padding-top:32px;border-top:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;
-}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding-top:32px;border-top:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
 .footer-bottom .meta{font-size:13px;color:#6F706C;letter-spacing:0.01em;}
 .footer-bottom .legal{display:flex;gap:26px;}
 .footer-bottom .legal a{font-size:13px;color:#6F706C;transition:color .2s;}
 .footer-bottom .legal a:hover{color:var(--white);}
 
-/* ─── reveal (transform-only rise; content stays fully visible) ─── */
+/* ─── reveal ─── */
 .reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1);}
 .reveal-on .reveal{transform:translateY(20px);}
 .reveal-on .reveal.visible{transform:none;}
 .rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.3s;}
 
-@media(max-width:1100px){
-  .footer-slogan h2{font-size:72px;}
+@media(max-width:1080px){
+  .ehero-overlay{left:var(--gut);bottom:56px;}
+  .ehero h1{font-size:52px;}
+  .snow-inner{grid-template-columns:1fr;gap:48px;}
+  .partners-grid,.ecta-grid{grid-template-columns:1fr;}
+  .footer-slogan h2{font-size:64px;}
   .footer-grid{grid-template-columns:1fr 1fr;}
 }
 
@@ -227,17 +222,13 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 .thumb-desc,.ctype-desc,.wcard-desc,.adir-desc,.tfeat-desc,.acard p,.dual-box p{font-size:14.5px!important;font-weight:400!important;line-height:1.65!important;}
 .shero-sub,.s-body,.t-body2,.ed-body,.awhy-body{font-size:17px!important;font-weight:400!important;line-height:1.6!important;}
 </style>
-<script>
-// Enable hidden-then-reveal only when motion is OK; default = content visible.
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reveal-on');}
-</script>
 </head>
 <body>
 
 <!-- ════════ NAV ════════ -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="brand" aria-label="Nine One — Home">
+    <a href="index.html" class="brand" aria-label="Nine One">
       <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
   <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
 <path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
@@ -254,74 +245,145 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
       <span class="brand-word"></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="sports.html">Sports</a></li>
       <li><a href="technologies.html">Technologies</a></li>
-      <li><a href="ecosystem.html">Ecosystem</a></li>
+      <li><a href="ecosystem.html" class="active">Ecosystem</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
     <a href="build.html" class="nav-cta">Build with us</a>
   </div>
 </nav>
 
-<!-- ════════ HERO ════════ -->
-<header class="hero" data-screen-label="Hero">
-  <div class="hero-figure">
-    <img src="assets/images/home-hero.jpg" alt="Single outdoor padel court at golden hour with a woman walking past, players mid-rally, a modern clubhouse and lake landscape behind">
+<!-- ════════ 01 · HERO ════════ -->
+<header class="ehero" id="top" data-screen-label="Hero">
+  <div class="ehero-figure">
+    <img src="assets/images/ecosystem-hero.jpg?v=2" alt="3D isometric visualization of the NINE ONE ecosystem — padel courts, clubhouses, a central NINE ONE mark, distribution truck and pedestrian figures connected by bright lime and blue data-flow lines on a light cream background">
   </div>
-  <div class="hero-overlay">
-    <span class="hero-eyebrow reveal">Nine One Sports</span>
-    <h1 class="reveal rd1">Move Together.</h1>
-    <a href="build.html" class="hero-link reveal rd2">Start a project —</a>
+  <div class="ehero-overlay">
+    <span class="ehero-eyebrow reveal">Ecosystem</span>
+    <h1 class="reveal rd1">One<br>connected<br>system.</h1>
+    <a href="build.html" class="ehero-link reveal rd2">Build with us —</a>
   </div>
 </header>
 
-<!-- ════════ 01 · SPORTS (image left / text right) ════════ -->
-<section class="ed-sec" id="sports" data-screen-label="01 Sports">
-  <div class="ed-grid">
-    <div class="ed-figure reveal">
-      <img src="assets/images/sports-clubhouse.jpg" alt="NINE ONE tropical clubhouse at golden hour with palm trees, glass courts and illuminated branding">
-    </div>
-    <div class="ed-panel">
-      <span class="ed-eyebrow reveal">01</span>
-      <h2 class="ed-title reveal rd1">Sports</h2>
-      <p class="ed-body reveal rd2">Connection starts with space. We build the courts where it happens.</p>
-      <a href="sports.html" class="ed-link lime reveal rd2">Build With Us
-        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
-      </a>
+<!-- ════════ 01.5 · WHERE MOVEMENT MEETS INTELLIGENCE (dual-track photo) ════════ -->
+<section class="dual" data-screen-label="Movement meets intelligence">
+  <img class="dual-img" src="assets/images/ecosystem-data-layer.jpg" alt="Padel player mid-action with lime movement-tracking skeleton and blue analytics dashboards overlaid">
+  <div class="dual-scrim"></div>
+  <div class="dual-inner">
+    <div class="dual-box">
+      <span class="eyebrow reveal"><span class="dot"></span>Where movement meets intelligence</span>
+      <h2 class="reveal rd1">The court, the player and the data — one connected system.</h2>
+      <p class="reveal rd2">Sport supplies the movement. Technology reads it. The ecosystem turns every rally into intelligence that makes the next court, club and community better.</p>
     </div>
   </div>
 </section>
 
-<!-- ════════ 02 · TECHNOLOGIES (text left / image right) ════════ -->
-<section class="ed-sec sand" id="technology" data-screen-label="02 Technologies">
-  <div class="ed-grid img-right">
-    <div class="ed-panel">
-      <span class="ed-eyebrow reveal"><span class="dot blue"></span>02</span>
-      <h2 class="ed-title reveal rd1">Technologies</h2>
-      <p class="ed-body reveal rd2">Technology should deepen movement, not distract from it. That's what we build.</p>
-      <a href="technologies.html" class="ed-link blue reveal rd2">Explore Technologies
-        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
-      </a>
+<!-- ════════ 02 · SNOWBALL EFFECT ════════ -->
+<section class="snow" id="snowball" data-screen-label="Snowball effect">
+  <div class="snow-inner">
+    <div class="snow-left">
+      <span class="eyebrow reveal"><span class="dot"></span>The snowball effect</span>
+      <h2 class="reveal rd1">Growth that feeds itself.</h2>
+      <p class="reveal rd2">Most businesses grow by adding more. Nine One grows differently.</p>
+      <p class="reveal rd2">Every court makes the data richer. Every player deepens the intelligence. Every session makes the network more valuable for everyone inside it.</p>
+      <p class="reveal rd2">You don't just join a platform. You become part of something that compounds.</p>
     </div>
-    <div class="ed-figure reveal">
-      <img src="assets/images/tech-rooftop-experience.jpg" alt="Rooftop lounge at golden hour with players, a smart racket and dashboard device on the table, city skyline and padel courts behind">
+    <div class="snow-steps reveal rd1">
+      <div class="snow-step">
+        <div class="snow-step-num">01</div>
+        <div>
+          <h3 class="snow-step-title">More Movement</h3>
+          <p class="snow-step-desc">Every court. Every player. Every session. The input never stops.</p>
+        </div>
+      </div>
+      <div class="snow-step">
+        <div class="snow-step-num">02</div>
+        <div>
+          <h3 class="snow-step-title">Deeper Intelligence</h3>
+          <p class="snow-step-desc">More movement means more data. More data means a smarter system.</p>
+        </div>
+      </div>
+      <div class="snow-step">
+        <div class="snow-step-num">03</div>
+        <div>
+          <h3 class="snow-step-title">Unmatched Value</h3>
+          <p class="snow-step-desc">The longer it runs, the harder it is to replicate.</p>
+        </div>
+      </div>
+      <hr class="grad-line snow-accent">
     </div>
   </div>
 </section>
 
-<!-- ════════ 03 · ECOSYSTEM (image left / text right) ════════ -->
-<section class="ed-sec" id="ecosystem" data-screen-label="03 Ecosystem">
-  <div class="ed-grid">
-    <div class="ed-figure reveal">
-      <img src="assets/images/ecosystem-data-layer.jpg" alt="Padel player mid-action with lime skeleton motion tracking and blue performance dashboard overlays">
+<!-- ════════ 03 · FOR OUR PARTNERS ════════ -->
+<section class="partners" data-screen-label="For our partners">
+  <div class="partners-inner">
+    <div class="partners-head reveal">
+      <span class="eyebrow"><span class="dot"></span>For our partners</span>
     </div>
-    <div class="ed-panel">
-      <span class="ed-eyebrow reveal"><span class="dot"></span>03</span>
-      <h2 class="ed-title reveal rd1">Ecosystem</h2>
-      <p class="ed-body reveal rd2">Every court. Every player. Every movement. <strong style="font-weight:600;">Connected.</strong></p>
-      <a href="ecosystem.html" class="ed-link reveal rd2">Explore Ecosystem
-        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
+    <div class="partners-grid">
+      <div class="pcard reveal">
+        <hr class="grad-line">
+        <div class="picon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>This train is leaving. With or without you.</h3>
+        <p>The network is already forming. The data is already accumulating. The moat is already being built. Early positions in compounding networks don't stay open. The question isn't whether this works. The question is whether you're in it when it does.</p>
+      </div>
+      <div class="pcard reveal rd1">
+        <hr class="grad-line">
+        <div class="picon"><svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg></div>
+        <h3>Your competitors are already inside.</h3>
+        <p>While you're reading this, clubs in this network are getting smarter. Their data is growing. Their players are more engaged. Their operations are more efficient. Every day outside the network is a day you fall further behind. The door is open. For now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 04 · CLOSING ════════ -->
+<section class="closing" data-screen-label="Closing">
+  <div class="closing-arc" aria-hidden="true">
+    <svg viewBox="0 0 760 360" preserveAspectRatio="xMidYMid meet">
+      <defs><linearGradient id="arcg" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#C7F000"></stop><stop offset="1" stop-color="#2D7DFF"></stop>
+      </linearGradient></defs>
+      <path d="M 40 320 Q 380 40 720 320" stroke="url(#arcg)" stroke-width="1.5" fill="none" stroke-opacity="0.5"></path>
+      <path d="M 110 320 Q 380 95 650 320" stroke="url(#arcg)" stroke-width="1.5" fill="none" stroke-opacity="0.36"></path>
+      <path d="M 180 320 Q 380 150 580 320" stroke="url(#arcg)" stroke-width="1.5" fill="none" stroke-opacity="0.24"></path>
+      <path d="M 250 320 Q 380 205 510 320" stroke="url(#arcg)" stroke-width="1.5" fill="none" stroke-opacity="0.13"></path>
+    </svg>
+  </div>
+  <div class="closing-content">
+    <h2 class="reveal">The network is forming now.</h2>
+    <div class="closing-lines reveal rd1">
+      <p>Not a slogan. A system.</p>
+      <p>Not a product. A position.</p>
+      <p>Not an opportunity. A decision.</p>
+    </div>
+    <div class="closing-tag reveal rd2">
+      <span class="main">Move Together.</span>
+      <span class="sub">Built into the system.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 05 · CTA ════════ -->
+<section class="ecta" id="cta" data-screen-label="Partner CTA">
+  <div class="ecta-inner">
+    <div class="ecta-grid">
+      <a href="#" class="ecard reveal">
+        <span class="e-eyebrow">I'm an investor</span>
+        <span class="e-body">Partner with Nine One.</span>
+        <span class="e-btn">Start the conversation
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+        </span>
+      </a>
+      <a href="#" class="ecard reveal rd1">
+        <span class="e-eyebrow">I'm a club owner</span>
+        <span class="e-body">Bring movement to your community.</span>
+        <span class="e-btn">Start the conversation
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+        </span>
       </a>
     </div>
   </div>
@@ -332,13 +394,13 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
   <div class="footer-inner">
     <div class="footer-slogan">
       <h2>Move Together<span class="accent">.</span></h2>
-      <a href="build.html" class="f-cta">Build with Us
+      <a href="#cta" class="f-cta">Partner with us
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="brand">
+        <a href="index.html" class="brand">
           <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
   <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
 <path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
@@ -357,16 +419,16 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
       <div class="footer-col">
         <h4>Business</h4>
         <ul>
-          <li><a href="#sports">Sports</a></li>
+          <li><a href="sports.html">Sports</a></li>
           <li><a href="technologies.html">Technologies</a></li>
-          <li><a href="#ecosystem">Ecosystem</a></li>
+          <li><a href="#top">Ecosystem</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="build.html">Build with Us</a></li>
+          <li><a href="build.html">Build with us</a></li>
           <li><a href="#">Careers</a></li>
         </ul>
       </div>
@@ -389,18 +451,16 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
 </footer>
 
 <template id="__bundler_thumbnail">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F5F5F3"/><text x="50" y="58" font-family="Inter,sans-serif" font-size="30" font-weight="900" fill="#0A0A0A" text-anchor="middle">no</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F5F5F3"/><text x="50" y="58" font-family="Inter,sans-serif" font-size="28" font-weight="900" fill="#0A0A0A" text-anchor="middle">no</text></svg>
 </template>
 
 <script>
-// reveal on scroll — with robust fallbacks so content is never stuck hidden
+document.documentElement.classList.add('reveal-on');
 const els=[...document.querySelectorAll('.reveal')];
 const show=el=>el.classList.add('visible');
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:0.08});
 els.forEach(el=>io.observe(el));
-// 1) reveal anything already in or above the viewport on first paint
 requestAnimationFrame(()=>{const vh=innerHeight||800;els.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92){show(el);io.unobserve(el);}});});
-// 2) safety net: if the observer never fires, reveal everything
 setTimeout(()=>els.forEach(show),1500);
 </script>
 </body>

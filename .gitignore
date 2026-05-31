@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Local backups (preserved on disk, not in repo)
+_old/
+**/_old/
+_processed/
+**/_processed/
+_originals/
+**/_originals/
+
+# Working folders
+NEW/
+**/NEW/
+New/
+**/New/
+
+# Reference / working documents (not for production)
+assets/IMAGE_RELIGHT_BRIEF.md
+assets/image-grade-contact-sheet.jpg
+
+# Independent project (not part of this site)
+nine-one-app-research/
+
+# Vendor / editor
+.vscode/
+.claude/

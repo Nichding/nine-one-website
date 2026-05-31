@@ -11,207 +11,191 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nine One Sports — NZ Sports Infrastructure & Intelligent Movement Platform</title>
-<meta name="description" content="Nine One Sports — New Zealand's leading sports infrastructure and intelligent movement platform. Padel courts, smart rackets, club systems and AI analytics. Move Together.">
-<link rel="canonical" href="https://nineonesports.co.nz/">
+<title>About — Built in Auckland, New Zealand | Nine One Sports</title>
+<meta name="description" content="Nine One Sports — built in Auckland, New Zealand. A future movement infrastructure platform connecting spaces, clubs and communities. Move Together.">
+<link rel="canonical" href="https://nineonesports.co.nz/about">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nine One Sports">
-<meta property="og:title" content="Nine One Sports — NZ Sports Infrastructure & Intelligent Movement Platform">
-<meta property="og:description" content="Nine One Sports — New Zealand's leading sports infrastructure and intelligent movement platform. Padel courts, smart rackets, club systems and AI analytics. Move Together.">
-<meta property="og:url" content="https://nineonesports.co.nz/">
+<meta property="og:title" content="About — Built in Auckland, New Zealand | Nine One Sports">
+<meta property="og:description" content="Nine One Sports — built in Auckland, New Zealand. A future movement infrastructure platform connecting spaces, clubs and communities. Move Together.">
+<meta property="og:url" content="https://nineonesports.co.nz/about">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap">
 <style>
 /* ════════════════════════════════════════════════
-   NINE ONE · Home · Tier 4 Master · V2.0.1
-   60% Soft White / 30% Black / 10% Accent
-   Inter only · Light-led · Calm Movement
+   NINE ONE · About · Tier 4 Master · V2.0.1
+   60% Soft White / 30% Black / 10% Lime (Now dot only) · Inter only
+   Light-led · neutral · italic Inter for emotional moments
+   IA mirrors pages/about.html (copy verbatim)
    ════════════════════════════════════════════════ */
 :root{
-  --black:#0A0A0A;
-  --white:#F5F5F3;
-  --paper:#EEEDE8;
-  --ink:#1A1A1A;
-  --graphite:#6F706C;
-  --muted:#A6A7A1;
-  --warmgrey:#D9D9D6;
+  --black:#0A0A0A; --white:#F5F5F3; --paper:#EEEDE8;
+  --ink:#1A1A1A; --graphite:#6F706C; --muted:#A6A7A1; --warmgrey:#D9D9D6;
   --lime:#C7F000;
-  --lime-soft:#EEF7B2;
-  --blue:#2D7DFF;
-  --blue-soft:#CFE1FF;
-  --line:#EEEDE8;
-  --nav-h:110px;
-  --gut:64px;
-  --maxw:1440px;
+  --line:#EEEDE8; --nav-h:110px; --gut:64px; --maxw:1440px;
   --mono:'Inter',sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{
-  background:var(--white);
-  color:var(--ink);
-  font-family:'Inter',sans-serif;
-  font-weight:400;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  overflow-x:hidden;
-}
+body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;
+  font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img,svg{display:block;}
 
-.shell{max-width:var(--maxw);margin:0 auto;}
+.a-eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--graphite);margin-bottom:22px;}
+.a-divider{width:42px;height:2px;background:var(--ink);margin:22px 0 26px;border:none;}
 
-/* ─── EYEBROW ─── */
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:12px;font-weight:600;line-height:1.4;
-  letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--graphite);
-}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none;}
+.btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;
+  letter-spacing:-0.005em;padding:15px 30px;border-radius:999px;transition:background .2s,transform .2s;}
+.btn svg{width:15px;height:15px;}
+.btn-solid{background:var(--ink);color:var(--white);border:1.5px solid var(--ink);}
+.btn-solid:hover{background:#000;transform:translateY(-1px);}
+
+/* placeholders */
+.ph{position:absolute;inset:0;background-color:var(--paper);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:46px 46px;}
+.ph.warm{background-color:#EEEDE8;
+  background-image:linear-gradient(rgba(120,110,90,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(120,110,90,0.10) 1px,transparent 1px);}
+.ph-label{position:absolute;left:22px;bottom:18px;z-index:3;font-family:var(--mono);
+  font-size:11.5px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--graphite);}
+
+/* shared light photo scrim (bottom-left) */
+.scrim-bl{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(245,245,243,0.90) 0%,rgba(245,245,243,0.42) 42%,rgba(245,245,243,0) 66%),
+             linear-gradient(to right,rgba(245,245,243,0.92) 0%,rgba(245,245,243,0.80) 30%,rgba(245,245,243,0) 65%);}
+/* corner dark wash — bottom-left editorial exception (white text legibility) */
+.scrim-corner{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,transparent 55%),
+             linear-gradient(to right,rgba(0,0,0,0.35) 0%,transparent 55%);}
+.bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
 
 /* ════════ NAV ════════ */
-.nav{
-  position:static;
-  height:var(--nav-h);
-  background:var(--white);
-  border-bottom:1px solid transparent;
-}
-.nav-inner{
-  max-width:var(--maxw);margin:0 auto;height:100%;
-  padding:0 var(--gut);
-  display:flex;align-items:center;justify-content:space-between;
-}
+.nav{position:static;height:var(--nav-h);background:var(--white);border-bottom:1px solid transparent;}
+.nav-inner{max-width:var(--maxw);margin:0 auto;height:100%;padding:0 var(--gut);
+  display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand-icon{width:42px;height:auto;display:block;}
 .nav-inner .brand-icon{width:148px;}
 .nav-inner .brand-word{display:none;}
 .brand-icon svg{width:100%;height:auto;display:block;}
-.brand-word{
-  font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);
-}
+.brand-word{font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);}
 .nav-links{display:flex;align-items:center;gap:38px;list-style:none;}
-.nav-links a{
-  font-size:15px;font-weight:500;color:var(--graphite);
-  letter-spacing:-0.005em;transition:color .2s;position:relative;
-}
+.nav-links a{font-size:15px;font-weight:500;color:var(--graphite);letter-spacing:-0.005em;transition:color .2s;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a.active{color:var(--ink);font-weight:600;}
-.nav-cta{
-  font-size:15px;font-weight:600;letter-spacing:-0.005em;
-  color:var(--ink);background:transparent;
-  border:1.5px solid var(--ink);border-radius:999px;
-  padding:11px 24px;transition:background .2s,color .2s;
-}
+.nav-cta{font-size:15px;font-weight:600;letter-spacing:-0.005em;color:var(--ink);background:transparent;
+  border:1.5px solid var(--ink);border-radius:999px;padding:11px 24px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:var(--ink);color:var(--white);}
 
-/* ════════ HERO (single full-bleed image · text overlaid, Aesop-quiet) ════════ */
-.hero{position:relative;}
-.hero-figure{position:relative;width:100%;height:90vh;min-height:600px;overflow:hidden;}
-.hero-figure img{width:100%;height:100%;object-fit:cover;display:block;}
-.hero-overlay{position:absolute;left:64px;bottom:80px;z-index:3;max-width:760px;}
-.hero-eyebrow{display:block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
-  letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,245,243,0.85);
-  margin-bottom:24px;text-shadow:0 1px 4px rgba(0,0,0,0.4);}
-.hero h1{font-family:'Inter',sans-serif;font-size:clamp(78px,7vw,96px);font-weight:900;font-style:normal;
-  line-height:0.98;letter-spacing:-0.025em;text-transform:none;color:#F5F5F3;margin:0;
-  text-shadow:0 1px 4px rgba(0,0,0,0.4);}
-.hero-link{display:inline-block;margin-top:32px;font-family:'Inter',sans-serif;font-size:12px;
-  font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,245,243,0.85);
-  text-shadow:0 1px 4px rgba(0,0,0,0.4);border-bottom:1px solid transparent;padding-bottom:3px;
-  transition:border-color .25s ease;}
-.hero-link:hover{border-bottom-color:rgba(245,245,243,0.85);}
+/* ════════ 01 HERO ════════ */
+.ahero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;}
+.ahero .ph{z-index:0;}
+.ahero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut) 72px;}
+.ahero h1{font-size:88px;font-weight:900;line-height:0.96;letter-spacing:-0.025em;color:var(--ink);}
+.ahero-sub{font-size:20px;line-height:1.55;color:var(--graphite);max-width:46ch;}
 
-/* ─── editorial eyebrow ─── */
-.ed-eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:12px;font-weight:600;
-  letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);}
-.ed-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex:none;}
-.ed-eyebrow .dot.blue{background:var(--blue);}
-.ed-eyebrow .dot.lime{background:var(--lime);}
+/* ════════ 02 WHY WE EXIST (full panorama + dark corner overlay) ════════ */
+.awhy{position:relative;overflow:hidden;}
+.awhy .bg-img{position:relative;display:block;width:100%;height:auto;z-index:0;}
+.awhy-inner{position:absolute;left:50%;transform:translateX(-50%);bottom:0;z-index:2;
+  max-width:var(--maxw);width:100%;padding:0 var(--gut) 80px;}
+.awhy-box{max-width:520px;}
+.awhy .a-eyebrow{color:rgba(245,245,243,0.85);margin-bottom:24px;}
+.awhy h1{font-size:clamp(28px,3vw,40px)!important;font-weight:500!important;line-height:1.1!important;letter-spacing:-0.01em!important;color:var(--white);text-shadow:0 2px 12px rgba(0,0,0,0.6);margin-bottom:24px;}
+.awhy-body{font-size:16px;font-weight:400;line-height:1.7;color:rgba(245,245,243,0.85);max-width:480px;text-shadow:0 2px 12px rgba(0,0,0,0.6);}
 
-/* ─── editorial text link ─── */
-.ed-link{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:600;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);}
-.ed-link svg{width:22px;height:12px;stroke:var(--ink);transition:transform .25s ease;}
-.ed-link:hover svg{transform:translateX(7px);}
-.ed-link.lime svg{stroke:var(--lime);}
-.ed-link.blue svg{stroke:var(--blue);}
+/* ════════ 03 PHILOSOPHY (light photo) ════════ */
+.aphoto{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;border-top:1px solid var(--line);}
+.aphoto .ph{z-index:0;}
+.aphoto-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut) 80px;}
+.aphoto-box{max-width:620px;}
+.aphilo h2{font-family:'Inter',sans-serif;font-size:clamp(28px,3vw,40px);font-weight:600;font-style:normal;line-height:1.15;letter-spacing:-0.01em;color:var(--white);margin-bottom:22px;}
+.aphilo-sub{font-family:'Inter',sans-serif;font-style:italic;font-weight:400;font-size:17px;line-height:1.5;letter-spacing:0;color:rgba(245,245,243,0.85);margin-bottom:22px;max-width:36ch;}
+.aphilo-body{font-family:'Inter',sans-serif;font-size:14.5px;font-weight:400;font-style:normal;line-height:1.65;letter-spacing:0;color:rgba(245,245,243,0.85);margin-bottom:26px;max-width:60ch;}
+.aphilo-closing{font-family:'Inter',sans-serif;font-style:italic;font-weight:400;font-size:17px;line-height:1.5;letter-spacing:0;color:rgba(245,245,243,0.85);}
+/* philosophy: full panorama + dark corner overlay + white text (matches Why We Exist) */
+.aphilo{min-height:0;display:block;}
+.aphilo .bg-img{position:relative;display:block;width:100%;height:auto;z-index:0;}
+.aphilo .aphoto-inner{position:absolute;left:50%;transform:translateX(-50%);bottom:0;}
+.aphilo .a-eyebrow{color:rgba(245,245,243,0.85);}
+.aphilo h2{text-shadow:0 2px 12px rgba(0,0,0,0.6);}
+.aphilo-sub,.aphilo-closing,.aphilo-body{text-shadow:0 2px 12px rgba(0,0,0,0.6);}
 
-/* ════════ EDITORIAL SECTIONS (alternating image / text) ════════ */
-.ed-sec{width:100%;border-top:1px solid var(--line);}
-.ed-sec.sand{background:var(--paper);}
-.ed-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:80vh;}
-.ed-figure{position:relative;overflow:hidden;min-height:480px;}
-.ed-figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.ed-panel{display:flex;flex-direction:column;justify-content:center;
-  padding:120px clamp(48px,7vw,112px);}
-.ed-title{font-size:clamp(40px,4vw,54px);font-weight:800;line-height:1.07;letter-spacing:-0.015em;
-  color:var(--ink);margin:24px 0 26px;max-width:18ch;}
-.ed-body{font-size:17px;line-height:1.72;color:var(--ink);max-width:44ch;margin-bottom:36px;}
+/* ════════ 04 ORIGIN (full panorama + dark corner overlay + white text) ════════ */
+.aorigin{min-height:0;display:block;}
+.aorigin .bg-img{position:relative;display:block;width:100%;height:auto;z-index:0;}
+.aorigin .aphoto-inner{position:absolute;left:50%;transform:translateX(-50%);bottom:0;}
+.aorigin .a-eyebrow{color:rgba(245,245,243,0.85);}
+.aorigin .a-divider{background:var(--white);width:32px;}
+.aorigin h2{font-size:clamp(36px,5vw,60px);font-weight:800;line-height:1.05;letter-spacing:-0.01em;
+  color:var(--white);max-width:16ch;text-shadow:0 2px 12px rgba(0,0,0,0.6);}
+.aorigin-body{font-size:16px;line-height:1.75;color:var(--white);max-width:520px;text-shadow:0 2px 12px rgba(0,0,0,0.6);}
 
-@media(max-width:900px){
-  .hero-figure{height:78vh;min-height:480px;}
-  .hero-overlay{left:var(--gut);bottom:56px;}
-  .ed-grid{grid-template-columns:1fr;min-height:0;}
-  .ed-grid .ed-figure{order:-1;min-height:62vh;}
-  .ed-grid.img-right .ed-figure{order:-1;}
-  .ed-panel{padding:72px var(--gut);}
-}
+/* ════════ 05 DIRECTION (light · timeline) ════════ */
+.adir{border-top:1px solid var(--line);}
+.adir-inner{max-width:var(--maxw);margin:0 auto;padding:120px var(--gut);}
+.adir h2{font-size:52px;font-weight:850;line-height:1.02;letter-spacing:-0.02em;color:var(--ink);}
+.adir-timeline{margin-top:88px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px;}
+.adir-node{display:flex;flex-direction:column;align-items:flex-start;max-width:260px;}
+.adir-label{font-size:12px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink);margin-bottom:12px;}
+.adir-node.is-now .adir-label::after{content:' ·  active';color:#C7F000;font-weight:500;letter-spacing:0.1em;}
+.adir-desc{font-size:15px;line-height:1.65;color:var(--graphite);max-width:230px;}
+.adir-map{display:block;width:100%;height:auto;margin-top:72px;}
+
+/* ════════ 06 MOVE WITH US (paper · centered · soft invitation) ════════ */
+.acta{background:var(--paper);border-top:1px solid var(--warmgrey);text-align:center;padding:140px var(--gut);}
+.acta h2{font-family:'Inter',sans-serif;font-style:italic;font-weight:400;
+  font-size:clamp(56px,8vw,112px);line-height:1.0;letter-spacing:-0.01em;color:var(--ink);margin-bottom:28px;}
+.acta-sub{font-family:'Inter',sans-serif;font-weight:400;font-size:16px;line-height:1.65;
+  color:var(--graphite);max-width:580px;margin:0 auto 48px;text-align:center;}
+.acta-actions{display:flex;justify-content:center;}
+.acta-actions .btn{font-size:12px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;
+  padding:16px 28px;border-radius:4px;}
 
 /* ════════ FOOTER ════════ */
 .footer{background:var(--black);color:var(--white);}
 .footer-inner{max-width:var(--maxw);margin:0 auto;padding:104px var(--gut) 48px;}
-.footer-slogan{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
-  padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;
-}
-.footer-slogan h2{
-  font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);
-}
-.footer-slogan h2 .accent{color:var(--lime);}
-.footer-slogan .f-cta{
-  display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
-  font-size:15px;font-weight:600;color:var(--black);background:var(--white);
-  padding:14px 28px;border-radius:999px;transition:background .2s;
-}
+.footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
+  padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
+.footer-slogan h2{font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);}
+.footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
+  font-size:15px;font-weight:600;color:var(--black);background:var(--white);padding:14px 28px;border-radius:999px;transition:background .2s,color .2s;}
 .footer-slogan .f-cta:hover{background:var(--lime);}
 .footer-slogan .f-cta svg{width:15px;height:15px;}
-.footer-grid{
-  display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;
-  padding:80px 0 80px;
-}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0 80px;}
 .footer-brand .brand-word{color:var(--white);}
 .footer-brand .brand-icon svg path{fill:var(--white);}
 .footer-brand .brand-icon{width:148px;}
 .footer-brand .brand-word{display:none;}
 .footer-tagline{font-size:15px;color:#A6A7A1;line-height:1.6;margin-top:20px;max-width:30ch;}
-.footer-col h4{
-  font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
-  color:#A6A7A1;margin-bottom:22px;
-}
+.footer-col h4{font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A6A7A1;margin-bottom:22px;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
 .footer-col a{font-size:16px;color:var(--white);opacity:0.78;transition:opacity .2s;}
 .footer-col a:hover{opacity:1;}
-.footer-bottom{
-  display:flex;align-items:center;justify-content:space-between;gap:24px;
-  padding-top:32px;border-top:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;
-}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding-top:32px;border-top:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
 .footer-bottom .meta{font-size:13px;color:#6F706C;letter-spacing:0.01em;}
 .footer-bottom .legal{display:flex;gap:26px;}
 .footer-bottom .legal a{font-size:13px;color:#6F706C;transition:color .2s;}
 .footer-bottom .legal a:hover{color:var(--white);}
 
-/* ─── reveal (transform-only rise; content stays fully visible) ─── */
+/* ─── reveal ─── */
 .reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1);}
 .reveal-on .reveal{transform:translateY(20px);}
 .reveal-on .reveal.visible{transform:none;}
 .rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.3s;}
 
-@media(max-width:1100px){
-  .footer-slogan h2{font-size:72px;}
+@media(max-width:1080px){
+  .ahero h1{font-size:58px;}
+  .awhy-body{max-width:none;}
+  .acta h2{font-size:64px;}
+  .aphilo-sub{font-size:16px;}
+  .adir-timeline{grid-template-columns:1fr;gap:36px;}
+  .adir-node{max-width:none;}
+  .footer-slogan h2{font-size:64px;}
   .footer-grid{grid-template-columns:1fr 1fr;}
 }
 
@@ -227,17 +211,13 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 .thumb-desc,.ctype-desc,.wcard-desc,.adir-desc,.tfeat-desc,.acard p,.dual-box p{font-size:14.5px!important;font-weight:400!important;line-height:1.65!important;}
 .shero-sub,.s-body,.t-body2,.ed-body,.awhy-body{font-size:17px!important;font-weight:400!important;line-height:1.6!important;}
 </style>
-<script>
-// Enable hidden-then-reveal only when motion is OK; default = content visible.
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reveal-on');}
-</script>
 </head>
 <body>
 
 <!-- ════════ NAV ════════ -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="brand" aria-label="Nine One — Home">
+    <a href="index.html" class="brand" aria-label="Nine One">
       <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
   <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
 <path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
@@ -254,76 +234,89 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
       <span class="brand-word"></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="sports.html">Sports</a></li>
       <li><a href="technologies.html">Technologies</a></li>
       <li><a href="ecosystem.html">Ecosystem</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
     </ul>
     <a href="build.html" class="nav-cta">Build with us</a>
   </div>
 </nav>
 
-<!-- ════════ HERO ════════ -->
-<header class="hero" data-screen-label="Hero">
-  <div class="hero-figure">
-    <img src="assets/images/home-hero.jpg" alt="Single outdoor padel court at golden hour with a woman walking past, players mid-rally, a modern clubhouse and lake landscape behind">
-  </div>
-  <div class="hero-overlay">
-    <span class="hero-eyebrow reveal">Nine One Sports</span>
-    <h1 class="reveal rd1">Move Together.</h1>
-    <a href="build.html" class="hero-link reveal rd2">Start a project —</a>
-  </div>
-</header>
-
-<!-- ════════ 01 · SPORTS (image left / text right) ════════ -->
-<section class="ed-sec" id="sports" data-screen-label="01 Sports">
-  <div class="ed-grid">
-    <div class="ed-figure reveal">
-      <img src="assets/images/sports-clubhouse.jpg" alt="NINE ONE tropical clubhouse at golden hour with palm trees, glass courts and illuminated branding">
-    </div>
-    <div class="ed-panel">
-      <span class="ed-eyebrow reveal">01</span>
-      <h2 class="ed-title reveal rd1">Sports</h2>
-      <p class="ed-body reveal rd2">Connection starts with space. We build the courts where it happens.</p>
-      <a href="sports.html" class="ed-link lime reveal rd2">Build With Us
-        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
-      </a>
+<!-- ════════ 01 · WHY WE EXIST (full panorama · page opener) ════════ -->
+<section class="awhy" id="top" data-screen-label="Why we exist">
+  <img class="bg-img" src="assets/images/about-why.jpg" alt="NINE ONE rooftop terrace connecting courts, clubhouse and community against the city skyline">
+  <div class="scrim-corner"></div>
+  <div class="awhy-inner">
+    <div class="awhy-box">
+      <span class="a-eyebrow reveal">About</span>
+      <h1 class="reveal">Move Together.</h1>
+      <p class="awhy-body reveal rd1">Movement is how people find each other — shared space, shared rhythm, communities built around something real. Nine ONE exists to bring that back: a calm system where space, intelligence and community work as one.</p>
     </div>
   </div>
 </section>
 
-<!-- ════════ 02 · TECHNOLOGIES (text left / image right) ════════ -->
-<section class="ed-sec sand" id="technology" data-screen-label="02 Technologies">
-  <div class="ed-grid img-right">
-    <div class="ed-panel">
-      <span class="ed-eyebrow reveal"><span class="dot blue"></span>02</span>
-      <h2 class="ed-title reveal rd1">Technologies</h2>
-      <p class="ed-body reveal rd2">Technology should deepen movement, not distract from it. That's what we build.</p>
-      <a href="technologies.html" class="ed-link blue reveal rd2">Explore Technologies
-        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
-      </a>
-    </div>
-    <div class="ed-figure reveal">
-      <img src="assets/images/tech-rooftop-experience.jpg" alt="Rooftop lounge at golden hour with players, a smart racket and dashboard device on the table, city skyline and padel courts behind">
+<!-- ════════ 03 · OUR PHILOSOPHY (light photo) ════════ -->
+<section class="aphoto aphilo" data-screen-label="Our philosophy">
+  <img class="bg-img" src="assets/images/about-philosophy.jpg" alt="NINE ONE clubhouse lounge beside glass padel courts at golden hour">
+  <div class="scrim-corner"></div>
+  <div class="aphoto-inner">
+    <div class="aphoto-box">
+      <span class="a-eyebrow reveal">Our philosophy</span>
+      <h2 class="reveal rd1">Calm Movement.</h2>
+      <p class="aphilo-sub reveal rd1">We don't believe sport is about winning. We believe it is about belonging.</p>
+      <p class="aphilo-body reveal rd2">Movement should reduce stress, not create it. It should bring people together, not isolate them. Technology should enhance the experience, not overwhelm it. Every court we build, every system we design, every community we support — exists around this one belief.</p>
+      <p class="aphilo-closing reveal rd2">Move together. Build together. Grow together.</p>
     </div>
   </div>
 </section>
 
-<!-- ════════ 03 · ECOSYSTEM (image left / text right) ════════ -->
-<section class="ed-sec" id="ecosystem" data-screen-label="03 Ecosystem">
-  <div class="ed-grid">
-    <div class="ed-figure reveal">
-      <img src="assets/images/ecosystem-data-layer.jpg" alt="Padel player mid-action with lime skeleton motion tracking and blue performance dashboard overlays">
+<!-- ════════ 04 · OUR ORIGIN (light photo) ════════ -->
+<section class="aphoto aorigin" data-screen-label="Our origin">
+  <img class="bg-img" src="assets/images/about-origin.jpg" alt="Snow-capped New Zealand mountain and alpine lake at dusk">
+  <div class="scrim-corner"></div>
+  <div class="aphoto-inner">
+    <div class="aphoto-box">
+      <span class="a-eyebrow reveal">Our origin</span>
+      <h2 class="reveal rd1">Designed in New Zealand. Built for the world.</h2>
+      <hr class="a-divider reveal rd1">
+      <p class="aorigin-body reveal rd2">New Zealand is where Nine ONE began. Not by accident — but by design. Small enough to move fast. Trusted enough to build real relationships. Open enough to think differently about what sport and community can be. This is where we proved the model. This is where the idea became real.</p>
     </div>
-    <div class="ed-panel">
-      <span class="ed-eyebrow reveal"><span class="dot"></span>03</span>
-      <h2 class="ed-title reveal rd1">Ecosystem</h2>
-      <p class="ed-body reveal rd2">Every court. Every player. Every movement. <strong style="font-weight:600;">Connected.</strong></p>
-      <a href="ecosystem.html" class="ed-link reveal rd2">Explore Ecosystem
-        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
-      </a>
+  </div>
+</section>
+
+<!-- ════════ 05 · OUR DIRECTION (timeline) ════════ -->
+<section class="adir" data-screen-label="Our direction">
+  <div class="adir-inner">
+    <span class="a-eyebrow reveal">Our direction</span>
+    <h2 class="reveal rd1">Our journey has just begun.</h2>
+    <img class="adir-map reveal rd1" src="assets/images/about-direction.jpg?v=2" alt="Minimal editorial world map illustration: a lime tennis-ball marker on New Zealand connected by a hand-drawn curve through an Asia-Pacific midpoint to an East Asia marker — the journey from now to the wider world">
+    <div class="adir-timeline reveal rd1">
+      <div class="adir-node is-now">
+        <div class="adir-label">Now</div>
+        <p class="adir-desc">Building our foundation in New Zealand. Creating iconic venues and connected experiences.</p>
+      </div>
+      <div class="adir-node">
+        <div class="adir-label">Next</div>
+        <p class="adir-desc">Expanding across Australia and the region. Growing our community and technology ecosystem.</p>
+      </div>
+      <div class="adir-node">
+        <div class="adir-label">Future</div>
+        <p class="adir-desc">Exporting Nine ONE infrastructure into Asia and the world. Setting a new standard for movement everywhere.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ════════ 06 · MOVE WITH US ════════ -->
+<section class="acta" id="cta" data-screen-label="Move with us">
+  <h2 class="reveal">Move with us.</h2>
+  <p class="acta-sub reveal rd1">Whether you are building a club, investing in the future of sport, or simply believe in what we are creating — there is a place for you in this movement.</p>
+  <div class="acta-actions reveal rd2">
+    <a href="#" class="btn btn-solid">Contact Nine One
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
   </div>
 </section>
 
@@ -331,14 +324,14 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-slogan">
-      <h2>Move Together<span class="accent">.</span></h2>
-      <a href="build.html" class="f-cta">Build with Us
+      <h2>Move Together.</h2>
+      <a href="#cta" class="f-cta">Start a project
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="brand">
+        <a href="index.html" class="brand">
           <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
   <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
 <path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
@@ -357,16 +350,16 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
       <div class="footer-col">
         <h4>Business</h4>
         <ul>
-          <li><a href="#sports">Sports</a></li>
+          <li><a href="sports.html">Sports</a></li>
           <li><a href="technologies.html">Technologies</a></li>
-          <li><a href="#ecosystem">Ecosystem</a></li>
+          <li><a href="ecosystem.html">Ecosystem</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="build.html">Build with Us</a></li>
+          <li><a href="#top">About</a></li>
+          <li><a href="build.html">Build with us</a></li>
           <li><a href="#">Careers</a></li>
         </ul>
       </div>
@@ -389,18 +382,16 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
 </footer>
 
 <template id="__bundler_thumbnail">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F5F5F3"/><text x="50" y="58" font-family="Inter,sans-serif" font-size="30" font-weight="900" fill="#0A0A0A" text-anchor="middle">no</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F5F5F3"/><text x="50" y="58" font-family="Inter,sans-serif" font-size="28" font-weight="900" fill="#0A0A0A" text-anchor="middle">no</text></svg>
 </template>
 
 <script>
-// reveal on scroll — with robust fallbacks so content is never stuck hidden
+document.documentElement.classList.add('reveal-on');
 const els=[...document.querySelectorAll('.reveal')];
 const show=el=>el.classList.add('visible');
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:0.08});
 els.forEach(el=>io.observe(el));
-// 1) reveal anything already in or above the viewport on first paint
 requestAnimationFrame(()=>{const vh=innerHeight||800;els.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92){show(el);io.unobserve(el);}});});
-// 2) safety net: if the observer never fires, reveal everything
 setTimeout(()=>els.forEach(show),1500);
 </script>
 </body>
