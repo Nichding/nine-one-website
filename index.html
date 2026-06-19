@@ -232,6 +232,28 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 .alink,.ed-link,.btn{font-weight:500!important;}
 .thumb-desc,.ctype-desc,.wcard-desc,.adir-desc,.tfeat-desc,.acard p,.dual-box p{font-size:14.5px!important;font-weight:400!important;line-height:1.65!important;}
 .shero-sub,.s-body,.t-body2,.ed-body,.awhy-body{font-size:17px!important;font-weight:400!important;line-height:1.6!important;}
+
+/* ── nav menu (desktop group) + mobile drawer ── */
+.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:1080px){
+  .nav{position:sticky;top:0;z-index:1100;}
+  .nav-toggle{display:flex;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--white);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
+  .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
+  .nav-links a{font-size:18px!important;}
+  .nav-cta{display:block;width:100%;text-align:center;padding:14px 24px;}
+}
+@media(max-width:768px){
+  :root{--gut:24px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-slogan h2{font-size:42px!important;}
+}
 </style>
 <script>
 // Enable hidden-then-reveal only when motion is OK; default = content visible.
@@ -259,15 +281,18 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentEle
 </svg></span>
       <span class="brand-word"></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="sports.html">Play</a></li>
-      <li><a href="technologies.html">Technologies</a></li>
-      <li><a href="facility.html">Facility</a></li>
-      <li><a href="ecosystem.html">Ecosystem</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-    <a href="build.html" class="nav-cta">Build with us</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="sports.html">Play</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="facility.html">Facility</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a href="build.html" class="nav-cta">Build with us</a>
+    </div>
   </div>
 </nav>
 
@@ -427,6 +452,13 @@ els.forEach(el=>io.observe(el));
 requestAnimationFrame(()=>{const vh=innerHeight||800;els.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92){show(el);io.unobserve(el);}});});
 // 2) safety net: if the observer never fires, reveal everything
 setTimeout(()=>els.forEach(show),1500);
+// mobile nav drawer
+const nav=document.getElementById('nav');
+const navToggle=document.querySelector('.nav-toggle');
+if(navToggle){
+  navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});
+  document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));
+}
 </script>
 </body>
 </html>
