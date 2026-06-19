@@ -11,49 +11,49 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Play — Premium Padel Court Infrastructure | Nine One Sports</title>
-<meta name="description" content="Premium padel court infrastructure designed for clubs, communities and long-term play. End-to-end venue delivery from Nine One Sports.">
-<link rel="canonical" href="https://nineonesports.co.nz/sports">
+<title>Facility — Air-Dome & Space Infrastructure | Nine One Sports</title>
+<meta name="description" content="All-weather air-domes, membrane structures and space conversion — built with an operations layer for wind load and structural safety. For councils and landowners.">
+<link rel="canonical" href="https://nineonesports.co.nz/facility">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nine One Sports">
-<meta property="og:title" content="Play — Premium Padel Court Infrastructure | Nine One Sports">
-<meta property="og:description" content="Premium padel court infrastructure designed for clubs, communities and long-term play. End-to-end venue delivery from Nine One Sports.">
-<meta property="og:url" content="https://nineonesports.co.nz/sports">
+<meta property="og:title" content="Facility — Air-Dome & Space Infrastructure | Nine One Sports">
+<meta property="og:description" content="All-weather air-domes, membrane structures and space conversion — built with an operations layer for wind load and structural safety. For councils and landowners.">
+<meta property="og:url" content="https://nineonesports.co.nz/facility">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
 /* ════════════════════════════════════════════════
-   NINE ONE · Sports · Tier 3 · V2.0.1
-   60% Soft White / 30% Black / 10% Lime · Inter only
-   Light-led · lime is the ONLY accent (no blue)
-   IA mirrors pages/sports.html, re-skinned to V2 CI
+   NINE ONE · Facility · per CI 正本 NINEONE_CI_System.html
+   Paper #F4F4F1 · Ink #121311 · Graphite #76766E (60/30/10)
+   Type: Inter (headline+body+UI) · Spline Sans Mono (labels)
+   Facility accent: yogurt blue #93D2F0 (deep ink #0E3B57 for text on it)
    ════════════════════════════════════════════════ */
 :root{
-  /* ── Neutral core · CI tokens ── */
+  /* ── Neutral core · CI 正本 NINEONE_CI_System.html (Paper / Ink / Graphite · 60/30/10) ── */
   --black:#0B0B0B;
   --paper:#F4F4F1;
-  --white:#F4F4F1;            /* alias → paper (legacy refs) */
-  --sand:#ECEBE6;            /* subtle greige for alternating sections */
+  --white:#F4F4F1;
+  --sand:#ECEBE6;
   --ink:#121311;
   --graphite:#76766E;
   --muted:#A6A7A1;
   --warmgrey:#D9D8D2;
   --line:#E7E6E1;
-  /* ── Three yogurt sparks · accents only · ≤15% · never body text ── */
+  /* ── Three yogurt sparks · accents only · ≤15% · deep same-hue ink for text ── */
   --play:#F6BE83;  --play-ink:#5E3411;
   --tech:#D4F25A;  --tech-ink:#2C340A;
   --fac:#93D2F0;   --fac-ink:#0E3B57;
-  --lime:#F6BE83;            /* this page's accent → Play orange */
-  --blue:#93D2F0;            /* legacy alias → facility blue */
-  --lime-soft:#FBE6CC;       /* soft play-orange ground */
+  --lime:#93D2F0;            /* THIS page = Facility → yogurt blue */
+  --blue:#93D2F0;
+  --lime-soft:#D6ECF7;
   --nav-h:110px; --gut:64px; --maxw:1440px;
   --display:'Inter',sans-serif;
   --mono:'Spline Sans Mono',ui-monospace,monospace;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;
   font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
@@ -114,9 +114,8 @@ img,svg{display:block;}
 .nav-cta:hover{background:var(--ink);color:var(--white);}
 
 /* ════════ 01 · HERO (full-bleed photo · dark corner scrim) ════════ */
-.shero{position:relative;width:100%;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;}
-.shero-slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity .7s ease;}
-.shero-slide.active{opacity:1;}
+.shero{position:relative;width:100%;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--paper);}
+/* hero uses a single <img class="shero-img"> (object-fit:cover, no background) — no slideshow, no repeat */
 .shero-scrim{position:absolute;inset:0;z-index:1;
   background:linear-gradient(to top,rgba(0,0,0,0.62) 0%,transparent 58%),
              linear-gradient(to right,rgba(0,0,0,0.42) 0%,transparent 60%);}
@@ -227,7 +226,7 @@ img,svg{display:block;}
   border:1px solid var(--line);border-radius:12px;padding:38px;}
 .bfield label{display:block;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--graphite);margin-bottom:9px;}
 .bfield input,.bfield textarea{width:100%;background:var(--white);border:1px solid var(--warmgrey);border-radius:6px;
-  padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);transition:border-color .2s,background .2s;}
+  padding:13px 15px;font-family:'Inter',sans-serif;font-size:16px;color:var(--ink);transition:border-color .2s,background .2s;}
 .bfield input::placeholder,.bfield textarea::placeholder{color:var(--muted);}
 .bfield input:focus,.bfield textarea:focus{outline:none;border-color:var(--ink);}
 .bfield textarea{height:104px;resize:vertical;line-height:1.5;}
@@ -298,10 +297,25 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 .nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
 .nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* ── hero image (object-fit cover, no repeat) ── */
+.shero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
+
+/* ── enquiry form success state ── */
+.form-success{display:none;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:38px;}
+.form-success.show{display:block;}
+.bform.hide{display:none;}
+.form-success h3{font-family:var(--display);font-size:22px;color:var(--ink);margin-bottom:10px;}
+.form-success p{font-size:15px;color:var(--graphite);line-height:1.6;}
+
+/* ── responsive: drawer nav ≤1080, mobile padding ≤768 ── */
 @media(max-width:1080px){
   .nav{position:sticky;top:0;z-index:1100;}
   .nav-toggle{display:flex;}
-  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--white);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--white);
+    flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;
+    padding:36px 24px;opacity:0;transform:translateY(-8px);
+    transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
   .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
   .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
   .nav-links a{font-size:18px!important;}
@@ -309,6 +323,11 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 }
 @media(max-width:768px){
   :root{--gut:24px;--nav-h:72px;}
+  .shero{min-height:78vh;}
+  .shero h1{font-size:42px!important;}
+  .build-inner{padding:64px 24px;}
+  .bform,.form-success{padding:22px;}
+  .why-cards{grid-template-columns:1fr;gap:26px;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
   .footer-slogan h2{font-size:42px!important;}
   .nav-inner .brand-icon{width:120px;}
@@ -340,9 +359,9 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
     <div class="nav-menu">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="sports.html" class="active">Play</a></li>
+        <li><a href="sports.html">Play</a></li>
         <li><a href="technologies.html">Technologies</a></li>
-        <li><a href="facility.html">Facility</a></li>
+        <li><a href="facility.html" class="active">Facility</a></li>
         <li><a href="ecosystem.html">Ecosystem</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
@@ -353,202 +372,141 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 
 <!-- ════════ 01 · HERO ════════ -->
 <header class="shero" id="top" data-screen-label="Hero">
-  <div class="shero-slide active" style="background-image:url('assets/images/sports-hero.jpg');"></div>
+  <img class="shero-img" src="assets/images/sports-airdome.jpg" alt="NINE ONE white air-dome facility at dusk — an all-weather membrane structure over a court">
   <div class="shero-scrim"></div>
   <div class="shero-inner">
-    <span class="eyebrow reveal"><span class="dot"></span>Play</span>
-    <h1 class="reveal rd1">Connection starts<br>with <span class="accent">space.</span></h1>
-    <p class="shero-sub reveal rd2">We build the courts where it happens.</p>
+    <span class="eyebrow reveal"><span class="dot"></span>Facility</span>
+    <h1 class="reveal rd1">Space to play.<br><span class="accent">All year.</span></h1>
+    <p class="shero-sub reveal rd2">Air-domes and membrane structures that turn open ground into year-round courts — sport-agnostic, fast to install, built to last.</p>
     <div class="shero-foot reveal rd3">
-      <a href="#courts" class="alink">Discover our system
+      <a href="#systems" class="alink">See how it works
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
   </div>
 </header>
 
-<!-- ════════ 02 · COURT PORTFOLIO ════════ -->
-<section class="courts" id="courts" data-screen-label="Court portfolio">
-  <p class="snum reveal">01</p>
-  <h2 class="s-title reveal rd1">Our courts portfolio</h2>
-  <div class="court-types reveal rd2">
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M5 14h14"/></svg>
-      <div class="ctype-title">Indoor</div>
-      <div class="ctype-desc">Climate-controlled. Built for year-round play.</div>
-    </div>
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="11" r="3"/><path d="M12 4v2M12 16v2M4 11h2M18 11h2M6.3 5.3l1.4 1.4M16.3 16.7l1.4-1.4M5.7 16.7l1.4-1.4M16.7 5.3l1.4 1.4"/><path d="M2 21h20"/></svg>
-      <div class="ctype-title">Outdoor</div>
-      <div class="ctype-desc">Designed for the elements. Built to last.</div>
-    </div>
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><path d="M3 4h18"/><path d="M3 20h18"/><path d="M6 4v16M12 4v16M18 4v16"/></svg>
-      <div class="ctype-title">Permanent</div>
-      <div class="ctype-desc">Tournament-grade. Built to anchor a community.</div>
-    </div>
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-2 8 9-12h-7l2-8z"/></svg>
-      <div class="ctype-title">Temporary</div>
-      <div class="ctype-desc">Fast to deploy. Ready when you are.</div>
-    </div>
-  </div>
-  <div class="courts-grid">
-    <div class="reveal">
-      <div class="thumb-img"><img src="assets/images/sports-court-1.jpg?v=2" alt="NINE ONE rooftop padel court at golden hour with city skyline backdrop, blue court surface and curved light fixtures — flagship Signature Panoramic venue" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Signature Panoramic Series</div>
-      <div class="thumb-desc">Flagship commercial and architectural padel solution.</div>
-    </div>
-    <div class="reveal rd1">
-      <div class="thumb-img"><img src="assets/images/sports-arena-indoor.jpg" alt="NINE ONE indoor padel arena with stadium seating, wooden floor and blue glass court" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Event Pro Series</div>
-      <div class="thumb-desc">International tournament-level performance system.</div>
-    </div>
-    <div class="reveal rd2">
-      <div class="thumb-img"><img src="assets/images/sports-court-2.jpg" alt="NINE ONE outdoor padel court with glass enclosure in bright daytime parkland" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Classic Club Series</div>
-      <div class="thumb-desc">The most versatile and scalable commercial court system.</div>
-    </div>
-    <div class="reveal">
-      <div class="thumb-img"><img src="assets/images/sports-court-outdoor.jpg" alt="NINE ONE outdoor padel court with full glass enclosure on a manicured lawn at dusk, parkland setting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Extreme Structure Series</div>
-      <div class="thumb-desc">Engineered for extreme environments and demanding conditions.</div>
-    </div>
-    <div class="reveal rd1">
-      <div class="thumb-img"><img src="assets/images/sports-heritage-venue.jpg" alt="NINE ONE portable padel court installed inside a heritage sandstone courtyard at golden hour — flexible installation in a historic setting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Mobility Series</div>
-      <div class="thumb-desc">Flexible installation and event-based court solution.</div>
-    </div>
-    <div class="reveal rd2">
-      <div class="thumb-img"><img src="assets/images/tech-smart-venue.jpg" alt="NINE ONE Smart Venue padel court — AI-powered connected ecosystem with sensor-equipped court nodes" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Smart Venue Series</div>
-      <div class="thumb-desc">Next-gen AI-powered smart padel ecosystem.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 03 · AIR DOME ════════ -->
-<section class="dome" data-screen-label="Air dome">
-  <img class="ph-img" src="assets/images/sports-airdome.jpg" alt="NINE ONE-branded white airdome padel facility at dusk" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+<!-- ════════ 02 · AIR-DOME SYSTEMS ════════ -->
+<section class="dome" id="systems" data-screen-label="Air-dome systems">
+  <img class="ph-img" src="assets/images/facility-dome.jpg" alt="NINE ONE air-dome facility at dusk — a year-round membrane structure over open ground" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
   <div class="dome-scrim"></div>
   <div class="dome-inner">
     <div class="dome-box">
-      <p class="snum reveal">02</p>
-      <h2 class="s-title reveal rd1">Air dome systems</h2>
+      <p class="snum reveal">01</p>
+      <h2 class="s-title reveal rd1">Air-domes &amp; membrane structures</h2>
       <div class="dome-divider reveal rd1"></div>
-      <p class="s-body reveal rd2">A cost-effective alternative to traditional indoor facilities — purpose-built for markets where weather and rent get in the way.</p>
+      <p class="s-body reveal rd2">Cost-effective, all-weather structures purpose-built for places where weather and rent get in the way of play.</p>
       <ul class="dome-list reveal rd2">
-        <li>Lower construction cost</li>
-        <li>Fast installation</li>
-        <li>Flexible relocation</li>
-        <li>All-weather play</li>
+        <li>Air-domes &amp; membrane structures</li>
+        <li>Structural shells</li>
+        <li>Space-scale fencing</li>
+        <li>Space conversion</li>
       </ul>
-      <a href="#build" class="alink reveal rd3">Enquire about a dome
+      <a href="#build" class="alink reveal rd3">Talk to us about a build
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ════════ 03.5 · FEATURED VENUE (sports-hero-1) ════════ -->
-<section class="feat" data-screen-label="Featured venue">
-  <img class="feat-img" src="assets/images/sports-clubhouse.jpg" alt="NINE ONE tropical clubhouse at golden hour with glass padel court, palm trees and illuminated signage">
-  <div class="feat-scrim"></div>
-  <div class="feat-inner">
-    <div class="feat-box">
-      <span class="eyebrow reveal"><span class="dot"></span>Featured venue</span>
-      <h2 class="reveal rd1">Iconic locations. Designed for play and landscape.</h2>
-      <p class="reveal rd2">From alpine lakesides to city rooftops — every NINE ONE venue is sited to belong to its place, then engineered to perform within it.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 04 · CLUB EXPERIENCE ════════ -->
-<section class="club" data-screen-label="Club experience">
-  <div class="club-text">
-    <p class="snum reveal">03</p>
-    <h2 class="s-title reveal rd1">Beyond the court.</h2>
-    <p class="s-body reveal rd2">We can help design the full club experience — from reception to court-side, every space that shapes how people feel.</p>
-  </div>
-  <div class="club-grid">
-    <div class="reveal">
-      <div class="thumb-img"><img src="assets/images/sports-lounge.jpg" alt="NINE ONE branded lounge interior with MOVE CONNECT LIVE wall, warm wood and sofas" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Lounge</div>
-      <div class="thumb-desc">Comfortable spaces to gather before and after play.</div>
-    </div>
-    <div class="reveal rd1">
-      <div class="thumb-img"><img src="assets/images/sports-cafe.jpg" alt="NINE ONE branded café interior with coffee bar, menu board and calm light" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Café</div>
-      <div class="thumb-desc">F&amp;B that keeps members on-site longer.</div>
-    </div>
-    <div class="reveal rd2">
-      <div class="thumb-img"><img src="assets/images/sports-social.jpg" alt="People at an outdoor NINE ONE social event beside the courts at golden hour" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Social Spaces</div>
-      <div class="thumb-desc">Flexible rooms designed for community.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 03.5 · AFTER HOURS ════════ -->
-<section class="evening" data-screen-label="After hours">
-  <div class="evening-inner">
-    <div class="evening-text">
-      <span class="eyebrow reveal"><span class="dot"></span>After hours</span>
-      <h2 class="reveal rd1">The club doesn't close at sunset.</h2>
-      <p class="reveal rd2">Reception, retail and the lounge stay lit for evening programming — league nights, socials and late sessions under the lights.</p>
-    </div>
-    <figure class="evening-card reveal rd1">
-      <img src="assets/images/sports-reception-night.jpg" alt="NINE ONE Sports reception lounge at night — dark architectural walls, illuminated nine one SPORTS logo wall, reception desk and retail display">
-    </figure>
-  </div>
-</section>
-
-<!-- ════════ 05 · WHY NINE ONE ════════ -->
-<section class="why" data-screen-label="Why Nine One">
+<!-- ════════ 03 · OPERATIONS INTELLIGENCE ════════ -->
+<section class="why" data-screen-label="Operations intelligence">
   <div class="why-inner">
     <div class="why-text">
-      <p class="snum reveal">04</p>
-      <h2 class="s-title reveal rd1">Why Nine One</h2>
-      <p class="s-body reveal rd2">Every court we deliver starts with design. End-to-end. From concept to court.</p>
+      <p class="snum reveal">02</p>
+      <h2 class="s-title reveal rd1">Built to stay safe and open.</h2>
+      <p class="s-body reveal rd2">Every structure carries an operations layer that watches the things that matter outdoors.</p>
     </div>
     <div class="why-cards">
       <div class="wcard reveal">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/><path d="M12 2a15 15 0 000 20"/></svg>
         <div class="wcard-num">01</div>
-        <h3 class="wcard-title">Global Supply Chain</h3>
-        <p class="wcard-desc">Built to your specification. Delivered to your timeline.</p>
+        <h3 class="wcard-title">Wind-load monitoring</h3>
+        <p class="wcard-desc">Sensors track the load on the structure in real time, so the team sees pressure building before it becomes a problem.</p>
       </div>
       <div class="wcard reveal rd1">
         <svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
         <div class="wcard-num">02</div>
-        <h3 class="wcard-title">Local Service</h3>
-        <p class="wcard-desc">Local inventory. Fast response. When you need it, not when it arrives.</p>
+        <h3 class="wcard-title">Wind-speed estimation</h3>
+        <p class="wcard-desc">On-site readings model conditions across the site, giving an accurate picture without a weather station on every corner.</p>
       </div>
       <div class="wcard reveal">
         <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
         <div class="wcard-num">03</div>
-        <h3 class="wcard-title">Better ROI</h3>
-        <p class="wcard-desc">Significantly more competitive than equivalent European solutions.</p>
+        <h3 class="wcard-title">Structural safety</h3>
+        <p class="wcard-desc">Thresholds and alerts are set to the structure's limits, so operators know when to act and when conditions are clear.</p>
       </div>
       <div class="wcard reveal rd1">
         <svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M8.5 12h7"/></svg>
         <div class="wcard-num">04</div>
-        <h3 class="wcard-title">Flexible Partnership</h3>
-        <p class="wcard-desc">We grow with the clubs we build. Partner, not supplier.</p>
+        <h3 class="wcard-title">All-weather operation</h3>
+        <p class="wcard-desc">Play stays on through wind, rain and cold — the structure keeps the court usable across the seasons.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════ 06 · LET'S BUILD ════════ -->
-<section class="build" id="build" data-screen-label="Court enquiry">
+<!-- ════════ 04 · WHO IT'S FOR ════════ -->
+<section class="feat" data-screen-label="Who it's for">
+  <img class="feat-img" src="assets/images/facility-space.jpg" alt="NINE ONE facility on open community land — a year-round court built where there was open ground">
+  <div class="feat-scrim"></div>
+  <div class="feat-inner">
+    <div class="feat-box">
+      <span class="eyebrow reveal"><span class="dot"></span>Who it's for</span>
+      <h2 class="reveal rd1">For councils and landowners.</h2>
+      <p class="reveal rd2">Turning open land into lasting community sport — complete, operable facilities, not just structures.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 04.5 · VALUE ════════ -->
+<section class="why" id="value" style="background:var(--sand);" data-screen-label="The value">
+  <div class="why-inner">
+    <div class="why-text">
+      <span class="eyebrow reveal"><span class="dot"></span>The value</span>
+      <h2 class="s-title reveal rd1" style="margin-bottom:18px;">More than a structure.</h2>
+      <p class="s-body reveal rd2">What a covered facility gives a council and its community.</p>
+    </div>
+    <div class="why-cards">
+      <div class="wcard reveal">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div class="wcard-num">01</div>
+        <h3 class="wcard-title">Year-round community access</h3>
+        <p class="wcard-desc">The court stays open through every season, so play and programming don't stop for the weather.</p>
+      </div>
+      <div class="wcard reveal rd1">
+        <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        <div class="wcard-num">02</div>
+        <h3 class="wcard-title">Faster land-to-play</h3>
+        <p class="wcard-desc">Open ground becomes a usable court in a fraction of a conventional build's timeline.</p>
+      </div>
+      <div class="wcard reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 10l7-7 7 7"/><path d="M5 17l7 4 7-4"/></svg>
+        <div class="wcard-num">03</div>
+        <h3 class="wcard-title">Lower-cost infrastructure</h3>
+        <p class="wcard-desc">A more affordable route to covered, all-weather courts than conventional construction.</p>
+      </div>
+      <div class="wcard reveal rd1">
+        <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
+        <div class="wcard-num">04</div>
+        <h3 class="wcard-title">An operable facility</h3>
+        <p class="wcard-desc">Delivered ready to run — structure, operations and safety together, not just a shell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 05 · LET'S BUILD ════════ -->
+<section class="build" id="build" data-screen-label="Facility enquiry">
   <div class="build-inner">
     <div class="build-text">
-      <p class="snum reveal">05</p>
-      <h2 class="s-title reveal rd1">Bring movement to your community.</h2>
-      <p class="s-body reveal rd2">Tell us about the venue, scale and timeline. We'll plan the court system from there.</p>
+      <p class="snum reveal">03</p>
+      <h2 class="s-title reveal rd1">Turn your land into year-round sport.</h2>
+      <p class="s-body reveal rd2">Tell us about the site, scale and timeline. We'll plan the structure from there.</p>
     </div>
-    <form class="bform reveal rd1" action="#" method="post">
+    <form class="bform reveal rd1" name="facility-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
+      <input type="hidden" name="form-name" value="facility-enquiry">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="bfield">
         <label for="f-name">Name</label>
         <input id="f-name" name="name" type="text" placeholder="Your name" required>
@@ -559,12 +517,16 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
       </div>
       <div class="bfield">
         <label for="f-msg">What are you looking to build?</label>
-        <textarea id="f-msg" name="message" placeholder="Tell us about the venue, scale and timeline…" required></textarea>
+        <textarea id="f-msg" name="message" placeholder="Tell us about the site, scale and timeline…" required></textarea>
       </div>
       <button type="submit" class="btn btn-solid">Send
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </button>
     </form>
+    <div class="form-success reveal rd1" id="form-success" role="status" aria-live="polite">
+      <h3>Thanks — message received.</h3>
+      <p>We'll be in touch shortly about your facility.</p>
+    </div>
   </div>
 </section>
 
@@ -573,7 +535,7 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
   <div class="footer-inner">
     <div class="footer-slogan">
       <h2>Move Together<span class="accent">.</span></h2>
-      <a href="#build" class="f-cta">Court enquiry
+      <a href="#build" class="f-cta">Talk to us
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
@@ -598,7 +560,7 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
       <div class="footer-col">
         <h4>Business</h4>
         <ul>
-          <li><a href="#top">Play</a></li>
+          <li><a href="sports.html">Play</a></li>
           <li><a href="technologies.html">Technologies</a></li>
           <li><a href="facility.html">Facility</a></li>
           <li><a href="ecosystem.html">Ecosystem</a></li>
@@ -608,24 +570,19 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="#build">Court enquiry</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="#build">Facility enquiry</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
           <li><a href="https://www.linkedin.com/company/nine-one-sports" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#">nineonesports.co.nz</a></li>
+          <li><a href="https://nineonesports.co.nz">nineonesports.co.nz</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
-      <div class="legal">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
     </div>
   </div>
 </footer>
@@ -642,17 +599,24 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){sho
 els.forEach(el=>io.observe(el));
 requestAnimationFrame(()=>{const vh=innerHeight||800;els.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92){show(el);io.unobserve(el);}});});
 setTimeout(()=>els.forEach(show),1500);
-// hero slideshow
-const dots=[...document.querySelectorAll('.shero-dots span')];
-const slides=[...document.querySelectorAll('.shero-slide')];
-let cur=0,timer;
-function go(i){cur=i;dots.forEach((d,n)=>d.classList.toggle('active',n===i));slides.forEach((s,n)=>s.classList.toggle('active',n===i));}
-dots.forEach(d=>d.addEventListener('click',()=>{go(+d.dataset.dot);clearInterval(timer);timer=setInterval(()=>go((cur+1)%slides.length),5000);}));
-timer=setInterval(()=>go((cur+1)%slides.length),5000);
 // mobile nav drawer
 const nav=document.getElementById('nav');
 const navToggle=document.querySelector('.nav-toggle');
-if(navToggle){navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));}
+if(navToggle){
+  navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});
+  document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));
+}
+// enquiry form — Netlify Forms with inline success
+const enq=document.querySelector('.bform');
+if(enq){
+  enq.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!enq.checkValidity()){enq.reportValidity();return;}
+    const body=new URLSearchParams(new FormData(enq)).toString();
+    const done=()=>{enq.classList.add('hide');const s=document.getElementById('form-success');if(s){s.classList.add('show','visible');s.scrollIntoView({behavior:'smooth',block:'center'});}};
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body}).then(done).catch(done);
+  });
+}
 </script>
 </body>
 </html>
