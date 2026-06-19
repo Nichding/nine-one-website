@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://nineonesports.co.nz/build">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
 /* ════════════════════════════════════════════════
    NINE ONE · Build with us · Tier 4 Master · V2.0.1
@@ -30,11 +30,25 @@
    Inter only · light, calm, architectural — no dark glass (D-002)
    ════════════════════════════════════════════════ */
 :root{
-  --black:#0A0A0A; --white:#F5F5F3; --paper:#EEEDE8;
-  --ink:#1A1A1A; --graphite:#6F706C; --muted:#A6A7A1; --warmgrey:#D9D9D6;
-  --lime:#C7F000;
-  --line:#EEEDE8; --nav-h:110px; --gut:64px; --maxw:1440px;
-  --mono:'Inter',sans-serif;
+  /* ── Neutral core · CI tokens ── */
+  --black:#0B0B0B;
+  --paper:#F4F4F1;
+  --white:#F4F4F1;            /* alias → paper (legacy refs) */
+  --sand:#ECEBE6;            /* subtle greige for alternating sections */
+  --ink:#121311;
+  --graphite:#76766E;
+  --muted:#A6A7A1;
+  --warmgrey:#D9D8D2;
+  --line:#E7E6E1;
+  /* ── Three yogurt sparks · accents only · ≤15% · never body text ── */
+  --play:#F6BE83;  --play-ink:#5E3411;
+  --tech:#D4F25A;  --tech-ink:#2C340A;
+  --fac:#93D2F0;   --fac-ink:#0E3B57;
+  --lime:#D4F25A;            /* legacy alias → tech green */
+  --blue:#93D2F0;            /* legacy alias → facility blue */
+  --nav-h:110px; --gut:64px; --maxw:1440px;
+  --display:'Inter',sans-serif;
+  --mono:'Spline Sans Mono',ui-monospace,monospace;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -83,10 +97,10 @@ img,svg{display:block;}
   border-radius:8px;padding:15px 16px;font-family:'Inter',sans-serif;font-size:16px;color:var(--ink);
   transition:border-color .2s ease,box-shadow .2s ease;}
 .field input::placeholder,.field textarea::placeholder{color:var(--muted);}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(199,240,0,0.30);}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(212,242,90,0.30);}
 .field textarea{height:150px;resize:vertical;line-height:1.55;}
 .field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:40px;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1l5 5 5-5' stroke='%231A1A1A' stroke-width='1.5'/></svg>");
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1l5 5 5-5' stroke='%23121311' stroke-width='1.5'/></svg>");
   background-repeat:no-repeat;background-position:right 16px center;}
 .bsubmit{align-self:flex-start;margin-top:4px;display:inline-flex;align-items:center;gap:10px;
   background:var(--ink);color:var(--white);border:1.5px solid var(--ink);border-radius:999px;
@@ -116,9 +130,10 @@ img,svg{display:block;}
 .footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
   padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
 .footer-slogan h2{font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);}
+.footer-slogan h2 .accent{color:var(--lime);}
 .footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
   font-size:15px;font-weight:600;color:var(--black);background:var(--white);padding:14px 28px;border-radius:999px;transition:background .2s;}
-.footer-slogan .f-cta:hover{background:var(--lime);}
+.footer-slogan .f-cta:hover{background:var(--tech);color:var(--tech-ink);}
 .footer-slogan .f-cta svg{width:15px;height:15px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0 80px;}
 .footer-brand .brand-word{color:var(--white);}
@@ -132,9 +147,9 @@ img,svg{display:block;}
 .footer-col a:hover{opacity:1;}
 .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;
   padding-top:32px;border-top:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
-.footer-bottom .meta{font-size:13px;color:#6F706C;letter-spacing:0.01em;}
+.footer-bottom .meta{font-family:var(--mono);font-size:12px;color:#A6A7A1;letter-spacing:0.04em;}
 .footer-bottom .legal{display:flex;gap:26px;}
-.footer-bottom .legal a{font-size:13px;color:#6F706C;transition:color .2s;}
+.footer-bottom .legal a{font-family:var(--mono);font-size:12px;color:#A6A7A1;letter-spacing:0.04em;transition:color .2s;}
 .footer-bottom .legal a:hover{color:var(--white);}
 
 /* reveal */
@@ -156,7 +171,7 @@ h1{font-size:clamp(40px,5vw,64px)!important;font-weight:500!important;line-heigh
 h2{font-size:clamp(28px,3vw,40px)!important;font-weight:600!important;line-height:1.15!important;letter-spacing:-0.01em!important;}
 h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!important;line-height:1.25!important;letter-spacing:-0.005em!important;}
 .footer-slogan h2{font-size:clamp(36px,4.5vw,56px)!important;font-weight:500!important;line-height:1.0!important;letter-spacing:-0.02em!important;}
-.eyebrow,.a-eyebrow,.ed-eyebrow,.hero-eyebrow,.thero-eyebrow,.ehero-eyebrow,.ctype-title,.thumb-label,.tfeat-eyebrow,.snum,.adir-label,.l-small,.footer-col h4,.ph-label{font-size:10.5px!important;font-weight:500!important;letter-spacing:0.14em!important;line-height:1.4!important;}
+.eyebrow,.a-eyebrow,.ed-eyebrow,.hero-eyebrow,.thero-eyebrow,.ehero-eyebrow,.ctype-title,.thumb-label,.tfeat-eyebrow,.snum,.adir-label,.l-small,.footer-col h4,.ph-label{font-family:var(--mono)!important;font-size:10.5px!important;font-weight:500!important;letter-spacing:0.12em!important;line-height:1.4!important;}
 .nav-links a{font-size:13px!important;font-weight:500!important;letter-spacing:0.04em!important;text-transform:none!important;}
 .nav-cta,.hero-link,.thero-link,.ehero-link,.f-cta{font-size:11.5px!important;font-weight:500!important;letter-spacing:0.16em!important;text-transform:uppercase!important;}
 .alink,.ed-link,.btn{font-weight:500!important;}
@@ -272,7 +287,7 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-slogan">
-      <h2>Move Together.</h2>
+      <h2>Move Together<span class="accent">.</span></h2>
       <a href="#form" class="f-cta">Start a project
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
