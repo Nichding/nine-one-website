@@ -22,38 +22,38 @@
 <meta property="og:url" content="https://nineonesports.co.nz/facility">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
 /* ════════════════════════════════════════════════
-   NINE ONE · Facility · publishable preview
-   Soft White #F5F5F3 led · Ink #14161A · Graphite #6F706C
-   Accent: Blaze #FA4D17 (Steel #5E727B secondary)
-   Type: Figtree (display) · Public Sans (body / UI)
+   NINE ONE · Facility · current CI 正本 (NINEONE_CI_System.html)
+   60% Soft White / 30% Black / 10% Facility blue · Inter + Spline Sans Mono
+   Light-led · Facility blue #93D2F0 is the only accent
    ════════════════════════════════════════════════ */
 :root{
-  /* ── Neutral core ── */
-  --black:#14161A;
-  --paper:#F5F5F3;
-  --white:#F5F5F3;            /* alias → soft white */
+  /* ── Neutral core · CI tokens ── */
+  --black:#0B0B0B;
+  --paper:#F4F4F1;
+  --white:#F4F4F1;            /* alias → paper (legacy refs) */
   --sand:#ECEBE6;            /* subtle greige for alternating sections */
-  --ink:#14161A;
-  --graphite:#6F706C;
-  --muted:#9A9B97;
-  --warmgrey:#D7D7D3;
-  --line:#E6E6E2;
-  /* ── Accents ── */
-  --blaze:#FA4D17;  --steel:#5E727B;
-  --lime:#FA4D17;            /* page accent → Blaze */
-  --blue:#5E727B;            /* secondary → Steel */
-  --lime-soft:#FCE3D8;       /* soft blaze ground */
-  --nav-h:96px; --gut:64px; --maxw:1440px;
-  --display:'Figtree',sans-serif;
-  --body:'Public Sans',sans-serif;
-  --mono:'Public Sans',sans-serif;   /* labels in Public Sans (UI) */
+  --ink:#121311;
+  --graphite:#76766E;
+  --muted:#A6A7A1;
+  --warmgrey:#D9D8D2;
+  --line:#E7E6E1;
+  /* ── Three yogurt sparks · accents only · ≤15% · never body text ── */
+  --play:#F6BE83;  --play-ink:#5E3411;
+  --tech:#D4F25A;  --tech-ink:#2C340A;
+  --fac:#93D2F0;   --fac-ink:#0E3B57;
+  --lime:#93D2F0;            /* this page's accent → Facility blue */
+  --blue:#93D2F0;            /* legacy alias → facility blue */
+  --lime-soft:#D6ECF7;       /* soft blue ground */
+  --nav-h:110px; --gut:64px; --maxw:1440px;
+  --display:'Inter',sans-serif;
+  --mono:'Spline Sans Mono',ui-monospace,monospace;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--ink);font-family:var(--body);
+body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;
   font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img,svg{display:block;}
@@ -226,7 +226,7 @@ img,svg{display:block;}
   border:1px solid var(--line);border-radius:12px;padding:38px;}
 .bfield label{display:block;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--graphite);margin-bottom:9px;}
 .bfield input,.bfield textarea{width:100%;background:var(--white);border:1px solid var(--warmgrey);border-radius:6px;
-  padding:13px 15px;font-family:var(--body);font-size:16px;color:var(--ink);transition:border-color .2s,background .2s;}
+  padding:13px 15px;font-family:'Inter',sans-serif;font-size:16px;color:var(--ink);transition:border-color .2s,background .2s;}
 .bfield input::placeholder,.bfield textarea::placeholder{color:var(--muted);}
 .bfield input:focus,.bfield textarea:focus{outline:none;border-color:var(--ink);}
 .bfield textarea{height:104px;resize:vertical;line-height:1.5;}
@@ -238,10 +238,10 @@ img,svg{display:block;}
 .footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
   padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
 .footer-slogan h2{font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);}
-.footer-slogan h2 .accent{color:var(--lime);}
+.footer-slogan h2 .accent{color:var(--tech);}
 .footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
   font-size:15px;font-weight:600;color:var(--black);background:var(--white);padding:14px 28px;border-radius:999px;transition:background .2s;}
-.footer-slogan .f-cta:hover{background:var(--lime);color:#fff;}
+.footer-slogan .f-cta:hover{background:var(--tech);color:var(--tech-ink);}
 .footer-slogan .f-cta svg{width:15px;height:15px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0 80px;}
 .footer-brand .brand-word{color:var(--white);}
@@ -289,10 +289,6 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 .alink,.ed-link,.btn{font-weight:500!important;}
 .thumb-desc,.ctype-desc,.wcard-desc,.adir-desc,.tfeat-desc,.acard p,.dual-box p{font-size:14.5px!important;font-weight:400!important;line-height:1.65!important;}
 .shero-sub,.s-body,.t-body2,.ed-body,.awhy-body{font-size:17px!important;font-weight:400!important;line-height:1.6!important;}
-
-/* ── Figtree headings · Public Sans body/UI ── */
-h1,h2,h3,h4,.s-title,.wcard-title,.feat h2,.evening-text h2{font-family:var(--display)!important;}
-.nav-links a,.nav-cta,.alink,.btn,.eyebrow,.snum,.wcard-num,.ph-label,.footer-col h4,.footer-bottom .meta{font-family:var(--body)!important;}
 
 /* ── nav menu (desktop group) + mobile drawer ── */
 .nav-menu{display:flex;align-items:center;gap:40px;}
