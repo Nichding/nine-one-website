@@ -22,39 +22,38 @@
 <meta property="og:url" content="https://nineonesports.co.nz/facility">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap">
 <style>
 /* ════════════════════════════════════════════════
-   NINE ONE · Facility · Tier 3 · V2.0.1
-   60% Soft White / 30% Black / 10% Facility blue · Inter only
-   Light-led · Facility blue is the ONLY accent (no green/orange)
-   IA mirrors pages/sports.html, re-skinned to V2 CI
+   NINE ONE · Facility · publishable preview
+   Soft White #F5F5F3 led · Ink #14161A · Graphite #6F706C
+   Accent: Blaze #FA4D17 (Steel #5E727B secondary)
+   Type: Figtree (display) · Public Sans (body / UI)
    ════════════════════════════════════════════════ */
 :root{
-  /* ── Neutral core · CI tokens ── */
-  --black:#0B0B0B;
-  --paper:#F4F4F1;
-  --white:#F4F4F1;            /* alias → paper (legacy refs) */
+  /* ── Neutral core ── */
+  --black:#14161A;
+  --paper:#F5F5F3;
+  --white:#F5F5F3;            /* alias → soft white */
   --sand:#ECEBE6;            /* subtle greige for alternating sections */
-  --ink:#121311;
-  --graphite:#76766E;
-  --muted:#A6A7A1;
-  --warmgrey:#D9D8D2;
-  --line:#E7E6E1;
-  /* ── Three yogurt sparks · accents only · ≤15% · never body text ── */
-  --play:#F6BE83;  --play-ink:#5E3411;
-  --tech:#D4F25A;  --tech-ink:#2C340A;
-  --fac:#93D2F0;   --fac-ink:#0E3B57;
-  --lime:#93D2F0;            /* this page's accent → Facility blue */
-  --blue:#93D2F0;            /* legacy alias → facility blue */
-  --lime-soft:#D6ECF7;       /* soft blue ground */
-  --nav-h:110px; --gut:64px; --maxw:1440px;
-  --display:'Inter',sans-serif;
-  --mono:'Spline Sans Mono',ui-monospace,monospace;
+  --ink:#14161A;
+  --graphite:#6F706C;
+  --muted:#9A9B97;
+  --warmgrey:#D7D7D3;
+  --line:#E6E6E2;
+  /* ── Accents ── */
+  --blaze:#FA4D17;  --steel:#5E727B;
+  --lime:#FA4D17;            /* page accent → Blaze */
+  --blue:#5E727B;            /* secondary → Steel */
+  --lime-soft:#FCE3D8;       /* soft blaze ground */
+  --nav-h:96px; --gut:64px; --maxw:1440px;
+  --display:'Figtree',sans-serif;
+  --body:'Public Sans',sans-serif;
+  --mono:'Public Sans',sans-serif;   /* labels in Public Sans (UI) */
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;
+body{background:var(--white);color:var(--ink);font-family:var(--body);
   font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
 img,svg{display:block;}
@@ -227,7 +226,7 @@ img,svg{display:block;}
   border:1px solid var(--line);border-radius:12px;padding:38px;}
 .bfield label{display:block;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--graphite);margin-bottom:9px;}
 .bfield input,.bfield textarea{width:100%;background:var(--white);border:1px solid var(--warmgrey);border-radius:6px;
-  padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);transition:border-color .2s,background .2s;}
+  padding:13px 15px;font-family:var(--body);font-size:16px;color:var(--ink);transition:border-color .2s,background .2s;}
 .bfield input::placeholder,.bfield textarea::placeholder{color:var(--muted);}
 .bfield input:focus,.bfield textarea:focus{outline:none;border-color:var(--ink);}
 .bfield textarea{height:104px;resize:vertical;line-height:1.5;}
@@ -239,10 +238,10 @@ img,svg{display:block;}
 .footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
   padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
 .footer-slogan h2{font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);}
-.footer-slogan h2 .accent{color:var(--tech);}
+.footer-slogan h2 .accent{color:var(--lime);}
 .footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
   font-size:15px;font-weight:600;color:var(--black);background:var(--white);padding:14px 28px;border-radius:999px;transition:background .2s;}
-.footer-slogan .f-cta:hover{background:var(--tech);color:var(--tech-ink);}
+.footer-slogan .f-cta:hover{background:var(--lime);color:#fff;}
 .footer-slogan .f-cta svg{width:15px;height:15px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0 80px;}
 .footer-brand .brand-word{color:var(--white);}
@@ -290,6 +289,52 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 .alink,.ed-link,.btn{font-weight:500!important;}
 .thumb-desc,.ctype-desc,.wcard-desc,.adir-desc,.tfeat-desc,.acard p,.dual-box p{font-size:14.5px!important;font-weight:400!important;line-height:1.65!important;}
 .shero-sub,.s-body,.t-body2,.ed-body,.awhy-body{font-size:17px!important;font-weight:400!important;line-height:1.6!important;}
+
+/* ── Figtree headings · Public Sans body/UI ── */
+h1,h2,h3,h4,.s-title,.wcard-title,.feat h2,.evening-text h2{font-family:var(--display)!important;}
+.nav-links a,.nav-cta,.alink,.btn,.eyebrow,.snum,.wcard-num,.ph-label,.footer-col h4,.footer-bottom .meta{font-family:var(--body)!important;}
+
+/* ── nav menu (desktop group) + mobile drawer ── */
+.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* ── hero image (object-fit cover, no repeat) ── */
+.shero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
+
+/* ── enquiry form success state ── */
+.form-success{display:none;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:38px;}
+.form-success.show{display:block;}
+.bform.hide{display:none;}
+.form-success h3{font-family:var(--display);font-size:22px;color:var(--ink);margin-bottom:10px;}
+.form-success p{font-size:15px;color:var(--graphite);line-height:1.6;}
+
+/* ── responsive: drawer nav ≤1080, mobile padding ≤768 ── */
+@media(max-width:1080px){
+  .nav{position:sticky;top:0;z-index:1100;}
+  .nav-toggle{display:flex;}
+  .nav-menu{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:var(--white);
+    flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;
+    padding:36px 24px;transform:translateX(100%);transition:transform .3s ease;pointer-events:none;}
+  .nav.is-open .nav-menu{transform:translateX(0);pointer-events:auto;}
+  .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
+  .nav-links a{font-size:18px!important;}
+  .nav-cta{display:block;width:100%;text-align:center;padding:14px 24px;}
+}
+@media(max-width:768px){
+  :root{--gut:24px;--nav-h:72px;}
+  .shero{min-height:78vh;}
+  .shero h1{font-size:42px!important;}
+  .build-inner{padding:64px 24px;}
+  .bform,.form-success{padding:22px;}
+  .why-cards{grid-template-columns:1fr;gap:26px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-slogan h2{font-size:42px!important;}
+  .nav-inner .brand-icon{width:120px;}
+}
 </style>
 </head>
 <body>
@@ -313,21 +358,24 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
 </svg></span>
       <span class="brand-word"></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sports.html">Play</a></li>
-      <li><a href="technologies.html">Technologies</a></li>
-      <li><a href="facility.html" class="active">Facility</a></li>
-      <li><a href="ecosystem.html">Ecosystem</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-    <a href="build.html" class="nav-cta">Build with us</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sports.html">Play</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="facility.html" class="active">Facility</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a href="build.html" class="nav-cta">Build with us</a>
+    </div>
   </div>
 </nav>
 
 <!-- ════════ 01 · HERO ════════ -->
 <header class="shero" id="top" data-screen-label="Hero">
-  <div class="shero-slide active" style="background-image:url('assets/images/sports-airdome.jpg');"></div>
+  <img class="shero-img" src="assets/images/sports-airdome.jpg" alt="NINE ONE white air-dome facility at dusk — an all-weather membrane structure over a court">
   <div class="shero-scrim"></div>
   <div class="shero-inner">
     <span class="eyebrow reveal"><span class="dot"></span>Facility</span>
@@ -414,6 +462,43 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
   </div>
 </section>
 
+<!-- ════════ 04.5 · VALUE ════════ -->
+<section class="why" id="value" style="background:var(--sand);" data-screen-label="The value">
+  <div class="why-inner">
+    <div class="why-text">
+      <span class="eyebrow reveal"><span class="dot"></span>The value</span>
+      <h2 class="s-title reveal rd1" style="margin-bottom:18px;">More than a structure.</h2>
+      <p class="s-body reveal rd2">What a covered facility gives a council and its community.</p>
+    </div>
+    <div class="why-cards">
+      <div class="wcard reveal">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div class="wcard-num">01</div>
+        <h3 class="wcard-title">Year-round community access</h3>
+        <p class="wcard-desc">The court stays open through every season, so play and programming don't stop for the weather.</p>
+      </div>
+      <div class="wcard reveal rd1">
+        <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        <div class="wcard-num">02</div>
+        <h3 class="wcard-title">Faster land-to-play</h3>
+        <p class="wcard-desc">Open ground becomes a usable court in a fraction of a conventional build's timeline.</p>
+      </div>
+      <div class="wcard reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 10l7-7 7 7"/><path d="M5 17l7 4 7-4"/></svg>
+        <div class="wcard-num">03</div>
+        <h3 class="wcard-title">Lower-cost infrastructure</h3>
+        <p class="wcard-desc">A more affordable route to covered, all-weather courts than conventional construction.</p>
+      </div>
+      <div class="wcard reveal rd1">
+        <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
+        <div class="wcard-num">04</div>
+        <h3 class="wcard-title">An operable facility</h3>
+        <p class="wcard-desc">Delivered ready to run — structure, operations and safety together, not just a shell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ════════ 05 · LET'S BUILD ════════ -->
 <section class="build" id="build" data-screen-label="Facility enquiry">
   <div class="build-inner">
@@ -422,7 +507,9 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
       <h2 class="s-title reveal rd1">Turn your land into year-round sport.</h2>
       <p class="s-body reveal rd2">Tell us about the site, scale and timeline. We'll plan the structure from there.</p>
     </div>
-    <form class="bform reveal rd1" action="#" method="post">
+    <form class="bform reveal rd1" name="facility-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
+      <input type="hidden" name="form-name" value="facility-enquiry">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="bfield">
         <label for="f-name">Name</label>
         <input id="f-name" name="name" type="text" placeholder="Your name" required>
@@ -433,12 +520,16 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
       </div>
       <div class="bfield">
         <label for="f-msg">What are you looking to build?</label>
-        <textarea id="f-msg" name="message" placeholder="Tell us about the venue, scale and timeline…" required></textarea>
+        <textarea id="f-msg" name="message" placeholder="Tell us about the site, scale and timeline…" required></textarea>
       </div>
       <button type="submit" class="btn btn-solid">Send
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </button>
     </form>
+    <div class="form-success reveal rd1" id="form-success" role="status" aria-live="polite">
+      <h3>Thanks — message received.</h3>
+      <p>We'll be in touch shortly about your facility.</p>
+    </div>
   </div>
 </section>
 
@@ -483,23 +574,18 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="#build">Facility enquiry</a></li>
-          <li><a href="#">Careers</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
           <li><a href="https://www.linkedin.com/company/nine-one-sports" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#">nineonesports.co.nz</a></li>
+          <li><a href="https://nineonesports.co.nz">nineonesports.co.nz</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
-      <div class="legal">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
     </div>
   </div>
 </footer>
@@ -516,13 +602,24 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){sho
 els.forEach(el=>io.observe(el));
 requestAnimationFrame(()=>{const vh=innerHeight||800;els.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92){show(el);io.unobserve(el);}});});
 setTimeout(()=>els.forEach(show),1500);
-// hero slideshow
-const dots=[...document.querySelectorAll('.shero-dots span')];
-const slides=[...document.querySelectorAll('.shero-slide')];
-let cur=0,timer;
-function go(i){cur=i;dots.forEach((d,n)=>d.classList.toggle('active',n===i));slides.forEach((s,n)=>s.classList.toggle('active',n===i));}
-dots.forEach(d=>d.addEventListener('click',()=>{go(+d.dataset.dot);clearInterval(timer);timer=setInterval(()=>go((cur+1)%slides.length),5000);}));
-timer=setInterval(()=>go((cur+1)%slides.length),5000);
+// mobile nav drawer
+const nav=document.getElementById('nav');
+const navToggle=document.querySelector('.nav-toggle');
+if(navToggle){
+  navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});
+  document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));
+}
+// enquiry form — Netlify Forms with inline success
+const enq=document.querySelector('.bform');
+if(enq){
+  enq.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!enq.checkValidity()){enq.reportValidity();return;}
+    const body=new URLSearchParams(new FormData(enq)).toString();
+    const done=()=>{enq.classList.add('hide');const s=document.getElementById('form-success');if(s){s.classList.add('show','visible');s.scrollIntoView({behavior:'smooth',block:'center'});}};
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body}).then(done).catch(done);
+  });
+}
 </script>
 </body>
 </html>
