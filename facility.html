@@ -209,6 +209,35 @@ img,svg{display:block;}
   .fform .actions{flex-direction:column;align-items:stretch;}
   .fform .actions .btn{justify-content:center;}
 }
+/* ── Facility · business-style layout (text hero · audience tiles · dark 4-panel) ── */
+.fhero{max-width:var(--maxw);margin:0 auto;padding:clamp(96px,13vw,176px) var(--gut) clamp(52px,6.5vw,84px);}
+.fhero .eyebrow{margin-bottom:20px;}
+.fhero h1{font-size:clamp(40px,6vw,84px);font-weight:600;line-height:1.0;letter-spacing:-0.03em;color:var(--ink);max-width:15ch;}
+.fhero-sub{font-size:clamp(18px,1.8vw,23px);line-height:1.5;color:var(--graphite);max-width:52ch;margin-top:24px;}
+.fhero-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:34px;}
+.ftiles{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut) clamp(28px,3.5vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,1.6vw,22px);}
+.ftile{position:relative;display:block;border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--black);}
+.ftile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.ftile:hover img{transform:scale(1.03);}
+.ftile-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.74),rgba(11,11,11,0.05) 55%);}
+.ftile-t{position:absolute;left:0;bottom:0;z-index:2;padding:clamp(26px,3vw,40px);color:var(--paper);}
+.ftile-t .eyebrow{color:rgba(244,244,241,0.85);margin-bottom:12px;}
+.ftile-t h2{font-size:clamp(22px,2.4vw,32px);font-weight:600;line-height:1.1;letter-spacing:-0.02em;max-width:18ch;}
+.ftile-t .tlink{color:var(--paper);margin-top:16px;}
+.fdark{background:var(--black);color:var(--paper);padding:clamp(72px,9vw,128px) 0;margin-top:clamp(28px,3.5vw,44px);}
+.fdark-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);}
+.fdark-inner h2{font-size:clamp(26px,3vw,42px);font-weight:600;line-height:1.08;letter-spacing:-0.02em;color:var(--paper);max-width:18ch;margin-bottom:clamp(34px,4vw,52px);}
+.fdark-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,1.6vw,22px);}
+.fcard{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:#161616;}
+.fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.78;transition:transform .6s ease,opacity .4s;}
+.fcard:hover img{transform:scale(1.03);opacity:0.9;}
+.fcard-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.82),rgba(11,11,11,0.12) 62%);}
+.fcard-t{position:absolute;left:0;bottom:0;z-index:2;padding:clamp(22px,2.6vw,34px);}
+.fcard-t .eyebrow{color:rgba(244,244,241,0.82);margin-bottom:10px;}
+.fcard-t h3{font-size:clamp(19px,2vw,26px);font-weight:600;line-height:1.12;letter-spacing:-0.015em;color:var(--paper);max-width:20ch;}
+@media(max-width:760px){.ftiles,.fdark-grid{grid-template-columns:1fr;}}
+.fband{position:relative;width:100%;height:clamp(420px,70vh,720px);overflow:hidden;background:var(--black);margin-bottom:clamp(28px,3.5vw,44px);}
+.fband img{width:100%;height:100%;object-fit:cover;display:block;}
 </style>
 </head>
 <body>
@@ -232,61 +261,73 @@ img,svg{display:block;}
   </div>
 </nav>
 
-<!-- ════════ HERO ════════ -->
-<header class="hero">
-  <img class="hero-img" src="assets/images/opt/facility-dome.jpg" alt="A covered Nine One community sport facility in soft daylight" width="1600" height="839" fetchpriority="high" decoding="async">
-  <div class="hero-scrim"></div>
-  <div class="hero-inner">
-    <span class="eyebrow reveal"><span class="dot"></span>Facility</span>
-    <h1 class="reveal rd1">Spaces people come back to.</h1>
-    <p class="hero-sub reveal rd2">Covered, year-round play space — designed to help a community keep moving through more of the year.</p>
-    <div class="hero-cta reveal rd3">
-      <a href="build.html" class="btn btn-light">Plan a facility
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-      </a>
-      <a href="#spaces" class="btn btn-clear">See the space</a>
-    </div>
+<!-- ════════ HERO (text-led, business-style · placeholder copy) ════════ -->
+<header class="fhero">
+  <span class="eyebrow reveal"><span class="dot"></span>Facility</span>
+  <h1 class="reveal rd1">From a single court to a whole facility.</h1>
+  <p class="fhero-sub reveal rd2">Nine One designs, builds and supports padel courts and multi-sport facilities — for the operators who run them, and the communities they serve.</p>
+  <div class="fhero-cta reveal rd3">
+    <a href="#plan" class="btn btn-solid">Plan your facility
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+    <a href="#audiences" class="tlink">See how it works <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a>
   </div>
 </header>
 
-<!-- ════════ MADE TO RETURN TO (light) ════════ -->
-<section class="lmod" id="spaces">
-  <div class="lmod-inner">
-    <h2 class="reveal">Made for people to return to.</h2>
-    <p class="reveal rd1">Not just a court — a place a community gathers, plays and comes back to.</p>
-    <div class="lmod-links reveal rd2"><a href="build.html" class="tlink">Plan a facility <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
-  </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/sports-social.jpg" alt="People gathering and playing at a Nine One community facility" width="1600" height="900" loading="lazy" decoding="async"></div></div>
+<!-- ════════ AIR-DOME (full-bleed) ════════ -->
+<section class="fband">
+  <img src="assets/images/opt/facility-dome.jpg" alt="A Nine One air-dome facility — concept visualisation" width="1600" height="839" loading="lazy" decoding="async">
 </section>
 
-<!-- ════════ COMMUNITY PROGRAMMES (light · alt) ════════ -->
-<section class="lmod alt">
-  <div class="lmod-inner">
-    <h2 class="reveal">Community programmes</h2>
-    <p class="reveal rd1">Open sessions, leagues and events that keep a venue active across the week.</p>
-    <div class="lmod-links reveal rd2"><a href="build.html" class="tlink">Talk to us <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
-  </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/sports-clubhouse.jpg" alt="A Nine One clubhouse where community programmes gather" width="1600" height="900" loading="lazy" decoding="async"></div></div>
+<!-- ════════ AUDIENCES · two tiles (placeholder copy) ════════ -->
+<section class="ftiles" id="audiences">
+  <a class="ftile reveal" href="#plan">
+    <img src="assets/images/opt/play-kauri-classic-01.jpg" alt="A Nine One padel club for operators" loading="lazy" decoding="async">
+    <div class="ftile-scrim"></div>
+    <div class="ftile-t">
+      <span class="eyebrow">For padel club operators</span>
+      <h2>A club that books, fills and runs itself.</h2>
+      <span class="tlink">Explore <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></span>
+    </div>
+  </a>
+  <a class="ftile reveal" href="#plan">
+    <img src="assets/images/opt/sports-arena-indoor.jpg" alt="A Nine One multi-function sports facility" loading="lazy" decoding="async">
+    <div class="ftile-scrim"></div>
+    <div class="ftile-t">
+      <span class="eyebrow">For multi-function sports facilities</span>
+      <h2>One venue, many sports, all year.</h2>
+      <span class="tlink">Explore <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></span>
+    </div>
+  </a>
 </section>
 
-<!-- ════════ SCHOOL & CLUB USE (light) ════════ -->
-<section class="lmod">
-  <div class="lmod-inner">
-    <h2 class="reveal">School &amp; club use</h2>
-    <p class="reveal rd1">Class hours by day, community by evening — grounds and clubs that earn their keep.</p>
-    <div class="lmod-links reveal rd2"><a href="ecosystem.html" class="tlink">Learn more <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
+<!-- ════════ DARK · four panels (business-style · placeholder copy) ════════ -->
+<section class="fdark">
+  <div class="fdark-inner">
+    <h2 class="reveal">Built around how a facility really works.</h2>
+    <div class="fdark-grid">
+      <a class="fcard reveal" href="#plan">
+        <img src="assets/images/opt/sports-clubhouse.jpg" alt="Padel club owner" loading="lazy" decoding="async">
+        <div class="fcard-scrim"></div>
+        <div class="fcard-t"><span class="eyebrow">Padel club owner</span><h3>Run a club people keep coming back to.</h3></div>
+      </a>
+      <a class="fcard reveal" href="sports.html">
+        <img src="assets/images/opt/play-kauri-panoramic-01.jpg" alt="The padel court" loading="lazy" decoding="async">
+        <div class="fcard-scrim"></div>
+        <div class="fcard-t"><span class="eyebrow">The padel court</span><h3>The court itself, engineered for here.</h3></div>
+      </a>
+      <a class="fcard reveal" href="ecosystem.html">
+        <img src="assets/images/opt/facility-space.jpg" alt="Placeholder panel" loading="lazy" decoding="async">
+        <div class="fcard-scrim"></div>
+        <div class="fcard-t"><span class="eyebrow">Built for New Zealand</span><h3>Made for our climate, sites and standards.</h3></div>
+      </a>
+      <a class="fcard reveal" href="#plan">
+        <img src="assets/images/opt/sports-social.jpg" alt="Success story" loading="lazy" decoding="async">
+        <div class="fcard-scrim"></div>
+        <div class="fcard-t"><span class="eyebrow">Success story</span><h3>How one site filled its calendar.</h3></div>
+      </a>
+    </div>
   </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/facility-space.jpg" alt="A Nine One facility used by schools and clubs through the day" width="1600" height="839" loading="lazy" decoding="async"></div></div>
-</section>
-
-<!-- ════════ COVERED PLAY (light · alt) ════════ -->
-<section class="lmod alt">
-  <div class="lmod-inner">
-    <h2 class="reveal">Covered play, weather resilience</h2>
-    <p class="reveal rd1">Air-dome and canopy options help keep the space usable through rain, wind and winter, where specified.</p>
-    <div class="lmod-links reveal rd2"><a href="sports-specs.html" class="tlink">Tech specs <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
-  </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/sports-airdome.jpg" alt="A Nine One air-dome covered court at dusk" width="1600" height="900" loading="lazy" decoding="async"></div></div>
 </section>
 
 <!-- ════════ PLAN A FACILITY (light · enquiry form) ════════ -->

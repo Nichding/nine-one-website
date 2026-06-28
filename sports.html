@@ -20,13 +20,13 @@
 <meta property="og:title" content="Nine One Play — Year-round community sport infrastructure">
 <meta property="og:description" content="A complete court system for communities, schools and landowners. Space to play.">
 <meta property="og:url" content="https://nineonesports.co.nz/sports">
-<meta property="og:image" content="https://nineonesports.co.nz/assets/images/opt/sports-court-3.jpg">
-<meta property="og:image:width" content="1920">
-<meta property="og:image:height" content="1071">
+<meta property="og:image" content="https://nineonesports.co.nz/assets/images/opt/play-hero-01.jpg">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1339">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nine One Play — Year-round community sport infrastructure">
 <meta name="twitter:description" content="A complete court system for communities, schools and landowners.">
-<meta name="twitter:image" content="https://nineonesports.co.nz/assets/images/opt/sports-court-3.jpg">
+<meta name="twitter:image" content="https://nineonesports.co.nz/assets/images/opt/play-hero-01.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
@@ -195,6 +195,7 @@ img,svg{display:block;}
 .carousel--feature .cslide .mslot{aspect-ratio:3/2;margin-bottom:18px;}
 .carousel--feature .cslide-cap{font-size:15px;line-height:1.55;color:var(--graphite);max-width:44ch;}
 .carousel--feature .cslide-cap b{color:var(--ink);font-weight:600;}
+.closer .glabel{margin-top:clamp(44px,5.5vw,76px);}
 
 /* ════════ 4 · MATERIALS (swipe carousel — same card format as Take a closer look) ════════ */
 .materials{background:var(--paper);border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;}
@@ -202,6 +203,16 @@ img,svg{display:block;}
 /* full-bleed no-text image band */
 .imgband{position:relative;width:100%;height:clamp(420px,72vh,760px);overflow:hidden;background:var(--black);}
 .imgband img{width:100%;height:100%;object-fit:cover;display:block;}
+/* full-bleed scrolly: pinned image + scrim (蒙版) + 5 stacked lines */
+.story{position:relative;background:var(--black);}
+.story-track{height:190vh;}
+.story-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;}
+.story-pin img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.story-scrim{position:absolute;inset:0;background:radial-gradient(ellipse 92% 78% at 50% 50%,rgba(11,11,11,0.62),rgba(11,11,11,0.26));opacity:0;}
+.story-lines{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut);color:var(--paper);text-align:center;opacity:0;will-change:opacity,transform;}
+.story-lines p{font-size:clamp(20px,2.2vw,28px);font-weight:400;line-height:1.5;letter-spacing:-0.01em;color:rgba(244,244,241,0.9);white-space:nowrap;text-shadow:0 1px 14px rgba(11,11,11,0.55);}
+.story-lines .hl{color:var(--accent);font-weight:700;font-size:1.4em;}
+.story-lines p + p{margin-top:clamp(14px,1.7vw,24px);}
 /* Designed for New Zealand reuses the closer/materials carousel system */
 .designnz{border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;background:var(--paper);}
 .designnz .closer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:0 var(--gut);}
@@ -355,7 +366,7 @@ img,svg{display:block;}
 <section class="vstage" id="top">
   <div class="vstage-track">
     <div class="vstage-pin">
-      <img class="vstage-img" src="assets/images/opt/sports-court-3.jpg" alt="Nine One Play court in soft daylight" width="1920" height="1071" decoding="async" fetchpriority="high">
+      <img class="vstage-img" src="assets/images/opt/play-hero-01.jpg" alt="A Nine One Play padel club on the Auckland coast at golden hour — concept visualisation" width="2400" height="1339" decoding="async" fetchpriority="high">
       <div class="vstage-base"></div>
       <div class="vstage-scrim" id="vScrim"></div>
       <div class="vhero-bar" id="vBar">
@@ -396,16 +407,36 @@ img,svg{display:block;}
 <!-- ════════ 3 · TAKE A CLOSER LOOK (swipe carousel of courts, image-led) ════════ -->
 <section class="closer sec-anchor" id="closer">
   <div class="closer-inner">
-    <h2 class="h-lg reveal">Take a closer look.</h2>
+    <h2 class="h-lg reveal">Made to land anywhere.</h2>
   </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Kauri</p></div>
   <div class="carousel-wrap">
     <div class="carousel carousel--feature">
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-1.jpg" alt="Signature Panoramic court" width="1920" height="1433" decoding="async" loading="lazy"></figure><div class="cslide-cap">The <b>Signature Panoramic</b> — our flagship commercial and architectural court.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-2.jpg" alt="Classic Club court" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap">The <b>Classic Club</b> — a versatile, scalable club court system.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-5.jpg" alt="Event Pro court" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap">The <b>Event Pro</b> — a tournament-level performance court.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-outdoor.jpg" alt="Extreme Structure court" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap">The <b>Extreme Structure</b> — built for demanding sites and conditions.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-arena-indoor.jpg" alt="Indoor Arena court" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap">The <b>Indoor Arena</b> — an indoor court with room for a crowd.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-6.jpg" alt="Mobility court" width="1920" height="1143" decoding="async" loading="lazy"></figure><div class="cslide-cap">The <b>Mobility</b> — a flexible, event-based installation.</div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kauri-classic-01.jpg" alt="Kauri Classic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kauri Classic</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kauri-panoramic-01.jpg" alt="Kauri Panoramic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kauri Panoramic</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kauri-extreme-01.jpg" alt="Kauri Extreme padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kauri Extreme</b></div></div>
+    </div>
+    <div class="carousel-foot">
+      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Kawarau</p></div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--feature">
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kawarau-outdoor-01.jpg" alt="Kawarau Outdoor padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kawarau Outdoor</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kawarau-elite-01.jpg" alt="Kawarau Elite padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kawarau Elite</b></div></div>
+    </div>
+    <div class="carousel-foot">
+      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Tekapo</p></div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--feature">
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-tekapo-panoramic-01.jpg" alt="Tekapo Panoramic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Tekapo Panoramic</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-tekapo-panoramic-full-01.jpg" alt="Tekapo Panoramic Full padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Tekapo Panoramic Full</b></div></div>
     </div>
     <div class="carousel-foot">
       <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -414,36 +445,21 @@ img,svg{display:block;}
   </div>
 </section>
 
-<!-- ════════ 3b · FULL-BLEED IMAGE ════════ -->
-<section class="imgband">
-  <img src="assets/images/opt/sports-main.jpg" alt="A Nine One court in its setting" width="1920" height="1080" decoding="async" loading="lazy">
-</section>
-
-<!-- ════════ 3c · DESIGNED FOR NEW ZEALAND (swipe carousel) ════════ -->
-<section class="designnz">
-  <div class="closer-inner">
-    <span class="eyebrow reveal"><span class="dot"></span>Built here</span>
-    <h2 class="h-lg reveal">Designed for New Zealand.</h2>
-    <p class="lede reveal">Every Nine One Play court is planned around its weather, its sites, and the communities that use them.</p>
-  </div>
-  <div class="carousel-wrap">
-    <div class="carousel carousel--feature">
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-airdome.jpg" alt="Covered court for changeable weather" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Built for the weather</b> — courts and covers planned for wind, rain and sun, so a site can stay usable through more of the year.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-outdoor.jpg" alt="Court sized to its site" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Sized to local sites</b> — designed around the land councils, schools and clubs already have.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-4.jpg" alt="Court built to local standards" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Local standards &amp; materials</b> — specified to New Zealand requirements and assessed per site.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-3.jpg" alt="One surface for many sports" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Made for community sport</b> — netball, tennis, basketball, futsal and more, on one surface where specified.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-reception-night.jpg" alt="Support based in New Zealand" width="1920" height="1080" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Supported on the ground</b> — planned, delivered and supported from a New Zealand base.</div></div>
-    </div>
-    <div class="carousel-foot">
-      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+<!-- ════════ 3b · FULL-BLEED SCROLLY (pinned image + scrim + 5 stacked lines) ════════ -->
+<section class="story">
+  <div class="story-track">
+    <div class="story-pin">
+      <img src="assets/images/opt/play-hero-02.jpg" alt="Queenstown and Lake Wakatipu, New Zealand" width="2400" height="1350" decoding="async" loading="lazy">
+      <div class="story-scrim"></div>
+      <div class="story-lines">
+        <p>Every court is rated for the <span class="hl">wind and corrosion</span> of its region.</p>
+        <p>Each one is sized and laid out to <span class="hl">your site</span>.</p>
+        <p>Built and certified to <span class="hl">New Zealand standards</span>.</p>
+        <p>Made for everyday <span class="hl">community sport</span>.</p>
+        <p>Backed by a <span class="hl">local team</span> for ten to twenty years.</p>
+      </div>
     </div>
   </div>
-</section>
-
-<!-- ════════ 3d · FULL-BLEED IMAGE ════════ -->
-<section class="imgband">
-  <img src="assets/images/opt/sports-sub2.jpg" alt="A Nine One court at a New Zealand site" width="1920" height="1080" decoding="async" loading="lazy">
 </section>
 
 <!-- ════════ 4 · MATERIALS (swipe carousel — same card format as Take a closer look) ════════ -->
@@ -614,6 +630,32 @@ const spyObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)
     const stIn=smooth(0.46,0.70,p);
     state.style.opacity=String(stIn);
     state.style.transform='translateY('+(26*(1-stIn))+'px)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
+  window.addEventListener('scroll',onScroll,{passive:true,capture:true});
+  window.addEventListener('resize',onScroll);
+  frame();
+})();
+
+// ── story band: clear image first, scroll reveals scrim (蒙版) + 5 lines ──
+(function(){
+  const story=document.querySelector('.story');
+  if(!story) return;
+  const scrim=story.querySelector('.story-scrim');
+  const lines=story.querySelector('.story-lines');
+  if(!scrim||!lines) return;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){scrim.style.opacity='0.7';lines.style.opacity='1';lines.style.transform='none';return;}
+  const smooth=(a,b,x)=>{x=Math.max(0,Math.min(1,(x-a)/(b-a)));return x*x*(3-2*x);};
+  let ticking=false;
+  function frame(){
+    ticking=false;
+    const total=story.offsetHeight-window.innerHeight;
+    if(total<=0){scrim.style.opacity='0.7';lines.style.opacity='1';lines.style.transform='none';return;}
+    const p=Math.max(0,Math.min(1,(-story.getBoundingClientRect().top)/total));
+    scrim.style.opacity=String(smooth(0.04,0.34,p));
+    const linesIn=smooth(0.16,0.48,p);
+    lines.style.opacity=String(linesIn);
+    lines.style.transform='translateY('+(26*(1-linesIn))+'px)';
   }
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
   window.addEventListener('scroll',onScroll,{passive:true,capture:true});

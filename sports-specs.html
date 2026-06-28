@@ -105,6 +105,29 @@ img,svg{display:block;}
 
 /* spec group index (mono running head) */
 .spec-idx{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);margin-bottom:12px;}
+/* model comparison table — Apple-specs style, columns left-to-right */
+.cmp-cap{font-family:var(--mono);font-size:11px;letter-spacing:0.04em;color:var(--graphite);margin:0;}
+.cmp-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 18px;}
+.cmp-nav{display:flex;align-items:center;gap:16px;flex:none;}
+.cmp-dots{display:flex;align-items:center;gap:8px;}
+.cmp-dot{width:7px;height:7px;border-radius:99px;border:none;background:var(--line);padding:0;cursor:pointer;transition:width .3s ease,background .3s ease;}
+.cmp-dot.is-active{width:26px;background:var(--ink);}
+.cmp-play{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.cmp-play:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.cmp-play svg{width:16px;height:16px;}
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.cmp{border-collapse:collapse;min-width:1080px;width:100%;}
+.cmp th,.cmp td{text-align:left;vertical-align:top;}
+.cmp thead th,.cmp th.rowhead{white-space:nowrap;}
+.cmp tbody td{white-space:normal;min-width:122px;line-height:1.5;}
+.cmp thead th{vertical-align:bottom;padding:0 14px 16px;border-bottom:1px solid var(--line);font-size:13.5px;font-weight:600;color:var(--ink);}
+.cmp .cmp-series{display:block;font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite);margin-bottom:5px;}
+.cmp th.rowhead{position:sticky;left:0;z-index:1;background:var(--paper);font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.03em;text-transform:uppercase;color:var(--ink);padding:13px 22px 13px 0;}
+.cmp thead th.rowhead{vertical-align:bottom;padding-bottom:16px;border-bottom:1px solid var(--line);}
+.cmp tbody th.rowhead{border-bottom:1px solid var(--line-soft);}
+.cmp tbody td{padding:13px 14px;border-bottom:1px solid var(--line-soft);font-family:var(--mono);font-size:12.5px;color:var(--graphite);font-variant-numeric:tabular-nums;}
+.cmp tr.cmp-group th.rowhead{padding:34px 0 12px;font-size:11px;font-weight:600;letter-spacing:0.14em;color:var(--accent);border:none;}
+.cmp tr.cmp-group td{border:none;padding:34px 0 12px;}
 .btn-light{background:var(--paper);color:var(--ink);border:1.5px solid var(--paper);}
 .btn-light:hover{transform:translateY(-1px);}
 
@@ -196,63 +219,73 @@ img,svg{display:block;}
 </header>
 
 <section class="specs-body">
-  <div class="spec-group">
-    <div class="spec-left"><div class="spec-idx">01 / 07</div><h2>Court system</h2></div>
-    <div class="spec-rows">
-      <div class="spec-row"><div class="spec-k">Court formats</div><div class="spec-v">Padel and multi-sport configurations — configured by site.</div></div>
-      <div class="spec-row"><div class="spec-k">Court count</div><div class="spec-v">Single or multi-court layouts — specified during project planning.</div></div>
-      <div class="spec-row"><div class="spec-k">Set-out &amp; spacing</div><div class="spec-v">Orientation and spacing — subject to site assessment.</div></div>
+  <div class="cmp-head">
+    <p class="cmp-cap">Indicative specification — final figures confirmed per project and site.</p>
+    <div class="cmp-nav">
+      <div class="cmp-dots" aria-label="Models">
+        <button class="cmp-dot is-active" data-i="0" aria-label="Kauri Classic"></button>
+        <button class="cmp-dot" data-i="1" aria-label="Kauri Panoramic"></button>
+        <button class="cmp-dot" data-i="2" aria-label="Kauri Extreme"></button>
+        <button class="cmp-dot" data-i="3" aria-label="Kawarau Outdoor"></button>
+        <button class="cmp-dot" data-i="4" aria-label="Kawarau Elite"></button>
+        <button class="cmp-dot" data-i="5" aria-label="Tekapo Panoramic"></button>
+        <button class="cmp-dot" data-i="6" aria-label="Tekapo Panoramic Full"></button>
+      </div>
+      <button class="cmp-play" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="5" width="3.4" height="14" rx="1"/><rect x="13.6" y="5" width="3.4" height="14" rx="1"/></svg></button>
     </div>
   </div>
-  <div class="spec-group">
-    <div class="spec-left"><div class="spec-idx">02 / 07</div><h2>Enclosure</h2></div>
-    <div class="spec-rows">
-      <div class="spec-row"><div class="spec-k">Glass</div><div class="spec-v">Tempered glass court walls.</div></div>
-      <div class="spec-row"><div class="spec-k">Perimeter &amp; fencing</div><div class="spec-v">Perimeter and fencing systems — to format and site.</div></div>
-      <div class="spec-row"><div class="spec-k">Access points</div><div class="spec-v">Entry and gate positions — specified during project planning.</div></div>
-    </div>
-  </div>
-  <div class="spec-group">
-    <div class="spec-left"><div class="spec-idx">03 / 07</div><h2>Surface</h2></div>
-    <div class="spec-rows">
-      <div class="spec-row"><div class="spec-k">Surface systems</div><div class="spec-v">Play-grade court surfaces — subject to use and site assessment.</div></div>
-      <div class="spec-row"><div class="spec-k">Cushioning</div><div class="spec-v">Cushioned and non-cushioned options — configured by site.</div></div>
-      <div class="spec-row"><div class="spec-k">Line &amp; colour</div><div class="spec-v">Court colourways and marking — to format and brief.</div></div>
-    </div>
-  </div>
-  <div class="spec-group">
-    <div class="spec-left"><div class="spec-idx">04 / 07</div><h2>Lighting</h2></div>
-    <div class="spec-rows">
-      <div class="spec-row"><div class="spec-k">Court lighting</div><div class="spec-v">LED court lighting — evening- and winter-play ready.</div></div>
-      <div class="spec-row"><div class="spec-k">Levels &amp; uniformity</div><div class="spec-v">Lighting design — specified during project planning.</div></div>
-      <div class="spec-row"><div class="spec-k">Controls</div><div class="spec-v">Scheduling and zone control — where specified.</div></div>
-    </div>
-  </div>
-  <div class="spec-group">
-    <div class="spec-left"><div class="spec-idx">05 / 07</div><h2>Air-dome readiness</h2></div>
-    <div class="spec-rows">
-      <div class="spec-row"><div class="spec-k">Structure options</div><div class="spec-v">Open court · canopy · air-dome — selected to site and climate.</div></div>
-      <div class="spec-row"><div class="spec-k">Membrane &amp; cover</div><div class="spec-v">Air-dome membrane and weather cover — configured by site.</div></div>
-      <div class="spec-row"><div class="spec-k">Weather protection</div><div class="spec-v">Wind, rain and sun protection — by structure type.</div></div>
-      <div class="spec-row"><div class="spec-k">Wind-load monitoring</div><div class="spec-v">Structural and wind-load monitoring on covered structures, where specified.</div></div>
-    </div>
-  </div>
-  <div class="spec-group">
-    <div class="spec-left"><div class="spec-idx">06 / 07</div><h2>Site requirements</h2></div>
-    <div class="spec-rows">
-      <div class="spec-row"><div class="spec-k">Suitable sites</div><div class="spec-v">Council land · school grounds · clubs · commercial sites · rooftops.</div></div>
-      <div class="spec-row"><div class="spec-k">Ground &amp; base</div><div class="spec-v">Ground works and base — subject to site assessment.</div></div>
-      <div class="spec-row"><div class="spec-k">Services</div><div class="spec-v">Power and connectivity — specified during project planning.</div></div>
-    </div>
-  </div>
-  <div class="spec-group">
-    <div class="spec-left"><div class="spec-idx">07 / 07</div><h2>Delivery &amp; assessment</h2></div>
-    <div class="spec-rows">
-      <div class="spec-row"><div class="spec-k">Site review</div><div class="spec-v">Site review and concept plan — the first stage.</div></div>
-      <div class="spec-row"><div class="spec-k">Installation timeline</div><div class="spec-v">Configured by site; confirmed during site assessment.</div></div>
-      <div class="spec-row"><div class="spec-k">Operations layer</div><div class="spec-v">Booking and access — staged rollout (see Play OS).</div></div>
-      <div class="spec-row"><div class="spec-k">Optional modules</div><div class="spec-v">Fencing · seating · lounge &amp; F&amp;B · branding.</div></div>
-    </div>
+  <div class="cmp-wrap">
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th class="rowhead">Specification</th>
+          <th><span class="cmp-series">Kauri</span>Classic</th>
+          <th><span class="cmp-series">Kauri</span>Panoramic</th>
+          <th><span class="cmp-series">Kauri</span>Extreme</th>
+          <th><span class="cmp-series">Kawarau</span>Outdoor</th>
+          <th><span class="cmp-series">Kawarau</span>Elite</th>
+          <th><span class="cmp-series">Tekapo</span>Panoramic</th>
+          <th><span class="cmp-series">Tekapo</span>Pano. Full</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cmp-group"><th class="rowhead">Structure</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Main posts</th><td>100×100×3.0 mm</td><td>100×100×3.0 mm</td><td>150×150×6.0 mm</td><td></td><td></td><td>100×100×3.0 mm</td><td>100×100×3.0 mm</td></tr>
+        <tr><th class="rowhead">Beams</th><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td><td>150×150×6.0 top / 50×150×6.0 btm</td><td></td><td></td><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td></tr>
+        <tr><th class="rowhead">Side posts</th><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td><td>50×150×6.0 mm</td><td></td><td></td><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td></tr>
+        <tr><th class="rowhead">Corner posts &amp; bracing</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Base frame &amp; anchors</th><td>Per site (anchored)</td><td>Per site (anchored)</td><td>Per site (anchored)</td><td>Movable base · no anchors</td><td>Movable base · no anchors</td><td>Per site (anchored)</td><td>Per site (anchored)</td></tr>
+        <tr><th class="rowhead">Steel &amp; coating</th><td>Q235 · HDG + powder coat</td><td>Q235 · HDG + powder coat</td><td>Q235 · HDG + powder coat</td><td></td><td></td><td>Q235 · HDG + powder coat</td><td>Q235 · HDG + powder coat</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Enclosure</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Tempered glass</th><td>12 mm × 18</td><td>12 mm × 18</td><td>12 mm × 18</td><td></td><td></td><td>12 mm × 18</td><td>12 mm × 18</td></tr>
+        <tr><th class="rowhead">Galvanised mesh</th><td>40×20×2.0 mm</td><td>40×20×2.0 mm</td><td>50×30×4.0 mm</td><td></td><td></td><td>40×20×2.0 mm</td><td>40×20×2.0 mm</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Surface</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Artificial turf</th><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td></tr>
+        <tr><th class="rowhead">Sand infill</th><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td></tr>
+        <tr><th class="rowhead">Line markings</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Foundation &amp; base</th><td>Per site</td><td>Per site</td><td>Per site</td><td>Level surface (no foundation)</td><td>Level surface (no foundation)</td><td>Per site</td><td>Per site</td></tr>
+        <tr><th class="rowhead">Drainage</th><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Net &amp; access</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Net height</th><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td></tr>
+        <tr><th class="rowhead">Access doors</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="cmp-group"><th class="rowhead">Optional upgrades</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Weather cover</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Spectator seating</th><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td></tr>
+        <tr><th class="rowhead">Branding / banners</th><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Lighting</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">LED floodlights</th><td>200 W × 8</td><td>200 W × 8</td><td>200 W × 8</td><td></td><td></td><td>200 W × 8</td><td>200 W × 8</td></tr>
+        <tr><th class="rowhead">Light poles</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Levels (avg)</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="cmp-group"><th class="rowhead">Dimensions &amp; compliance</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Court dimensions</th><td>20 × 10 m</td><td>20 × 10 m</td><td>20 × 10 m</td><td>Per site</td><td>Per site</td><td>20 × 10 m</td><td>20 × 10 m</td></tr>
+        <tr><th class="rowhead">Wall heights</th><td>3 m (glass)</td><td>3 m (glass)</td><td>3 m (glass)</td><td></td><td></td><td>3 m (glass)</td><td>3 m (glass)</td></tr>
+        <tr><th class="rowhead">Wind load</th><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Indoor (sheltered)</td><td>Indoor (sheltered)</td></tr>
+        <tr><th class="rowhead">Coating upgrade (opt.)</th><td>2nd coat after HDG</td><td>2nd coat after HDG</td><td>2nd coat after HDG</td><td></td><td></td><td>2nd coat after HDG</td><td>2nd coat after HDG</td></tr>
+        <tr><th class="rowhead">Corrosion category</th><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Indoor (low)</td><td>Indoor (low)</td></tr>
+        <tr><th class="rowhead">Seismic</th><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td></tr>
+        <tr><th class="rowhead">Standards</th><td>AS/NZS 2208 (glass)</td><td>AS/NZS 2208 (glass)</td><td>AS/NZS 2208 (glass)</td><td></td><td></td><td>AS/NZS 2208 (glass)</td><td>AS/NZS 2208 (glass)</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -313,6 +346,30 @@ img,svg{display:block;}
 const nav=document.getElementById('nav');
 const navToggle=document.querySelector('.nav-toggle');
 if(navToggle){navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));}
+// comparison table — dot progress + autoplay scroll
+(function(){
+  const wrap=document.querySelector('.cmp-wrap');
+  const dotsWrap=document.querySelector('.cmp-dots');
+  const playBtn=document.querySelector('.cmp-play');
+  if(!wrap||!dotsWrap||!playBtn) return;
+  const dots=[...dotsWrap.querySelectorAll('.cmp-dot')];
+  const n=dots.length;
+  const PAUSE='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="5" width="3.4" height="14" rx="1"/><rect x="13.6" y="5" width="3.4" height="14" rx="1"/></svg>';
+  const PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+  const maxScroll=()=>Math.max(1,wrap.scrollWidth-wrap.clientWidth);
+  const targetFor=i=>Math.round(i/(n-1)*maxScroll());
+  const activeIdx=()=>Math.round(wrap.scrollLeft/maxScroll()*(n-1));
+  function setActive(i){dots.forEach((d,k)=>d.classList.toggle('is-active',k===i));}
+  let playing=false,timer=null,raf=null;
+  function startPlay(){playing=true;playBtn.innerHTML=PAUSE;playBtn.setAttribute('aria-label','Pause');clearInterval(timer);timer=setInterval(()=>{const i=(activeIdx()+1)%n;wrap.scrollTo({left:targetFor(i),behavior:'smooth'});},3500);}
+  function stopPlay(){playing=false;playBtn.innerHTML=PLAY;playBtn.setAttribute('aria-label','Play');clearInterval(timer);}
+  wrap.addEventListener('scroll',()=>{if(raf)return;raf=requestAnimationFrame(()=>{raf=null;setActive(activeIdx());});},{passive:true});
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{stopPlay();wrap.scrollTo({left:targetFor(i),behavior:'smooth'});setActive(i);}));
+  playBtn.addEventListener('click',()=>{playing?stopPlay():startPlay();});
+  ['wheel','touchstart','pointerdown'].forEach(ev=>wrap.addEventListener(ev,()=>{if(playing)stopPlay();},{passive:true}));
+  setActive(activeIdx());
+  startPlay();
+})();
 </script>
 </body>
 </html>
