@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVWD4QKPGJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-NVWD4QKPGJ");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine One Play — Tech Specs | Nine One Sports</title>
+<meta name="description" content="Nine One Play specifications — court system, enclosure, surface, lighting, air-dome readiness, site requirements and delivery. Configured per site.">
+<link rel="canonical" href="https://nineonesports.co.nz/sports-specs">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nine One Sports">
+<meta property="og:title" content="Nine One Play — Tech Specs">
+<meta property="og:description" content="Court system, enclosure, surface, lighting, air-dome readiness and site requirements — configured per site.">
+<meta property="og:url" content="https://nineonesports.co.nz/sports-specs">
+<meta property="og:image" content="https://nineonesports.co.nz/assets/images/opt/sports-court-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nine One Play — Tech Specs">
+<meta name="twitter:description" content="Court system, enclosure, surface, lighting and site requirements — configured per site.">
+<meta name="twitter:image" content="https://nineonesports.co.nz/assets/images/opt/sports-court-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --black:#0B0B0B; --paper:#F4F4F1; --ink:#121311; --graphite:#76766E;
+  --grey:#D9D8D2; --play:#F6BE83; --accent:#F6BE83;
+  --line:rgba(18,19,17,.16); --line-soft:rgba(18,19,17,.09); --muted-dark:rgba(244,244,241,.55); --surface:rgba(18,19,17,.04);
+  --nav-h:70px; --gut:64px; --maxw:1024px; --maxw-wide:1024px;
+  --display:'Inter',system-ui,sans-serif; --mono:'Spline Sans Mono','IBM Plex Mono',ui-monospace,monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);font-weight:400;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip;}
+a{text-decoration:none;color:inherit;}
+img,svg{display:block;}
+.snum{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;padding:14px 28px;border-radius:999px;transition:background .2s,transform .2s;}
+.btn svg{width:14px;height:14px;}
+.btn-solid{background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);}
+.btn-solid:hover{background:var(--black);transform:translateY(-1px);}
+
+/* nav */
+.nav{position:static;height:var(--nav-h);background:var(--paper);}
+.nav-inner{max-width:var(--maxw-wide);margin:0 auto;height:100%;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;}
+.brand-icon{display:flex;align-items:center;}
+.brand-icon img{height:40px;width:auto;display:block;}
+.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--graphite);letter-spacing:0.02em;transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a.active{color:var(--ink);font-weight:600;}
+.nav-cta{font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:1.5px solid var(--ink);border-radius:999px;padding:11px 22px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:var(--ink);color:var(--paper);}
+.nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* product sub-nav */
+.psub{position:sticky;top:0;z-index:1090;background:rgba(244,244,241,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line);}
+.psub-inner{max-width:var(--maxw-wide);margin:0 auto;height:50px;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.psub-name{font-size:18px;font-weight:600;letter-spacing:-0.015em;color:var(--ink);white-space:nowrap;}
+.psub-links{display:flex;align-items:center;gap:30px;list-style:none;margin-left:auto;}
+.psub-links a{font-size:13px;font-weight:400;color:var(--graphite);letter-spacing:0.005em;transition:color .2s;position:relative;}
+.psub-links a:hover{color:var(--ink);}
+.psub-links a.cur{color:var(--ink);}
+.psub-links a.cur::after{content:'';position:absolute;left:0;right:0;bottom:-18px;height:2px;background:var(--accent);border-radius:2px;}
+.psub-links .soon{color:var(--graphite);display:inline-flex;align-items:center;gap:7px;}
+.psub-links .soon .tag{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink);background:rgba(246,190,131,.4);padding:2px 6px;border-radius:4px;}
+.psub-cta{flex:none;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:999px;padding:9px 18px;transition:background .2s,transform .2s;white-space:nowrap;}
+.psub-cta:hover{background:var(--black);transform:translateY(-1px);}
+
+/* page header */
+.spec-hero{max-width:var(--maxw);margin:0 auto;padding:clamp(72px,10vw,140px) var(--gut) clamp(40px,5vw,64px);}
+.spec-hero .snum{display:block;margin-bottom:18px;}
+.spec-hero h1{font-size:clamp(40px,6vw,86px);font-weight:600;line-height:1.0;letter-spacing:-0.03em;color:var(--ink);}
+.spec-hero p{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:var(--graphite);max-width:56ch;margin-top:24px;}
+
+/* spec groups */
+.specs-body{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut) clamp(80px,10vw,140px);}
+.spec-group{padding:clamp(40px,5vw,64px) 0;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:0.5fr 1.5fr;gap:clamp(24px,4vw,64px);align-items:start;}
+.spec-group:first-of-type{border-top:none;}
+.spec-left{position:sticky;top:80px;}
+.spec-group h2{font-size:clamp(22px,2.4vw,30px);font-weight:600;letter-spacing:-0.015em;color:var(--ink);margin-top:8px;}
+.spec-rows{display:flex;flex-direction:column;}
+.spec-row{display:grid;grid-template-columns:0.7fr 1.3fr;gap:28px;padding:20px 0;border-top:1px solid var(--line-soft);align-items:baseline;}
+.spec-row:first-child{border-top:none;}
+.spec-k{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);}
+.spec-v{font-size:15.5px;line-height:1.55;color:var(--graphite);}
+.specs-note{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut) clamp(80px,9vw,120px);}
+.specs-note p{font-size:13.5px;line-height:1.65;color:var(--graphite);max-width:62ch;
+  border-top:1px solid var(--line);padding-top:28px;}
+.specs-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+
+/* spec group index (mono running head) */
+.spec-idx{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);margin-bottom:12px;}
+/* model comparison table — Apple-specs style, columns left-to-right */
+.cmp-cap{font-family:var(--mono);font-size:11px;letter-spacing:0.04em;color:var(--graphite);margin:0;}
+.cmp-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 18px;}
+.cmp-nav{display:flex;align-items:center;gap:16px;flex:none;}
+.cmp-dots{display:flex;align-items:center;gap:8px;}
+.cmp-dot{width:7px;height:7px;border-radius:99px;border:none;background:var(--line);padding:0;cursor:pointer;transition:width .3s ease,background .3s ease;}
+.cmp-dot.is-active{width:26px;background:var(--ink);}
+.cmp-play{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.cmp-play:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.cmp-play svg{width:16px;height:16px;}
+.cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.cmp{border-collapse:collapse;min-width:1080px;width:100%;}
+.cmp th,.cmp td{text-align:left;vertical-align:top;}
+.cmp thead th,.cmp th.rowhead{white-space:nowrap;}
+.cmp tbody td{white-space:normal;min-width:122px;line-height:1.5;}
+.cmp thead th{vertical-align:bottom;padding:0 14px 16px;border-bottom:1px solid var(--line);font-size:13.5px;font-weight:600;color:var(--ink);}
+.cmp .cmp-series{display:block;font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite);margin-bottom:5px;}
+.cmp th.rowhead{position:sticky;left:0;z-index:1;background:var(--paper);font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.03em;text-transform:uppercase;color:var(--ink);padding:13px 22px 13px 0;}
+.cmp thead th.rowhead{vertical-align:bottom;padding-bottom:16px;border-bottom:1px solid var(--line);}
+.cmp tbody th.rowhead{border-bottom:1px solid var(--line-soft);}
+.cmp tbody td{padding:13px 14px;border-bottom:1px solid var(--line-soft);font-family:var(--mono);font-size:12.5px;color:var(--graphite);font-variant-numeric:tabular-nums;}
+.cmp tr.cmp-group th.rowhead{padding:34px 0 12px;font-size:11px;font-weight:600;letter-spacing:0.14em;color:var(--accent);border:none;}
+.cmp tr.cmp-group td{border:none;padding:34px 0 12px;}
+.btn-light{background:var(--paper);color:var(--ink);border:1.5px solid var(--paper);}
+.btn-light:hover{transform:translateY(-1px);}
+
+/* footer (consistent with Home / Play) */
+.footer{background:var(--black);color:var(--paper);}
+.footer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:104px var(--gut) 48px;}
+.footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding-bottom:80px;border-bottom:1px solid rgba(244,244,241,0.12);flex-wrap:wrap;}
+.footer-slogan h2{font-size:clamp(40px,8vw,108px);font-weight:600;line-height:0.92;letter-spacing:-0.03em;color:var(--paper);}
+.footer-slogan h2 .accent{color:var(--accent);}
+.footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:999px;transition:background .2s;}
+.footer-slogan .f-cta svg{width:14px;height:14px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0;}
+.footer-brand .brand-icon img{height:56px;}
+.footer-tagline{font-size:15px;color:var(--muted-dark);line-height:1.6;margin-top:20px;max-width:30ch;}
+.footer-col h4{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:22px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.footer-col a{font-size:15px;color:var(--paper);opacity:0.78;transition:opacity .2s;}
+.footer-col a:hover{opacity:1;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:32px;border-top:1px solid rgba(244,244,241,0.12);flex-wrap:wrap;}
+.footer-bottom .meta{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
+.footer-bottom .legal{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
+
+@media(max-width:1080px){
+  .nav{position:sticky;top:0;z-index:1100;}
+  .nav-toggle{display:flex;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
+  .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
+  .nav-links a{font-size:18px;}
+  .nav-cta{display:block;width:100%;text-align:center;padding:14px 24px;}
+  .psub{top:var(--nav-h);}
+  .psub-links{margin-left:14px;gap:22px;flex:1 1 auto;min-width:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .psub-links::-webkit-scrollbar{display:none;}
+  .psub-links a{white-space:nowrap;}
+  .psub-links a.cur::after{display:none;}
+  .spec-group{grid-template-columns:1fr;gap:18px;}
+  .spec-left{position:static;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  :root{--gut:24px;--nav-h:72px;}
+  .psub-inner{height:50px;}
+  .psub-name{font-size:16px;}
+  .spec-row{grid-template-columns:1fr;gap:6px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-slogan h2{font-size:44px;}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Nine One Sports"><span class="brand-icon"><img src="assets/logo/nineone-stacked-ink.svg" alt="Nine One" width="67" height="42"></span></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sports.html" class="active">Play</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="facility.html">Facility</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a href="build.html" class="nav-cta">Build with us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="psub" id="psub">
+  <div class="psub-inner">
+    <a href="sports.html" class="psub-name">Nine One Play</a>
+    <ul class="psub-links">
+      <li><a href="sports.html">Overview</a></li>
+      <li><a href="sports-specs.html" class="cur">Tech Specs</a></li>
+      <li><a href="sports.html#play-os" class="soon">Play OS <span class="tag">Soon</span></a></li>
+    </ul>
+    <a href="build.html" class="psub-cta">Plan a site</a>
+  </div>
+</div>
+
+<header class="spec-hero">
+  <span class="snum">Tech Specs</span>
+  <h1>Specifications.</h1>
+  <p>A starting point, not a fixed menu. Every Nine One Play venue is configured to its site — exact formats, materials, timelines and modules are confirmed during a site assessment.</p>
+</header>
+
+<section class="specs-body">
+  <div class="cmp-head">
+    <p class="cmp-cap">Indicative specification — final figures confirmed per project and site.</p>
+    <div class="cmp-nav">
+      <div class="cmp-dots" aria-label="Models">
+        <button class="cmp-dot is-active" data-i="0" aria-label="Kauri Classic"></button>
+        <button class="cmp-dot" data-i="1" aria-label="Kauri Panoramic"></button>
+        <button class="cmp-dot" data-i="2" aria-label="Kauri Extreme"></button>
+        <button class="cmp-dot" data-i="3" aria-label="Kawarau Outdoor"></button>
+        <button class="cmp-dot" data-i="4" aria-label="Kawarau Elite"></button>
+        <button class="cmp-dot" data-i="5" aria-label="Tekapo Panoramic"></button>
+        <button class="cmp-dot" data-i="6" aria-label="Tekapo Panoramic Full"></button>
+      </div>
+      <button class="cmp-play" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="5" width="3.4" height="14" rx="1"/><rect x="13.6" y="5" width="3.4" height="14" rx="1"/></svg></button>
+    </div>
+  </div>
+  <div class="cmp-wrap">
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th class="rowhead">Specification</th>
+          <th><span class="cmp-series">Kauri</span>Classic</th>
+          <th><span class="cmp-series">Kauri</span>Panoramic</th>
+          <th><span class="cmp-series">Kauri</span>Extreme</th>
+          <th><span class="cmp-series">Kawarau</span>Outdoor</th>
+          <th><span class="cmp-series">Kawarau</span>Elite</th>
+          <th><span class="cmp-series">Tekapo</span>Panoramic</th>
+          <th><span class="cmp-series">Tekapo</span>Pano. Full</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cmp-group"><th class="rowhead">Structure</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Main posts</th><td>100×100×3.0 mm</td><td>100×100×3.0 mm</td><td>150×150×6.0 mm</td><td></td><td></td><td>100×100×3.0 mm</td><td>100×100×3.0 mm</td></tr>
+        <tr><th class="rowhead">Beams</th><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td><td>150×150×6.0 top / 50×150×6.0 btm</td><td></td><td></td><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td></tr>
+        <tr><th class="rowhead">Side posts</th><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td><td>50×150×6.0 mm</td><td></td><td></td><td>50×100×3.0 mm</td><td>50×100×3.0 mm</td></tr>
+        <tr><th class="rowhead">Corner posts &amp; bracing</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Base frame &amp; anchors</th><td>Per site (anchored)</td><td>Per site (anchored)</td><td>Per site (anchored)</td><td>Movable base · no anchors</td><td>Movable base · no anchors</td><td>Per site (anchored)</td><td>Per site (anchored)</td></tr>
+        <tr><th class="rowhead">Steel &amp; coating</th><td>Q235 · HDG + powder coat</td><td>Q235 · HDG + powder coat</td><td>Q235 · HDG + powder coat</td><td></td><td></td><td>Q235 · HDG + powder coat</td><td>Q235 · HDG + powder coat</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Enclosure</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Tempered glass</th><td>12 mm × 18</td><td>12 mm × 18</td><td>12 mm × 18</td><td></td><td></td><td>12 mm × 18</td><td>12 mm × 18</td></tr>
+        <tr><th class="rowhead">Galvanised mesh</th><td>40×20×2.0 mm</td><td>40×20×2.0 mm</td><td>50×30×4.0 mm</td><td></td><td></td><td>40×20×2.0 mm</td><td>40×20×2.0 mm</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Surface</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Artificial turf</th><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td></tr>
+        <tr><th class="rowhead">Sand infill</th><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td></tr>
+        <tr><th class="rowhead">Line markings</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Foundation &amp; base</th><td>Per site</td><td>Per site</td><td>Per site</td><td>Level surface (no foundation)</td><td>Level surface (no foundation)</td><td>Per site</td><td>Per site</td></tr>
+        <tr><th class="rowhead">Drainage</th><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td><td>Per site</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Net &amp; access</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Net height</th><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td><td>0.88 m centre / 0.92 m ends</td></tr>
+        <tr><th class="rowhead">Access doors</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="cmp-group"><th class="rowhead">Optional upgrades</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Weather cover</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Spectator seating</th><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td></tr>
+        <tr><th class="rowhead">Branding / banners</th><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td><td>Per project</td></tr>
+        <tr class="cmp-group"><th class="rowhead">Lighting</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">LED floodlights</th><td>200 W × 8</td><td>200 W × 8</td><td>200 W × 8</td><td></td><td></td><td>200 W × 8</td><td>200 W × 8</td></tr>
+        <tr><th class="rowhead">Light poles</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th class="rowhead">Levels (avg)</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="cmp-group"><th class="rowhead">Dimensions &amp; compliance</th><td colspan="7"></td></tr>
+        <tr><th class="rowhead">Court dimensions</th><td>20 × 10 m</td><td>20 × 10 m</td><td>20 × 10 m</td><td>Per site</td><td>Per site</td><td>20 × 10 m</td><td>20 × 10 m</td></tr>
+        <tr><th class="rowhead">Wall heights</th><td>3 m (glass)</td><td>3 m (glass)</td><td>3 m (glass)</td><td></td><td></td><td>3 m (glass)</td><td>3 m (glass)</td></tr>
+        <tr><th class="rowhead">Wind load</th><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Per site (NZ wind zone)</td><td>Indoor (sheltered)</td><td>Indoor (sheltered)</td></tr>
+        <tr><th class="rowhead">Coating upgrade (opt.)</th><td>2nd coat after HDG</td><td>2nd coat after HDG</td><td>2nd coat after HDG</td><td></td><td></td><td>2nd coat after HDG</td><td>2nd coat after HDG</td></tr>
+        <tr><th class="rowhead">Corrosion category</th><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Per site (ISO 9223)</td><td>Indoor (low)</td><td>Indoor (low)</td></tr>
+        <tr><th class="rowhead">Seismic</th><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td><td>Per site (NZS 1170.5)</td></tr>
+        <tr><th class="rowhead">Standards</th><td>AS/NZS 2208 (glass)</td><td>AS/NZS 2208 (glass)</td><td>AS/NZS 2208 (glass)</td><td></td><td></td><td>AS/NZS 2208 (glass)</td><td>AS/NZS 2208 (glass)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="specs-note">
+  <p>Specifications shown are indicative and provided to support early planning. Exact court formats, materials, structure type, installation timeline and optional modules are configured per site and confirmed during a site assessment.</p>
+  <div class="specs-cta">
+    <a href="build.html" class="btn btn-solid">Plan a site
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-slogan">
+      <h2>Move Together<span class="accent">.</span></h2>
+      <a href="build.html" class="f-cta">Plan a site
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><span class="brand-icon"><img src="assets/logo/nineone-stacked-white.svg" alt="Nine One" width="89" height="56"></span></a>
+        <p class="footer-tagline">Year-round community sport infrastructure — courts, communities and operators, built as one system.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Business</h4>
+        <ul>
+          <li><a href="sports.html">Play</a></li>
+          <li><a href="technologies.html">Technologies</a></li>
+          <li><a href="facility.html">Facility</a></li>
+          <li><a href="ecosystem.html">Ecosystem</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="build.html">Build with us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/company/nine-one-sports" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://nineonesports.co.nz">nineonesports.co.nz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
+      <span class="legal">Move Together.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+const navToggle=document.querySelector('.nav-toggle');
+if(navToggle){navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));}
+// comparison table — dot progress + autoplay scroll
+(function(){
+  const wrap=document.querySelector('.cmp-wrap');
+  const dotsWrap=document.querySelector('.cmp-dots');
+  const playBtn=document.querySelector('.cmp-play');
+  if(!wrap||!dotsWrap||!playBtn) return;
+  const dots=[...dotsWrap.querySelectorAll('.cmp-dot')];
+  const n=dots.length;
+  const PAUSE='<svg viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="5" width="3.4" height="14" rx="1"/><rect x="13.6" y="5" width="3.4" height="14" rx="1"/></svg>';
+  const PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+  const maxScroll=()=>Math.max(1,wrap.scrollWidth-wrap.clientWidth);
+  const targetFor=i=>Math.round(i/(n-1)*maxScroll());
+  const activeIdx=()=>Math.round(wrap.scrollLeft/maxScroll()*(n-1));
+  function setActive(i){dots.forEach((d,k)=>d.classList.toggle('is-active',k===i));}
+  let playing=false,timer=null,raf=null;
+  function startPlay(){playing=true;playBtn.innerHTML=PAUSE;playBtn.setAttribute('aria-label','Pause');clearInterval(timer);timer=setInterval(()=>{const i=(activeIdx()+1)%n;wrap.scrollTo({left:targetFor(i),behavior:'smooth'});},3500);}
+  function stopPlay(){playing=false;playBtn.innerHTML=PLAY;playBtn.setAttribute('aria-label','Play');clearInterval(timer);}
+  wrap.addEventListener('scroll',()=>{if(raf)return;raf=requestAnimationFrame(()=>{raf=null;setActive(activeIdx());});},{passive:true});
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{stopPlay();wrap.scrollTo({left:targetFor(i),behavior:'smooth'});setActive(i);}));
+  playBtn.addEventListener('click',()=>{playing?stopPlay():startPlay();});
+  ['wheel','touchstart','pointerdown'].forEach(ev=>wrap.addEventListener(ev,()=>{if(playing)stopPlay();},{passive:true}));
+  setActive(activeIdx());
+  startPlay();
+})();
+</script>
+</body>
+</html>

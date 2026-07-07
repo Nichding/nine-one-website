@@ -11,330 +11,343 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Play — Premium Padel Court Infrastructure | Nine One Sports</title>
-<meta name="description" content="Premium padel court infrastructure designed for clubs, communities and long-term play. End-to-end venue delivery from Nine One Sports.">
+<title>Nine One Play — Year-round community sport infrastructure | Nine One Sports</title>
+<meta name="description" content="Nine One Play is a complete court system for communities, schools and landowners — surface, structure, lighting, access and operations, designed to help land stay active through more of the year.">
 <link rel="canonical" href="https://nineonesports.co.nz/sports">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nine One Sports">
-<meta property="og:title" content="Play — Premium Padel Court Infrastructure | Nine One Sports">
-<meta property="og:description" content="Premium padel court infrastructure designed for clubs, communities and long-term play. End-to-end venue delivery from Nine One Sports.">
+<meta property="og:title" content="Nine One Play — Year-round community sport infrastructure">
+<meta property="og:description" content="A complete court system for communities, schools and landowners. Space to play.">
 <meta property="og:url" content="https://nineonesports.co.nz/sports">
+<meta property="og:image" content="https://nineonesports.co.nz/assets/images/opt/play-hero-01.jpg">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1339">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nine One Play — Year-round community sport infrastructure">
+<meta name="twitter:description" content="A complete court system for communities, schools and landowners.">
+<meta name="twitter:image" content="https://nineonesports.co.nz/assets/images/opt/play-hero-01.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
 /* ════════════════════════════════════════════════
-   NINE ONE · Sports · Tier 3 · V2.0.1
-   60% Soft White / 30% Black / 10% Lime · Inter only
-   Light-led · lime is the ONLY accent (no blue)
-   IA mirrors pages/sports.html, re-skinned to V2 CI
+   NINE ONE · PLAY · Flagship FRAMEWORK (VP-style scaffold)
+   Canonical CI — Inter + Spline Sans Mono · CI tokens only
+   Section flow mirrors Apple Vision Pro (structure, not content)
+   Media = images with optional corner captions
    ════════════════════════════════════════════════ */
 :root{
-  /* ── Neutral core · CI tokens ── */
   --black:#0B0B0B;
   --paper:#F4F4F1;
-  --white:#F4F4F1;            /* alias → paper (legacy refs) */
-  --sand:#ECEBE6;            /* subtle greige for alternating sections */
   --ink:#121311;
   --graphite:#76766E;
-  --muted:#A6A7A1;
-  --warmgrey:#D9D8D2;
-  --line:#E7E6E1;
-  /* ── Three yogurt sparks · accents only · ≤15% · never body text ── */
-  --play:#F6BE83;  --play-ink:#5E3411;
-  --tech:#D4F25A;  --tech-ink:#2C340A;
-  --fac:#93D2F0;   --fac-ink:#0E3B57;
-  --lime:#F6BE83;            /* this page's accent → Play orange */
-  --blue:#93D2F0;            /* legacy alias → facility blue */
-  --lime-soft:#FBE6CC;       /* soft play-orange ground */
-  --nav-h:110px; --gut:64px; --maxw:1440px;
-  --display:'Inter',sans-serif;
-  --mono:'Spline Sans Mono',ui-monospace,monospace;
+  --grey:#D9D8D2;
+  --play:#F6BE83;
+  --accent:#F6BE83;
+  --line:rgba(18,19,17,.16);
+  --line-soft:rgba(18,19,17,.09);
+  --line-inv:rgba(244,244,241,.18);
+  --muted-dark:rgba(244,244,241,.55);
+  --surface:rgba(18,19,17,.04);
+  --nav-h:70px; --gut:64px; --maxw:1024px; --maxw-wide:1024px;
+  --display:'Inter',system-ui,sans-serif;
+  --mono:'Spline Sans Mono','IBM Plex Mono',ui-monospace,monospace;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--ink);font-family:'Inter',sans-serif;
-  font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+html{scroll-behavior:smooth;scroll-padding-top:150px;}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);
+  font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip;}
 a{text-decoration:none;color:inherit;}
 img,svg{display:block;}
 
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;
-  line-height:1.4;letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none;}
+/* ── shared type ── */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);
+  font-size:11.5px;font-weight:500;line-height:1.4;letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+.h-xl{font-size:clamp(34px,5.4vw,68px);font-weight:600;line-height:1.05;letter-spacing:-0.025em;color:var(--ink);}
+.h-lg{font-size:clamp(30px,4vw,52px);font-weight:600;line-height:1.08;letter-spacing:-0.02em;color:var(--ink);}
+.lede{font-size:clamp(18px,1.6vw,21px);line-height:1.6;color:var(--graphite);font-weight:400;}
+.snum{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);}
 
-/* section number eyebrow (lime accent line) */
-.snum{display:flex;align-items:center;gap:14px;font-size:14px;font-weight:600;
-  letter-spacing:0.04em;color:var(--ink);margin-bottom:22px;}
-.snum::after{content:'';display:block;width:44px;height:2px;background:var(--lime);}
-
-.s-title{font-size:52px;font-weight:850;line-height:1.04;letter-spacing:-0.02em;color:var(--ink);}
-.s-body{font-size:18px;line-height:1.62;color:var(--graphite);}
-
-/* buttons + arrow link */
-.btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;
-  letter-spacing:-0.005em;padding:15px 30px;border-radius:999px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
-.btn svg{width:15px;height:15px;}
-.btn-solid{background:var(--ink);color:var(--white);border:1.5px solid var(--ink);}
-.btn-solid:hover{background:#000;transform:translateY(-1px);}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--warmgrey);}
+/* ── buttons ── */
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;
+  letter-spacing:0.01em;padding:14px 28px;border-radius:999px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
+.btn svg{width:14px;height:14px;}
+.btn-solid{background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);}
+.btn-solid:hover{background:var(--black);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--grey);}
 .btn-ghost:hover{border-color:var(--ink);}
-.alink{display:inline-flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--ink);transition:gap .2s;}
-.alink:hover{gap:18px;}
-.alink svg{width:16px;height:16px;stroke:var(--lime);}
+.btn-light{background:var(--paper);color:var(--ink);border:1.5px solid var(--paper);}
+.btn-light:hover{transform:translateY(-1px);}
+.btn-clear{background:transparent;color:var(--paper);border:1.5px solid rgba(244,244,241,0.45);}
+.btn-clear:hover{border-color:var(--paper);}
+.alink{display:inline-flex;align-items:center;gap:11px;font-size:14px;font-weight:500;color:var(--ink);transition:gap .2s;}
+.alink:hover{gap:16px;}
+.alink svg{width:15px;height:15px;stroke:var(--accent);}
 
-/* placeholders */
-.ph{position:absolute;inset:0;background-color:var(--paper);
-  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:46px 46px;}
-.ph.warm{background-color:var(--sand);
-  background-image:linear-gradient(rgba(120,110,90,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(120,110,90,0.10) 1px,transparent 1px);}
-.ph.lime{background-color:var(--lime-soft);
-  background-image:linear-gradient(rgba(133,90,30,0.12) 1px,transparent 1px),linear-gradient(90deg,rgba(133,90,30,0.12) 1px,transparent 1px);}
-.ph-label{position:absolute;left:22px;bottom:18px;z-index:3;font-family:var(--mono);
-  font-size:11.5px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--graphite);}
-.ph-label.sm{left:14px;bottom:12px;font-size:10px;}
+/* ════════ media slot ════════ */
+.mslot{position:relative;overflow:hidden;border-radius:12px;background:var(--surface);}
+.mslot img{width:100%;height:100%;object-fit:cover;display:block;}
+.mslot-tag{position:absolute;left:14px;bottom:14px;z-index:3;display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--paper);background:rgba(11,11,11,0.52);padding:6px 11px;border-radius:7px;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+.mslot-tag .d{width:5px;height:5px;border-radius:50%;background:var(--play);flex:none;}
+.mslot .play{position:absolute;inset:0;margin:auto;z-index:3;width:72px;height:72px;border-radius:50%;
+  background:rgba(244,244,241,0.92);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 40px rgba(11,11,11,0.35);transition:transform .2s;}
+.mslot:hover .play{transform:scale(1.06);}
+.mslot .play::after{content:'';margin-left:5px;border-left:19px solid var(--ink);
+  border-top:12px solid transparent;border-bottom:12px solid transparent;}
 
 /* ════════ NAV ════════ */
-.nav{position:static;height:var(--nav-h);background:var(--white);border-bottom:1px solid transparent;}
-.nav-inner{max-width:var(--maxw);margin:0 auto;height:100%;padding:0 var(--gut);
+.nav{position:static;height:var(--nav-h);background:var(--paper);}
+.nav-inner{max-width:var(--maxw-wide);margin:0 auto;height:100%;padding:0 var(--gut);
   display:flex;align-items:center;justify-content:space-between;}
-.brand{display:flex;align-items:center;gap:12px;}
-.brand-icon{width:42px;height:auto;display:block;}
-.nav-inner .brand-icon{width:148px;}
-.nav-inner .brand-word{display:none;}
-.brand-icon svg{width:100%;height:auto;display:block;}
-.brand-word{font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);}
-.nav-links{display:flex;align-items:center;gap:38px;list-style:none;}
-.nav-links a{font-size:15px;font-weight:500;color:var(--graphite);letter-spacing:-0.005em;transition:color .2s;}
+.brand{display:flex;align-items:center;}
+.brand-icon{display:flex;align-items:center;}
+.brand-icon img{height:40px;width:auto;display:block;}
+.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--graphite);letter-spacing:0.02em;transition:color .2s;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a.active{color:var(--ink);font-weight:600;}
-.nav-cta{font-size:15px;font-weight:600;letter-spacing:-0.005em;color:var(--ink);background:transparent;
-  border:1.5px solid var(--ink);border-radius:999px;padding:11px 24px;transition:background .2s,color .2s;}
-.nav-cta:hover{background:var(--ink);color:var(--white);}
-
-/* ════════ 01 · HERO (full-bleed photo · dark corner scrim) ════════ */
-.shero{position:relative;width:100%;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;}
-.shero-slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity .7s ease;}
-.shero-slide.active{opacity:1;}
-.shero-scrim{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(to top,rgba(0,0,0,0.62) 0%,transparent 58%),
-             linear-gradient(to right,rgba(0,0,0,0.42) 0%,transparent 60%);}
-.shero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut) 64px;}
-.shero .eyebrow{color:rgba(245,245,243,0.9);}
-.shero h1{font-size:80px;font-weight:900;line-height:0.98;letter-spacing:-0.025em;color:var(--white);margin:24px 0 24px;max-width:15ch;text-shadow:0 2px 18px rgba(0,0,0,0.45);}
-.shero h1 .accent{color:var(--lime);}
-.shero-sub{font-size:20px;line-height:1.55;color:rgba(245,245,243,0.92);max-width:42ch;margin-bottom:34px;text-shadow:0 2px 12px rgba(0,0,0,0.5);}
-.shero-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;}
-.shero .alink{color:var(--white);}
-.shero-dots{display:flex;gap:26px;}
-.shero-dots span{font-size:12px;font-weight:600;letter-spacing:0.18em;color:rgba(245,245,243,0.55);cursor:pointer;
-  padding-bottom:6px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;}
-.shero-dots span:hover{color:rgba(245,245,243,0.85);}
-.shero-dots span.active{color:var(--white);border-bottom-color:var(--lime);}
-
-/* featured venue (full-bleed editorial · dark corner scrim) */
-.feat{position:relative;overflow:hidden;border-top:1px solid var(--line);}
-.feat .feat-img{position:relative;display:block;width:100%;height:auto;z-index:0;}
-.feat-scrim{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(to top,rgba(0,0,0,0.42) 0%,transparent 44%),
-             linear-gradient(to right,rgba(0,0,0,0.26) 0%,transparent 44%);}
-.feat-inner{position:absolute;left:50%;transform:translateX(-50%);bottom:0;z-index:2;
-  max-width:var(--maxw);width:100%;padding:0 var(--gut) 80px;}
-.feat-box{max-width:540px;}
-.feat .eyebrow{color:rgba(245,245,243,0.9);}
-.feat h2{font-size:clamp(36px,4.4vw,56px);font-weight:850;line-height:1.04;letter-spacing:-0.02em;
-  color:var(--white);margin:20px 0 18px;max-width:16ch;text-shadow:0 2px 16px rgba(0,0,0,0.5);}
-.feat p{font-size:17px;line-height:1.65;color:rgba(245,245,243,0.92);max-width:46ch;text-shadow:0 2px 12px rgba(0,0,0,0.55);}
-
-/* ════════ 02.5 · HERITAGE VENUE (editorial · full-width photo, caption below) ════════ */
-.heritage{border-top:1px solid var(--line);background:var(--white);}
-.heritage-img{width:100%;height:auto;display:block;}
-.heritage-text{max-width:var(--maxw);margin:0 auto;padding:76px var(--gut) 104px;
-  display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;}
-.heritage-head .eyebrow{margin-bottom:24px;}
-.heritage-head .s-title{max-width:14ch;}
-.heritage-body{font-size:18px;line-height:1.66;color:var(--graphite);max-width:46ch;}
-
-/* ════════ 02 · COURT PORTFOLIO (stacked: header → feature row → grid) ════════ */
-.courts{max-width:var(--maxw);margin:0 auto;padding:120px var(--gut);}
-.courts > .s-title{font-size:clamp(56px,5vw,72px);font-weight:900;line-height:0.98;letter-spacing:-0.025em;margin:14px 0 0;}
-.court-types{display:grid;grid-template-columns:repeat(4,1fr);gap:44px;
-  margin-top:52px;padding:52px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--warmgrey);}
-.ctype svg{width:34px;height:34px;stroke:var(--lime);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-.ctype-title{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);margin:18px 0 8px;}
-.ctype-desc{font-size:13.5px;line-height:1.55;color:var(--graphite);}
-.courts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:52px 28px;margin-top:56px;align-items:start;}
-.courts-grid .thumb-img{aspect-ratio:16/9;}
-.thumb-img{position:relative;overflow:hidden;border-radius:5px;aspect-ratio:4/3;margin-bottom:18px;}
-.thumb-label{font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);margin-bottom:8px;}
-.thumb-desc{font-size:15px;line-height:1.55;color:var(--graphite);}
-
-/* ════════ 03 · AIR DOME (full-bleed, light) ════════ */
-.dome{position:relative;min-height:80vh;display:flex;align-items:center;overflow:hidden;border-top:1px solid var(--line);}
-.dome .ph{z-index:0;}
-.dome-scrim{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(to right,rgba(245,245,243,0.95) 0%,rgba(245,245,243,0.7) 38%,rgba(245,245,243,0) 76%);}
-.dome-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut);}
-.dome-box{max-width:540px;}
-.dome-divider{width:44px;height:2px;background:var(--lime);margin:18px 0 26px;}
-.dome-box .s-body{margin-bottom:26px;}
-.dome-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:34px;}
-.dome-list li{display:flex;align-items:center;gap:14px;font-size:16px;font-weight:500;color:var(--ink);}
-.dome-list li::before{content:'';width:9px;height:9px;background:var(--lime);flex:none;}
-
-/* ════════ 04 · CLUB EXPERIENCE ════════ */
-.club{max-width:var(--maxw);margin:0 auto;padding:140px var(--gut);background:var(--white);
-  display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:center;}
-.club-text .snum::after{background:var(--graphite);}
-.club-text .s-title{font-size:clamp(56px,5vw,72px);font-weight:900;line-height:1.0;letter-spacing:-0.025em;margin-bottom:22px;}
-.club-text .s-body{font-size:16.5px;line-height:1.65;color:var(--graphite);max-width:380px;}
-.club-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start;}
-.club-grid .thumb-img{aspect-ratio:4/3;}
-
-/* ════════ 03.5 · AFTER HOURS (contained dark card, light surround) ════════ */
-.evening{background:var(--white);border-top:1px solid var(--line);}
-.evening-inner{max-width:var(--maxw);margin:0 auto;padding:104px var(--gut);
-  display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center;}
-.evening-text .eyebrow{margin-bottom:20px;}
-.evening-text h2{font-size:40px;font-weight:850;line-height:1.06;letter-spacing:-0.02em;color:var(--ink);margin-bottom:18px;max-width:15ch;}
-.evening-text p{font-size:17px;line-height:1.62;color:var(--graphite);max-width:40ch;}
-.evening-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/9;
-  box-shadow:0 34px 64px -32px rgba(10,10,10,0.55);}
-.evening-card img{width:100%;height:100%;object-fit:cover;display:block;}
-.evening-cap{margin-top:14px;font-family:var(--mono);font-size:11px;font-weight:500;
-  letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
-
-/* ════════ 05 · WHY NINE ONE ════════ */
-.why{background:var(--paper);border-top:1px solid var(--line);}
-.why-inner{max-width:var(--maxw);margin:0 auto;padding:120px var(--gut);
-  display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;}
-.why-text .s-title{margin-bottom:24px;}
-.why-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 48px;}
-.wcard{border-top:1px solid var(--warmgrey);padding-top:26px;}
-.wcard svg{width:28px;height:28px;stroke:var(--lime);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:20px;}
-.wcard-num{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.2em;color:var(--graphite);margin-bottom:10px;}
-.wcard-title{font-size:19px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);margin-bottom:12px;}
-.wcard-desc{font-size:14.5px;line-height:1.6;color:var(--graphite);}
-
-/* ════════ 06 · LET'S BUILD ════════ */
-.build{border-top:1px solid var(--line);}
-.build-inner{max-width:var(--maxw);margin:0 auto;padding:120px var(--gut);
-  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.build-text .s-title{font-size:60px;letter-spacing:-0.025em;line-height:1.0;margin-bottom:24px;max-width:13ch;}
-.build-text .s-body{max-width:40ch;}
-.bform{display:flex;flex-direction:column;gap:20px;background:var(--white);
-  border:1px solid var(--line);border-radius:12px;padding:38px;}
-.bfield label{display:block;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--graphite);margin-bottom:9px;}
-.bfield input,.bfield textarea{width:100%;background:var(--white);border:1px solid var(--warmgrey);border-radius:6px;
-  padding:13px 15px;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);transition:border-color .2s,background .2s;}
-.bfield input::placeholder,.bfield textarea::placeholder{color:var(--muted);}
-.bfield input:focus,.bfield textarea:focus{outline:none;border-color:var(--ink);}
-.bfield textarea{height:104px;resize:vertical;line-height:1.5;}
-.bform .btn{justify-content:center;margin-top:4px;}
-
-/* ════════ FOOTER ════════ */
-.footer{background:var(--black);color:var(--white);}
-.footer-inner{max-width:var(--maxw);margin:0 auto;padding:104px var(--gut) 48px;}
-.footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
-  padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
-.footer-slogan h2{font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);}
-.footer-slogan h2 .accent{color:var(--tech);}
-.footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
-  font-size:15px;font-weight:600;color:var(--black);background:var(--white);padding:14px 28px;border-radius:999px;transition:background .2s;}
-.footer-slogan .f-cta:hover{background:var(--tech);color:var(--tech-ink);}
-.footer-slogan .f-cta svg{width:15px;height:15px;}
-.footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0 80px;}
-.footer-brand .brand-word{color:var(--white);}
-.footer-brand .brand-icon svg path{fill:var(--white);}
-.footer-brand .brand-icon{width:148px;}
-.footer-brand .brand-word{display:none;}
-.footer-tagline{font-size:15px;color:#A6A7A1;line-height:1.6;margin-top:20px;max-width:30ch;}
-.footer-col h4{font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#A6A7A1;margin-bottom:22px;}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
-.footer-col a{font-size:16px;color:var(--white);opacity:0.78;transition:opacity .2s;}
-.footer-col a:hover{opacity:1;}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;
-  padding-top:32px;border-top:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;}
-.footer-bottom .meta{font-family:var(--mono);font-size:12px;color:#A6A7A1;letter-spacing:0.04em;}
-.footer-bottom .legal{display:flex;gap:26px;}
-.footer-bottom .legal a{font-family:var(--mono);font-size:12px;color:#A6A7A1;letter-spacing:0.04em;transition:color .2s;}
-.footer-bottom .legal a:hover{color:var(--white);}
-
-/* ─── reveal ─── */
-.reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1);}
-.reveal-on .reveal{transform:translateY(20px);}
-.reveal-on .reveal.visible{transform:none;}
-.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.3s;}
-
-@media(max-width:1080px){
-  .shero h1{font-size:58px;}
-  .courts,.club,.why-inner{grid-template-columns:1fr;gap:48px;}
-  .evening-inner{grid-template-columns:1fr;gap:36px;}
-  .heritage-text{grid-template-columns:1fr;gap:28px;padding:48px var(--gut) 72px;}
-  .courts-grid,.club-grid{grid-template-columns:repeat(2,1fr);}
-  .court-types{grid-template-columns:repeat(2,1fr);gap:34px;}
-  .build-inner{grid-template-columns:1fr;gap:48px;}
-  .footer-slogan h2{font-size:64px;}
-  .footer-grid{grid-template-columns:1fr 1fr;}
-}
-
-/* ════════ V2.0.2 TYPOGRAPHY — global lightening (Calm Premium · Inter only) ════════ */
-h1{font-size:clamp(40px,5vw,64px)!important;font-weight:500!important;line-height:1.05!important;letter-spacing:-0.015em!important;}
-h2{font-size:clamp(28px,3vw,40px)!important;font-weight:600!important;line-height:1.15!important;letter-spacing:-0.01em!important;}
-h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!important;line-height:1.25!important;letter-spacing:-0.005em!important;}
-.footer-slogan h2{font-size:clamp(36px,4.5vw,56px)!important;font-weight:500!important;line-height:1.0!important;letter-spacing:-0.02em!important;}
-.eyebrow,.a-eyebrow,.ed-eyebrow,.hero-eyebrow,.thero-eyebrow,.ehero-eyebrow,.ctype-title,.thumb-label,.tfeat-eyebrow,.snum,.adir-label,.l-small,.footer-col h4,.ph-label{font-family:var(--mono)!important;font-size:10.5px!important;font-weight:500!important;letter-spacing:0.14em!important;line-height:1.4!important;}
-.nav-links a{font-size:13px!important;font-weight:500!important;letter-spacing:0.04em!important;text-transform:none!important;}
-.nav-cta,.hero-link,.thero-link,.ehero-link,.f-cta{font-size:11.5px!important;font-weight:500!important;letter-spacing:0.16em!important;text-transform:uppercase!important;}
-.alink,.ed-link,.btn{font-weight:500!important;}
-.thumb-desc,.ctype-desc,.wcard-desc,.adir-desc,.tfeat-desc,.acard p,.dual-box p{font-size:14.5px!important;font-weight:400!important;line-height:1.65!important;}
-.shero-sub,.s-body,.t-body2,.ed-body,.awhy-body{font-size:17px!important;font-weight:400!important;line-height:1.6!important;}
-
-/* ── nav menu (desktop group) + mobile drawer ── */
-.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-cta{font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);background:transparent;
+  border:1.5px solid var(--ink);border-radius:999px;padding:11px 22px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:var(--ink);color:var(--paper);}
 .nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
 .nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
 .nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* ════════ PRODUCT SUB-NAV ════════ */
+.psub{position:sticky;top:0;z-index:1090;background:rgba(244,244,241,0.82);
+  backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line);}
+.psub-inner{max-width:var(--maxw-wide);margin:0 auto;height:50px;padding:0 var(--gut);
+  display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.psub-name{font-size:18px;font-weight:600;letter-spacing:-0.015em;color:var(--ink);white-space:nowrap;}
+.psub-links{display:flex;align-items:center;gap:30px;list-style:none;margin-left:auto;}
+.psub-links a{font-size:13px;font-weight:400;color:var(--graphite);letter-spacing:0.005em;transition:color .2s;position:relative;}
+.psub-links a:hover{color:var(--ink);}
+.psub-links a.cur{color:var(--ink);}
+.psub-links a.cur::after{content:'';position:absolute;left:0;right:0;bottom:-18px;height:2px;background:var(--accent);border-radius:2px;}
+.psub-links .soon{color:var(--graphite);cursor:default;display:inline-flex;align-items:center;gap:7px;}
+.psub-links .soon .tag{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--ink);background:rgba(246,190,131,.4);padding:2px 6px;border-radius:4px;}
+.psub-cta{flex:none;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--paper);
+  background:var(--ink);border-radius:999px;padding:9px 18px;transition:background .2s,transform .2s;white-space:nowrap;}
+.psub-cta:hover{background:var(--black);transform:translateY(-1px);}
+
+/* ════════ 1+2 · HERO STAGE — Apple-style sticky scroll (hero → cover → statement) ════════ */
+.vstage{position:relative;background:var(--black);}
+.vstage-track{height:235vh;}
+.vstage-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--black);}
+.vstage-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+.vstage-base{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(11,11,11,0.30) 0%,rgba(11,11,11,0.10) 38%,rgba(11,11,11,0.44) 100%);}
+.vstage-scrim{position:absolute;inset:0;z-index:2;background:var(--black);opacity:0;will-change:opacity;}
+.vhero-bar{position:absolute;left:0;right:0;bottom:clamp(34px,6vh,72px);z-index:4;
+  padding-left:max(var(--gut),calc((100% - var(--maxw))/4 + var(--gut)/2));
+  padding-right:max(var(--gut),calc((100% - var(--maxw))/2 + var(--gut)));
+  display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(24px,4vw,72px);will-change:opacity,transform;}
+.vhero-text{text-align:left;min-width:0;will-change:opacity;}
+.vtitle{display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:clamp(10px,1.1vw,16px);
+  font-size:clamp(26px,3.4vw,44px);font-weight:600;line-height:1;letter-spacing:-0.025em;color:var(--paper);
+  text-shadow:0 2px 24px rgba(11,11,11,0.42);}
+.vtitle-mark{height:0.84em;width:auto;display:block;filter:drop-shadow(0 2px 18px rgba(11,11,11,0.38));}
+.vt-div{width:2px;height:0.92em;background:rgba(244,244,241,0.5);border-radius:2px;flex:none;}
+.vhero-desc{font-size:clamp(15px,1.4vw,18px);line-height:1.5;color:rgba(244,244,241,0.9);max-width:60ch;margin:16px 0 0;text-shadow:0 1px 12px rgba(11,11,11,0.4);}
+.vhero-desc b{font-weight:600;color:var(--paper);}
+.vhero-cta{flex:none;padding-bottom:4px;will-change:opacity;}
+.vhero-hint{position:absolute;left:0;right:0;bottom:32px;z-index:3;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(244,244,241,0.72);will-change:opacity;}
+.vhero-hint svg{display:block;width:16px;height:16px;margin:9px auto 0;stroke:rgba(244,244,241,0.72);fill:none;stroke-width:1.6;animation:vbob 1.8s ease-in-out infinite;}
+@keyframes vbob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.vstage-state{position:absolute;z-index:4;width:100%;max-width:1000px;padding:0 var(--gut);text-align:center;opacity:0;pointer-events:none;will-change:opacity,transform;}
+.vstage-state p{font-size:clamp(26px,3.4vw,46px);font-weight:500;line-height:1.24;letter-spacing:-0.02em;color:var(--paper);}
+.vstage-state .accent{color:var(--play);}
+@media(prefers-reduced-motion:reduce){.vstage-track{height:auto;}.vstage-pin{position:static;height:auto;min-height:100vh;}.vhero-hint{display:none;}}
+
+/* ════════ section frame ════════ */
+.sec{max-width:var(--maxw);margin:0 auto;padding:clamp(88px,12vw,160px) var(--gut);}
+.sec-anchor{scroll-margin-top:150px;}
+.sec-head{max-width:760px;margin:0 auto clamp(44px,6vw,72px);text-align:center;}
+.sec-head.left{margin-left:0;text-align:left;}
+.sec-head .snum{display:block;margin-bottom:18px;}
+.sec-head .lede{margin-top:22px;}
+
+/* ════════ 3 · FULL-SCREEN DEMO (placeholder image/video) ════════ */
+.vdemo{position:relative;width:100%;min-height:92vh;overflow:hidden;background:var(--black);display:flex;align-items:flex-end;}
+.vdemo .mslot{position:absolute;inset:0;border-radius:0;}
+.vdemo-scrim{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(11,11,11,0.55),transparent 50%);}
+.vdemo-inner{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut) clamp(56px,7vw,88px);}
+.vdemo .eyebrow{color:rgba(244,244,241,0.85);margin-bottom:16px;}
+.vdemo h2{font-size:clamp(28px,3.6vw,48px);font-weight:600;line-height:1.08;letter-spacing:-0.02em;color:var(--paper);max-width:16ch;
+  text-shadow:0 2px 18px rgba(11,11,11,0.4);}
+.vdemo .play{position:absolute;top:calc(50% - 36px);left:calc(50% - 36px);margin:0;}
+
+/* ════════ 3 · TAKE A CLOSER LOOK (swipe carousel + caption under each card) ════════ */
+.closer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;}
+.closer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:0 var(--gut);}
+.closer .carousel-wrap,.materials .carousel-wrap{padding:clamp(34px,4vw,54px) 0 0;}
+.carousel--feature .cslide{flex:0 0 clamp(300px,58vw,720px);}
+.carousel--feature .cslide .mslot{aspect-ratio:3/2;margin-bottom:18px;}
+.carousel--feature .cslide-cap{font-size:15px;line-height:1.55;color:var(--graphite);max-width:44ch;}
+.carousel--feature .cslide-cap b{color:var(--ink);font-weight:600;}
+.closer .glabel{margin-top:clamp(44px,5.5vw,76px);}
+.fromprice{margin-top:8px;font-size:clamp(13px,1.15vw,15px);font-weight:300;letter-spacing:0.005em;color:var(--graphite);}
+.fromprice span{color:var(--ink);}
+
+/* ════════ 4 · CAPABILITY (swipe carousel — portrait cards, each with a + detail button) ════════ */
+.caps{background:var(--paper);border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;}
+.caps .closer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:0 var(--gut);}
+.caps .lede{margin-top:18px;max-width:52ch;font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:var(--graphite);}
+.caps .carousel-wrap{padding:clamp(34px,4vw,54px) 0 0;}
+.carousel--caps .cslide{flex:0 0 clamp(250px,32vw,360px);}
+.capfig{position:relative;aspect-ratio:3/4;margin-bottom:18px;overflow:hidden;background:var(--surface);border-radius:2px;}
+.capfig img{width:100%;height:100%;object-fit:cover;display:block;}
+.capplus{position:absolute;right:16px;bottom:16px;width:44px;height:44px;border-radius:50%;
+  border:1.5px solid rgba(244,244,241,0.9);background:rgba(18,19,17,0.32);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  color:var(--paper);font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;
+  padding-bottom:3px;transition:background .2s,transform .2s;}
+.capplus:hover{background:var(--ink);transform:translateY(-1px);}
+.capnum{display:block;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--graphite);margin-bottom:10px;}
+.capslide-cap b{display:block;font-size:19px;line-height:1.25;font-weight:600;letter-spacing:-0.01em;color:var(--ink);margin-bottom:8px;}
+.capslide-cap p{font-size:14px;line-height:1.55;color:var(--graphite);max-width:34ch;}
+/* full-bleed no-text image band */
+.imgband{position:relative;width:100%;height:clamp(420px,72vh,760px);overflow:hidden;background:var(--black);}
+.imgband img{width:100%;height:100%;object-fit:cover;display:block;}
+/* full-bleed scrolly: pinned image + scrim (蒙版) + 5 stacked lines */
+.story{position:relative;background:var(--black);}
+.story-track{height:190vh;}
+.story-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;}
+.story-pin img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.story-scrim{position:absolute;inset:0;background:radial-gradient(ellipse 92% 78% at 50% 50%,rgba(11,11,11,0.62),rgba(11,11,11,0.26));opacity:0;}
+.story-lines{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut);color:var(--paper);text-align:center;opacity:0;will-change:opacity,transform;}
+.story-lines p{font-size:clamp(26px,3.4vw,46px);font-weight:500;line-height:1.24;letter-spacing:-0.02em;color:var(--paper);text-shadow:0 1px 14px rgba(11,11,11,0.55);}
+.story-lines .hl{color:var(--play);}
+.story-lines p + p{margin-top:clamp(14px,1.7vw,24px);}
+/* Designed for New Zealand reuses the closer/materials carousel system */
+.designnz{border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;background:var(--paper);}
+.designnz .closer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:0 var(--gut);}
+.designnz .carousel-wrap{padding:clamp(34px,4vw,54px) 0 0;}
+.designnz .eyebrow{margin-bottom:18px;}
+.designnz .closer-inner .lede{margin-top:18px;max-width:54ch;}
+
+/* ════════ 5 · MOVE TOGETHER MOMENTS (full-bleed + swipe carousel) ════════ */
+.moments{overflow:hidden;}
+.moments-head{position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--black);}
+.moments-head .mslot{position:absolute;inset:0;border-radius:0;}
+.moments-head-scrim{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(11,11,11,0.42),rgba(11,11,11,0.5));}
+.moments-head-inner{position:relative;z-index:3;max-width:900px;padding:96px var(--gut);}
+.moments-head .eyebrow{color:rgba(244,244,241,0.82);justify-content:center;margin-bottom:22px;}
+.moments-head h2{font-size:clamp(30px,4.4vw,58px);font-weight:600;line-height:1.06;letter-spacing:-0.022em;color:var(--paper);
+  text-shadow:0 2px 20px rgba(11,11,11,0.4);}
+.moments-head p{font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:rgba(244,244,241,0.9);max-width:48ch;margin:22px auto 0;}
+.carousel-wrap{max-width:var(--maxw-wide);margin:0 auto;padding:clamp(56px,7vw,96px) 0 clamp(72px,8vw,120px);}
+.carousel-foot{display:flex;justify-content:center;gap:14px;margin-top:clamp(30px,4vw,48px);}
+.cbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--grey);background:transparent;color:var(--ink);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,border-color .2s,opacity .2s;}
+.cbtn:hover{border-color:var(--ink);}
+.cbtn:disabled{opacity:0.35;cursor:default;}
+.cbtn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8;}
+.carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;-ms-overflow-style:none;padding:0 var(--gut);scroll-padding-left:var(--gut);scroll-padding-right:var(--gut);}
+.carousel::-webkit-scrollbar{display:none;}
+.cslide{flex:0 0 clamp(260px,40vw,520px);scroll-snap-align:start;}
+.cslide .mslot{aspect-ratio:3/4;margin-bottom:16px;}
+
+/* ════════ PLAY OS ════════ */
+.pos{background:var(--black);color:var(--paper);}
+.pos-inner{max-width:var(--maxw);margin:0 auto;padding:clamp(96px,12vw,168px) var(--gut);}
+.pos-head{max-width:680px;}
+.pos-tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;font-weight:500;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);border:1px solid rgba(244,244,241,0.32);border-radius:999px;padding:7px 15px;margin-bottom:30px;}
+.pos-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
+.pos h2{font-size:clamp(46px,7vw,92px);font-weight:600;line-height:1;letter-spacing:-0.035em;color:var(--paper);}
+.pos-sub{font-size:clamp(18px,2vw,24px);font-weight:500;line-height:1.3;letter-spacing:-0.01em;color:var(--paper);margin:22px 0 18px;}
+.pos-body{font-size:16.5px;line-height:1.65;color:rgba(244,244,241,0.66);max-width:50ch;}
+.pos-dirs{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px;}
+.pos-dirs span{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(244,244,241,0.78);border:1px solid rgba(244,244,241,0.2);border-radius:999px;padding:9px 17px;}
+
+/* ════════ CLOSING CTA ════════ */
+.cta{background:var(--paper);border-top:1px solid var(--line);}
+.cta-inner{max-width:var(--maxw);margin:0 auto;padding:clamp(96px,12vw,160px) var(--gut);text-align:center;}
+.cta h2{font-size:clamp(34px,5vw,64px);font-weight:600;line-height:1.05;letter-spacing:-0.025em;color:var(--ink);max-width:18ch;margin:0 auto;}
+.cta p{font-size:clamp(17px,1.7vw,20px);line-height:1.55;color:var(--graphite);max-width:46ch;margin:24px auto 38px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* ════════ FOOTER ════════ */
+.footer{background:var(--black);color:var(--paper);}
+.footer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:104px var(--gut) 48px;}
+.footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding-bottom:80px;border-bottom:1px solid rgba(244,244,241,0.12);flex-wrap:wrap;}
+.footer-slogan h2{font-size:clamp(40px,8vw,108px);font-weight:600;line-height:0.92;letter-spacing:-0.03em;color:var(--paper);}
+.footer-slogan h2 .accent{color:var(--accent);}
+.footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
+  font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:999px;transition:background .2s;}
+.footer-slogan .f-cta svg{width:14px;height:14px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0;}
+.footer-brand .brand-icon img{height:56px;}
+.footer-tagline{font-size:15px;color:var(--muted-dark);line-height:1.6;margin-top:20px;max-width:30ch;}
+.footer-col h4{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:22px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.footer-col a{font-size:15px;color:var(--paper);opacity:0.78;transition:opacity .2s;}
+.footer-col a:hover{opacity:1;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:32px;border-top:1px solid rgba(244,244,241,0.12);flex-wrap:wrap;}
+.footer-bottom .meta{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
+.footer-bottom .legal{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
+
+/* ── reveal ── */
+.reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .7s ease;}
+.reveal-on .reveal{opacity:0;transform:translateY(22px);}
+.reveal-on .reveal.visible{opacity:1;transform:none;}
+.rd1{transition-delay:.08s;}.rd2{transition-delay:.16s;}.rd3{transition-delay:.24s;}
+
+/* ════════ RESPONSIVE ════════ */
 @media(max-width:1080px){
   .nav{position:sticky;top:0;z-index:1100;}
   .nav-toggle{display:flex;}
-  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--white);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
   .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
   .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
-  .nav-links a{font-size:18px!important;}
+  .nav-links a{font-size:18px;}
   .nav-cta{display:block;width:100%;text-align:center;padding:14px 24px;}
+  .psub{top:var(--nav-h);}
+  .psub-inner{gap:14px;}
+  .psub-links{margin-left:14px;gap:22px;flex:1 1 auto;min-width:0;overflow-x:auto;overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,var(--black) 14px,var(--black) calc(100% - 18px),transparent 100%);
+    mask-image:linear-gradient(to right,transparent 0,var(--black) 14px,var(--black) calc(100% - 18px),transparent 100%);}
+  .psub-links::-webkit-scrollbar{display:none;}
+  .psub-links a{white-space:nowrap;}
+  .psub-links a.cur::after{display:none;}
+  .tech-inner{grid-template-columns:1fr;gap:32px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:768px){
   :root{--gut:24px;--nav-h:72px;}
+  .psub-inner{height:50px;}
+  .psub-name{font-size:16px;}
+  .vhero-bar{flex-direction:column;align-items:flex-start;gap:18px;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
-  .footer-slogan h2{font-size:42px!important;}
-  .nav-inner .brand-icon{width:120px;}
+  .footer-slogan h2{font-size:44px;}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
-<!-- ════════ NAV ════════ -->
+<!-- ════════ FRAMEWORK NOTE (scaffold only) ════════ -->
+
+<!-- ════════ GLOBAL NAV ════════ -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand" aria-label="Nine One Sports">
-      <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
-  <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
-<path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
-<path d="M8575 6693 c-112 -16 -253 -48 -330 -74 -219 -75 -447 -212 -583&#xA;-351 -139 -142 -268 -354 -327 -538 -24 -77 -28 -107 -37 -310 -11 -270 -1&#xA;-697 17 -755 7 -22 18 -68 25 -102 7 -35 17 -63 21 -63 5 0 9 -9 9 -21 0 -19&#xA;46 -128 59 -139 3 -3 17 -25 30 -50 80 -150 284 -351 446 -440 22 -12 45 -25&#xA;50 -29 11 -8 133 -59 202 -85 88 -32 250 -69 388 -86 104 -13 964 -13 1080 0&#xA;126 15 235 42 372 94 277 104 484 243 611 409 66 86 134 209 136 247 0 14 6&#xA;24 14 22 6 -1 12 3 12 8 0 6 9 30 20 52 11 23 20 54 20 69 0 15 3 35 6 44 6&#xA;13 9 14 16 3 7 -9 8 -3 5 17 -3 16 1 46 10 65 25 60 35 260 30 580 -5 318 -6&#xA;328 -57 480 -45 133 -106 259 -174 360 -56 82 -200 238 -266 285 -22 17 -62&#xA;45 -87 64 -69 51 -238 135 -347 171 -207 69 -244 72 -821 75 -286 2 -533 1&#xA;-550 -2z m715 -513 c186 -3 326 -27 470 -83 114 -45 269 -149 323 -219 14 -18&#xA;33 -42 43 -53 46 -51 124 -209 141 -285 53 -243 39 -752 -22 -820 -8 -9 -15&#xA;-22 -15 -29 0 -46 -95 -193 -181 -280 -86 -86 -239 -177 -329 -196 -19 -4 -40&#xA;-11 -45 -15 -6 -5 -62 -16 -125 -26 -169 -25 -747 -26 -909 -1 -63 9 -119 21&#xA;-125 26 -6 5 -29 13 -51 17 -52 9 -174 65 -244 111 -102 67 -232 224 -263 316&#xA;-6 18 -14 37 -18 42 -6 9 -32 91 -61 195 -14 52 -20 322 -8 425 4 39 10 96 14&#xA;128 3 32 13 77 21 99 8 22 14 48 14 56 0 9 21 59 48 111 38 77 63 112 137 186&#xA;110 113 250 205 365 242 85 27 265 51 395 52 71 1 131 3 132 5 2 2 38 2 81 0&#xA;42 -2 138 -4 212 -4z"></path>
-<path d="M6215 2460 c-146 -6 -180 -10 -243 -32 -134 -48 -217 -118 -280 -236&#xA;-52 -98 -65 -173 -66 -377 -1 -162 1 -188 23 -255 55 -176 130 -272 264 -339&#xA;141 -70 163 -72 810 -71 448 0 572 3 579 12 9 15 10 113 2 144 l-6 21 -561 -1&#xA;c-511 -1 -568 1 -627 17 -118 32 -208 105 -258 207 -27 54 -27 58 -27 250 0&#xA;227 12 281 76 354 91 104 162 120 529 120 303 1 344 -5 410 -62 52 -44 70 -84&#xA;70 -155 0 -88 -10 -118 -55 -162 -31 -32 -58 -47 -111 -63 -64 -20 -92 -21&#xA;-363 -21 -207 1 -297 -3 -305 -11 -17 -17 -14 -129 4 -140 19 -12 603 -12 685&#xA;0 178 25 289 119 329 278 46 182 -18 370 -150 448 -106 62 -163 74 -369 78&#xA;-104 1 -266 0 -360 -4z"></path>
-<path d="M12860 2458 c-258 -26 -432 -156 -495 -370 -19 -67 -27 -315 -14&#xA;-431 18 -155 77 -278 176 -367 66 -60 132 -94 228 -119 76 -20 104 -21 674&#xA;-21 426 0 597 3 601 11 8 12 4 148 -4 156 -3 3 -265 6 -583 7 l-578 2 -75 29&#xA;c-105 41 -187 123 -221 221 -22 62 -24 86 -24 234 1 191 13 260 59 327 39 56&#xA;120 104 209 124 84 19 604 18 662 -1 115 -37 171 -144 139 -267 -18 -67 -35&#xA;-95 -82 -125 -76 -50 -135 -58 -428 -58 -148 0 -274 -4 -281 -8 -16 -10 -33&#xA;-57 -33 -92 0 -62 -3 -62 384 -58 l351 3 66 31 c174 83 246 226 218 433 -21&#xA;153 -119 263 -286 321 -54 19 -86 21 -329 23 -148 1 -298 -1 -334 -5z"></path>
-<path d="M1780 2436 c-165 -43 -274 -124 -335 -249 -60 -126 -65 -173 -62&#xA;-619 1 -218 5 -399 8 -402 8 -9 176 -14 189 -6 5 3 10 172 12 430 l3 425 38&#xA;77 c45 92 95 138 182 163 100 30 671 25 775 -7 67 -20 139 -86 172 -158 30&#xA;-65 37 -160 37 -567 l1 -363 101 0 101 0 -5 433 c-3 283 -8 447 -16 476 -20&#xA;76 -76 184 -117 226 -49 50 -124 100 -178 118 -135 47 -139 48 -488 46 -310&#xA;-1 -339 -2 -418 -23z"></path>
-<path d="M3306 2444 c-3 -9 -6 -301 -6 -650 l0 -634 95 0 95 0 0 621 0 621&#xA;-27 29 c-25 26 -34 29 -89 29 -47 0 -63 -4 -68 -16z"></path>
-<path d="M4230 2450 c-168 -29 -289 -100 -360 -210 -55 -85 -71 -156 -80 -340&#xA;-8 -185 -8 -725 0 -734 7 -7 187 -13 193 -6 3 3 7 203 9 445 3 434 3 441 26&#xA;490 26 56 111 142 151 152 14 3 32 11 40 17 32 25 672 14 772 -14 44 -12 155&#xA;-124 165 -166 4 -16 12 -32 18 -36 8 -5 13 -145 16 -450 l5 -443 75 -3 c41 -2&#xA;85 0 97 3 l23 5 0 378 c-1 474 -6 540 -56 641 -46 94 -125 174 -214 218 -63&#xA;31 -70 32 -202 34 -75 1 -142 5 -148 9 -6 4 34 7 89 6 56 -1 101 2 101 7 0 9&#xA;-661 7 -720 -3z"></path>
-<path d="M9155 2450 c-22 -4 -31 -8 -20 -10 11 -2 -25 -6 -81 -10 -87 -6 -110&#xA;-12 -161 -39 -128 -68 -205 -163 -249 -306 -16 -51 -19 -94 -19 -290 0 -199 3&#xA;-238 19 -290 53 -165 165 -275 340 -332 69 -23 80 -24 427 -23 384 0 430 5&#xA;552 60 71 32 171 130 207 204 49 102 59 175 56 411 -3 178 -6 219 -23 270 -38&#xA;112 -98 198 -182 254 -94 64 -141 81 -228 83 -65 1 -70 2 -33 7 39 5 42 7 20&#xA;13 -32 10 -571 8 -625 -2z m575 -185 c76 -10 131 -35 189 -90 90 -84 111 -155&#xA;112 -384 1 -221 -27 -315 -117 -390 -77 -63 -101 -66 -484 -66 -307 0 -351 2&#xA;-402 18 -74 24 -139 82 -175 155 l-28 57 0 230 c0 219 1 232 23 280 26 57 70&#xA;106 126 142 48 31 83 43 161 53 67 8 510 5 595 -5z"></path>
-<path d="M10930 2449 c-30 -4 -75 -12 -100 -18 -159 -36 -290 -176 -330 -351&#xA;-11 -53 -26 -853 -16 -893 6 -27 7 -27 96 -27 79 0 90 2 91 18 0 9 0 114 -1&#xA;232 -1 274 16 590 35 656 9 31 31 69 56 98 75 85 139 105 355 113 167 6 484&#xA;-10 565 -28 59 -13 145 -87 177 -153 30 -60 40 -196 41 -591 0 -159 1 -305 1&#xA;-322 l0 -33 84 0 c62 0 89 4 100 15 12 13 15 58 15 283 1 353 -12 589 -37 667&#xA;-36 116 -106 203 -212 265 -77 45 -96 49 -217 52 -51 1 -93 6 -93 11 0 5 27 7&#xA;59 5 33 -2 58 -1 55 4 -6 10 -649 8 -724 -3z"></path>
-</g>
-</svg></span>
-      <span class="brand-word"></span>
+      <span class="brand-icon"><img src="assets/logo/nineone-stacked-ink.svg" alt="Nine One" width="67" height="42"></span>
     </a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-menu">
@@ -351,220 +364,149 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
   </div>
 </nav>
 
-<!-- ════════ 01 · HERO ════════ -->
-<header class="shero" id="top" data-screen-label="Hero">
-  <div class="shero-slide active" style="background-image:url('assets/images/sports-hero.jpg');"></div>
-  <div class="shero-scrim"></div>
-  <div class="shero-inner">
-    <span class="eyebrow reveal"><span class="dot"></span>Play</span>
-    <h1 class="reveal rd1">Connection starts<br>with <span class="accent">space.</span></h1>
-    <p class="shero-sub reveal rd2">We build the courts where it happens.</p>
-    <div class="shero-foot reveal rd3">
-      <a href="#courts" class="alink">Discover our system
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-      </a>
-    </div>
+<!-- ════════ PRODUCT SUB-NAV ════════ -->
+<div class="psub" id="psub">
+  <div class="psub-inner">
+    <a href="#top" class="psub-name">Nine One Play</a>
+    <ul class="psub-links">
+      <li><a href="#top" data-spy="top">Overview</a></li>
+      <li><a href="sports-specs.html">Tech Specs</a></li>
+    </ul>
+    <a href="build.html" class="psub-cta">Plan a site</a>
   </div>
-</header>
+</div>
 
-<!-- ════════ 02 · COURT PORTFOLIO ════════ -->
-<section class="courts" id="courts" data-screen-label="Court portfolio">
-  <p class="snum reveal">01</p>
-  <h2 class="s-title reveal rd1">Our courts portfolio</h2>
-  <div class="court-types reveal rd2">
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M5 14h14"/></svg>
-      <div class="ctype-title">Indoor</div>
-      <div class="ctype-desc">Climate-controlled. Built for year-round play.</div>
-    </div>
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="11" r="3"/><path d="M12 4v2M12 16v2M4 11h2M18 11h2M6.3 5.3l1.4 1.4M16.3 16.7l1.4-1.4M5.7 16.7l1.4-1.4M16.7 5.3l1.4 1.4"/><path d="M2 21h20"/></svg>
-      <div class="ctype-title">Outdoor</div>
-      <div class="ctype-desc">Designed for the elements. Built to last.</div>
-    </div>
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><path d="M3 4h18"/><path d="M3 20h18"/><path d="M6 4v16M12 4v16M18 4v16"/></svg>
-      <div class="ctype-title">Permanent</div>
-      <div class="ctype-desc">Tournament-grade. Built to anchor a community.</div>
-    </div>
-    <div class="ctype">
-      <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-2 8 9-12h-7l2-8z"/></svg>
-      <div class="ctype-title">Temporary</div>
-      <div class="ctype-desc">Fast to deploy. Ready when you are.</div>
-    </div>
-  </div>
-  <div class="courts-grid">
-    <div class="reveal">
-      <div class="thumb-img"><img src="assets/images/sports-court-1.jpg?v=2" alt="NINE ONE rooftop padel court at golden hour with city skyline backdrop, blue court surface and curved light fixtures — flagship Signature Panoramic venue" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Signature Panoramic Series</div>
-      <div class="thumb-desc">Flagship commercial and architectural padel solution.</div>
-    </div>
-    <div class="reveal rd1">
-      <div class="thumb-img"><img src="assets/images/sports-arena-indoor.jpg" alt="NINE ONE indoor padel arena with stadium seating, wooden floor and blue glass court" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Event Pro Series</div>
-      <div class="thumb-desc">International tournament-level performance system.</div>
-    </div>
-    <div class="reveal rd2">
-      <div class="thumb-img"><img src="assets/images/sports-court-2.jpg" alt="NINE ONE outdoor padel court with glass enclosure in bright daytime parkland" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Classic Club Series</div>
-      <div class="thumb-desc">The most versatile and scalable commercial court system.</div>
-    </div>
-    <div class="reveal">
-      <div class="thumb-img"><img src="assets/images/sports-court-outdoor.jpg" alt="NINE ONE outdoor padel court with full glass enclosure on a manicured lawn at dusk, parkland setting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Extreme Structure Series</div>
-      <div class="thumb-desc">Engineered for extreme environments and demanding conditions.</div>
-    </div>
-    <div class="reveal rd1">
-      <div class="thumb-img"><img src="assets/images/sports-heritage-venue.jpg" alt="NINE ONE portable padel court installed inside a heritage sandstone courtyard at golden hour — flexible installation in a historic setting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Mobility Series</div>
-      <div class="thumb-desc">Flexible installation and event-based court solution.</div>
-    </div>
-    <div class="reveal rd2">
-      <div class="thumb-img"><img src="assets/images/tech-smart-venue.jpg" alt="NINE ONE Smart Venue padel court — AI-powered connected ecosystem with sensor-equipped court nodes" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Smart Venue Series</div>
-      <div class="thumb-desc">Next-gen AI-powered smart padel ecosystem.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 03 · AIR DOME ════════ -->
-<section class="dome" data-screen-label="Air dome">
-  <img class="ph-img" src="assets/images/sports-airdome.jpg" alt="NINE ONE-branded white airdome padel facility at dusk" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
-  <div class="dome-scrim"></div>
-  <div class="dome-inner">
-    <div class="dome-box">
-      <p class="snum reveal">02</p>
-      <h2 class="s-title reveal rd1">Air dome systems</h2>
-      <div class="dome-divider reveal rd1"></div>
-      <p class="s-body reveal rd2">A cost-effective alternative to traditional indoor facilities — purpose-built for markets where weather and rent get in the way.</p>
-      <ul class="dome-list reveal rd2">
-        <li>Lower construction cost</li>
-        <li>Fast installation</li>
-        <li>Flexible relocation</li>
-        <li>All-weather play</li>
-      </ul>
-      <a href="#build" class="alink reveal rd3">Enquire about a dome
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 03.5 · FEATURED VENUE (sports-hero-1) ════════ -->
-<section class="feat" data-screen-label="Featured venue">
-  <img class="feat-img" src="assets/images/sports-clubhouse.jpg" alt="NINE ONE tropical clubhouse at golden hour with glass padel court, palm trees and illuminated signage">
-  <div class="feat-scrim"></div>
-  <div class="feat-inner">
-    <div class="feat-box">
-      <span class="eyebrow reveal"><span class="dot"></span>Featured venue</span>
-      <h2 class="reveal rd1">Iconic locations. Designed for play and landscape.</h2>
-      <p class="reveal rd2">From alpine lakesides to city rooftops — every NINE ONE venue is sited to belong to its place, then engineered to perform within it.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 04 · CLUB EXPERIENCE ════════ -->
-<section class="club" data-screen-label="Club experience">
-  <div class="club-text">
-    <p class="snum reveal">03</p>
-    <h2 class="s-title reveal rd1">Beyond the court.</h2>
-    <p class="s-body reveal rd2">We can help design the full club experience — from reception to court-side, every space that shapes how people feel.</p>
-  </div>
-  <div class="club-grid">
-    <div class="reveal">
-      <div class="thumb-img"><img src="assets/images/sports-lounge.jpg" alt="NINE ONE branded lounge interior with MOVE CONNECT LIVE wall, warm wood and sofas" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Lounge</div>
-      <div class="thumb-desc">Comfortable spaces to gather before and after play.</div>
-    </div>
-    <div class="reveal rd1">
-      <div class="thumb-img"><img src="assets/images/sports-cafe.jpg" alt="NINE ONE branded café interior with coffee bar, menu board and calm light" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Café</div>
-      <div class="thumb-desc">F&amp;B that keeps members on-site longer.</div>
-    </div>
-    <div class="reveal rd2">
-      <div class="thumb-img"><img src="assets/images/sports-social.jpg" alt="People at an outdoor NINE ONE social event beside the courts at golden hour" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></div>
-      <div class="thumb-label">Social Spaces</div>
-      <div class="thumb-desc">Flexible rooms designed for community.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 03.5 · AFTER HOURS ════════ -->
-<section class="evening" data-screen-label="After hours">
-  <div class="evening-inner">
-    <div class="evening-text">
-      <span class="eyebrow reveal"><span class="dot"></span>After hours</span>
-      <h2 class="reveal rd1">The club doesn't close at sunset.</h2>
-      <p class="reveal rd2">Reception, retail and the lounge stay lit for evening programming — league nights, socials and late sessions under the lights.</p>
-    </div>
-    <figure class="evening-card reveal rd1">
-      <img src="assets/images/sports-reception-night.jpg" alt="NINE ONE Sports reception lounge at night — dark architectural walls, illuminated nine one SPORTS logo wall, reception desk and retail display">
-    </figure>
-  </div>
-</section>
-
-<!-- ════════ 05 · WHY NINE ONE ════════ -->
-<section class="why" data-screen-label="Why Nine One">
-  <div class="why-inner">
-    <div class="why-text">
-      <p class="snum reveal">04</p>
-      <h2 class="s-title reveal rd1">Why Nine One</h2>
-      <p class="s-body reveal rd2">Every court we deliver starts with design. End-to-end. From concept to court.</p>
-    </div>
-    <div class="why-cards">
-      <div class="wcard reveal">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/><path d="M12 2a15 15 0 000 20"/></svg>
-        <div class="wcard-num">01</div>
-        <h3 class="wcard-title">Global Supply Chain</h3>
-        <p class="wcard-desc">Built to your specification. Delivered to your timeline.</p>
+<!-- ════════ 1+2 · HERO STAGE (sticky scroll: hero → cover → statement) ════════ -->
+<section class="vstage" id="top">
+  <div class="vstage-track">
+    <div class="vstage-pin">
+      <img class="vstage-img" src="assets/images/opt/play-hero-01.jpg" alt="A Nine One Play padel club on the Auckland coast at golden hour — concept visualisation" width="2400" height="1339" decoding="async" fetchpriority="high">
+      <div class="vstage-base"></div>
+      <div class="vstage-scrim" id="vScrim"></div>
+      <div class="vhero-bar" id="vBar">
+        <div class="vhero-text" id="vHero">
+          <h1 class="vtitle">
+            <img class="vtitle-mark" src="assets/logo/nineone-mark-white.svg" alt="Nine One">
+            <span>Nine One</span>
+            <span class="vt-div" aria-hidden="true"></span>
+            <span>Play</span>
+          </h1>
+          <p class="vhero-desc"><b>Space to play.</b> A complete play system for communities, courts and operators.</p>
+        </div>
+        <div class="vhero-cta" id="vCta">
+          <a href="build.html" class="btn btn-light">Plan a site
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="wcard reveal rd1">
-        <svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
-        <div class="wcard-num">02</div>
-        <h3 class="wcard-title">Local Service</h3>
-        <p class="wcard-desc">Local inventory. Fast response. When you need it, not when it arrives.</p>
+      <div class="vstage-state" id="vState">
+        <p>A new kind of play infrastructure. Surface, structure, lighting, access and operations — planned as <span class="accent">one system</span> that turns land into a sport space a community can use, run and come back to.</p>
       </div>
-      <div class="wcard reveal">
-        <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
-        <div class="wcard-num">03</div>
-        <h3 class="wcard-title">Better ROI</h3>
-        <p class="wcard-desc">Significantly more competitive than equivalent European solutions.</p>
-      </div>
-      <div class="wcard reveal rd1">
-        <svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M8.5 12h7"/></svg>
-        <div class="wcard-num">04</div>
-        <h3 class="wcard-title">Flexible Partnership</h3>
-        <p class="wcard-desc">We grow with the clubs we build. Partner, not supplier.</p>
+      <div class="vhero-hint" id="vHint" aria-hidden="true">Scroll
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════ 06 · LET'S BUILD ════════ -->
-<section class="build" id="build" data-screen-label="Court enquiry">
-  <div class="build-inner">
-    <div class="build-text">
-      <p class="snum reveal">05</p>
-      <h2 class="s-title reveal rd1">Bring movement to your community.</h2>
-      <p class="s-body reveal rd2">Tell us about the venue, scale and timeline. We'll plan the court system from there.</p>
+<!-- ════════ 3 · TAKE A CLOSER LOOK (swipe carousel of courts, image-led) ════════ -->
+<section class="closer sec-anchor" id="closer">
+  <div class="closer-inner">
+    <h2 class="h-lg reveal">Made to land anywhere.</h2>
+  </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Kauri — Built for the open air</p><p class="fromprice reveal">From NZD <span>$35,999</span></p></div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--feature">
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kauri-classic-01.jpg" alt="Kauri Classic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kauri Classic</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kauri-panoramic-01.jpg" alt="Kauri Panoramic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kauri Panoramic</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kauri-extreme-01.jpg" alt="Kauri Extreme padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kauri Extreme</b></div></div>
     </div>
-    <form class="bform reveal rd1" action="#" method="post">
-      <div class="bfield">
-        <label for="f-name">Name</label>
-        <input id="f-name" name="name" type="text" placeholder="Your name" required>
+    <div class="carousel-foot">
+      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Kawarau — A court that can move with you</p><p class="fromprice reveal">From NZD <span>$34,999</span></p></div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--feature">
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kawarau-outdoor-01.jpg" alt="Kawarau Outdoor padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kawarau Outdoor</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kawarau-elite-01.jpg" alt="Kawarau Elite padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kawarau Elite</b></div></div>
+    </div>
+    <div class="carousel-foot">
+      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Tekapo — Play on, all year</p><p class="fromprice reveal">From NZD <span>$31,999</span></p></div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--feature">
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-tekapo-panoramic-01.jpg" alt="Tekapo Panoramic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Tekapo Panoramic</b></div></div>
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-tekapo-panoramic-full-01.jpg" alt="Tekapo Panoramic Full padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Tekapo Panoramic Full</b></div></div>
+    </div>
+    <div class="carousel-foot">
+      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Rangitoto</p><p class="fromprice reveal">From NZD <span>$35,999</span></p></div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--feature">
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-rangitoto-01.jpg" alt="Rangitoto court platform — concept visualisation" width="1980" height="1080" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Rangitoto Platform</b> — the deck that puts a court on any site.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3b · FULL-BLEED SCROLLY (pinned image + scrim + 5 stacked lines) ════════ -->
+<section class="story">
+  <div class="story-track">
+    <div class="story-pin">
+      <img src="assets/images/opt/play-hero-02.jpg" alt="Queenstown and Lake Wakatipu, New Zealand" width="2400" height="1350" decoding="async" loading="lazy">
+      <div class="story-scrim"></div>
+      <div class="story-lines">
+        <p>Every court is rated for the <span class="hl">wind and corrosion</span> of its region — sized and laid out to <span class="hl">your site</span>, built and certified to <span class="hl">New Zealand standards</span>, made for everyday <span class="hl">community sport</span>, and backed by a <span class="hl">local team</span> for ten to twenty years.</p>
       </div>
-      <div class="bfield">
-        <label for="f-email">Email</label>
-        <input id="f-email" name="email" type="email" placeholder="you@example.com" required>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4 · CAPABILITY (swipe carousel — portrait cards, each with a + detail button) ════════ -->
+<!-- DRAFT COPY — pending CI §22 sign-off. Images are placeholders (assets/images/opt/play-capability-*-01.jpg), overwrite in place when finals land. -->
+<section class="caps">
+  <div class="closer-inner">
+    <h2 class="h-lg reveal">More than the materials.</h2>
+    <p class="lede reveal">Anyone can buy the parts. What we deliver is a court that belongs here — specified, sourced, certified, built and backed by us.</p>
+  </div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--caps">
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-nz-01.jpg" alt="Designed for New Zealand — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about Designed for New Zealand">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">01</span><b>Designed for New Zealand</b><p>Specified for its site — wind zone, coastal corrosion, UV and ground conditions.</p></div>
       </div>
-      <div class="bfield">
-        <label for="f-msg">What are you looking to build?</label>
-        <textarea id="f-msg" name="message" placeholder="Tell us about the venue, scale and timeline…" required></textarea>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-sourcing-01.jpg" alt="Global sourcing — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about global sourcing">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">02</span><b>Specified by us, sourced worldwide</b><p>Proven, factory-audited manufacturers — delivered to New Zealand and Australia.</p></div>
       </div>
-      <button type="submit" class="btn btn-solid">Send
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-      </button>
-    </form>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-certified-01.jpg" alt="Engineered and certified — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about engineering and certification">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">03</span><b>Engineered and certified</b><p>Designed and documented to New Zealand standards — ready for council consent.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-delivery-01.jpg" alt="End-to-end delivery — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about end-to-end delivery">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">04</span><b>From first review to handover</b><p>One team, one contract — site review, design, consent, build and handover.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-smart-01.jpg" alt="Smart from day one — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about the technology layer">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">05</span><b>Smart from day one</b><p>Booking, access and lighting — built in, not bolted on.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-service-01.jpg" alt="Local service — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about local service">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">06</span><b>A local team, for the long term</b><p>A New Zealand team, accountable for the next ten to twenty years.</p></div>
+      </div>
+    </div>
+    <div class="carousel-foot">
+      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
   </div>
 </section>
 
@@ -573,32 +515,19 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
   <div class="footer-inner">
     <div class="footer-slogan">
       <h2>Move Together<span class="accent">.</span></h2>
-      <a href="#build" class="f-cta">Court enquiry
+      <a href="build.html" class="f-cta">Court enquiry
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="brand">
-          <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
-  <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
-<path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
-<path d="M8575 6693 c-112 -16 -253 -48 -330 -74 -219 -75 -447 -212 -583&#xA;-351 -139 -142 -268 -354 -327 -538 -24 -77 -28 -107 -37 -310 -11 -270 -1&#xA;-697 17 -755 7 -22 18 -68 25 -102 7 -35 17 -63 21 -63 5 0 9 -9 9 -21 0 -19&#xA;46 -128 59 -139 3 -3 17 -25 30 -50 80 -150 284 -351 446 -440 22 -12 45 -25&#xA;50 -29 11 -8 133 -59 202 -85 88 -32 250 -69 388 -86 104 -13 964 -13 1080 0&#xA;126 15 235 42 372 94 277 104 484 243 611 409 66 86 134 209 136 247 0 14 6&#xA;24 14 22 6 -1 12 3 12 8 0 6 9 30 20 52 11 23 20 54 20 69 0 15 3 35 6 44 6&#xA;13 9 14 16 3 7 -9 8 -3 5 17 -3 16 1 46 10 65 25 60 35 260 30 580 -5 318 -6&#xA;328 -57 480 -45 133 -106 259 -174 360 -56 82 -200 238 -266 285 -22 17 -62&#xA;45 -87 64 -69 51 -238 135 -347 171 -207 69 -244 72 -821 75 -286 2 -533 1&#xA;-550 -2z m715 -513 c186 -3 326 -27 470 -83 114 -45 269 -149 323 -219 14 -18&#xA;33 -42 43 -53 46 -51 124 -209 141 -285 53 -243 39 -752 -22 -820 -8 -9 -15&#xA;-22 -15 -29 0 -46 -95 -193 -181 -280 -86 -86 -239 -177 -329 -196 -19 -4 -40&#xA;-11 -45 -15 -6 -5 -62 -16 -125 -26 -169 -25 -747 -26 -909 -1 -63 9 -119 21&#xA;-125 26 -6 5 -29 13 -51 17 -52 9 -174 65 -244 111 -102 67 -232 224 -263 316&#xA;-6 18 -14 37 -18 42 -6 9 -32 91 -61 195 -14 52 -20 322 -8 425 4 39 10 96 14&#xA;128 3 32 13 77 21 99 8 22 14 48 14 56 0 9 21 59 48 111 38 77 63 112 137 186&#xA;110 113 250 205 365 242 85 27 265 51 395 52 71 1 131 3 132 5 2 2 38 2 81 0&#xA;42 -2 138 -4 212 -4z"></path>
-<path d="M6215 2460 c-146 -6 -180 -10 -243 -32 -134 -48 -217 -118 -280 -236&#xA;-52 -98 -65 -173 -66 -377 -1 -162 1 -188 23 -255 55 -176 130 -272 264 -339&#xA;141 -70 163 -72 810 -71 448 0 572 3 579 12 9 15 10 113 2 144 l-6 21 -561 -1&#xA;c-511 -1 -568 1 -627 17 -118 32 -208 105 -258 207 -27 54 -27 58 -27 250 0&#xA;227 12 281 76 354 91 104 162 120 529 120 303 1 344 -5 410 -62 52 -44 70 -84&#xA;70 -155 0 -88 -10 -118 -55 -162 -31 -32 -58 -47 -111 -63 -64 -20 -92 -21&#xA;-363 -21 -207 1 -297 -3 -305 -11 -17 -17 -14 -129 4 -140 19 -12 603 -12 685&#xA;0 178 25 289 119 329 278 46 182 -18 370 -150 448 -106 62 -163 74 -369 78&#xA;-104 1 -266 0 -360 -4z"></path>
-<path d="M12860 2458 c-258 -26 -432 -156 -495 -370 -19 -67 -27 -315 -14&#xA;-431 18 -155 77 -278 176 -367 66 -60 132 -94 228 -119 76 -20 104 -21 674&#xA;-21 426 0 597 3 601 11 8 12 4 148 -4 156 -3 3 -265 6 -583 7 l-578 2 -75 29&#xA;c-105 41 -187 123 -221 221 -22 62 -24 86 -24 234 1 191 13 260 59 327 39 56&#xA;120 104 209 124 84 19 604 18 662 -1 115 -37 171 -144 139 -267 -18 -67 -35&#xA;-95 -82 -125 -76 -50 -135 -58 -428 -58 -148 0 -274 -4 -281 -8 -16 -10 -33&#xA;-57 -33 -92 0 -62 -3 -62 384 -58 l351 3 66 31 c174 83 246 226 218 433 -21&#xA;153 -119 263 -286 321 -54 19 -86 21 -329 23 -148 1 -298 -1 -334 -5z"></path>
-<path d="M1780 2436 c-165 -43 -274 -124 -335 -249 -60 -126 -65 -173 -62&#xA;-619 1 -218 5 -399 8 -402 8 -9 176 -14 189 -6 5 3 10 172 12 430 l3 425 38&#xA;77 c45 92 95 138 182 163 100 30 671 25 775 -7 67 -20 139 -86 172 -158 30&#xA;-65 37 -160 37 -567 l1 -363 101 0 101 0 -5 433 c-3 283 -8 447 -16 476 -20&#xA;76 -76 184 -117 226 -49 50 -124 100 -178 118 -135 47 -139 48 -488 46 -310&#xA;-1 -339 -2 -418 -23z"></path>
-<path d="M3306 2444 c-3 -9 -6 -301 -6 -650 l0 -634 95 0 95 0 0 621 0 621&#xA;-27 29 c-25 26 -34 29 -89 29 -47 0 -63 -4 -68 -16z"></path>
-<path d="M4230 2450 c-168 -29 -289 -100 -360 -210 -55 -85 -71 -156 -80 -340&#xA;-8 -185 -8 -725 0 -734 7 -7 187 -13 193 -6 3 3 7 203 9 445 3 434 3 441 26&#xA;490 26 56 111 142 151 152 14 3 32 11 40 17 32 25 672 14 772 -14 44 -12 155&#xA;-124 165 -166 4 -16 12 -32 18 -36 8 -5 13 -145 16 -450 l5 -443 75 -3 c41 -2&#xA;85 0 97 3 l23 5 0 378 c-1 474 -6 540 -56 641 -46 94 -125 174 -214 218 -63&#xA;31 -70 32 -202 34 -75 1 -142 5 -148 9 -6 4 34 7 89 6 56 -1 101 2 101 7 0 9&#xA;-661 7 -720 -3z"></path>
-<path d="M9155 2450 c-22 -4 -31 -8 -20 -10 11 -2 -25 -6 -81 -10 -87 -6 -110&#xA;-12 -161 -39 -128 -68 -205 -163 -249 -306 -16 -51 -19 -94 -19 -290 0 -199 3&#xA;-238 19 -290 53 -165 165 -275 340 -332 69 -23 80 -24 427 -23 384 0 430 5&#xA;552 60 71 32 171 130 207 204 49 102 59 175 56 411 -3 178 -6 219 -23 270 -38&#xA;112 -98 198 -182 254 -94 64 -141 81 -228 83 -65 1 -70 2 -33 7 39 5 42 7 20&#xA;13 -32 10 -571 8 -625 -2z m575 -185 c76 -10 131 -35 189 -90 90 -84 111 -155&#xA;112 -384 1 -221 -27 -315 -117 -390 -77 -63 -101 -66 -484 -66 -307 0 -351 2&#xA;-402 18 -74 24 -139 82 -175 155 l-28 57 0 230 c0 219 1 232 23 280 26 57 70&#xA;106 126 142 48 31 83 43 161 53 67 8 510 5 595 -5z"></path>
-<path d="M10930 2449 c-30 -4 -75 -12 -100 -18 -159 -36 -290 -176 -330 -351&#xA;-11 -53 -26 -853 -16 -893 6 -27 7 -27 96 -27 79 0 90 2 91 18 0 9 0 114 -1&#xA;232 -1 274 16 590 35 656 9 31 31 69 56 98 75 85 139 105 355 113 167 6 484&#xA;-10 565 -28 59 -13 145 -87 177 -153 30 -60 40 -196 41 -591 0 -159 1 -305 1&#xA;-322 l0 -33 84 0 c62 0 89 4 100 15 12 13 15 58 15 283 1 353 -12 589 -37 667&#xA;-36 116 -106 203 -212 265 -77 45 -96 49 -217 52 -51 1 -93 6 -93 11 0 5 27 7&#xA;59 5 33 -2 58 -1 55 4 -6 10 -649 8 -724 -3z"></path>
-</g>
-</svg></span>
-          </a>
+        <a href="index.html" class="brand"><span class="brand-icon"><img src="assets/logo/nineone-stacked-white.svg" alt="Nine One" width="89" height="56"></span></a>
+        <p class="footer-tagline">Year-round community sport infrastructure — courts, communities and operators, built as one system.</p>
       </div>
       <div class="footer-col">
         <h4>Business</h4>
         <ul>
-          <li><a href="#top">Play</a></li>
+          <li><a href="sports.html">Play</a></li>
           <li><a href="technologies.html">Technologies</a></li>
           <li><a href="facility.html">Facility</a></li>
           <li><a href="ecosystem.html">Ecosystem</a></li>
@@ -608,33 +537,26 @@ h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!impor
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="#build">Court enquiry</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="build.html">Court enquiry</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
           <li><a href="https://www.linkedin.com/company/nine-one-sports" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#">nineonesports.co.nz</a></li>
+          <li><a href="https://nineonesports.co.nz">nineonesports.co.nz</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
-      <div class="legal">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
+      <span class="legal">Move Together.</span>
     </div>
   </div>
 </footer>
 
-<template id="__bundler_thumbnail">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F5F5F3"/><text x="50" y="58" font-family="Inter,sans-serif" font-size="28" font-weight="900" fill="#0A0A0A" text-anchor="middle">no</text></svg>
-</template>
-
 <script>
+// reveal on scroll
 document.documentElement.classList.add('reveal-on');
 const els=[...document.querySelectorAll('.reveal')];
 const show=el=>el.classList.add('visible');
@@ -642,17 +564,87 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){sho
 els.forEach(el=>io.observe(el));
 requestAnimationFrame(()=>{const vh=innerHeight||800;els.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92){show(el);io.unobserve(el);}});});
 setTimeout(()=>els.forEach(show),1500);
-// hero slideshow
-const dots=[...document.querySelectorAll('.shero-dots span')];
-const slides=[...document.querySelectorAll('.shero-slide')];
-let cur=0,timer;
-function go(i){cur=i;dots.forEach((d,n)=>d.classList.toggle('active',n===i));slides.forEach((s,n)=>s.classList.toggle('active',n===i));}
-dots.forEach(d=>d.addEventListener('click',()=>{go(+d.dataset.dot);clearInterval(timer);timer=setInterval(()=>go((cur+1)%slides.length),5000);}));
-timer=setInterval(()=>go((cur+1)%slides.length),5000);
+
 // mobile nav drawer
 const nav=document.getElementById('nav');
 const navToggle=document.querySelector('.nav-toggle');
 if(navToggle){navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));}
+
+// sub-nav scrollspy
+const spy=new Map([...document.querySelectorAll('.psub-links a[data-spy]')].map(a=>[a.dataset.spy,a]));
+const spyObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){spy.forEach(a=>a.classList.remove('cur'));const a=spy.get(e.target.id);if(a)a.classList.add('cur');}});},{rootMargin:'-45% 0px -50% 0px'});
+['top'].forEach(id=>{const t=document.getElementById(id);if(t)spyObs.observe(t);});
+
+// ── hero stage: scroll-driven hero → cover → statement (Apple-style) ──
+(function(){
+  const stage=document.querySelector('.vstage');
+  const hero=document.getElementById('vHero');
+  const scrim=document.getElementById('vScrim');
+  const state=document.getElementById('vState');
+  const hint=document.getElementById('vHint');
+  const cta=document.getElementById('vCta');
+  const bar=document.getElementById('vBar');
+  const pin=stage.querySelector('.vstage-pin');
+  if(!stage||!hero||!scrim||!state) return;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){scrim.style.opacity='0.6';hero.style.opacity='1';state.style.opacity='1';return;}
+  const smooth=(a,b,x)=>{x=Math.max(0,Math.min(1,(x-a)/(b-a)));return x*x*(3-2*x);};
+  let ticking=false;
+  function frame(){
+    ticking=false;
+    const total=stage.offsetHeight-window.innerHeight;
+    if(total<=0) return;
+    const p=Math.max(0,Math.min(1,(-stage.getBoundingClientRect().top)/total));
+    const heroOut=smooth(0.16,0.40,p);
+    if(bar&&pin){const below=Math.max(0,pin.getBoundingClientRect().bottom-window.innerHeight);bar.style.opacity=String(1-heroOut);bar.style.transform='translateY('+(-below-36*heroOut)+'px)';bar.style.pointerEvents=heroOut>0.5?'none':'auto';}
+    if(hint) hint.style.opacity=String(1-smooth(0.03,0.15,p));
+    scrim.style.opacity=String(0.84*smooth(0.24,0.56,p));
+    const stIn=smooth(0.46,0.70,p);
+    state.style.opacity=String(stIn);
+    state.style.transform='translateY('+(26*(1-stIn))+'px)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
+  window.addEventListener('scroll',onScroll,{passive:true,capture:true});
+  window.addEventListener('resize',onScroll);
+  frame();
+})();
+
+// ── story band: clear image first, scroll reveals scrim (蒙版) + 5 lines ──
+(function(){
+  const story=document.querySelector('.story');
+  if(!story) return;
+  const scrim=story.querySelector('.story-scrim');
+  const lines=story.querySelector('.story-lines');
+  if(!scrim||!lines) return;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){scrim.style.opacity='0.7';lines.style.opacity='1';lines.style.transform='none';return;}
+  const smooth=(a,b,x)=>{x=Math.max(0,Math.min(1,(x-a)/(b-a)));return x*x*(3-2*x);};
+  let ticking=false;
+  function frame(){
+    ticking=false;
+    const total=story.offsetHeight-window.innerHeight;
+    if(total<=0){scrim.style.opacity='0.7';lines.style.opacity='1';lines.style.transform='none';return;}
+    const p=Math.max(0,Math.min(1,(-story.getBoundingClientRect().top)/total));
+    scrim.style.opacity=String(smooth(0.04,0.34,p));
+    const linesIn=smooth(0.16,0.48,p);
+    lines.style.opacity=String(linesIn);
+    lines.style.transform='translateY('+(26*(1-linesIn))+'px)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
+  window.addEventListener('scroll',onScroll,{passive:true,capture:true});
+  window.addEventListener('resize',onScroll);
+  frame();
+})();
+
+// carousels — each .carousel-wrap drives its own .carousel + buttons
+document.querySelectorAll('.carousel-wrap').forEach(wrap=>{
+  const car=wrap.querySelector('.carousel');
+  const btns=[...wrap.querySelectorAll('.cbtn')];
+  if(!car) return;
+  const step=()=>{const s=car.querySelector('.cslide');return s?s.getBoundingClientRect().width+20:400;};
+  const upd=()=>{const max=car.scrollWidth-car.clientWidth-2;btns.forEach(b=>{const d=+b.dataset.dir;b.disabled=(d<0&&car.scrollLeft<=2)||(d>0&&car.scrollLeft>=max);});};
+  btns.forEach(b=>b.addEventListener('click',()=>car.scrollBy({left:(+b.dataset.dir)*step(),behavior:'smooth'})));
+  car.addEventListener('scroll',upd,{passive:true});
+  upd();
+});
 </script>
 </body>
 </html>
