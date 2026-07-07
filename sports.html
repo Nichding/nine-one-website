@@ -196,10 +196,25 @@ img,svg{display:block;}
 .carousel--feature .cslide-cap{font-size:15px;line-height:1.55;color:var(--graphite);max-width:44ch;}
 .carousel--feature .cslide-cap b{color:var(--ink);font-weight:600;}
 .closer .glabel{margin-top:clamp(44px,5.5vw,76px);}
+.fromprice{margin-top:8px;font-size:clamp(13px,1.15vw,15px);font-weight:300;letter-spacing:0.005em;color:var(--graphite);}
+.fromprice span{color:var(--ink);}
 
-/* ════════ 4 · MATERIALS (swipe carousel — same card format as Take a closer look) ════════ */
-.materials{background:var(--paper);border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;}
-.materials .closer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:0 var(--gut);}
+/* ════════ 4 · CAPABILITY (swipe carousel — portrait cards, each with a + detail button) ════════ */
+.caps{background:var(--paper);border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;}
+.caps .closer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:0 var(--gut);}
+.caps .lede{margin-top:18px;max-width:52ch;font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:var(--graphite);}
+.caps .carousel-wrap{padding:clamp(34px,4vw,54px) 0 0;}
+.carousel--caps .cslide{flex:0 0 clamp(250px,32vw,360px);}
+.capfig{position:relative;aspect-ratio:3/4;margin-bottom:18px;overflow:hidden;background:var(--surface);border-radius:2px;}
+.capfig img{width:100%;height:100%;object-fit:cover;display:block;}
+.capplus{position:absolute;right:16px;bottom:16px;width:44px;height:44px;border-radius:50%;
+  border:1.5px solid rgba(244,244,241,0.9);background:rgba(18,19,17,0.32);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  color:var(--paper);font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;
+  padding-bottom:3px;transition:background .2s,transform .2s;}
+.capplus:hover{background:var(--ink);transform:translateY(-1px);}
+.capnum{display:block;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--graphite);margin-bottom:10px;}
+.capslide-cap b{display:block;font-size:19px;line-height:1.25;font-weight:600;letter-spacing:-0.01em;color:var(--ink);margin-bottom:8px;}
+.capslide-cap p{font-size:14px;line-height:1.55;color:var(--graphite);max-width:34ch;}
 /* full-bleed no-text image band */
 .imgband{position:relative;width:100%;height:clamp(420px,72vh,760px);overflow:hidden;background:var(--black);}
 .imgband img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -210,8 +225,8 @@ img,svg{display:block;}
 .story-pin img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .story-scrim{position:absolute;inset:0;background:radial-gradient(ellipse 92% 78% at 50% 50%,rgba(11,11,11,0.62),rgba(11,11,11,0.26));opacity:0;}
 .story-lines{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 var(--gut);color:var(--paper);text-align:center;opacity:0;will-change:opacity,transform;}
-.story-lines p{font-size:clamp(20px,2.2vw,28px);font-weight:400;line-height:1.5;letter-spacing:-0.01em;color:rgba(244,244,241,0.9);white-space:nowrap;text-shadow:0 1px 14px rgba(11,11,11,0.55);}
-.story-lines .hl{color:var(--accent);font-weight:700;font-size:1.4em;}
+.story-lines p{font-size:clamp(26px,3.4vw,46px);font-weight:500;line-height:1.24;letter-spacing:-0.02em;color:var(--paper);text-shadow:0 1px 14px rgba(11,11,11,0.55);}
+.story-lines .hl{color:var(--play);}
 .story-lines p + p{margin-top:clamp(14px,1.7vw,24px);}
 /* Designed for New Zealand reuses the closer/materials carousel system */
 .designnz{border-top:1px solid var(--line);padding:clamp(88px,11vw,150px) 0;background:var(--paper);}
@@ -356,7 +371,6 @@ img,svg{display:block;}
     <ul class="psub-links">
       <li><a href="#top" data-spy="top">Overview</a></li>
       <li><a href="sports-specs.html">Tech Specs</a></li>
-      <li><a href="#play-os" class="soon" data-spy="play-os">Play OS <span class="tag">Soon</span></a></li>
     </ul>
     <a href="build.html" class="psub-cta">Plan a site</a>
   </div>
@@ -395,21 +409,12 @@ img,svg{display:block;}
   </div>
 </section>
 
-<!-- ════════ 2 · SEE IT IN PLACE (full-bleed media, no text) ════════ -->
-<section class="vdemo">
-  <figure class="mslot">
-    <img src="assets/images/opt/sports-clubhouse.jpg" alt="A Nine One venue at golden hour" width="1920" height="1433" decoding="async" loading="lazy">
-    <span class="play" aria-hidden="true"></span>
-    
-  </figure>
-</section>
-
 <!-- ════════ 3 · TAKE A CLOSER LOOK (swipe carousel of courts, image-led) ════════ -->
 <section class="closer sec-anchor" id="closer">
   <div class="closer-inner">
     <h2 class="h-lg reveal">Made to land anywhere.</h2>
   </div>
-  <div class="closer-inner"><p class="eyebrow glabel reveal">Kauri</p></div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Kauri — Built for the open air</p><p class="fromprice reveal">From NZD <span>$35,999</span></p></div>
   <div class="carousel-wrap">
     <div class="carousel carousel--feature">
       <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kauri-classic-01.jpg" alt="Kauri Classic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kauri Classic</b></div></div>
@@ -421,7 +426,7 @@ img,svg{display:block;}
       <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
-  <div class="closer-inner"><p class="eyebrow glabel reveal">Kawarau</p></div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Kawarau — A court that can move with you</p><p class="fromprice reveal">From NZD <span>$34,999</span></p></div>
   <div class="carousel-wrap">
     <div class="carousel carousel--feature">
       <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-kawarau-outdoor-01.jpg" alt="Kawarau Outdoor padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Kawarau Outdoor</b></div></div>
@@ -432,7 +437,7 @@ img,svg{display:block;}
       <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
-  <div class="closer-inner"><p class="eyebrow glabel reveal">Tekapo</p></div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Tekapo — Play on, all year</p><p class="fromprice reveal">From NZD <span>$31,999</span></p></div>
   <div class="carousel-wrap">
     <div class="carousel carousel--feature">
       <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-tekapo-panoramic-01.jpg" alt="Tekapo Panoramic padel court — concept visualisation" width="1980" height="1105" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Tekapo Panoramic</b></div></div>
@@ -441,6 +446,12 @@ img,svg{display:block;}
     <div class="carousel-foot">
       <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
       <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="closer-inner"><p class="eyebrow glabel reveal">Rangitoto</p><p class="fromprice reveal">From NZD <span>$35,999</span></p></div>
+  <div class="carousel-wrap">
+    <div class="carousel carousel--feature">
+      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/play-rangitoto-01.jpg" alt="Rangitoto court platform — concept visualisation" width="1980" height="1080" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Rangitoto Platform</b> — the deck that puts a court on any site.</div></div>
     </div>
   </div>
 </section>
@@ -452,89 +463,49 @@ img,svg{display:block;}
       <img src="assets/images/opt/play-hero-02.jpg" alt="Queenstown and Lake Wakatipu, New Zealand" width="2400" height="1350" decoding="async" loading="lazy">
       <div class="story-scrim"></div>
       <div class="story-lines">
-        <p>Every court is rated for the <span class="hl">wind and corrosion</span> of its region.</p>
-        <p>Each one is sized and laid out to <span class="hl">your site</span>.</p>
-        <p>Built and certified to <span class="hl">New Zealand standards</span>.</p>
-        <p>Made for everyday <span class="hl">community sport</span>.</p>
-        <p>Backed by a <span class="hl">local team</span> for ten to twenty years.</p>
+        <p>Every court is rated for the <span class="hl">wind and corrosion</span> of its region — sized and laid out to <span class="hl">your site</span>, built and certified to <span class="hl">New Zealand standards</span>, made for everyday <span class="hl">community sport</span>, and backed by a <span class="hl">local team</span> for ten to twenty years.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════ 4 · MATERIALS (swipe carousel — same card format as Take a closer look) ════════ -->
-<section class="materials">
+<!-- ════════ 4 · CAPABILITY (swipe carousel — portrait cards, each with a + detail button) ════════ -->
+<!-- DRAFT COPY — pending CI §22 sign-off. Images are placeholders (assets/images/opt/play-capability-*-01.jpg), overwrite in place when finals land. -->
+<section class="caps">
   <div class="closer-inner">
-    <h2 class="h-lg reveal">Down to the material.</h2>
+    <h2 class="h-lg reveal">More than the materials.</h2>
+    <p class="lede reveal">Anyone can buy the parts. What we deliver is a court that belongs here — specified, sourced, certified, built and backed by us.</p>
   </div>
   <div class="carousel-wrap">
-    <div class="carousel carousel--feature">
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-2.jpg" alt="Cushioned surface" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Cushioned surface</b> — engineered acrylic court systems.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-6.jpg" alt="Turf systems" width="1920" height="1143" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Turf systems</b> — where the format calls for it.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-5.jpg" alt="Tempered glass" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Tempered glass</b> — clear, strong court walls.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-4.jpg" alt="Steel structure" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Steel structure</b> — the frame that holds it all.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-airdome.jpg" alt="Air-dome membrane" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Air-dome membrane</b> — a light, sealed weather cover.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-reception-night.jpg" alt="LED lighting" width="1920" height="1080" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>LED lighting</b> — even light, low energy draw.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-3.jpg" alt="Line and colour" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Line &amp; colour</b> — court colourways and marking.</div></div>
-    </div>
-    <div class="carousel-foot">
-      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ 5 · MOVE TOGETHER MOMENTS (full-bleed + swipe carousel) ════════ -->
-<section class="moments">
-  <div class="moments-head">
-    <figure class="mslot"><img src="assets/images/opt/sports-social.jpg" alt="People at a Nine One venue" width="1920" height="1433" decoding="async" loading="lazy"></figure>
-    <div class="moments-head-scrim"></div>
-    <div class="moments-head-inner">
-      <span class="eyebrow reveal"><span class="dot"></span>Move Together</span>
-      <h2 class="reveal rd1">The moments a court is really for.</h2>
-      <p class="reveal rd2">Not the build — the use. The reasons a community keeps coming back.</p>
-    </div>
-  </div>
-  <div class="carousel-wrap">
-    <div class="carousel carousel--feature" id="carousel">
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-cafe.jpg" alt="After play" width="1920" height="1433" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>After play</b> — stay around once the game ends.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-lounge.jpg" alt="Community" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Community</b> — a place that belongs to the people who use it.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-heritage-venue.jpg" alt="Events" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Events</b> — from a quiet morning to a full house.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-arena-indoor.jpg" alt="Leagues" width="1920" height="1071" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Leagues</b> — evening sessions under the lights.</div></div>
-      <div class="cslide"><figure class="mslot"><img src="assets/images/opt/sports-court-6.jpg" alt="Juniors" width="1920" height="1143" decoding="async" loading="lazy"></figure><div class="cslide-cap"><b>Juniors</b> — the next people to call it theirs.</div></div>
-    </div>
-    <div class="carousel-foot">
-      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ PLAY OS ════════ -->
-<section class="pos sec-anchor" id="play-os">
-  <div class="pos-inner">
-    <div class="pos-head">
-      <span class="pos-tag reveal"><span class="dot"></span>Coming later</span>
-      <h2 class="reveal rd1">Play OS</h2>
-      <p class="pos-sub reveal rd2">A future operating layer for connected courts.</p>
-      <p class="pos-body reveal rd2">A planned future layer to help operators run their space — booking, community, access, events and day-to-day operations in one place. Still in exploration; we'll share more if and when it's ready.</p>
-      <div class="pos-dirs reveal rd3">
-        <span>Booking</span><span>Community</span><span>Access</span><span>Events</span><span>Operator tools</span>
+    <div class="carousel carousel--caps">
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-nz-01.jpg" alt="Designed for New Zealand — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about Designed for New Zealand">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">01</span><b>Designed for New Zealand</b><p>Specified for its site — wind zone, coastal corrosion, UV and ground conditions.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-sourcing-01.jpg" alt="Global sourcing — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about global sourcing">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">02</span><b>Specified by us, sourced worldwide</b><p>Proven, factory-audited manufacturers — delivered to New Zealand and Australia.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-certified-01.jpg" alt="Engineered and certified — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about engineering and certification">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">03</span><b>Engineered and certified</b><p>Designed and documented to New Zealand standards — ready for council consent.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-delivery-01.jpg" alt="End-to-end delivery — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about end-to-end delivery">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">04</span><b>From first review to handover</b><p>One team, one contract — site review, design, consent, build and handover.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-smart-01.jpg" alt="Smart from day one — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about the technology layer">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">05</span><b>Smart from day one</b><p>Booking, access and lighting — built in, not bolted on.</p></div>
+      </div>
+      <div class="cslide">
+        <figure class="capfig"><img src="assets/images/opt/play-capability-service-01.jpg" alt="Local service — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about local service">+</button></figure>
+        <div class="capslide-cap"><span class="capnum">06</span><b>A local team, for the long term</b><p>A New Zealand team, accountable for the next ten to twenty years.</p></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ════════ CLOSING CTA ════════ -->
-<section class="cta">
-  <div class="cta-inner">
-    <h2 class="reveal">Ready to plan a court system?</h2>
-    <p class="reveal rd1">Talk to us about your site. We'll take it from a first review to a plan you can act on.</p>
-    <div class="cta-btns reveal rd2">
-      <a href="build.html" class="btn btn-solid">Plan a site
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
-      </a>
-      <a href="build.html" class="btn btn-ghost">Contact Nine One</a>
+    <div class="carousel-foot">
+      <button class="cbtn" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="cbtn" data-dir="1" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
@@ -602,7 +573,7 @@ if(navToggle){navToggle.addEventListener('click',()=>{const open=nav.classList.t
 // sub-nav scrollspy
 const spy=new Map([...document.querySelectorAll('.psub-links a[data-spy]')].map(a=>[a.dataset.spy,a]));
 const spyObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){spy.forEach(a=>a.classList.remove('cur'));const a=spy.get(e.target.id);if(a)a.classList.add('cur');}});},{rootMargin:'-45% 0px -50% 0px'});
-['top','play-os'].forEach(id=>{const t=document.getElementById(id);if(t)spyObs.observe(t);});
+['top'].forEach(id=>{const t=document.getElementById(id);if(t)spyObs.observe(t);});
 
 // ── hero stage: scroll-driven hero → cover → statement (Apple-style) ──
 (function(){
