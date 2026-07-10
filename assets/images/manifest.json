@@ -1,0 +1,350 @@
+[
+  {
+    "file": "assets/images/opt/about-direction.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/about-hero.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/about-origin.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/about-philosophy.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/about-why.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/ecosystem-bg.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/ecosystem-data-layer.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/ecosystem-hero.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-all-weather-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-allyear-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-allyear-storm-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-city-design-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-cost-interior-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-durability-1-membrane-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-durability-2-cable-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-durability-3-control-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-team-onsite-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-10"
+  },
+  {
+    "file": "assets/images/opt/facility-dome.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/facility-space.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/home-hero.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/play-capability-certified-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-07"
+  },
+  {
+    "file": "assets/images/opt/play-capability-delivery-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-07"
+  },
+  {
+    "file": "assets/images/opt/play-capability-nz-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-07"
+  },
+  {
+    "file": "assets/images/opt/play-capability-service-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-07"
+  },
+  {
+    "file": "assets/images/opt/play-capability-smart-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-07"
+  },
+  {
+    "file": "assets/images/opt/play-capability-sourcing-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-07"
+  },
+  {
+    "file": "assets/images/opt/play-hero-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-26"
+  },
+  {
+    "file": "assets/images/opt/play-hero-02.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/play-kauri-classic-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/play-kauri-extreme-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/play-kauri-panoramic-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/play-kawarau-elite-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/play-kawarau-outdoor-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/play-rangitoto-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-06"
+  },
+  {
+    "file": "assets/images/opt/play-tekapo-panoramic-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/play-tekapo-panoramic-full-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-27"
+  },
+  {
+    "file": "assets/images/opt/sports-airdome.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-arena-indoor.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-cafe.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-clubhouse.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-court-1.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-court-2.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-court-3.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-court-4.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-court-5.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-court-6.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-court-outdoor.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-heritage-venue.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-hero-1.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-lounge.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-main.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-reception-night.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-social.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-sub.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/sports-sub2.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/tech-hero.jpg",
+    "status": "reference",
+    "source": "Legacy website reference asset",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/tech-rooftop-experience.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-25"
+  },
+  {
+    "file": "assets/images/opt/tech-visual.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-06-24"
+  }
+]

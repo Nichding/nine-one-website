@@ -10,7 +10,7 @@
   --tech-tint:#E6F4FB;--tech-light:#B8E0F5;--tech-soft:#6FC2EA;--tech-hero:#0E9BDE;--tech-strong:#0077B4;--tech-deep:#02557C;--tech-night:#052A40;
   --fac-tint:#F1EBF8;--fac-light:#D6C8EC;--fac-soft:#A88BD1;--fac-hero:#5C2E91;--fac-strong:#4A2478;--fac-deep:#38195C;--fac-night:#200E38;
   --ink:#15140F;          /* text dark */
-  --white:#F4F4F1;        /* text light (for data-theme="dark") */
+  --white:#FFFFFF;        /* approved light text for Violet/night contexts */
   --bg:#F4F4F1;
   --ph-fill:#D9D8D2;
   --ph-line:#76766E;
@@ -363,7 +363,8 @@ p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
 }
 
 /* CI V2 Facility context */
-.footer{background:var(--fac-night)}
+.footer{background:var(--fac-night);color:var(--white)}
+.footer nav a,.footer nav a:hover{color:var(--white)}
 .btn-primary,.nav-cta,.psub-cta{background:var(--fac-hero);color:var(--white);border-color:var(--fac-hero)}
 .btn-primary:hover,.nav-cta:hover,.psub-cta:hover{background:var(--fac-strong);color:var(--white)}
 main p,section p{color:var(--ink)}
