@@ -20,12 +20,12 @@
   --gut:clamp(20px,4vw,48px);
   --font:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
   --mono:"Spline Sans Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --skyblue:#5C2E91;      /* Facility accent */
-  --inkblue:#38195C;      /* Facility deep */
+  --skyblue:var(--fac-hero);      /* Facility accent */
+  --inkblue:var(--fac-deep);      /* Facility deep */
   /* ── site-standard header tokens (shared across all pages) ── */
   --paper:#F4F4F1;
   --graphite:#76766E;
-  --accent:#00A87E;       /* site accent (amber) — matches Play/Facility nav */
+  --accent:var(--fac-hero);       /* site accent (amber) — matches Play/Facility nav */
   --line:rgba(21,20,15,.16);
   --black:#0B0B0B;
   --nav-h:70px;
@@ -361,3 +361,9 @@ p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
   .flow{padding:72px var(--gut);}
   .speccards{grid-template-columns:1fr;}
 }
+
+/* CI V2 Facility context */
+.footer{background:var(--fac-night)}
+.btn-primary,.nav-cta,.psub-cta{background:var(--fac-hero);color:var(--white);border-color:var(--fac-hero)}
+.btn-primary:hover,.nav-cta:hover,.psub-cta:hover{background:var(--fac-strong);color:var(--white)}
+main p,section p{color:var(--ink)}

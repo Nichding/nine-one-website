@@ -49,8 +49,8 @@
   --ink:#15140F;
   --graphite:#76766E;
   --grey:#D9D8D2;
-  --play:#00A87E;
-  --accent:#00A87E;
+  --play:var(--fac-hero);
+  --accent:var(--fac-hero);
   --line:rgba(21,20,15,.16);
   --line-soft:rgba(21,20,15,.09);
   --muted-dark:rgba(244,244,241,.55);
@@ -249,6 +249,12 @@ img,svg{display:block;}
 @media(max-width:760px){.ftiles{grid-template-columns:1fr;}}
 .fband{position:relative;width:100%;height:clamp(420px,70vh,720px);overflow:hidden;background:var(--black);margin-bottom:clamp(28px,3.5vw,44px);}
 .fband img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* CI V2 division context */
+main p,section p{color:var(--ink)}
+.footer{background:var(--fac-night)}
+.btn-solid,.nav-cta{background:var(--fac-hero);color:var(--white);border-color:var(--fac-hero)}
+.btn-solid:hover,.nav-cta:hover{background:var(--fac-strong);color:var(--white)}
 </style>
 </head>
 <body>

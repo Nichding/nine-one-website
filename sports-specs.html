@@ -41,7 +41,7 @@
   --tech-tint:#E6F4FB;--tech-light:#B8E0F5;--tech-soft:#6FC2EA;--tech-hero:#0E9BDE;--tech-strong:#0077B4;--tech-deep:#02557C;--tech-night:#052A40;
   --fac-tint:#F1EBF8;--fac-light:#D6C8EC;--fac-soft:#A88BD1;--fac-hero:#5C2E91;--fac-strong:#4A2478;--fac-deep:#38195C;--fac-night:#200E38;
   --black:#0B0B0B; --paper:#F4F4F1; --ink:#15140F; --graphite:#76766E;
-  --grey:#D9D8D2; --play:#00A87E; --accent:#00A87E;
+  --grey:#D9D8D2; --play:var(--play-hero); --accent:var(--play-hero);
   --line:rgba(21,20,15,.16); --line-soft:rgba(21,20,15,.09); --muted-dark:rgba(244,244,241,.55); --surface:rgba(21,20,15,.04);
   --nav-h:70px; --gut:64px; --maxw:1024px; --maxw-wide:1024px;
   --display:'Inter',system-ui,sans-serif; --mono:'Spline Sans Mono','IBM Plex Mono',ui-monospace,monospace;
@@ -188,6 +188,12 @@ img,svg{display:block;}
 @media(max-width:640px){
   .footer-grid{grid-template-columns:1fr;}
 }
+
+/* CI V2 division context */
+main p,section p{color:var(--ink)}
+.footer{background:var(--play-night)}
+.btn-solid,.nav-cta,.psub-cta{background:var(--play-hero);color:var(--play-night);border-color:var(--play-hero)}
+.btn-solid:hover,.nav-cta:hover,.psub-cta:hover{background:var(--play-strong);color:var(--play-night)}
 </style>
 </head>
 <body>
