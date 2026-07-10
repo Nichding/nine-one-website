@@ -30,6 +30,16 @@
 
 ---
 
+## 2026-07-11 · Facility 文案 review 裁决执行
+
+- Nicholas 已完成 `Website/_Drafts/Facility_Copy_Review_2026-07-10.md` 的逐项裁决；清单 A/B 已在 `redesign/ci-v2-phase2` 执行。
+- Air Dome：`Lifespan` 对齐为 `Design Life`；All Year 指定两句降温；法律页脚改为 `© 2026 Nine One Sports Ltd`；目标文件内 `air-dome` 归零。
+- Facility：删除虚构 `Success story` 整卡，四卡改三卡；按批准稿更新运营/全年/新西兰条件/表单/页脚文案；六处相关图片 alt 全部改为 concept visualisation 框架；目标文件内 `air-dome` 归零。
+- 响应式：`facility.html` 三卡在 390 / 768 / 1440 均为 3 项、无横向溢出；1440 三列，390/768 单列。
+- 按 Nicholas 裁决明确保留：估算器及 `airdome/script.js` 全部字符串、成本 `fraction` 比较、business case PDF、规格配置、`One Local Team`/全链条交付、`First Serve`、Air Dome Title Case。
+- 清单外未改：`index.html`、`technologies.html`、`build.html`、`sports-specs.html` 与 `_backup/` 仍有历史 `air-dome` 拼写，因此“全仓 HTML 零命中”检查仍失败；A/B 两个目标文件为零命中，等待 Nicholas 另行授权是否全仓统一。
+- 未 push、未 merge `main`、未创建或处理 PR。
+
 ## 一句话现状
 
 8 页官网已整体重做成 **Apple 式产品生态站**（Inter + Spline Sans Mono、严格 6-token CI、白底为主、零非 CI hex）。**AI 配图系统已开跑**：Play 页四条产品线（Kauri / Kawarau / Tekapo / Rangitoto）已全部用上 Gemini 概念渲染图（原档在本文件夹 `Imagery/Renders/`）。之前「7 页未提交」已于 6-28 提交（`751e6cf`）；当前仅 sports.html 的 Rangitoto 段落 + 新图未提交。**线上跑的仍是旧版，本轮重做未上线。**

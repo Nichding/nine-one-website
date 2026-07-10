@@ -233,7 +233,7 @@ img,svg{display:block;}
 .fdark{background:var(--black);color:var(--paper);padding:clamp(72px,9vw,128px) 0;margin-top:clamp(28px,3.5vw,44px);}
 .fdark-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);}
 .fdark-inner h2{font-size:clamp(26px,3vw,42px);font-weight:600;line-height:1.08;letter-spacing:-0.02em;color:var(--paper);max-width:18ch;margin-bottom:clamp(34px,4vw,52px);}
-.fdark-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,1.6vw,22px);}
+.fdark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.6vw,22px);}
 .fcard{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:#121311;}
 .fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.78;transition:transform .6s ease,opacity .4s;}
 .fcard:hover img{transform:scale(1.03);opacity:0.9;}
@@ -241,7 +241,8 @@ img,svg{display:block;}
 .fcard-t{position:absolute;left:0;bottom:0;z-index:2;padding:clamp(22px,2.6vw,34px);}
 .fcard-t .eyebrow{color:rgba(244,244,241,0.82);margin-bottom:10px;}
 .fcard-t h3{font-size:clamp(19px,2vw,26px);font-weight:600;line-height:1.12;letter-spacing:-0.015em;color:var(--paper);max-width:20ch;}
-@media(max-width:760px){.ftiles,.fdark-grid{grid-template-columns:1fr;}}
+@media(max-width:900px){.fdark-grid{grid-template-columns:1fr;}}
+@media(max-width:760px){.ftiles{grid-template-columns:1fr;}}
 .fband{position:relative;width:100%;height:clamp(420px,70vh,720px);overflow:hidden;background:var(--black);margin-bottom:clamp(28px,3.5vw,44px);}
 .fband img{width:100%;height:100%;object-fit:cover;display:block;}
 </style>
@@ -280,57 +281,52 @@ img,svg{display:block;}
   </div>
 </header>
 
-<!-- ════════ AIR-DOME (full-bleed) ════════ -->
+<!-- ════════ AIR DOME (full-bleed) ════════ -->
 <section class="fband">
-  <img src="assets/images/opt/facility-dome.jpg" alt="A Nine One air-dome facility — concept visualisation" width="1600" height="839" loading="lazy" decoding="async">
+  <img src="assets/images/opt/facility-dome.jpg" alt="Concept visualisation — a proposed Nine One Air Dome facility" width="1600" height="839" loading="lazy" decoding="async">
 </section>
 
 <!-- ════════ AUDIENCES · two tiles (placeholder copy) ════════ -->
 <section class="ftiles" id="audiences">
   <a class="ftile reveal" href="#plan">
-    <img src="assets/images/opt/play-kauri-classic-01.jpg" alt="A Nine One padel club for operators" loading="lazy" decoding="async">
+    <img src="assets/images/opt/play-kauri-classic-01.jpg" alt="Concept visualisation — a Nine One padel club for operators" loading="lazy" decoding="async">
     <div class="ftile-scrim"></div>
     <div class="ftile-t">
       <span class="eyebrow">For padel club operators</span>
-      <h2>A club that books, fills and runs itself.</h2>
+      <h2>A club designed around bookings, access and daily operations.</h2>
       <span class="tlink">Explore <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></span>
     </div>
   </a>
   <a class="ftile reveal" href="#plan">
-    <img src="assets/images/opt/sports-arena-indoor.jpg" alt="A Nine One multi-function sports facility" loading="lazy" decoding="async">
+    <img src="assets/images/opt/sports-arena-indoor.jpg" alt="Concept visualisation — a Nine One multi-sport facility" loading="lazy" decoding="async">
     <div class="ftile-scrim"></div>
     <div class="ftile-t">
       <span class="eyebrow">For multi-function sports facilities</span>
-      <h2>One venue, many sports, all year.</h2>
+      <h2>One venue, many sports, through more of the year.</h2>
       <span class="tlink">Explore <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></span>
     </div>
   </a>
 </section>
 
-<!-- ════════ DARK · four panels (business-style · placeholder copy) ════════ -->
+<!-- ════════ DARK · three panels (business-style · placeholder copy) ════════ -->
 <section class="fdark">
   <div class="fdark-inner">
-    <h2 class="reveal">Built around how a facility really works.</h2>
+    <h2 class="reveal">Built around how a facility runs.</h2>
     <div class="fdark-grid">
       <a class="fcard reveal" href="#plan">
-        <img src="assets/images/opt/sports-clubhouse.jpg" alt="Padel club owner" loading="lazy" decoding="async">
+        <img src="assets/images/opt/sports-clubhouse.jpg" alt="Concept visualisation — proposed padel clubhouse setting" loading="lazy" decoding="async">
         <div class="fcard-scrim"></div>
         <div class="fcard-t"><span class="eyebrow">Padel club owner</span><h3>Run a club people keep coming back to.</h3></div>
       </a>
       <a class="fcard reveal" href="sports.html">
-        <img src="assets/images/opt/play-kauri-panoramic-01.jpg" alt="The padel court" loading="lazy" decoding="async">
+        <img src="assets/images/opt/play-kauri-panoramic-01.jpg" alt="Concept visualisation — proposed Nine One padel court" loading="lazy" decoding="async">
         <div class="fcard-scrim"></div>
         <div class="fcard-t"><span class="eyebrow">The padel court</span><h3>The court itself, engineered for here.</h3></div>
       </a>
       <a class="fcard reveal" href="ecosystem.html">
-        <img src="assets/images/opt/facility-space.jpg" alt="Placeholder panel" loading="lazy" decoding="async">
+        <img src="assets/images/opt/facility-space.jpg" alt="Concept visualisation — proposed covered-sport site in New Zealand" loading="lazy" decoding="async">
         <div class="fcard-scrim"></div>
-        <div class="fcard-t"><span class="eyebrow">Built for New Zealand</span><h3>Made for our climate, sites and standards.</h3></div>
-      </a>
-      <a class="fcard reveal" href="#plan">
-        <img src="assets/images/opt/sports-social.jpg" alt="Success story" loading="lazy" decoding="async">
-        <div class="fcard-scrim"></div>
-        <div class="fcard-t"><span class="eyebrow">Success story</span><h3>How one site filled its calendar.</h3></div>
+        <div class="fcard-t"><span class="eyebrow">Built for New Zealand</span><h3>Designed for New Zealand climate, sites and standards.</h3></div>
       </a>
     </div>
   </div>
@@ -341,7 +337,7 @@ img,svg{display:block;}
   <div class="build-inner">
     <span class="eyebrow reveal"><span class="dot"></span>Plan a facility</span>
     <h2 class="reveal rd1">Start with a site.</h2>
-    <p class="reveal rd2">Tell us about the site and the community. We'll take it from there.</p>
+    <p class="reveal rd2">Tell us about the site, the community and what you want the space to do. We'll come back with the next step.</p>
 
     <form class="fform reveal rd3" name="facility-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="facility-enquiry">
@@ -364,7 +360,7 @@ img,svg{display:block;}
         <button type="submit" class="btn btn-solid">Send
           <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
         </button>
-        <div class="form-success" hidden><span class="dot"></span>Thanks — we'll be in touch.</div>
+        <div class="form-success" hidden><span class="dot"></span>Thanks. We've received your enquiry and will be in touch about the next step.</div>
       </div>
     </form>
   </div>
@@ -382,7 +378,7 @@ img,svg{display:block;}
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand"><span class="brand-icon"><img src="assets/logo/nineone-stacked-white.svg" alt="Nine One" width="89" height="56"></span></a>
-        <p class="footer-tagline">Year-round community sport infrastructure — courts, communities and operators, built as one system.</p>
+        <p class="footer-tagline">Year-round community sport infrastructure — courts, covered play and operations, designed as one system.</p>
       </div>
       <div class="footer-col">
         <h4>Business</h4>
