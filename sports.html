@@ -44,18 +44,22 @@
    Media = images with optional corner captions
    ════════════════════════════════════════════════ */
 :root{
+  --paper:#F4F4F1;--mist:#ECEBE6;--greige:#D9D8D2;--stone:#A8A69D;--graphite:#76766E;--ink:#15140F;--black:#0B0B0B;--white:#FFFFFF;
+  --play-tint:#E3F4EF;--play-light:#B9E4D8;--play-soft:#6BC7AC;--play-hero:#00A87E;--play-strong:#0E7F60;--play-deep:#0A5C4A;--play-night:#07322B;
+  --tech-tint:#E6F4FB;--tech-light:#B8E0F5;--tech-soft:#6FC2EA;--tech-hero:#0E9BDE;--tech-strong:#0077B4;--tech-deep:#02557C;--tech-night:#052A40;
+  --fac-tint:#F1EBF8;--fac-light:#D6C8EC;--fac-soft:#A88BD1;--fac-hero:#5C2E91;--fac-strong:#4A2478;--fac-deep:#38195C;--fac-night:#200E38;
   --black:#0B0B0B;
   --paper:#F4F4F1;
-  --ink:#121311;
+  --ink:#15140F;
   --graphite:#76766E;
   --grey:#D9D8D2;
-  --play:#F6BE83;
-  --accent:#F6BE83;
-  --line:rgba(18,19,17,.16);
-  --line-soft:rgba(18,19,17,.09);
+  --play:#00A87E;
+  --accent:#00A87E;
+  --line:rgba(21,20,15,.16);
+  --line-soft:rgba(21,20,15,.09);
   --line-inv:rgba(244,244,241,.18);
   --muted-dark:rgba(244,244,241,.55);
-  --surface:rgba(18,19,17,.04);
+  --surface:rgba(21,20,15,.04);
   --nav-h:70px; --gut:64px; --maxw:1024px; --maxw-wide:1024px;
   --display:'Inter',system-ui,sans-serif;
   --mono:'Spline Sans Mono','IBM Plex Mono',ui-monospace,monospace;
@@ -141,7 +145,7 @@ img,svg{display:block;}
 .psub-links a.cur::after{content:'';position:absolute;left:0;right:0;bottom:-18px;height:2px;background:var(--accent);border-radius:2px;}
 .psub-links .soon{color:var(--graphite);cursor:default;display:inline-flex;align-items:center;gap:7px;}
 .psub-links .soon .tag{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;
-  color:var(--ink);background:rgba(246,190,131,.4);padding:2px 6px;border-radius:4px;}
+  color:var(--ink);background:rgba(0,168,126,.4);padding:2px 6px;border-radius:4px;}
 .psub-cta{flex:none;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--paper);
   background:var(--ink);border-radius:999px;padding:9px 18px;transition:background .2s,transform .2s;white-space:nowrap;}
 .psub-cta:hover{background:var(--black);transform:translateY(-1px);}
@@ -214,7 +218,7 @@ img,svg{display:block;}
 .capfig{position:relative;aspect-ratio:3/4;margin-bottom:18px;overflow:hidden;background:var(--surface);border-radius:2px;}
 .capfig img{width:100%;height:100%;object-fit:cover;display:block;}
 .capplus{position:absolute;right:16px;bottom:16px;width:44px;height:44px;border-radius:50%;
-  border:1.5px solid rgba(244,244,241,0.9);background:rgba(18,19,17,0.32);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  border:1.5px solid rgba(244,244,241,0.9);background:rgba(21,20,15,0.32);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
   color:var(--paper);font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;
   padding-bottom:3px;transition:background .2s,transform .2s;}
 .capplus:hover{background:var(--ink);transform:translateY(-1px);}
@@ -329,7 +333,7 @@ body.capmodal-open{overflow:hidden;}
 .rd1{transition-delay:.08s;}.rd2{transition-delay:.16s;}.rd3{transition-delay:.24s;}
 
 /* ════════ RESPONSIVE ════════ */
-@media(max-width:1080px){
+@media(max-width:1024px){
   .nav{position:sticky;top:0;z-index:1100;}
   .nav-toggle{display:flex;}
   .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
@@ -349,7 +353,7 @@ body.capmodal-open{overflow:hidden;}
   .tech-inner{grid-template-columns:1fr;gap:32px;}
   .footer-grid{grid-template-columns:1fr 1fr;}
 }
-@media(max-width:768px){
+@media(max-width:640px){
   :root{--gut:24px;--nav-h:72px;}
   .psub-inner{height:50px;}
   .psub-name{font-size:16px;}
@@ -357,7 +361,7 @@ body.capmodal-open{overflow:hidden;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
   .footer-slogan h2{font-size:44px;}
 }
-@media(max-width:480px){
+@media(max-width:640px){
   .footer-grid{grid-template-columns:1fr;}
 }
 </style>

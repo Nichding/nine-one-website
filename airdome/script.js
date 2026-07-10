@@ -155,8 +155,8 @@ const PLACEHOLDER_PER_COURT = 1200;
   }
   function ramp(t){
     t = t < 0 ? 0 : t > 1 ? 1 : t;
-    if (t < 0.38) return '#0E3B57';
-    if (t < 0.72) return '#93D2F0';
+    if (t < 0.38) return '#38195C';
+    if (t < 0.72) return '#5C2E91';
     return '#F4F4F1';
   }
   function spawn(p){
@@ -167,10 +167,10 @@ const PLACEHOLDER_PER_COURT = 1200;
   }
   function paintBg(){
     const g = ctx.createLinearGradient(0, 0, 0, H);
-    g.addColorStop(0, '#0E3B57'); g.addColorStop(1, '#0B0B0B');
+    g.addColorStop(0, '#38195C'); g.addColorStop(1, '#0B0B0B');
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     ctx.save(); domePath(ctx); ctx.clip();
-    ctx.strokeStyle = 'rgba(147,210,240,.10)'; ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(92,46,145,.10)'; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(geo.x0, geo.floor); ctx.lineTo(geo.x1, geo.floor); ctx.stroke();
     ctx.restore();
   }
@@ -187,7 +187,7 @@ const PLACEHOLDER_PER_COURT = 1200;
   }
   function frame(){
     ctx.save(); domePath(ctx); ctx.clip();
-    ctx.fillStyle = 'rgba(14,59,87,0.14)'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = 'rgba(32,14,56,0.14)'; ctx.fillRect(0, 0, W, H);
     ctx.globalCompositeOperation = 'lighter'; ctx.lineWidth = 1.15; ctx.lineCap = 'round';
     for (const p of parts){
       const u = U(p.nx, p.ny), v = V(p.nx, p.ny); const s = Math.hypot(u, v);
@@ -201,7 +201,7 @@ const PLACEHOLDER_PER_COURT = 1200;
     }
     ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.restore();
     // membrane outline + centre inlet glow
-    domePath(ctx); ctx.strokeStyle = 'rgba(147,210,240,.55)'; ctx.lineWidth = 1.4; ctx.stroke();
+    domePath(ctx); ctx.strokeStyle = 'rgba(92,46,145,.55)'; ctx.lineWidth = 1.4; ctx.stroke();
     const ix = geo.x0 + (geo.x1 - geo.x0) * 0.5, iy = geo.floor;
     const gl = ctx.createRadialGradient(ix, iy, 0, ix, iy, 46);
     gl.addColorStop(0, 'rgba(244,244,241,.55)'); gl.addColorStop(1, 'rgba(244,244,241,0)');
