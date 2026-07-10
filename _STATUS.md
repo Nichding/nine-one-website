@@ -1,10 +1,22 @@
 # Nine One 官网 — STATUS（接力棒）
 
-> 改完谁更新，接手先读。**最近更新：2026-07-10**
+> 改完谁更新，接手先读。**最近更新：2026-07-11**
 >
 > ⏳ **发布中（待 Nicholas 合 PR）**：本轮全部改动已 commit 并推到 `redesign/ci-v2-phase2`（tip `ca31bde`）。Nicholas 已批准整套 8 页上线（选项 A）。**直接 push main 被仓库钩子禁止（须走 PR），且本会话 gh 未登录** → 最后一步由 Nicholas 在 GitHub 手动合 PR：<https://github.com/Nichding/nine-one-website/compare/main...redesign/ci-v2-phase2?expand=1> → Merge → Netlify 自动部署上线。
 > ⚠️ **线上曾有平行 Phase 2 提交 `bf1a6fe`（Facility 页+移动导航），不在本分支**。已用 `git merge -s ours origin/main` 把它记入历史但**内容以本分支为准**（PR 因此无冲突、干净可合）；合并即以本分支全面取代它。若发现 bf1a6fe 有本分支缺的东西，再单独补。
 > 这是文档侧（OneDrive）的正本接力棒。代码侧 `~/Projects/nineone/website/_STATUS.md` 是同内容的就近副本，以本文为准。
+
+---
+
+## 2026-07-11 · 全站文案 review 裁决执行
+
+- Nicholas 已完成 `_Drafts/Site_Copy_Review_2026-07-11.md` 裁决；批准清单已在 `redesign/ci-v2-phase2` 执行，报告中其余 findings 保持不动。
+- Play：四条产品线价格补 `+GST`（价格数字不变）；两处 `ten to twenty years` 降级为 `for the long term`。
+- About：按批准稿将三处建成式表述改为设计/所在地表述；OG / Twitter meta 保持原文。
+- 场景图：review 范围内 35 个非 Logo alt 统一为 `Concept visualisation — <原描述>`，移除旧句尾后缀并保留 Nine One、Kauri、Kawarau、Tekapo、Rangitoto、Queenstown、Auckland 等专名大小写。
+- 术语与页脚：正式页面范围内 6 处 `air-dome` 改为 `Air Dome`；8 个正式页面 footer tagline 统一为 `Year-round community sport infrastructure — courts, covered play and operations, designed as one system.`
+- **明确遗留**：`sports-specs.html` 的 padel 规格表数值等待供应商目录核对；Play OS / Smart 表述等待页面方向确定。Technology / Build 已批准交付承诺及 `Tech Specs` 保持原文。
+- 未 push、未 merge `main`、未创建或处理 PR。
 
 ---
 
