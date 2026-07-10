@@ -39,6 +39,7 @@
 - 已接入 8 个正式页面与 `airdome/` 正主；Play 使用 Jade、Technology 使用 Azure、Facility/Air Dome 使用 Violet，Master 页面保持中性色。
 - Air Dome Canvas 动画已改为读取 CSS token，不再内嵌旧色。
 - 四个现用官方 Logo SVG 副本仅做颜色归一（Black / Paper），path、viewBox、比例未改。
+- 2026-07-10 Logo 决策更新：全站导航与页脚统一改用纯 Mark，不再显示 stacked 文字版；浅底使用 `nineone-mark-ink.svg`（40px 高），深底使用 `nineone-mark-white.svg`（56px 高）。
 - 旧 `facility-airdome.html` 仍为未跟踪旧稿，不纳入本次提交；`airdome/index.html` 仍是现行正主。
 - 响应式检查：9 页在 390 / 822 / 1440 均无横向溢出；页面计算字体均为 Inter + Noto Sans SC；业务 accent 分别解析为 Jade / Azure / Violet。
 - 旧色扫描：正式 HTML/CSS/JS 与现用 Logo 中指定三代旧色归零；`_backup/` 历史档案保持原样，验收 grep 需排除归档目录。
