@@ -1,0 +1,246 @@
+:root {
+  --master-paper: #F4F4F1;
+  --master-mist: #ECEBE6;
+  --master-greige: #D9D8D2;
+  --master-stone: #A8A69D;
+  --master-graphite: #76766E;
+  --master-ink: #15140F;
+  --master-black: #0B0B0B;
+  --master-white: #FFFFFF;
+  --play-tint: #E3F4EF;
+  --play-light: #B9E4D8;
+  --play-soft: #6BC7AC;
+  --play-hero: #00A87E;
+  --play-strong: #0E7F60;
+  --play-deep: #0A5C4A;
+  --play-night: #07322B;
+  --technology-tint: #E6F4FB;
+  --technology-light: #B8E0F5;
+  --technology-soft: #6FC2EA;
+  --technology-hero: #0E9BDE;
+  --technology-strong: #0077B4;
+  --technology-deep: #02557C;
+  --technology-night: #052A40;
+  --facility-tint: #F1EBF8;
+  --facility-light: #D6C8EC;
+  --facility-soft: #A88BD1;
+  --facility-hero: #5C2E91;
+  --facility-strong: #4A2478;
+  --facility-deep: #38195C;
+  --facility-night: #200E38;
+
+  --font-sans: "Inter", "Noto Sans SC", system-ui, sans-serif;
+  --font-mono: "Spline Sans Mono", ui-monospace, monospace;
+  --type-display: 3rem;
+  --type-title: 1.75rem;
+  --type-body: 1rem;
+  --type-label: 0.8125rem;
+  --type-mono: 0.75rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --radius-control: 0.25rem;
+  --radius-card: 0.5rem;
+  --radius-feature: 1rem;
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+  --site-max: 75rem;
+  --site-gutter: clamp(1.5rem, 5vw, 4rem);
+
+  --black: var(--master-black);
+  --paper: var(--master-paper);
+  --ink: var(--master-ink);
+  --graphite: var(--master-graphite);
+  --grey: var(--master-greige);
+  --display: var(--font-sans);
+  --mono: var(--font-mono);
+  --gut: var(--site-gutter);
+  --maxw: var(--site-max);
+  --maxw-wide: var(--site-max);
+  --line: rgba(21, 20, 15, 0.16);
+  --line-soft: rgba(21, 20, 15, 0.09);
+  --line-inv: rgba(244, 244, 241, 0.18);
+  --muted-dark: rgba(244, 244, 241, 0.72);
+  --surface: var(--master-mist);
+}
+
+html[data-page="play"] {
+  --play: var(--play-hero);
+  --accent: var(--play-hero);
+  --surface: var(--play-tint);
+}
+
+html[data-page="technology"] {
+  --play: var(--technology-hero);
+  --accent: var(--technology-hero);
+  --surface: var(--technology-tint);
+}
+
+html[data-page="facility"],
+html[data-page="airdome"] {
+  --play: var(--facility-hero);
+  --accent: var(--facility-hero);
+  --surface: var(--facility-tint);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--master-paper);
+  color: var(--master-ink);
+  font-family: var(--font-sans);
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+
+:lang(zh), :lang(zh-CN), :lang(zh-Hans) {
+  line-height: 1.75;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, var(--type-display));
+  font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: var(--type-title);
+  font-weight: 700;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.eyebrow,
+.mono-cap,
+.capnum,
+.snum,
+.spec-k,
+.spec-idx,
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--type-mono);
+  line-height: 1.4;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--master-black);
+  outline-offset: 3px;
+}
+
+button,
+.btn,
+.nav-cta,
+.psub-cta,
+.f-cta {
+  border-radius: var(--radius-control);
+  transition-duration: var(--duration-base);
+}
+
+.btn-solid,
+.nav-cta:hover,
+.psub-cta,
+.pbar-cta {
+  background: var(--master-black);
+  color: var(--master-paper);
+}
+
+html[data-page="technology"] .btn-solid,
+html[data-page="technology"] .nav-cta:hover {
+  background: var(--technology-hero);
+  color: var(--technology-night);
+}
+
+.mslot,
+.frame,
+.capmodal-panel,
+.spec-card,
+.speccard,
+.calc-form,
+.leadcard,
+.form-success {
+  border-radius: var(--radius-card);
+}
+
+.ftile,
+.fcard,
+.lmod-fig .frame {
+  border-radius: var(--radius-feature);
+}
+
+html[data-page="facility"] .fdark {
+  background: var(--facility-tint);
+  color: var(--master-ink);
+}
+
+html[data-page="facility"] .fdark .eyebrow {
+  color: var(--facility-deep);
+}
+
+html[data-page="technology"] .dot,
+html[data-page="technology"] .accent {
+  background: var(--technology-hero);
+  color: var(--technology-hero);
+}
+
+html[data-page="facility"] .dot,
+html[data-page="facility"] .accent,
+html[data-page="airdome"] .dot,
+html[data-page="airdome"] .accent {
+  background: var(--facility-hero);
+  color: var(--facility-hero);
+}
+
+html[data-page="play"] .dot,
+html[data-page="play"] .accent {
+  background: var(--play-hero);
+  color: var(--play-hero);
+}
+
+.nav-inner,
+.sec,
+.sec-inner,
+.footer-inner,
+.build-inner,
+.value-inner,
+.capgrid-inner,
+.designnz-inner,
+.moments-head-inner,
+.carousel-wrap,
+.fdark-inner,
+.spec-hero,
+.specs-body,
+.specs-note {
+  max-width: var(--site-max);
+}
+
+section:not(.panel):not(.hero):not(.vstage):not(.vstage-pin):not(.sec-img):not(.duo) {
+  scroll-margin-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}

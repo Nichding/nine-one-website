@@ -132,6 +132,12 @@ const PLACEHOLDER_PER_COURT = 1200;
   const cv = document.getElementById('flow');
   if (!cv) return;
   const ctx = cv.getContext('2d');
+  const css = getComputedStyle(document.documentElement);
+  const colour = (name) => css.getPropertyValue(name).trim();
+  const facilityDeep = colour('--facility-deep');
+  const facilityHero = colour('--facility-hero');
+  const masterPaper = colour('--master-paper');
+  const masterBlack = colour('--master-black');
   const PI = Math.PI;
   const U = (x, y) => -Math.sin(2 * PI * x) * PI * Math.cos(PI * y);
   const V = (x, y) =>  2 * PI * Math.cos(2 * PI * x) * Math.sin(PI * y);
@@ -155,9 +161,9 @@ const PLACEHOLDER_PER_COURT = 1200;
   }
   function ramp(t){
     t = t < 0 ? 0 : t > 1 ? 1 : t;
-    if (t < 0.38) return '#0E3B57';
-    if (t < 0.72) return '#93D2F0';
-    return '#F4F4F1';
+    if (t < 0.38) return facilityDeep;
+    if (t < 0.72) return facilityHero;
+    return masterPaper;
   }
   function spawn(p){
     if (Math.random() < 0.38){ p.nx = 0.40 + Math.random()*0.20; p.ny = 0.80 + Math.random()*0.18; }
@@ -167,11 +173,12 @@ const PLACEHOLDER_PER_COURT = 1200;
   }
   function paintBg(){
     const g = ctx.createLinearGradient(0, 0, 0, H);
-    g.addColorStop(0, '#0E3B57'); g.addColorStop(1, '#0B0B0B');
+    g.addColorStop(0, facilityDeep); g.addColorStop(1, masterBlack);
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     ctx.save(); domePath(ctx); ctx.clip();
-    ctx.strokeStyle = 'rgba(147,210,240,.10)'; ctx.lineWidth = 1;
+    ctx.globalAlpha = 0.1; ctx.strokeStyle = facilityHero; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(geo.x0, geo.floor); ctx.lineTo(geo.x1, geo.floor); ctx.stroke();
+    ctx.globalAlpha = 1;
     ctx.restore();
   }
   function build(){

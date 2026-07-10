@@ -30,6 +30,19 @@
 
 ---
 
+## 2026-07-10 · CI V2 视觉基础迁移（文案冻结）
+
+- Nicholas 已批准先实施视觉基础层，**页面文案全部冻结，未修改**。
+- 当前工作分支：`ci-v2`；基线来自 `redesign/ci-v2-phase2`。未碰 `main`，未 push、未部署。
+- token 正源已恢复：`Brand_CI/manifest/tokens.json`，共 29 个 V2 token。
+- 新增全站基础层 `css/ci-v2.css`：Master / Play / Technology / Facility 四种语境、Inter + Noto Sans SC + Spline Sans Mono、48/28/16/13/12 type scale、1200px 版心、CI spacing/radius/motion/focus/reduced-motion。
+- 已接入 8 个正式页面与 `airdome/` 正主；Play 使用 Jade、Technology 使用 Azure、Facility/Air Dome 使用 Violet，Master 页面保持中性色。
+- Air Dome Canvas 动画已改为读取 CSS token，不再内嵌旧色。
+- 四个现用官方 Logo SVG 副本仅做颜色归一（Black / Paper），path、viewBox、比例未改。
+- 旧 `facility-airdome.html` 仍为未跟踪旧稿，不纳入本次提交；`airdome/index.html` 仍是现行正主。
+- 响应式检查：9 页在 390 / 822 / 1440 均无横向溢出；页面计算字体均为 Inter + Noto Sans SC；业务 accent 分别解析为 Jade / Azure / Violet。
+- 旧色扫描：正式 HTML/CSS/JS 与现用 Logo 中指定三代旧色归零；`_backup/` 历史档案保持原样，验收 grep 需排除归档目录。
+
 ## 一句话现状
 
 8 页官网已整体重做成 **Apple 式产品生态站**（Inter + Spline Sans Mono、严格 6-token CI、白底为主、零非 CI hex）。**AI 配图系统已开跑**：Play 页四条产品线（Kauri / Kawarau / Tekapo / Rangitoto）已全部用上 Gemini 概念渲染图（原档在本文件夹 `Imagery/Renders/`）。之前「7 页未提交」已于 6-28 提交（`751e6cf`）；当前仅 sports.html 的 Rangitoto 段落 + 新图未提交。**线上跑的仍是旧版，本轮重做未上线。**

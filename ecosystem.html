@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="master">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVWD4QKPGJ"></script>
@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#F4F4F1">
+<meta name="theme-color" content="var(--master-paper)">
 <title>Nine One Ecosystem — One system for community sport | Nine One Sports</title>
 <meta name="description" content="Sites, software and operations that add up to one long-term system for community sport — for councils, schools, clubs, landowners and developers.">
 <link rel="canonical" href="https://nineonesports.co.nz/ecosystem">
@@ -33,20 +33,20 @@
 <meta name="twitter:image" content="https://nineonesports.co.nz/assets/images/opt/ecosystem-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
 /* ════════════════════════════════════════════════
    NINE ONE · ECOSYSTEM · Apple-style system-value / B2B page
    Canonical CI — Inter + Spline Sans Mono · strict 6 tokens
    ════════════════════════════════════════════════ */
 :root{
-  --black:#0B0B0B;
-  --paper:#F4F4F1;
-  --ink:#121311;
-  --graphite:#76766E;
-  --grey:#D9D8D2;
-  --play:#F6BE83;
-  --accent:#F6BE83;
+  --black:var(--master-black);
+  --paper:var(--master-paper);
+  --ink:var(--master-ink);
+  --graphite:var(--master-graphite);
+  --grey:var(--master-greige);
+  --play:var(--master-ink);
+  --accent:var(--master-ink);
   --line:rgba(18,19,17,.16);
   --line-soft:rgba(18,19,17,.09);
   --muted-dark:rgba(244,244,241,.55);
@@ -212,6 +212,7 @@ img,svg{display:block;}
   .footer-grid{grid-template-columns:1fr;}
 }
 </style>
+<link rel="stylesheet" href="css/ci-v2.css">
 </head>
 <body>
 

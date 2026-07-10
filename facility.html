@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="facility">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVWD4QKPGJ"></script>
@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#F4F4F1">
+<meta name="theme-color" content="var(--master-paper)">
 <title>Nine One Facility — Year-round community sport space | Nine One Sports</title>
 <meta name="description" content="A covered, year-round space a community gathers, plays and comes back to — open sessions, leagues, school and club use, with covered play designed to help keep the space usable through more of the year.">
 <link rel="canonical" href="https://nineonesports.co.nz/facility">
@@ -33,20 +33,20 @@
 <meta name="twitter:image" content="https://nineonesports.co.nz/assets/images/opt/facility-dome.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
 /* ════════════════════════════════════════════════
    NINE ONE · HOME · Apple-style product ecosystem entry
    Canonical CI — Inter + Spline Sans Mono · strict 6 tokens
    ════════════════════════════════════════════════ */
 :root{
-  --black:#0B0B0B;
-  --paper:#F4F4F1;
-  --ink:#121311;
-  --graphite:#76766E;
-  --grey:#D9D8D2;
-  --play:#F6BE83;
-  --accent:#F6BE83;
+  --black:var(--master-black);
+  --paper:var(--master-paper);
+  --ink:var(--master-ink);
+  --graphite:var(--master-graphite);
+  --grey:var(--master-greige);
+  --play:var(--facility-hero);
+  --accent:var(--facility-hero);
   --line:rgba(18,19,17,.16);
   --line-soft:rgba(18,19,17,.09);
   --muted-dark:rgba(244,244,241,.55);
@@ -234,7 +234,7 @@ img,svg{display:block;}
 .fdark-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);}
 .fdark-inner h2{font-size:clamp(26px,3vw,42px);font-weight:600;line-height:1.08;letter-spacing:-0.02em;color:var(--paper);max-width:18ch;margin-bottom:clamp(34px,4vw,52px);}
 .fdark-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,1.6vw,22px);}
-.fcard{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:#121311;}
+.fcard{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:var(--master-ink);}
 .fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.78;transition:transform .6s ease,opacity .4s;}
 .fcard:hover img{transform:scale(1.03);opacity:0.9;}
 .fcard-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.82),rgba(11,11,11,0.12) 62%);}
@@ -245,6 +245,7 @@ img,svg{display:block;}
 .fband{position:relative;width:100%;height:clamp(420px,70vh,720px);overflow:hidden;background:var(--black);margin-bottom:clamp(28px,3.5vw,44px);}
 .fband img{width:100%;height:100%;object-fit:cover;display:block;}
 </style>
+<link rel="stylesheet" href="css/ci-v2.css">
 </head>
 <body>
 

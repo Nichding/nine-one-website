@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="play">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVWD4QKPGJ"></script>
@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#F4F4F1">
+<meta name="theme-color" content="var(--master-paper)">
 <title>Nine One Play — Year-round community sport infrastructure | Nine One Sports</title>
 <meta name="description" content="Nine One Play is a complete court system for communities, schools and landowners — surface, structure, lighting, access and operations, designed to help land stay active through more of the year.">
 <link rel="canonical" href="https://nineonesports.co.nz/sports">
@@ -35,7 +35,7 @@
 <meta name="twitter:image" content="https://nineonesports.co.nz/assets/images/opt/play-hero-01.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
 /* ════════════════════════════════════════════════
    NINE ONE · PLAY · Flagship FRAMEWORK (VP-style scaffold)
@@ -44,13 +44,13 @@
    Media = images with optional corner captions
    ════════════════════════════════════════════════ */
 :root{
-  --black:#0B0B0B;
-  --paper:#F4F4F1;
-  --ink:#121311;
-  --graphite:#76766E;
-  --grey:#D9D8D2;
-  --play:#F6BE83;
-  --accent:#F6BE83;
+  --black:var(--master-black);
+  --paper:var(--master-paper);
+  --ink:var(--master-ink);
+  --graphite:var(--master-graphite);
+  --grey:var(--master-greige);
+  --play:var(--play-hero);
+  --accent:var(--play-hero);
   --line:rgba(18,19,17,.16);
   --line-soft:rgba(18,19,17,.09);
   --line-inv:rgba(244,244,241,.18);
@@ -361,6 +361,7 @@ body.capmodal-open{overflow:hidden;}
   .footer-grid{grid-template-columns:1fr;}
 }
 </style>
+<link rel="stylesheet" href="css/ci-v2.css">
 </head>
 <body>
 
