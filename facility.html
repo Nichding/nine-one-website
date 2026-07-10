@@ -68,11 +68,11 @@ img,svg{display:block;}
 
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;font-weight:500;
   line-height:1.4;letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+.eyebrow .dot{width:7px;height:7px;border-radius:4px;background:var(--accent);flex:none;}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;letter-spacing:0.01em;
-  padding:14px 28px;border-radius:999px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
+  padding:14px 28px;border-radius:4px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
 .btn svg{width:14px;height:14px;}
 .btn-solid{background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);}
 .btn-solid:hover{background:var(--black);transform:translateY(-1px);}
@@ -101,10 +101,10 @@ img,svg{display:block;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a.active{color:var(--ink);font-weight:600;}
 .nav-cta{font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);background:transparent;
-  border:1.5px solid var(--ink);border-radius:999px;padding:11px 22px;transition:background .2s,color .2s;}
+  border:1.5px solid var(--ink);border-radius:4px;padding:11px 22px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:var(--ink);color:var(--paper);}
 .nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .2s cubic-bezier(0.2,0,0,1),opacity .2s cubic-bezier(0.2,0,0,1);}
 .nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
 .nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -144,7 +144,7 @@ img,svg{display:block;}
 .lmod-links .tlink{color:var(--ink);}
 .lmod-links .tlink svg{stroke:var(--play);}
 .lmod-fig{max-width:var(--maxw-wide);margin:clamp(44px,6vw,72px) auto 0;padding:0 var(--gut);}
-.lmod-fig .frame{border-radius:18px;overflow:hidden;aspect-ratio:16/9;background:var(--surface);}
+.lmod-fig .frame{border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:var(--surface);}
 .lmod-fig img{width:100%;height:100%;object-fit:cover;display:block;}
 
 /* ════════ BUILD BAND ════════ */
@@ -162,7 +162,7 @@ img,svg{display:block;}
 .footer-slogan h2{font-size:clamp(40px,8vw,108px);font-weight:600;line-height:0.92;letter-spacing:-0.03em;color:var(--paper);}
 .footer-slogan h2 .accent{color:var(--accent);}
 .footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
-  font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:999px;transition:background .2s;}
+  font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:4px;transition:background .2s;}
 .footer-slogan .f-cta svg{width:14px;height:14px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0;}
 .footer-brand .brand-icon img{height:56px;}
@@ -176,7 +176,7 @@ img,svg{display:block;}
 .footer-bottom .legal{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
 
 /* reveal */
-.reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .7s ease;}
+.reveal{opacity:1;transform:none;transition:transform .3s cubic-bezier(0.2,0,0,1),opacity .3s cubic-bezier(0.2,0,0,1);}
 .reveal-on .reveal{opacity:0;transform:translateY(20px);}
 .reveal-on .reveal.visible{opacity:1;transform:none;}
 .rd1{transition-delay:.08s;}.rd2{transition-delay:.16s;}.rd3{transition-delay:.24s;}
@@ -186,18 +186,18 @@ img,svg{display:block;}
 .fform .field{display:flex;flex-direction:column;gap:9px;margin-bottom:22px;}
 .fform label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);}
 .fform input,.fform textarea{width:100%;font-family:var(--display);font-size:16px;color:var(--ink);background:var(--paper);
-  border:1.5px solid var(--grey);border-radius:12px;padding:15px 16px;line-height:1.5;transition:border-color .2s;}
+  border:1.5px solid var(--grey);border-radius:8px;padding:15px 16px;line-height:1.5;transition:border-color .2s;}
 .fform input::placeholder,.fform textarea::placeholder{color:var(--graphite);}
 .fform input:focus,.fform textarea:focus{outline:none;border-color:var(--ink);}
 .fform textarea{resize:vertical;min-height:130px;}
 .fform .actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:4px;}
 .fform .btn-solid{border:1.5px solid var(--ink);cursor:pointer;}
 .form-success{font-size:15px;font-weight:500;color:var(--ink);}
-.form-success .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:9px;vertical-align:middle;}
+.form-success .dot{display:inline-block;width:8px;height:8px;border-radius:4px;background:var(--accent);margin-right:9px;vertical-align:middle;}
 
 @media(max-width:1024px){
   .nav-toggle{display:flex;}
-  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .2s cubic-bezier(0.2,0,0,1),transform .2s cubic-bezier(0.2,0,0,1);pointer-events:none;overflow-y:auto;}
   .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
   .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
   .nav-links a{font-size:18px;}
@@ -227,7 +227,7 @@ img,svg{display:block;}
 .fhero-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:34px;}
 .ftiles{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut) clamp(28px,3.5vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,1.6vw,22px);}
 .ftile{position:relative;display:block;border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--black);}
-.ftile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.ftile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .3s cubic-bezier(0.2,0,0,1);}
 .ftile:hover img{transform:scale(1.03);}
 .ftile-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.74),rgba(11,11,11,0.05) 55%);}
 .ftile-t{position:absolute;left:0;bottom:0;z-index:2;padding:clamp(26px,3vw,40px);color:var(--paper);}
@@ -238,8 +238,8 @@ img,svg{display:block;}
 .fdark-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);}
 .fdark-inner h2{font-size:clamp(26px,3vw,42px);font-weight:600;line-height:1.08;letter-spacing:-0.02em;color:var(--paper);max-width:18ch;margin-bottom:clamp(34px,4vw,52px);}
 .fdark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.6vw,22px);}
-.fcard{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:#15140F;}
-.fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.78;transition:transform .6s ease,opacity .4s;}
+.fcard{position:relative;display:block;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:#15140F;}
+.fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.78;transition:transform .3s cubic-bezier(0.2,0,0,1),opacity .3s cubic-bezier(0.2,0,0,1);}
 .fcard:hover img{transform:scale(1.03);opacity:0.9;}
 .fcard-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,0.82),rgba(11,11,11,0.12) 62%);}
 .fcard-t{position:absolute;left:0;bottom:0;z-index:2;padding:clamp(22px,2.6vw,34px);}
@@ -255,6 +255,8 @@ main p,section p{color:var(--ink)}
 .footer{background:var(--fac-night)}
 .btn-solid,.nav-cta{background:var(--fac-hero);color:var(--white);border-color:var(--fac-hero)}
 .btn-solid:hover,.nav-cta:hover{background:var(--fac-strong);color:var(--white)}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal,.reveal-on .reveal{opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -268,7 +270,7 @@ main p,section p{color:var(--ink)}
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="sports.html">Play</a></li>
-        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="technologies.html">Technology</a></li>
         <li><a href="facility.html" class="active">Facility</a></li>
         <li><a href="ecosystem.html">Ecosystem</a></li>
         <li><a href="about.html">About</a></li>
@@ -380,7 +382,6 @@ main p,section p{color:var(--ink)}
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-slogan">
-      <h2>Move Together<span class="accent">.</span></h2>
       <a href="build.html" class="f-cta">Build with us
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
@@ -394,7 +395,7 @@ main p,section p{color:var(--ink)}
         <h4>Business</h4>
         <ul>
           <li><a href="sports.html">Play</a></li>
-          <li><a href="technologies.html">Technologies</a></li>
+          <li><a href="technologies.html">Technology</a></li>
           <li><a href="facility.html">Facility</a></li>
           <li><a href="ecosystem.html">Ecosystem</a></li>
         </ul>
@@ -416,7 +417,6 @@ main p,section p{color:var(--ink)}
     </div>
     <div class="footer-bottom">
       <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
-      <span class="legal">Move Together.</span>
     </div>
   </div>
 </footer>

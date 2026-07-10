@@ -68,11 +68,11 @@ img,svg{display:block;}
 
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;font-weight:500;
   line-height:1.4;letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+.eyebrow .dot{width:7px;height:7px;border-radius:4px;background:var(--accent);flex:none;}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;letter-spacing:0.01em;
-  padding:14px 28px;border-radius:999px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
+  padding:14px 28px;border-radius:4px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
 .btn svg{width:14px;height:14px;}
 .btn-solid{background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);}
 .btn-solid:hover{background:var(--black);transform:translateY(-1px);}
@@ -101,10 +101,10 @@ img,svg{display:block;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a.active{color:var(--ink);font-weight:600;}
 .nav-cta{font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);background:transparent;
-  border:1.5px solid var(--ink);border-radius:999px;padding:11px 22px;transition:background .2s,color .2s;}
+  border:1.5px solid var(--ink);border-radius:4px;padding:11px 22px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:var(--ink);color:var(--paper);}
 .nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .2s cubic-bezier(0.2,0,0,1),opacity .2s cubic-bezier(0.2,0,0,1);}
 .nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
 .nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -173,12 +173,12 @@ img,svg{display:block;}
 .field label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);}
 .field label .req{color:var(--accent);margin-left:3px;}
 .field input,.field textarea{width:100%;font-family:var(--display);font-size:16px;font-weight:400;line-height:1.5;color:var(--ink);
-  background:var(--paper);border:1px solid var(--grey);border-radius:12px;padding:14px 16px;transition:border-color .2s;}
+  background:var(--paper);border:1px solid var(--grey);border-radius:8px;padding:14px 16px;transition:border-color .2s;}
 .field input::placeholder,.field textarea::placeholder{color:var(--graphite);opacity:0.7;}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--ink);}
 .field textarea{resize:vertical;min-height:140px;}
 .form-actions{grid-column:1 / -1;display:flex;justify-content:center;margin-top:8px;}
-.form-success{grid-column:1 / -1;text-align:center;border:1px solid var(--line);border-radius:14px;background:var(--surface);
+.form-success{grid-column:1 / -1;text-align:center;border:1px solid var(--line);border-radius:16px;background:var(--surface);
   padding:clamp(32px,5vw,48px);}
 .form-success .mono-cap{display:block;margin-bottom:12px;color:var(--accent);}
 .form-success p{font-size:clamp(18px,2vw,22px);font-weight:600;letter-spacing:-0.015em;color:var(--ink);line-height:1.35;}
@@ -190,7 +190,7 @@ img,svg{display:block;}
 .footer-slogan h2{font-size:clamp(40px,8vw,108px);font-weight:600;line-height:0.92;letter-spacing:-0.03em;color:var(--paper);}
 .footer-slogan h2 .accent{color:var(--accent);}
 .footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
-  font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:999px;transition:background .2s;}
+  font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:4px;transition:background .2s;}
 .footer-slogan .f-cta svg{width:14px;height:14px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0;}
 .footer-brand .brand-icon img{height:56px;}
@@ -204,14 +204,14 @@ img,svg{display:block;}
 .footer-bottom .legal{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
 
 /* reveal */
-.reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .7s ease;}
+.reveal{opacity:1;transform:none;transition:transform .3s cubic-bezier(0.2,0,0,1),opacity .3s cubic-bezier(0.2,0,0,1);}
 .reveal-on .reveal{opacity:0;transform:translateY(20px);}
 .reveal-on .reveal.visible{opacity:1;transform:none;}
 .rd1{transition-delay:.08s;}.rd2{transition-delay:.16s;}.rd3{transition-delay:.24s;}
 
 @media(max-width:1024px){
   .nav-toggle{display:flex;}
-  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .2s cubic-bezier(0.2,0,0,1),transform .2s cubic-bezier(0.2,0,0,1);pointer-events:none;overflow-y:auto;}
   .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
   .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
   .nav-links a{font-size:18px;}
@@ -240,6 +240,8 @@ img,svg{display:block;}
 
 /* CI V2 division context */
 main p,section p{color:var(--ink)}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal,.reveal-on .reveal{opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -253,7 +255,7 @@ main p,section p{color:var(--ink)}
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="sports.html">Play</a></li>
-        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="technologies.html">Technology</a></li>
         <li><a href="facility.html">Facility</a></li>
         <li><a href="ecosystem.html">Ecosystem</a></li>
         <li><a href="about.html">About</a></li>
@@ -425,7 +427,6 @@ main p,section p{color:var(--ink)}
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-slogan">
-      <h2>Move Together<span class="accent">.</span></h2>
       <a href="build.html" class="f-cta">Build with us
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
@@ -439,7 +440,7 @@ main p,section p{color:var(--ink)}
         <h4>Business</h4>
         <ul>
           <li><a href="sports.html">Play</a></li>
-          <li><a href="technologies.html">Technologies</a></li>
+          <li><a href="technologies.html">Technology</a></li>
           <li><a href="facility.html">Facility</a></li>
           <li><a href="ecosystem.html">Ecosystem</a></li>
         </ul>
@@ -461,7 +462,6 @@ main p,section p{color:var(--ink)}
     </div>
     <div class="footer-bottom">
       <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
-      <span class="legal">Move Together.</span>
     </div>
   </div>
 </footer>
