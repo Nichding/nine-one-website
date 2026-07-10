@@ -212,9 +212,26 @@ img,svg{display:block;}
   color:var(--paper);font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;
   padding-bottom:3px;transition:background .2s,transform .2s;}
 .capplus:hover{background:var(--ink);transform:translateY(-1px);}
+.capplus:focus-visible{outline:2px solid var(--paper);outline-offset:3px;}
 .capnum{display:block;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--graphite);margin-bottom:10px;}
 .capslide-cap b{display:block;font-size:19px;line-height:1.25;font-weight:600;letter-spacing:-0.01em;color:var(--ink);margin-bottom:8px;}
 .capslide-cap p{font-size:14px;line-height:1.55;color:var(--graphite);max-width:34ch;}
+.capmodal{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:24px;background:rgba(11,11,11,0.62);}
+.capmodal[hidden]{display:none;}
+.capmodal-panel{position:relative;width:min(720px,100%);max-height:min(760px,calc(100vh - 48px));overflow-y:auto;background:var(--paper);color:var(--ink);border-radius:2px;padding:clamp(40px,6vw,72px);box-shadow:0 24px 80px rgba(11,11,11,0.24);}
+.capmodal-num{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.14em;color:var(--graphite);margin-bottom:18px;}
+.capmodal-title{font-size:clamp(30px,4.5vw,52px);line-height:1.08;letter-spacing:-0.03em;font-weight:600;max-width:14ch;}
+.capmodal-copy{margin-top:28px;font-size:clamp(16px,1.4vw,18px);line-height:1.7;color:var(--graphite);max-width:56ch;}
+.capmodal-note{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--graphite);}
+.capmodal-close{position:absolute;top:18px;right:18px;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-size:25px;line-height:1;cursor:pointer;display:grid;place-items:center;}
+.capmodal-close:hover{background:var(--greige);}
+body.capmodal-open{overflow:hidden;}
+@media(max-width:640px){
+  .capmodal{padding:0;align-items:stretch;}
+  .capmodal-panel{width:100%;max-height:none;height:100%;border-radius:0;padding:88px 24px 40px;}
+  .capmodal-title{font-size:36px;}
+  .capmodal-copy{font-size:16px;line-height:1.65;}
+}
 /* full-bleed no-text image band */
 .imgband{position:relative;width:100%;height:clamp(420px,72vh,760px);overflow:hidden;background:var(--black);}
 .imgband img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -479,27 +496,27 @@ img,svg{display:block;}
   <div class="carousel-wrap">
     <div class="carousel carousel--caps">
       <div class="cslide">
-        <figure class="capfig"><img src="assets/images/opt/play-capability-nz-01.jpg" alt="Designed for New Zealand — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about Designed for New Zealand">+</button></figure>
+        <figure class="capfig"><img src="assets/images/opt/play-capability-nz-01.jpg" alt="Designed for New Zealand — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" data-capability="nz" aria-haspopup="dialog" aria-label="Learn more about Designed for New Zealand">+</button></figure>
         <div class="capslide-cap"><span class="capnum">01</span><b>Designed for New Zealand</b><p>Specified for its site — wind zone, coastal corrosion, UV and ground conditions.</p></div>
       </div>
       <div class="cslide">
-        <figure class="capfig"><img src="assets/images/opt/play-capability-sourcing-01.jpg" alt="Global sourcing — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about global sourcing">+</button></figure>
+        <figure class="capfig"><img src="assets/images/opt/play-capability-sourcing-01.jpg" alt="Global sourcing — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" data-capability="sourcing" aria-haspopup="dialog" aria-label="Learn more about global sourcing">+</button></figure>
         <div class="capslide-cap"><span class="capnum">02</span><b>Specified by us, sourced worldwide</b><p>Proven, factory-audited manufacturers — delivered to New Zealand and Australia.</p></div>
       </div>
       <div class="cslide">
-        <figure class="capfig"><img src="assets/images/opt/play-capability-certified-01.jpg" alt="Engineered and certified — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about engineering and certification">+</button></figure>
+        <figure class="capfig"><img src="assets/images/opt/play-capability-certified-01.jpg" alt="Engineered and certified — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" data-capability="certified" aria-haspopup="dialog" aria-label="Learn more about engineering and certification">+</button></figure>
         <div class="capslide-cap"><span class="capnum">03</span><b>Engineered and certified</b><p>Designed and documented to New Zealand standards — ready for council consent.</p></div>
       </div>
       <div class="cslide">
-        <figure class="capfig"><img src="assets/images/opt/play-capability-delivery-01.jpg" alt="End-to-end delivery — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about end-to-end delivery">+</button></figure>
+        <figure class="capfig"><img src="assets/images/opt/play-capability-delivery-01.jpg" alt="End-to-end delivery — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" data-capability="delivery" aria-haspopup="dialog" aria-label="Learn more about end-to-end delivery">+</button></figure>
         <div class="capslide-cap"><span class="capnum">04</span><b>From first review to handover</b><p>One team, one contract — site review, design, consent, build and handover.</p></div>
       </div>
       <div class="cslide">
-        <figure class="capfig"><img src="assets/images/opt/play-capability-smart-01.jpg" alt="Smart from day one — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about the technology layer">+</button></figure>
+        <figure class="capfig"><img src="assets/images/opt/play-capability-smart-01.jpg" alt="Smart from day one — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" data-capability="smart" aria-haspopup="dialog" aria-label="Learn more about the technology layer">+</button></figure>
         <div class="capslide-cap"><span class="capnum">05</span><b>Smart from day one</b><p>Booking, access and lighting — built in, not bolted on.</p></div>
       </div>
       <div class="cslide">
-        <figure class="capfig"><img src="assets/images/opt/play-capability-service-01.jpg" alt="Local service — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" aria-label="Learn more about local service">+</button></figure>
+        <figure class="capfig"><img src="assets/images/opt/play-capability-service-01.jpg" alt="Local service — concept visualisation" width="900" height="1200" decoding="async" loading="lazy"><button class="capplus" data-capability="service" aria-haspopup="dialog" aria-label="Learn more about local service">+</button></figure>
         <div class="capslide-cap"><span class="capnum">06</span><b>A local team, for the long term</b><p>A New Zealand team, accountable for the next ten to twenty years.</p></div>
       </div>
     </div>
@@ -509,6 +526,16 @@ img,svg{display:block;}
     </div>
   </div>
 </section>
+
+<div class="capmodal" id="capmodal" hidden>
+  <article class="capmodal-panel" role="dialog" aria-modal="true" aria-labelledby="capmodal-title" aria-describedby="capmodal-copy">
+    <button class="capmodal-close" type="button" aria-label="Close capability details">×</button>
+    <div class="capmodal-num" id="capmodal-num"></div>
+    <h2 class="capmodal-title" id="capmodal-title"></h2>
+    <p class="capmodal-copy" id="capmodal-copy"></p>
+    <p class="capmodal-note">Draft copy — pending CI §22 and Nicholas sign-off</p>
+  </article>
+</div>
 
 <!-- ════════ FOOTER ════════ -->
 <footer class="footer">
@@ -645,6 +672,38 @@ document.querySelectorAll('.carousel-wrap').forEach(wrap=>{
   car.addEventListener('scroll',upd,{passive:true});
   upd();
 });
+
+// capability detail modal — one accessible overlay, populated by the six cards
+(function(){
+  const modal=document.getElementById('capmodal');
+  if(!modal) return;
+  const closeBtn=modal.querySelector('.capmodal-close');
+  const num=document.getElementById('capmodal-num');
+  const title=document.getElementById('capmodal-title');
+  const copy=document.getElementById('capmodal-copy');
+  const details={
+    nz:{num:'01',title:'Designed for New Zealand',copy:'A court begins with the site, not a catalogue. We review the local wind zone, coastal exposure, UV, drainage, ground conditions and the way people will move through the facility. Those inputs shape the layout, structural brief, materials and maintenance approach before orders are placed. The result is designed as a New Zealand court from the outset, with project decisions documented for the site rather than borrowed from a generic overseas package. Every final specification remains subject to site review, engineering and consent.'},
+    sourcing:{num:'02',title:'Specified by us, sourced worldwide',copy:'We source from specialist manufacturers where their capability best fits the project, then hold the specification and delivery process together locally. Supplier selection considers manufacturing quality, relevant documentation, lead time, finish and the practical route into New Zealand or Australia. Components are reviewed as part of one court system, not as isolated purchases. That gives project teams a clear line from design intent to factory output and site delivery, while final suppliers and product selections are confirmed against the approved project scope.'},
+    certified:{num:'03',title:'Engineered and certified',copy:'Engineering and compliance are built into the project sequence. We coordinate the information needed by the appointed engineers, consent team and specialist suppliers so that the court, foundations and site interfaces can be reviewed as one package. Drawings, calculations and product documentation are assembled around the actual site and proposed use. The aim is a clear, traceable path through design and consent, with responsibilities visible before construction begins. Final certification requirements and technical values are confirmed by the relevant project professionals.'},
+    delivery:{num:'04',title:'From first review to handover',copy:'One team coordinates the work from the first site conversation through design, procurement, installation and handover. We define the sequence, bring the required specialists together and keep decisions connected across the project. That reduces the gaps that appear when court supply, groundworks, consent and technology are managed as separate jobs. The scope and programme remain site-specific, but the operating principle stays consistent: one accountable route for information, decisions and delivery, with the completed project handed over against the agreed specification.'},
+    smart:{num:'05',title:'Smart from day one',copy:'The digital layer is considered while the facility is being planned, not after the physical court is finished. Booking, access and lighting can be coordinated around how operators expect the site to run, with the final configuration confirmed for each project. This creates a clearer connection between the court, the customer journey and day-to-day operations. Technology remains a practical service layer rather than a collection of add-ons: selected to support easier access, useful operating information and a more consistent experience for players and staff.'},
+    service:{num:'06',title:'A local team, for the long term',copy:'The relationship continues after handover. A New Zealand-based team remains the point of contact for planned support, maintenance coordination, replacement parts and future changes to the facility. Service requirements are set against the final project specification, site conditions and operating model, so owners know how issues will be routed and who is accountable. The goal is straightforward continuity: local context, accessible support and a documented asset history that helps the court remain useful over its intended life, without making promises beyond the confirmed service scope.'}
+  };
+  let opener=null;
+  function openModal(button){
+    const item=details[button.dataset.capability];
+    if(!item) return;
+    opener=button;num.textContent=item.num;title.textContent=item.title;copy.textContent=item.copy;
+    modal.hidden=false;document.body.classList.add('capmodal-open');closeBtn.focus();
+  }
+  function closeModal(){
+    modal.hidden=true;document.body.classList.remove('capmodal-open');if(opener)opener.focus();
+  }
+  document.querySelectorAll('.capplus[data-capability]').forEach(button=>button.addEventListener('click',()=>openModal(button)));
+  closeBtn.addEventListener('click',closeModal);
+  modal.addEventListener('click',event=>{if(event.target===modal)closeModal();});
+  document.addEventListener('keydown',event=>{if(!modal.hidden&&event.key==='Escape')closeModal();});
+})();
 </script>
 </body>
 </html>
