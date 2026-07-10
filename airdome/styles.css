@@ -1,0 +1,359 @@
+/* ════════════════════════════════════════════════
+   AIR DOME · single-page site — Tesla Solar Roof pattern
+   Plain CSS · no build step · placeholders = .ph
+   ════════════════════════════════════════════════ */
+
+/* ── tokens ── */
+:root{
+  --ink:#121311;          /* text dark */
+  --white:#F4F4F1;        /* text light (for data-theme="dark") */
+  --bg:#F4F4F1;
+  --ph-fill:#D9D8D2;
+  --ph-line:#76766E;
+  --ph-text:#76766E;
+  --hairline:rgba(18,19,17,.1);
+  --maxw:1100px;
+  --gut:clamp(20px,4vw,48px);
+  --font:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+  --mono:"Spline Sans Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --skyblue:#93D2F0;      /* Facility accent */
+  --inkblue:#0E3B57;      /* Facility deep */
+  /* ── site-standard header tokens (shared across all pages) ── */
+  --paper:#F4F4F1;
+  --graphite:#76766E;
+  --accent:#F6BE83;       /* site accent (amber) — matches Play/Facility nav */
+  --line:rgba(18,19,17,.16);
+  --black:#0B0B0B;
+  --nav-h:70px;
+  --psub-h:50px;
+  --maxw-wide:1024px;
+  --nav-gut:clamp(24px,5vw,64px);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y proximity;   /* soft snap — proximity so tall sections don't trap scroll */
+  scroll-padding-top:calc(var(--psub-h) + 8px);   /* anchors clear the sticky product sub-nav */
+}
+@media(max-width:1024px){ html{scroll-padding-top:calc(var(--nav-h) + var(--psub-h) + 8px);} }
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:400;
+  line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip;}
+a{text-decoration:none;color:inherit;}
+img,svg{display:block;}
+
+/* visible focus ring for keyboard users */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--ink);outline-offset:2px;border-radius:4px;}
+
+/* ── type scale (per spec) ── */
+h1{font-size:clamp(40px,6vw,64px);font-weight:500;letter-spacing:-0.01em;line-height:1.05;}
+h2{font-size:clamp(30px,4vw,48px);font-weight:500;line-height:1.1;letter-spacing:-0.005em;}
+p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
+
+/* ── buttons (Tesla-style pill) ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;
+  height:44px;min-width:260px;padding:0 24px;border:0;border-radius:100px;
+  font-family:var(--font);font-size:15px;font-weight:500;cursor:pointer;
+  transition:background .2s,color .2s;}
+.btn-primary{background:var(--ink);color:var(--white);}
+.btn-primary:hover{background:#0B0B0B;}   /* slightly lighten on hover */
+/* secondary: meant to be rgba(244,244,241,.65) translucent over real media later —
+   rendered as light grey + hairline border while backgrounds are placeholders */
+.btn-secondary{background:#F4F4F1;color:var(--ink);border:1px solid var(--ink);}
+.btn-secondary:hover{background:#D9D8D2;}
+.btn-sm{height:34px;min-width:0;padding:0 18px;font-size:13px;}
+
+/* ═══ site-standard header: main nav + product sub-nav (identical to Play page) ═══ */
+.nav a,.psub a{text-decoration:none;}
+.nav{position:static;height:var(--nav-h);background:var(--paper);}
+.nav-inner{max-width:var(--maxw-wide);margin:0 auto;height:100%;padding:0 var(--nav-gut);
+  display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;}
+.brand-icon{display:flex;align-items:center;}
+.brand-icon img{height:40px;width:auto;display:block;}
+.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;margin:0;padding:0;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--graphite);letter-spacing:.02em;transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a.active{color:var(--ink);font-weight:600;}
+.nav-cta{display:inline-flex;align-items:center;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink);background:transparent;border:1.5px solid var(--ink);border-radius:999px;padding:11px 22px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:var(--ink);color:var(--paper);}
+.nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.psub{position:sticky;top:0;z-index:1090;background:rgba(244,244,241,.82);
+  backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line);}
+.psub-inner{max-width:var(--maxw-wide);margin:0 auto;height:var(--psub-h);padding:0 var(--nav-gut);
+  display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.psub-name{font-size:18px;font-weight:600;letter-spacing:-.015em;color:var(--ink);white-space:nowrap;}
+.psub-links{display:flex;align-items:center;gap:30px;list-style:none;margin:0 0 0 auto;padding:0;}
+.psub-links a{font-size:13px;font-weight:400;color:var(--graphite);letter-spacing:.005em;transition:color .2s;position:relative;}
+.psub-links a:hover{color:var(--ink);}
+.psub-links a.cur{color:var(--ink);}
+.psub-links a.cur::after{content:'';position:absolute;left:0;right:0;bottom:-17px;height:2px;background:var(--accent);border-radius:2px;}
+.psub-cta{flex:none;display:inline-flex;align-items:center;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--paper);background:var(--ink);border-radius:999px;padding:9px 18px;transition:background .2s,transform .2s;white-space:nowrap;}
+.psub-cta:hover{background:var(--black);transform:translateY(-1px);}
+
+/* header — mobile (collapse nav to a toggle; keep psub as a scrollable strip) */
+@media(max-width:1024px){
+  .nav{position:sticky;top:0;z-index:1100;}
+  .nav-toggle{display:flex;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);
+    flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;padding:36px var(--nav-gut);
+    opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;z-index:1100;}
+  .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
+  .nav-links{flex-direction:column;align-items:flex-start;gap:22px;}
+  .nav-links a{font-size:17px;}
+  .psub{top:var(--nav-h);}
+  .psub-inner{gap:14px;}
+  .psub-links{margin-left:14px;gap:22px;flex:1 1 auto;min-width:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
+  .psub-links::-webkit-scrollbar{display:none;}
+  .psub-links a{white-space:nowrap;}          /* never truncate the labels */
+  .psub-links a.cur::after{display:none;}
+}
+/* phones: drop the in-page tabs, keep the product name + CTA (no squeeze) */
+@media(max-width:600px){ .psub-links{display:none;} }
+@media(max-width:768px){ .psub-name{font-size:16px;} }
+
+/* ── full-viewport media panel ── */
+.panel{position:relative;min-height:100vh;width:100%;scroll-snap-align:start;
+  display:flex;flex-direction:column;}
+/* hero sits below the static nav + sticky sub-nav — fit the remaining first screen */
+#hero.panel{min-height:calc(100vh - var(--nav-h) - var(--psub-h));}
+.media{position:absolute;inset:0;z-index:0;}
+.media video{width:100%;height:100%;object-fit:cover;}
+/* hero reel: three stacked clips, crossfaded by script.js */
+#hero-reel .heroclip{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;}
+#hero-reel .heroclip.is-active{opacity:1;}
+/* legibility over real media: soft shadow on light text */
+.panel[data-theme="dark"] h1,.panel[data-theme="dark"] h2,
+.panel[data-theme="dark"] .stat-big,.panel[data-theme="dark"] .stat-label,
+.panel[data-theme="dark"] .lower p{text-shadow:0 1px 14px rgba(11,11,11,.45);}
+.content{position:relative;z-index:1;width:100%;max-width:var(--maxw);margin:0 auto;
+  flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:14vh var(--gut) 10vh;}
+.content h2,.content h1{max-width:20ch;}
+/* body + CTA sit in the lower area */
+.lower{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:28px;}
+.lower p{max-width:640px;}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+
+/* per-section text theme — flip data-theme="dark" when real dark media lands */
+.panel[data-theme="light"] .content{color:var(--ink);}
+.panel[data-theme="dark"] .content{color:var(--white);}
+.panel[data-theme="dark"] .topnav a{color:var(--white);}
+
+/* ── hero specifics ── */
+.hero-content h1{margin-top:1vh;}         /* h1 lands ~15% from top (14vh pad + margin) */
+/* Tesla solarroof hero footer: stats + Order Now in one row, pinned to the bottom.
+   The stat trio sits just left of centre, the outlined button to its right. */
+.hero-content{padding-bottom:5vh;} /* row hugs the viewport bottom like Tesla */
+.hero-lower{margin-top:auto;display:flex;flex-direction:row;align-items:center;justify-content:center;
+  gap:clamp(32px,5vw,72px);flex-wrap:wrap;}
+.hero-lower .btn{margin-left:clamp(8px,3vw,48px);}
+.stat{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:110px;}
+.stat-big{font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.1;}
+.stat-label{font-size:15px;font-weight:500;line-height:1.25;max-width:12ch;text-align:center;}
+/* outlined white button over dark hero media (Tesla solarroof style) */
+.btn-outline-w{background:transparent;border:3px solid #F4F4F1;color:#F4F4F1;}
+.btn-outline-w:hover{background:#F4F4F1;color:var(--ink);}
+
+/* ── placeholder convention ── */
+.ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  background:var(--ph-fill);border:2px dashed var(--ph-line);
+  color:var(--ph-text);font-size:13px;font-weight:500;text-transform:uppercase;
+  letter-spacing:.08em;text-align:center;padding:12px;}
+
+/* ── image section (solarroof pattern: full-bleed image → white band below) ──
+   measured from tesla.com/solarroof: eyebrow 17/500 · h2 28/500/lh36 ·
+   outlined button 204×40 3px border r4 · para 14/400 #76766E */
+.imgsec{scroll-snap-align:start;}
+.sec-media{position:relative;height:74vh;min-height:420px;overflow:hidden;}
+.sec-media img{width:100%;height:100%;object-fit:cover;}
+.band{background:#F4F4F1;padding:48px var(--gut) 64px;}
+.band-in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,80px);align-items:start;}
+.beyebrow{font-size:17px;font-weight:500;line-height:20px;color:var(--ink);}
+.band h2{font-size:28px;font-weight:500;line-height:36px;letter-spacing:0;margin-top:8px;max-width:18ch;}
+.btn-band{display:inline-flex;align-items:center;justify-content:center;width:204px;height:40px;margin-top:24px;
+  border:3px solid var(--ink);border-radius:4px;background:transparent;color:var(--ink);
+  font-size:14px;font-weight:500;transition:background .2s,color .2s;}
+.btn-band:hover{background:var(--ink);color:#F4F4F1;}
+.band-in > p{font-size:14px;font-weight:400;line-height:20px;color:#76766E;max-width:60ch;}
+@media(max-width:820px){
+  .sec-media{height:52vh;min-height:300px;}
+  .band-in{grid-template-columns:1fr;gap:20px;}
+}
+
+/* ── value lede: the "Short" hook line under each H2 (Facility deep-blue accent).
+   .is-lead = the two purchase reasons (values 1 & 2), given more weight ── */
+.vlede{font-size:18px;font-weight:500;line-height:1.4;color:var(--inkblue);margin-top:12px;max-width:34ch;}
+.vlede.is-lead{font-size:21px;line-height:1.34;max-width:26ch;}
+@media(max-width:820px){.vlede.is-lead{font-size:19px;}}
+
+/* ── installation process strip (Tesla "Design / Installation / Power On":
+   three steps under a top rule, final step emphasised with a bold ink rule) ── */
+.proc{max-width:var(--maxw);margin:clamp(40px,5vw,64px) auto 0;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);}
+.proc .step{border-top:1px solid #D9D8D2;padding-top:20px;}
+.proc .step:last-child{border-top:2px solid var(--ink);}
+.proc .step h3{font-size:17px;font-weight:500;line-height:20px;color:var(--ink);}
+.proc .step p{font-size:14px;font-weight:400;line-height:20px;color:#76766E;margin-top:10px;max-width:32ch;}
+@media(max-width:820px){
+  .proc{grid-template-columns:1fr;gap:0;margin-top:32px;}
+  .proc .step{padding:18px 0;}
+}
+
+/* ── engineered-air flow panel (our own animated, CFD-informed airflow;
+   stands in for a Tesla before/after slider) — canvas driven by script.js ── */
+.flowsec{scroll-snap-align:start;}
+.flow-media{position:relative;height:74vh;min-height:440px;overflow:hidden;background:#0E3B57;}
+#flow{display:block;width:100%;height:100%;}
+.flow-tag{position:absolute;left:22px;top:20px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:rgba(147,210,240,.9);}
+.flow-cap{position:absolute;left:22px;bottom:16px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.06em;color:rgba(244,244,241,.62);}
+.flow-legend{position:absolute;right:22px;bottom:20px;display:flex;flex-direction:column;gap:6px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:rgba(244,244,241,.72);}
+.flow-legend .bar{width:150px;height:6px;border-radius:3px;
+  background:linear-gradient(90deg,var(--inkblue),var(--skyblue),#F4F4F1);}
+.flow-legend .ends{display:flex;justify-content:space-between;}
+@media(max-width:820px){
+  .flow-media{height:52vh;min-height:320px;}
+  .flow-legend{display:none;}
+}
+
+/* ── split section (Tesla "Energy Storage" pattern: text left on white, tall image right) ── */
+.splitsec{background:#F4F4F1;scroll-snap-align:start;}
+.split-in{display:grid;grid-template-columns:minmax(280px,3fr) 8fr;gap:clamp(24px,4vw,56px);align-items:start;}
+.split-left{padding:clamp(48px,8vh,96px) 0 48px clamp(20px,4vw,48px);}
+.split-left h2{font-size:28px;font-weight:500;line-height:36px;letter-spacing:0;margin-top:8px;max-width:14ch;}
+.split-left p{font-size:14px;font-weight:400;line-height:20px;color:#76766E;margin-top:20px;max-width:34ch;}
+.split-left .btn-band{margin-top:28px;}
+.split-media{height:min(96vh,900px);min-height:480px;overflow:hidden;}
+.split-media img,.split-media .ph{width:100%;height:100%;object-fit:cover;}
+@media(max-width:820px){
+  .split-in{grid-template-columns:1fr;gap:0;}
+  .split-left{padding:48px var(--gut) 32px;}
+  .split-media{height:60vh;min-height:320px;}
+}
+
+/* ── Durability triptych (Tesla "Take on the Elements"): three panels + text ── */
+.durasec{background:#F4F4F1;scroll-snap-align:start;padding:0;}
+.dura-in{display:grid;grid-template-columns:7fr 3fr;align-items:stretch;}
+.tript{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;height:min(88vh,880px);min-height:460px;background:#F4F4F1;}
+.tript figure{position:relative;margin:0;overflow:hidden;}
+.tript img{width:100%;height:100%;object-fit:cover;display:block;}
+.tript figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 18px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#F4F4F1;
+  background:linear-gradient(to top,rgba(11,11,11,.6),transparent);}
+.dura-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,5vw,64px);}
+.dura-text .beyebrow{font-size:17px;font-weight:500;color:var(--ink);}
+.dura-text h2{font-size:28px;font-weight:500;line-height:36px;margin-top:8px;max-width:12ch;}
+.dura-text p{font-size:14px;font-weight:400;line-height:20px;color:#76766E;margin-top:20px;}
+@media(max-width:820px){
+  .dura-in{grid-template-columns:1fr;}
+  .tript{height:44vh;min-height:280px;}
+  .tript figcaption{padding:24px 12px 12px;font-size:11px;}
+  .dura-text{padding:40px var(--gut);}
+}
+
+/* ── flow sections (Specs / Estimate — size to content) ── */
+.flow{scroll-snap-align:start;background:#F4F4F1;padding:120px var(--gut);}
+.flow h2{text-align:center;max-width:24ch;margin:0 auto;}
+#estimate{background:var(--bg);}
+
+/* specs layout: list + optional side image */
+/* customer-facing spec cards — grouped by decision, each tagged with the value it supports */
+.specs-intro{max-width:64ch;margin:16px auto 0;text-align:center;font-size:15px;line-height:1.6;color:#76766E;}
+.speccards{max-width:var(--maxw);margin:44px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,28px);}
+.speccard{background:#F4F4F1;border:1px solid var(--hairline);border-radius:12px;padding:26px 26px 22px;display:flex;flex-direction:column;}
+.sc-title{font-size:18px;font-weight:600;letter-spacing:-.01em;color:var(--ink);}
+.sc-desc{font-size:14px;line-height:1.55;color:#76766E;margin-top:8px;}
+.sc-list{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:7px;}
+.sc-list li{font-size:13.5px;line-height:1.45;color:var(--ink);padding-left:16px;position:relative;}
+.sc-list li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--skyblue);}
+.sc-supports{margin-top:auto;padding-top:16px;border-top:1px solid var(--hairline);font-size:13px;font-weight:500;color:var(--ink);line-height:1.4;}
+.sc-supports .k{display:block;font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--inkblue);margin-bottom:5px;}
+.specs-cta{display:flex;justify-content:center;margin-top:clamp(30px,4vw,44px);}
+.btn-band-wide{width:auto;padding:0 28px;}
+
+/* ── NZD business-case calculator ── */
+.calc-sub{max-width:60ch;margin:14px auto 0;text-align:center;font-size:15px;line-height:1.6;color:#76766E;}
+.calc{max-width:var(--maxw);margin:44px auto 0;display:grid;grid-template-columns:minmax(300px,5fr) 7fr;gap:clamp(24px,3vw,40px);align-items:start;}
+/* inputs */
+.calc-form{background:#F4F4F1;border:1px solid var(--hairline);border-radius:14px;padding:clamp(22px,2.4vw,28px);display:flex;flex-direction:column;gap:18px;}
+.cfield{display:flex;flex-direction:column;gap:8px;}
+.cfield label{font-size:13.5px;font-weight:500;color:var(--ink);}
+.cfield select,.cfield input[type="number"]{width:100%;height:44px;padding:0 12px;font:inherit;font-size:15px;
+  border:1px solid #D9D8D2;border-radius:8px;background:#F4F4F1;color:var(--ink);}
+.cmoney{position:relative;}
+.cmoney-pre{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:15px;color:#76766E;pointer-events:none;}
+.cmoney input{padding-left:42px!important;}
+.crange-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;}
+.crange-top output{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--inkblue);}
+.cfield input[type="range"]{width:100%;height:26px;accent-color:var(--inkblue);cursor:pointer;}
+.calc-btn{width:100%;min-width:0;margin-top:4px;}
+/* outputs */
+.calc-out{display:flex;flex-direction:column;gap:20px;}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.rescard{background:#F4F4F1;border:1px solid var(--hairline);border-radius:10px;padding:15px 16px;display:flex;flex-direction:column;gap:6px;min-height:78px;}
+.rc-label{font-size:12px;line-height:1.35;color:#76766E;}
+.rc-val{font-size:clamp(19px,2vw,22px);font-weight:600;letter-spacing:-.01em;color:var(--ink);line-height:1.15;}
+.rc-val.is-note{font-size:13px;font-weight:500;color:#76766E;line-height:1.4;letter-spacing:0;}
+.rescard--wide{grid-column:1 / -1;}
+.rescard--wide .rc-val{font-size:clamp(22px,2.4vw,26px);color:var(--inkblue);}
+.res-interp{font-size:15px;font-weight:500;line-height:1.5;color:var(--ink);}
+.calc-disc{font-size:13px;line-height:1.6;color:#76766E;border-top:1px solid var(--hairline);padding-top:16px;}
+
+/* ── lead capture (Netlify) ── */
+.lead{max-width:var(--maxw);margin:clamp(28px,4vw,44px) auto 0;background:#F4F4F1;border:1px solid var(--hairline);
+  border-radius:14px;padding:clamp(24px,3vw,36px);}
+.lead-copy h3{font-size:clamp(19px,2.2vw,24px);font-weight:600;letter-spacing:-.01em;color:var(--ink);}
+.lead-copy p{font-size:15px;line-height:1.6;color:#76766E;margin-top:8px;max-width:64ch;}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+.lead-fields{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;}
+.lead-span{grid-column:1 / -1;}
+.lead-form .cfield label{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;}
+.lead-form input,.lead-form select{width:100%;height:44px;padding:0 12px;font:inherit;font-size:15px;
+  border:1px solid #D9D8D2;border-radius:8px;background:#F4F4F1;color:var(--ink);}
+.lead-btn{margin-top:20px;width:auto;padding:0 26px;}
+.lead-fine{margin-top:14px;font-size:12px;line-height:1.55;color:#76766E;}
+.lead-thanks{padding:8px 2px;}
+.lead-thanks h3{font-size:clamp(19px,2.2vw,24px);font-weight:600;color:var(--ink);}
+.lead-thanks p{font-size:15px;line-height:1.6;color:#76766E;margin-top:8px;max-width:60ch;}
+
+@media(max-width:820px){
+  .calc{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+  .res-grid{grid-template-columns:1fr;}
+  .lead-fields{grid-template-columns:1fr;}
+}
+
+/* ── footer ── */
+.footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  padding:28px var(--gut);border-top:1px solid var(--hairline);font-size:13px;color:var(--ink);}
+.footer nav{display:flex;gap:20px;flex-wrap:wrap;}
+.footer nav a{font-size:13px;color:#76766E;}
+.footer nav a:hover{color:var(--ink);}
+.footer .slogan{font-size:13px;font-weight:500;color:var(--ink);letter-spacing:.01em;}
+
+/* ── mobile (clean at 375px) ── */
+@media(max-width:820px){
+  .content{padding:12vh var(--gut) 8vh;}
+  .hero-content{padding-bottom:6vh;}
+  .hero-lower{flex-direction:column;gap:26px;}
+  .hero-lower .btn{margin-left:0;margin-top:6px;}
+  .cta-row{flex-direction:column;width:100%;align-items:center;}
+  .btn{width:min(100%,320px);}
+  .btn-sm{width:auto;}
+  .flow{padding:72px var(--gut);}
+  .speccards{grid-template-columns:1fr;}
+}
