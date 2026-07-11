@@ -30,6 +30,12 @@
 - **明确遗留**：`sports-specs.html` 的 padel 规格表数值等待供应商目录核对；Play OS / Smart 表述等待页面方向确定。Technology / Build 已批准交付承诺及 `Tech Specs` 保持原文。
 - 未 push、未 merge `main`、未创建或处理 PR。
 
+## 2026-07-11 · 旧 Facility 设计归档
+
+- 已按 Nicholas 指示将过时的整份 `facility.html` 移入 `_backup/facility-v1-outdated-20260711.html`，未硬删除。
+- 全站原指向旧 Facility 页的导航和入口已改指当前设计稿 `airdome/index.html`；sitemap 已移除旧 `facility.html` URL。
+- Air Dome 设计稿仍保持 `noindex`，待最终批准后再决定正式公开路径。
+
 ---
 
 ## 2026-07-10 执行记录（Air Dome 收尾 / 能力卡 / P1）
