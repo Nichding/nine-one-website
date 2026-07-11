@@ -42,6 +42,12 @@
 - 文案精修清单 43 条中 33 条落地；[43] 页脚标签并入 V2 迁移处理。
 - 估算器区块（`#estimate`）与页脚导航标签本轮未改；`[__]` 占位、`noindex` 保持。
 
+## 2026-07-11 · Air Dome 媒体技术修复
+
+- 8 张章节图已补齐实测 `width` / `height` 属性；两个无 poster 的 Hero 视频已用 ffmpeg 首帧抽取、PIL 压至 1080px 并接入 poster。
+- `airdome/media/` 已确认全仓 HTML/CSS/JS 零引用，整体移入 `_backup/airdome-media-20260711/`，未硬删除。
+- 带人画面替换与全页统一调色待 Nicholas 裁决后另轮执行。
+
 ---
 
 ## 2026-07-10 执行记录（Air Dome 收尾 / 能力卡 / P1）
