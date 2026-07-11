@@ -36,6 +36,12 @@
 - 全站原指向旧 Facility 页的导航和入口已改指当前设计稿 `airdome/index.html`；sitemap 已移除旧 `facility.html` URL。
 - Air Dome 设计稿仍保持 `noindex`，待最终批准后再决定正式公开路径。
 
+## 2026-07-11 · Air Dome 文案精修落地
+
+- Air Dome Title Case 特例已撤销，按 2026-07-11 裁决改为全页 sentence case；`Overview` / `Tech Specs` 与页脚导航标签按清单保留。
+- 文案精修清单 43 条中 33 条落地；[43] 页脚标签并入 V2 迁移处理。
+- 估算器区块（`#estimate`）与页脚导航标签本轮未改；`[__]` 占位、`noindex` 保持。
+
 ---
 
 ## 2026-07-10 执行记录（Air Dome 收尾 / 能力卡 / P1）
