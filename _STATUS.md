@@ -48,6 +48,12 @@
 - `airdome/media/` 已确认全仓 HTML/CSS/JS 零引用，整体移入 `_backup/airdome-media-20260711/`，未硬删除。
 - 带人画面替换与全页统一调色待 Nicholas 裁决后另轮执行。
 
+## 2026-07-11 · Air Dome 空场景配图替换
+
+- 已生成并入库 5 张空场景概念渲染：All Year / Cost / One Team / Your Sport / Closing；原带人画面已按 Nicholas 裁决替换。
+- 新图母档已存 OneDrive `Imagery/Renders/`，仓库优化图宽 1080px，并登记进 `assets/images/manifest.json`。
+- 控制柜图（Durability）保留；Hero 视频调色待重生成轮。
+
 ---
 
 ## 2026-07-10 执行记录（Air Dome 收尾 / 能力卡 / P1）

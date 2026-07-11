@@ -346,5 +346,35 @@
     "status": "ai-concept",
     "source": "Nine One Website imagery library",
     "added": "2026-06-24"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-allyear-02.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI generated concept visualisation",
+    "added": "2026-07-11"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-cost-interior-02.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI generated concept visualisation",
+    "added": "2026-07-11"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-team-onsite-02.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI generated concept visualisation",
+    "added": "2026-07-11"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-your-sport-02.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI generated concept visualisation",
+    "added": "2026-07-11"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-city-design-02.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI generated concept visualisation",
+    "added": "2026-07-11"
   }
 ]
