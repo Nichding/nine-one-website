@@ -1,7 +1,7 @@
 /* ════════════════════════════════════════════════
    AIR DOME · minimal vanilla JS
    1) mobile nav toggle
-   2) estimator calculation (PLACEHOLDER formula)
+   2) facility cost indicator
    ════════════════════════════════════════════════ */
 
 // ── 1 · mobile nav toggle (site-standard header: .nav / .nav-toggle) ──
@@ -57,54 +57,43 @@ if (clips.length > 1) {
   document.addEventListener('click', () => { if (clips[cur].paused) clips[cur].play(); }, { once: true });
 }
 
-// ── 3 · early-stage placeholder estimator ──
-// Intentionally public and non-commercial. Do not add supplier pricing,
-// margins, CAPEX ranges or operating-cost coefficients to this file.
-const PLACEHOLDER_PER_COURT = 1200;
-
+// ── 3 · facility cost indicator ──
 (function initEstimator(){
   const form = document.getElementById('calc-form');
   if (!form) return;
   const $ = (id) => document.getElementById(id);
   const el = {
-    sport:$('c-sport'), courts:$('c-courts'), hours:$('c-hours'), rate:$('c-rate'), util:$('c-util'),
-    hV:$('c-hours-v'), uV:$('c-util-v'),
-    rHours:$('r-hours'), rRev:$('r-rev'), rOp:$('r-op'), rProj:$('r-proj'), rPay:$('r-payback'), rInterp:$('r-interp')
+    length:$('c-length'), width:$('c-width'), lengthV:$('c-length-v'), widthV:$('c-width-v'), footprint:$('c-footprint'),
+    total:$('r-total'), membrane:$('r-membrane'), fans:$('r-fans'), kit:$('r-kit')
   };
-  const nf = new Intl.NumberFormat('en-NZ');                       // NZD locale formatting
-  const clamp = (n,lo,hi) => Math.min(hi, Math.max(lo, n));
+  const nf = new Intl.NumberFormat('en-NZ');
   const setHidden = (id,v) => { const n=$(id); if(n) n.value=v; };
 
   function calc(){
-    const sport  = el.sport.value;
-    const courts = clamp(parseInt(el.courts.value,10)||1, 1, 12);
-    const hrsDay = clamp(parseInt(el.hours.value,10)||0, 2, 16);
-    const rate   = Math.max(0, parseFloat(el.rate.value)||0);
-    const utilPct= clamp(parseInt(el.util.value,10)||0, 20, 85);
-    el.hV.textContent = hrsDay + ' hrs/day';
-    el.uV.textContent = utilPct + '%';
-    const placeholder = courts * PLACEHOLDER_PER_COURT;
+    const length = Number(el.length.value);
+    const width = Number(el.width.value);
+    const rate = Number(form.querySelector('input[name="specification"]:checked').value);
+    const fans = Number(form.querySelector('input[name="fans"]:checked').value);
+    const area = length * width;
+    const membrane = area * rate;
+    const fanCost = fans * 10000;
+    const total = Math.round((membrane + fanCost + 10000) / 1000) * 1000;
+    const money = (value) => 'NZ$ ' + nf.format(value);
 
-    el.rHours.textContent = '[__] hrs / year';
-    el.rRev.textContent   = '[__] / year';
-    el.rOp.textContent    = 'Confirmed after site review';
-    el.rProj.textContent  = nf.format(placeholder) + ' placeholder units';
-    el.rPay.textContent   = 'Confirmed after site review';
-    el.rPay.classList.add('is-note');
+    el.lengthV.textContent = length + ' m';
+    el.widthV.textContent = width + ' m';
+    el.footprint.textContent = 'Footprint: ' + nf.format(area) + ' m²';
+    el.total.textContent = money(total) + ' +GST';
+    el.membrane.textContent = money(membrane);
+    el.fans.textContent = money(fanCost);
+    el.kit.textContent = money(10000);
 
-    el.rInterp.textContent = 'This public placeholder demonstrates the interaction only. A site-specific business case is prepared after review.';
-
-    // keep the lead-capture snapshot in sync (submitted with the form for context)
-    setHidden('m-sport', sport); setHidden('m-courts', courts); setHidden('m-hpd', hrsDay);
-    setHidden('m-rate', rate); setHidden('m-util', utilPct+'%');
-    setHidden('m-hpy', '[__]'); setHidden('m-rev', '[__]');
-    setHidden('m-pay', el.rPay.textContent);
+    setHidden('m-length', length); setHidden('m-width', width);
+    setHidden('m-spec', rate); setHidden('m-fans', fans); setHidden('m-cost', total);
   }
 
-  el.sport.addEventListener('change', calc);
-  form.addEventListener('input', calc);                            // live update on every change
-  form.addEventListener('submit', (e) => { e.preventDefault(); calc(); });
-  calc();                                                          // show a modelled result on load
+  form.addEventListener('input', calc);
+  calc();
 })();
 
 // ── 3b · lead capture (Netlify Forms, AJAX → inline thank-you; no backend) ──

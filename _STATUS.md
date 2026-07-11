@@ -54,6 +54,13 @@
 - 新图母档已存 OneDrive `Imagery/Renders/`，仓库优化图宽 1080px，并登记进 `assets/images/manifest.json`。
 - 控制柜图（Durability）保留；Hero 视频调色待重生成轮。
 
+## 2026-07-11 · Air Dome 成本指示器
+
+- `#estimate` 已重做为 Facility cost indicator：长度 25–150m、宽度 15–75m，实时 footprint 与成本明细。
+- 对外指示性数字按 Nicholas 2026-07-11 批准：Standard / Advanced / Premium = NZ$350 / 450 / 600 per m²；风机 NZ$10,000/台；building kit NZ$10,000。
+- 总价公式：长 × 宽 × 单价档 + 风机数 × NZ$10,000 + NZ$10,000 building kit；结果四舍五入至千位并显示 `+GST`。
+- 不含混凝土地面与地基工程；最终成本须经 site-specific review 确认。尺寸边界依据 GAOSHAN / XIDE 手册调研后按 Nicholas 指定边界执行。
+
 ---
 
 ## 2026-07-10 执行记录（Air Dome 收尾 / 能力卡 / P1）

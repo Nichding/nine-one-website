@@ -280,60 +280,52 @@
     <div class="specs-cta"><a class="btn-band btn-band-wide" href="#order">Request a site review</a></div>
   </section>
 
-  <!-- ═══════════════ ESTIMATE ═══════════════  (placeholder logic in script.js) -->
+  <!-- ═══════════════ ESTIMATE ═══════════════ -->
   <section class="flow" id="estimate">
-    <h2>See What a Dome Does for Your Site</h2>
-    <p class="calc-sub">Model the extra playable hours, revenue and indicative payback before you commit.</p>
+    <h2>Estimate the cost</h2>
+    <p class="calc-sub">Set the size and specification, and see an indicative cost — before you commit.</p>
 
     <div class="calc">
-      <!-- ── inputs (5) — live model ── -->
-      <form class="calc-form" id="calc-form" aria-label="Air Dome business case model">
-        <div class="cfield">
-          <label for="c-sport">Sport / court type</label>
-          <select id="c-sport">
-            <option value="Padel" selected>Padel</option>
-            <option value="Tennis">Tennis</option>
-            <option value="Netball">Netball</option>
-            <option value="Multi-use">Multi-use</option>
-          </select>
-        </div>
-
-        <div class="cfield">
-          <label for="c-courts">Number of courts</label>
-          <input type="number" id="c-courts" min="1" max="12" value="2" step="1" inputmode="numeric">
+      <form class="calc-form" id="calc-form" aria-label="Air Dome cost indicator">
+        <div class="cfield crange">
+          <div class="crange-top"><label for="c-length">Length</label><output id="c-length-v" for="c-length">88 m</output></div>
+          <input type="range" id="c-length" min="25" max="150" value="88" step="1">
         </div>
 
         <div class="cfield crange">
-          <div class="crange-top"><label for="c-hours">Extra playable hours per day the dome unlocks</label><output id="c-hours-v" for="c-hours">8 hrs/day</output></div>
-          <input type="range" id="c-hours" min="2" max="16" value="8" step="1">
+          <div class="crange-top"><label for="c-width">Width</label><output id="c-width-v" for="c-width">45 m</output></div>
+          <input type="range" id="c-width" min="15" max="75" value="45" step="1">
         </div>
 
-        <div class="cfield">
-          <label for="c-rate">Court hire rate (NZD per hour)</label>
-          <div class="cmoney"><span class="cmoney-pre">NZ$</span><input type="number" id="c-rate" min="0" max="500" value="70" step="1" inputmode="numeric"></div>
-        </div>
+        <p class="calc-footprint" id="c-footprint" aria-live="polite">Footprint: 3,960 m²</p>
 
-        <div class="cfield crange">
-          <div class="crange-top"><label for="c-util">Utilisation of those extra hours</label><output id="c-util-v" for="c-util">60%</output></div>
-          <input type="range" id="c-util" min="20" max="85" value="60" step="1">
-        </div>
+        <fieldset class="cfield calc-spec">
+          <legend>Specification</legend>
+          <div class="calc-options">
+            <label><input type="radio" name="specification" value="350" checked><span>Standard</span><small>NZ$350/m²</small></label>
+            <label><input type="radio" name="specification" value="450"><span>Advanced</span><small>NZ$450/m²</small></label>
+            <label><input type="radio" name="specification" value="600"><span>Premium</span><small>NZ$600/m²</small></label>
+          </div>
+          <p class="calc-note">Final specification confirmed per project</p>
+        </fieldset>
 
-        <button type="submit" class="btn btn-primary calc-btn">Model My Dome</button>
+        <fieldset class="cfield calc-spec">
+          <legend>Air supply fans</legend>
+          <div class="calc-options calc-fans">
+            <label><input type="radio" name="fans" value="1" checked><span>1 fan</span></label>
+            <label><input type="radio" name="fans" value="2"><span>2 fans</span></label>
+          </div>
+        </fieldset>
       </form>
 
-      <!-- ── live results (NZD) ── -->
-      <div class="calc-out">
-        <div class="res-grid" aria-live="polite">
-          <div class="rescard"><span class="rc-label">Extra playable hours / year</span><span class="rc-val" id="r-hours">—</span></div>
-          <div class="rescard"><span class="rc-label">Extra revenue / year</span><span class="rc-val" id="r-rev">—</span></div>
-          <div class="rescard"><span class="rc-label">Placeholder operating model</span><span class="rc-val" id="r-op">—</span></div>
-          <div class="rescard"><span class="rc-label">Placeholder model output</span><span class="rc-val" id="r-proj">—</span></div>
-          <div class="rescard rescard--wide"><span class="rc-label">Indicative payback period</span><span class="rc-val is-note" id="r-payback">Confirmed after site review</span></div>
+      <div class="calc-out" aria-live="polite">
+        <div class="res-grid">
+          <div class="rescard rescard--wide"><span class="rc-label">Indicative cost</span><span class="rc-val" id="r-total">NZ$ 1,396,000 +GST</span></div>
+          <div class="rescard"><span class="rc-label">Membrane structure (area × rate)</span><span class="rc-val" id="r-membrane">NZ$ 1,386,000</span></div>
+          <div class="rescard"><span class="rc-label">Air supply fans (n × NZ$10,000)</span><span class="rc-val" id="r-fans">NZ$ 10,000</span></div>
+          <div class="rescard"><span class="rc-label">Building kit (NZ$10,000)</span><span class="rc-val" id="r-kit">NZ$ 10,000</span></div>
         </div>
-
-        <p class="res-interp" id="r-interp"></p>
-
-        <p class="calc-disc">Early-stage placeholder only — not a quote. No supplier pricing or project cost coefficients are used in this public model. Final cost, timing and payback are confirmed after site review.</p>
+        <p class="calc-disc">Indicative only — not a quote. Excludes concrete slab and ground works. All figures NZD excluding GST. Final cost is confirmed after a site-specific review.</p>
       </div>
     </div>
 
@@ -347,15 +339,12 @@
       <form class="lead-form" id="lead-form" name="airdome-business-case" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="airdome-business-case">
         <p class="hp" aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <!-- modelled scenario, populated live from the calculator above -->
-        <input type="hidden" name="model-sport" id="m-sport">
-        <input type="hidden" name="model-courts" id="m-courts">
-        <input type="hidden" name="model-extra-hours-per-day" id="m-hpd">
-        <input type="hidden" name="model-hire-rate-nzd" id="m-rate">
-        <input type="hidden" name="model-utilisation" id="m-util">
-        <input type="hidden" name="model-extra-hours-per-year" id="m-hpy">
-        <input type="hidden" name="model-extra-revenue-nzd" id="m-rev">
-        <input type="hidden" name="model-indicative-payback" id="m-pay">
+        <!-- selected scenario, populated live from the cost indicator above -->
+        <input type="hidden" name="model-length-m" id="m-length">
+        <input type="hidden" name="model-width-m" id="m-width">
+        <input type="hidden" name="model-specification" id="m-spec">
+        <input type="hidden" name="model-fans" id="m-fans">
+        <input type="hidden" name="model-indicative-cost-nzd" id="m-cost">
 
         <div class="lead-fields">
           <div class="cfield"><label for="ld-name">Name</label><input id="ld-name" name="name" type="text" required autocomplete="name"></div>
