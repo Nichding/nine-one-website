@@ -91,7 +91,10 @@ if (clips.length > 1) {
     setHidden('m-spec', rate); setHidden('m-fans', 2); setHidden('m-cost', total);
   }
 
-  form.addEventListener('input', calc);
+  el.length.addEventListener('input', calc);
+  el.length.addEventListener('change', calc);
+  el.width.addEventListener('input', calc);
+  el.width.addEventListener('change', calc);
   calc();
 })();
 
