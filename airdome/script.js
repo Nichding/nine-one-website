@@ -96,6 +96,13 @@ if (clips.length > 1) {
   el.width.addEventListener('input', calc);
   el.width.addEventListener('change', calc);
   calc();
+  let lastValues = el.length.value + ':' + el.width.value;
+  function syncWhileDragging(){
+    const values = el.length.value + ':' + el.width.value;
+    if (values !== lastValues){ lastValues = values; calc(); }
+    requestAnimationFrame(syncWhileDragging);
+  }
+  requestAnimationFrame(syncWhileDragging);
 })();
 
 // ── 4 · engineered-air flow field ──
