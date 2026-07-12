@@ -203,3 +203,12 @@
 - 页面 Blocker 清零；待发布动作：摘 noindex、进导航、合 PR。测试提交名为 `TEST — Codex QA`，需在 Formspree 后台确认后删除。
 
 PM 会话判断 / 拆活，网站的活派 **`web` 执行者**（代码在 `~/Projects`，文案在 OneDrive，遵守 Nine One CI）。工作流见 `_AI_Rules/Workflow.md`。
+
+## 发布就绪(2026-07-12 · Claude 终检)
+
+- Air Dome 页 **Blocker 清零、发布准备完成**:Formspree 已接真实 endpoint(xpqvzaqb)并实测提交成功;
+  费率改分段累进(600/450/350 分段,无跳变,有效单价单调下降);QA 修复 F1–F6 全部验收通过;
+  noindex 已摘;Cost 区新渲染图(单片网球场)已随 alt 定稿并入库(257ed77)。
+- facility.html 已归档(fc6aff8),Air Dome 页即 Facility 分区页,全站 7 页导航一致指向 airdome/。
+- 分支已推远端(257ed77)。**只剩 Nicholas 两个动作:① Formspree 后台删除 `TEST — Codex QA`
+  测试询盘;② 合并 PR(main ← redesign/ci-v2-phase2)→ Netlify 自动上线;上线后建议对线上跑一次 QA。**
