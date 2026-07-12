@@ -64,7 +64,7 @@ if (clips.length > 1) {
   const $ = (id) => document.getElementById(id);
   const el = {
     length:$('c-length'), width:$('c-width'), lengthV:$('c-length-v'), widthV:$('c-width-v'), footprint:$('c-footprint'),
-    total:$('r-total'), membrane:$('r-membrane'), fans:$('r-fans'), kit:$('r-kit')
+    total:$('r-total'), membrane:$('r-membrane'), air:$('r-air'), kit:$('r-kit')
   };
   const nf = new Intl.NumberFormat('en-NZ');
   const setHidden = (id,v) => { const n=$(id); if(n) n.value=v; };
@@ -72,12 +72,11 @@ if (clips.length > 1) {
   function calc(){
     const length = Number(el.length.value);
     const width = Number(el.width.value);
-    const rate = Number(form.querySelector('input[name="specification"]:checked').value);
-    const fans = Number(form.querySelector('input[name="fans"]:checked').value);
     const area = length * width;
+    const rate = area < 1000 ? 600 : area <= 3000 ? 450 : 350;
     const membrane = area * rate;
-    const fanCost = fans * 10000;
-    const total = Math.round((membrane + fanCost + 10000) / 1000) * 1000;
+    const airCost = 20000;
+    const total = Math.round((membrane + airCost + 10000) / 1000) * 1000;
     const money = (value) => 'NZ$ ' + nf.format(value);
 
     el.lengthV.textContent = length + ' m';
@@ -85,29 +84,15 @@ if (clips.length > 1) {
     el.footprint.textContent = 'Footprint: ' + nf.format(area) + ' m²';
     el.total.textContent = money(total) + ' +GST';
     el.membrane.textContent = money(membrane);
-    el.fans.textContent = money(fanCost);
+    el.air.textContent = money(airCost);
     el.kit.textContent = money(10000);
 
     setHidden('m-length', length); setHidden('m-width', width);
-    setHidden('m-spec', rate); setHidden('m-fans', fans); setHidden('m-cost', total);
+    setHidden('m-spec', rate); setHidden('m-fans', 2); setHidden('m-cost', total);
   }
 
   form.addEventListener('input', calc);
   calc();
-})();
-
-// ── 3b · lead capture (Netlify Forms, AJAX → inline thank-you; no backend) ──
-(function initLead(){
-  const form = document.getElementById('lead-form');
-  const thanks = document.getElementById('lead-thanks');
-  if (!form || !thanks) return;
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();                                            // native validation has already passed
-    const body = new URLSearchParams(new FormData(form)).toString();
-    const done = () => { form.hidden = true; thanks.hidden = false; thanks.scrollIntoView({behavior:'smooth', block:'center'}); };
-    fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body })
-      .then(done).catch(done);                                     // Netlify captures it in production; thank the user either way
-  });
 })();
 
 // ── 4 · engineered-air flow field ──

@@ -299,86 +299,20 @@
 
         <p class="calc-footprint" id="c-footprint" aria-live="polite">Footprint: 3,960 m²</p>
 
-        <fieldset class="cfield calc-spec">
-          <legend>Specification</legend>
-          <div class="calc-options">
-            <label><input type="radio" name="specification" value="350" checked><span>Standard</span><small>NZ$350/m²</small></label>
-            <label><input type="radio" name="specification" value="450"><span>Advanced</span><small>NZ$450/m²</small></label>
-            <label><input type="radio" name="specification" value="600"><span>Premium</span><small>NZ$600/m²</small></label>
-          </div>
-          <p class="calc-note">Final specification confirmed per project</p>
-        </fieldset>
-
-        <fieldset class="cfield calc-spec">
-          <legend>Air supply fans</legend>
-          <div class="calc-options calc-fans">
-            <label><input type="radio" name="fans" value="1" checked><span>1 fan</span></label>
-            <label><input type="radio" name="fans" value="2"><span>2 fans</span></label>
-          </div>
-        </fieldset>
+        <p class="calc-note">Area pricing: NZ$600/m² for smaller footprints, NZ$450/m² for mid-size footprints, and NZ$350/m² for larger footprints. Air supply: NZ$20,000. Final cost is confirmed per project.</p>
       </form>
 
       <div class="calc-out" aria-live="polite">
         <div class="res-grid">
           <div class="rescard rescard--wide"><span class="rc-label">Indicative cost</span><span class="rc-val" id="r-total">NZ$ 1,396,000 +GST</span></div>
           <div class="rescard"><span class="rc-label">Membrane structure (area × rate)</span><span class="rc-val" id="r-membrane">NZ$ 1,386,000</span></div>
-          <div class="rescard"><span class="rc-label">Air supply fans (n × NZ$10,000)</span><span class="rc-val" id="r-fans">NZ$ 10,000</span></div>
-          <div class="rescard"><span class="rc-label">Building kit (NZ$10,000)</span><span class="rc-val" id="r-kit">NZ$ 10,000</span></div>
+          <div class="rescard"><span class="rc-label">Air supply</span><span class="rc-val" id="r-air">NZ$ 20,000</span></div>
+          <div class="rescard"><span class="rc-label">Building kit</span><span class="rc-val" id="r-kit">NZ$ 10,000</span></div>
         </div>
         <p class="calc-disc">Indicative only — not a quote. Excludes concrete slab and ground works. All figures NZD excluding GST. Final cost is confirmed after a site-specific review.</p>
       </div>
     </div>
 
-    <!-- ── lead capture (Netlify Forms — no backend) ── -->
-    <div class="lead">
-      <div class="lead-copy">
-        <h3>Get your project business case</h3>
-        <p>Send us your site, sport and target operating model. We'll return a project-specific NZD business case covering scope, timing and indicative payback.</p>
-      </div>
-
-      <form class="lead-form" id="lead-form" name="airdome-business-case" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="airdome-business-case">
-        <p class="hp" aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <!-- selected scenario, populated live from the cost indicator above -->
-        <input type="hidden" name="model-length-m" id="m-length">
-        <input type="hidden" name="model-width-m" id="m-width">
-        <input type="hidden" name="model-specification" id="m-spec">
-        <input type="hidden" name="model-fans" id="m-fans">
-        <input type="hidden" name="model-indicative-cost-nzd" id="m-cost">
-
-        <div class="lead-fields">
-          <div class="cfield"><label for="ld-name">Name</label><input id="ld-name" name="name" type="text" required autocomplete="name"></div>
-          <div class="cfield"><label for="ld-email">Email</label><input id="ld-email" name="email" type="email" required autocomplete="email"></div>
-          <div class="cfield"><label for="ld-phone">Phone</label><input id="ld-phone" name="phone" type="tel" autocomplete="tel"></div>
-          <div class="cfield"><label for="ld-region">Region</label>
-            <select id="ld-region" name="region">
-              <option selected>Auckland</option>
-              <option>Northland</option>
-              <option>Waikato / Bay of Plenty</option>
-              <option>Wellington</option>
-              <option>South Island</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="cfield lead-span"><label for="ld-stage">Project stage</label>
-            <select id="ld-stage" name="project-stage">
-              <option>Exploring the idea</option>
-              <option>We have a site in mind</option>
-              <option>Securing budget</option>
-              <option>Ready to proceed</option>
-            </select>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary lead-btn">Request your business case (PDF)</button>
-        <p class="lead-fine">Indicative only, based on your inputs — not a quote. We'll use your details to prepare and send your business case.</p>
-      </form>
-
-      <div class="lead-thanks" id="lead-thanks" hidden role="status" aria-live="polite">
-        <h3>Thanks — we'll prepare the next step.</h3>
-        <p>Our team will prepare your project-specific NZD business case and contact you about the next step.</p>
-      </div>
-    </div>
   </section>
 
   <!-- ═══════════════ ORDER ═══════════════  (closing CTA) -->

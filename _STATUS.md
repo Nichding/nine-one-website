@@ -60,6 +60,7 @@
 - 对外指示性数字按 Nicholas 2026-07-11 批准：Standard / Advanced / Premium = NZ$350 / 450 / 600 per m²；风机 NZ$10,000/台；building kit NZ$10,000。
 - 总价公式：长 × 宽 × 单价档 + 风机数 × NZ$10,000 + NZ$10,000 building kit；结果四舍五入至千位并显示 `+GST`。
 - 不含混凝土地面与地基工程；最终成本须经 site-specific review 确认。尺寸边界依据 GAOSHAN / XIDE 手册调研后按 Nicholas 指定边界执行。
+- 后续调整：移除 Specification 选择器；按面积自动采用小于 1,000m² = NZ$600/m²、1,000–3,000m² = NZ$450/m²、大于 3,000m² = NZ$350/m²；Air supply 固定 NZ$20,000；移除该区块的 business case lead 表单。
 
 ---
 
