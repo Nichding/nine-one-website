@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine One Play — Tech Specs | Nine One Sports</title>
+<meta name="description" content="Nine One Play specifications — court formats, structure, surfaces, lighting, weather protection, operations and sites. Configured per site.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --black:#0B0B0B; --paper:#F4F4F1; --ink:#121311; --graphite:#76766E;
+  --grey:#D9D8D2; --grey-2:#ECEBE6; --play:#F6BE83; --play-ink:#5E3411; --accent:#F6BE83;
+  --line:rgba(18,19,17,.16); --line-soft:rgba(18,19,17,.09); --muted-dark:rgba(244,244,241,.55);
+  --nav-h:110px; --gut:64px; --maxw:1280px; --maxw-wide:1480px;
+  --display:'Inter',system-ui,sans-serif; --mono:'Spline Sans Mono','IBM Plex Mono',ui-monospace,monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);font-weight:400;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;overflow-x:clip;}
+a{text-decoration:none;color:inherit;}
+img,svg{display:block;}
+.snum{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;padding:14px 28px;border-radius:999px;transition:background .2s,transform .2s;}
+.btn svg{width:14px;height:14px;}
+.btn-solid{background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);}
+.btn-solid:hover{background:var(--black);transform:translateY(-1px);}
+
+/* nav */
+.nav{position:static;height:var(--nav-h);background:var(--paper);}
+.nav-inner{max-width:var(--maxw-wide);margin:0 auto;height:100%;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;}
+.brand-icon{display:flex;align-items:center;}
+.brand-icon img{height:46px;width:auto;display:block;}
+.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--graphite);letter-spacing:0.02em;transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a.active{color:var(--ink);font-weight:600;}
+.nav-cta{font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:1.5px solid var(--ink);border-radius:999px;padding:11px 22px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:var(--ink);color:var(--paper);}
+.nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* product sub-nav */
+.psub{position:sticky;top:0;z-index:1090;background:rgba(244,244,241,0.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line);}
+.psub-inner{max-width:var(--maxw-wide);margin:0 auto;height:54px;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.psub-name{font-size:18px;font-weight:600;letter-spacing:-0.015em;color:var(--ink);white-space:nowrap;}
+.psub-links{display:flex;align-items:center;gap:30px;list-style:none;margin-left:auto;}
+.psub-links a{font-size:13px;font-weight:400;color:var(--graphite);letter-spacing:0.005em;transition:color .2s;position:relative;}
+.psub-links a:hover{color:var(--ink);}
+.psub-links a.cur{color:var(--ink);}
+.psub-links a.cur::after{content:'';position:absolute;left:0;right:0;bottom:-18px;height:2px;background:var(--accent);border-radius:2px;}
+.psub-links .soon{color:var(--graphite);display:inline-flex;align-items:center;gap:7px;}
+.psub-links .soon .tag{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--play-ink);background:rgba(246,190,131,.22);padding:2px 6px;border-radius:4px;}
+.psub-cta{flex:none;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--paper);background:var(--ink);border-radius:999px;padding:9px 18px;transition:background .2s,transform .2s;white-space:nowrap;}
+.psub-cta:hover{background:var(--black);transform:translateY(-1px);}
+
+/* page header */
+.spec-hero{max-width:var(--maxw);margin:0 auto;padding:clamp(72px,10vw,140px) var(--gut) clamp(40px,5vw,64px);}
+.spec-hero .snum{display:block;margin-bottom:18px;}
+.spec-hero h1{font-size:clamp(40px,6vw,86px);font-weight:600;line-height:1.0;letter-spacing:-0.03em;color:var(--ink);}
+.spec-hero p{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:var(--graphite);max-width:56ch;margin-top:24px;}
+
+/* spec groups */
+.specs-body{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut) clamp(80px,10vw,140px);}
+.spec-group{padding:clamp(40px,5vw,64px) 0;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:0.5fr 1.5fr;gap:clamp(24px,4vw,64px);align-items:start;}
+.spec-group:first-of-type{border-top:none;}
+.spec-group h2{font-size:clamp(22px,2.4vw,30px);font-weight:600;letter-spacing:-0.015em;color:var(--ink);position:sticky;top:80px;}
+.spec-rows{display:flex;flex-direction:column;}
+.spec-row{display:grid;grid-template-columns:0.7fr 1.3fr;gap:28px;padding:20px 0;border-top:1px solid var(--line-soft);align-items:baseline;}
+.spec-row:first-child{border-top:none;}
+.spec-k{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink);}
+.spec-v{font-size:15.5px;line-height:1.55;color:var(--graphite);}
+.specs-note{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut) clamp(80px,9vw,120px);}
+.specs-note p{font-size:13.5px;line-height:1.65;color:var(--graphite);max-width:62ch;
+  border-top:1px solid var(--line);padding-top:28px;}
+.specs-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+
+/* footer */
+.footer{background:var(--black);color:var(--paper);}
+.footer-inner{max-width:var(--maxw-wide);margin:0 auto;padding:96px var(--gut) 44px;}
+.footer-slogan{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding-bottom:64px;border-bottom:1px solid rgba(244,244,241,0.12);flex-wrap:wrap;}
+.footer-slogan h2{font-size:clamp(40px,8vw,96px);font-weight:600;line-height:0.92;letter-spacing:-0.03em;color:var(--paper);}
+.footer-slogan h2 .accent{color:var(--accent);}
+.footer-brand .brand-icon img{height:52px;}
+.footer-meta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:40px;flex-wrap:wrap;}
+.footer-meta .m{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
+
+@media(max-width:1080px){
+  .nav{position:sticky;top:0;z-index:1100;}
+  .nav-toggle{display:flex;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
+  .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
+  .nav-links a{font-size:18px;}
+  .nav-cta{display:block;width:100%;text-align:center;padding:14px 24px;}
+  .psub{top:var(--nav-h);}
+  .psub-links{margin-left:14px;gap:22px;flex:1 1 auto;min-width:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .psub-links::-webkit-scrollbar{display:none;}
+  .psub-links a{white-space:nowrap;}
+  .psub-links a.cur::after{display:none;}
+  .spec-group{grid-template-columns:1fr;gap:18px;}
+  .spec-group h2{position:static;}
+}
+@media(max-width:768px){
+  :root{--gut:24px;--nav-h:72px;}
+  .psub-inner{height:50px;}
+  .psub-name{font-size:16px;}
+  .spec-row{grid-template-columns:1fr;gap:6px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Nine One Sports"><span class="brand-icon"><img src="assets/logo/nineone-stacked-ink.svg" alt="Nine One" width="67" height="42"></span></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sports.html" class="active">Play</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="facility.html">Facility</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a href="build.html" class="nav-cta">Build with us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="psub" id="psub">
+  <div class="psub-inner">
+    <a href="play-framework.html" class="psub-name">Nine One Play</a>
+    <ul class="psub-links">
+      <li><a href="play-framework.html">Overview</a></li>
+      <li><a href="play-specs.html" class="cur">Tech Specs</a></li>
+      <li><a href="play-framework.html#play-os" class="soon">Play OS <span class="tag">Soon</span></a></li>
+    </ul>
+    <a href="build.html" class="psub-cta">Plan a site</a>
+  </div>
+</div>
+
+<header class="spec-hero">
+  <span class="snum">Tech Specs</span>
+  <h1>Specifications.</h1>
+  <p>A starting point, not a fixed menu. Every Nine One Play venue is configured to its site — exact formats, materials, timelines and modules are confirmed during a site assessment.</p>
+</header>
+
+<section class="specs-body">
+  <div class="spec-group">
+    <h2>Court &amp; formats</h2>
+    <div class="spec-rows">
+      <div class="spec-row"><div class="spec-k">Court formats</div><div class="spec-v">Padel and multi-sport configurations — configured by site.</div></div>
+      <div class="spec-row"><div class="spec-k">Surface options</div><div class="spec-v">Play-grade court systems — subject to use and site assessment.</div></div>
+      <div class="spec-row"><div class="spec-k">Lighting</div><div class="spec-v">LED court lighting — evening- and winter-play ready.</div></div>
+      <div class="spec-row"><div class="spec-k">Line &amp; colour</div><div class="spec-v">Court colourways and marking — to format and brief.</div></div>
+    </div>
+  </div>
+  <div class="spec-group">
+    <h2>Structure &amp; weather</h2>
+    <div class="spec-rows">
+      <div class="spec-row"><div class="spec-k">Structure options</div><div class="spec-v">Open court · canopy · air-dome — selected to site and climate.</div></div>
+      <div class="spec-row"><div class="spec-k">Weather protection</div><div class="spec-v">Wind, rain and sun protection — by structure type.</div></div>
+      <div class="spec-row"><div class="spec-k">Enclosure</div><div class="spec-v">Tempered glass and perimeter systems.</div></div>
+      <div class="spec-row"><div class="spec-k">Safety</div><div class="spec-v">Structural and wind-load monitoring on covered structures, where specified.</div></div>
+    </div>
+  </div>
+  <div class="spec-group">
+    <h2>Operations &amp; sites</h2>
+    <div class="spec-rows">
+      <div class="spec-row"><div class="spec-k">Installation timeline</div><div class="spec-v">Configured by site; confirmed at concept stage.</div></div>
+      <div class="spec-row"><div class="spec-k">Operations layer</div><div class="spec-v">Booking and access — staged rollout (see Play OS).</div></div>
+      <div class="spec-row"><div class="spec-k">Suitable sites</div><div class="spec-v">Council land · school grounds · clubs · commercial sites · rooftops.</div></div>
+      <div class="spec-row"><div class="spec-k">Optional modules</div><div class="spec-v">Fencing · seating · lounge &amp; F&amp;B · branding.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="specs-note">
+  <p>Specifications shown are indicative and provided to support early planning. Exact court formats, materials, structure type, installation timeline and optional modules are configured per site and confirmed during a site assessment.</p>
+  <div class="specs-cta">
+    <a href="build.html" class="btn btn-solid">Plan a site
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-slogan">
+      <h2>Move Together<span class="accent">.</span></h2>
+      <a href="play-framework.html" class="btn btn-solid" style="background:var(--paper);color:var(--ink);border-color:var(--paper);">Back to overview</a>
+    </div>
+    <div class="footer-meta">
+      <span class="brand-icon"><img src="assets/logo/nineone-stacked-white.svg" alt="Nine One" width="83" height="52"></span>
+      <span class="m">© 2026 NINE ONE · Nine One Sports Ltd · Move Together.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+const navToggle=document.querySelector('.nav-toggle');
+if(navToggle){navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));}
+</script>
+</body>
+</html>

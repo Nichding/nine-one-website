@@ -11,6 +11,12 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/logo/nineone-mark-ink.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#F4F4F1">
 <title>About Nine One — Why we build | Nine One Sports</title>
 <meta name="description" content="Nine One builds year-round community sport infrastructure — more places to play, and better use of the land we already have. Built in New Zealand, planned for the long term.">
 <link rel="canonical" href="https://nineonesports.co.nz/about">
@@ -34,17 +40,21 @@
    Canonical CI — Inter + Spline Sans Mono · strict 6 tokens
    ════════════════════════════════════════════════ */
 :root{
+  --paper:#F4F4F1;--mist:#ECEBE6;--greige:#D9D8D2;--stone:#A8A69D;--graphite:#76766E;--ink:#15140F;--black:#0B0B0B;--white:#FFFFFF;
+  --play-tint:#E3F4EF;--play-light:#B9E4D8;--play-soft:#6BC7AC;--play-hero:#00A87E;--play-strong:#0E7F60;--play-deep:#0A5C4A;--play-night:#07322B;
+  --tech-tint:#E6F4FB;--tech-light:#B8E0F5;--tech-soft:#6FC2EA;--tech-hero:#0E9BDE;--tech-strong:#0077B4;--tech-deep:#02557C;--tech-night:#052A40;
+  --fac-tint:#F1EBF8;--fac-light:#D6C8EC;--fac-soft:#A88BD1;--fac-hero:#5C2E91;--fac-strong:#4A2478;--fac-deep:#38195C;--fac-night:#200E38;
   --black:#0B0B0B;
   --paper:#F4F4F1;
-  --ink:#121311;
+  --ink:#15140F;
   --graphite:#76766E;
   --grey:#D9D8D2;
-  --play:#F6BE83;
-  --accent:#F6BE83;
-  --line:rgba(18,19,17,.16);
-  --line-soft:rgba(18,19,17,.09);
+  --play:#15140F;
+  --accent:#15140F;
+  --line:rgba(21,20,15,.16);
+  --line-soft:rgba(21,20,15,.09);
   --muted-dark:rgba(244,244,241,.55);
-  --surface:rgba(18,19,17,.04);
+  --surface:rgba(21,20,15,.04);
   --nav-h:70px; --gut:64px; --maxw:1024px; --maxw-wide:1024px;
   --display:'Inter',system-ui,sans-serif;
   --mono:'Spline Sans Mono','IBM Plex Mono',ui-monospace,monospace;
@@ -58,11 +68,11 @@ img,svg{display:block;}
 
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;font-weight:500;
   line-height:1.4;letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+.eyebrow .dot{width:7px;height:7px;border-radius:4px;background:var(--accent);flex:none;}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;letter-spacing:0.01em;
-  padding:14px 28px;border-radius:999px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
+  padding:14px 28px;border-radius:4px;transition:background .2s,color .2s,border-color .2s,transform .2s;}
 .btn svg{width:14px;height:14px;}
 .btn-solid{background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);}
 .btn-solid:hover{background:var(--black);transform:translateY(-1px);}
@@ -91,10 +101,10 @@ img,svg{display:block;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a.active{color:var(--ink);font-weight:600;}
 .nav-cta{font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);background:transparent;
-  border:1.5px solid var(--ink);border-radius:999px;padding:11px 22px;transition:background .2s,color .2s;}
+  border:1.5px solid var(--ink);border-radius:4px;padding:11px 22px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:var(--ink);color:var(--paper);}
 .nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .2s cubic-bezier(0.2,0,0,1),opacity .2s cubic-bezier(0.2,0,0,1);}
 .nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
 .nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -134,7 +144,7 @@ img,svg{display:block;}
 .lmod-links .tlink{color:var(--ink);}
 .lmod-links .tlink svg{stroke:var(--play);}
 .lmod-fig{max-width:var(--maxw-wide);margin:clamp(44px,6vw,72px) auto 0;padding:0 var(--gut);}
-.lmod-fig .frame{border-radius:18px;overflow:hidden;aspect-ratio:16/9;background:var(--surface);}
+.lmod-fig .frame{border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:var(--surface);}
 .lmod-fig img{width:100%;height:100%;object-fit:cover;display:block;}
 
 /* ════════ STATEMENT (light · centered values line) ════════ */
@@ -158,7 +168,7 @@ img,svg{display:block;}
 .footer-slogan h2{font-size:clamp(40px,8vw,108px);font-weight:600;line-height:0.92;letter-spacing:-0.03em;color:var(--paper);}
 .footer-slogan h2 .accent{color:var(--accent);}
 .footer-slogan .f-cta{display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
-  font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:999px;transition:background .2s;}
+  font-size:11.5px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);background:var(--paper);padding:14px 26px;border-radius:4px;transition:background .2s;}
 .footer-slogan .f-cta svg{width:14px;height:14px;}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;padding:80px 0;}
 .footer-brand .brand-icon img{height:56px;}
@@ -172,14 +182,14 @@ img,svg{display:block;}
 .footer-bottom .legal{font-family:var(--mono);font-size:11.5px;color:var(--muted-dark);letter-spacing:0.04em;}
 
 /* reveal */
-.reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .7s ease;}
+.reveal{opacity:1;transform:none;transition:transform .3s cubic-bezier(0.2,0,0,1),opacity .3s cubic-bezier(0.2,0,0,1);}
 .reveal-on .reveal{opacity:0;transform:translateY(20px);}
 .reveal-on .reveal.visible{opacity:1;transform:none;}
 .rd1{transition-delay:.08s;}.rd2{transition-delay:.16s;}.rd3{transition-delay:.24s;}
 
-@media(max-width:1080px){
+@media(max-width:1024px){
   .nav-toggle{display:flex;}
-  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .2s cubic-bezier(0.2,0,0,1),transform .2s cubic-bezier(0.2,0,0,1);pointer-events:none;overflow-y:auto;}
   .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
   .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
   .nav-links a{font-size:18px;}
@@ -188,17 +198,22 @@ img,svg{display:block;}
   .duo .feat{min-height:72vh;}
   .footer-grid{grid-template-columns:1fr 1fr;}
 }
-@media(max-width:768px){
+@media(max-width:640px){
   :root{--gut:24px;--nav-h:72px;}
   .feat{min-height:80vh;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
   .footer-slogan h2{font-size:44px;}
 }
-@media(max-width:480px){
+@media(max-width:640px){
   .hero-cta{flex-direction:column;gap:14px;align-items:center;}
   .hero-cta .btn{min-width:220px;justify-content:center;}
   .footer-grid{grid-template-columns:1fr;}
 }
+
+/* CI V2 division context */
+main p,section p{color:var(--ink)}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal,.reveal-on .reveal{opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -212,8 +227,8 @@ img,svg{display:block;}
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="sports.html">Play</a></li>
-        <li><a href="technologies.html">Technologies</a></li>
-        <li><a href="facility.html">Facility</a></li>
+        <li><a href="technologies.html">Technology</a></li>
+        <li><a href="airdome/index.html">Facility</a></li>
         <li><a href="ecosystem.html">Ecosystem</a></li>
         <li><a href="about.html" class="active">About</a></li>
       </ul>
@@ -224,12 +239,11 @@ img,svg{display:block;}
 
 <!-- ════════ HERO ════════ -->
 <header class="hero">
-  <img class="hero-img" src="assets/images/opt/about-hero.jpg" alt="A Nine One community sport venue in soft daylight" width="1600" height="1066" fetchpriority="high" decoding="async">
+  <img class="hero-img" src="assets/images/opt/about-hero.jpg" alt="Concept visualisation — A Nine One community sport venue in soft daylight" width="1600" height="1066" fetchpriority="high" decoding="async">
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <span class="eyebrow reveal"><span class="dot"></span>About</span>
-    <h1 class="reveal rd1">Move Together.</h1>
-    <p class="hero-sub reveal rd2">We build year-round community sport infrastructure — more places to play, and better use of the land we already have.</p>
+    <p class="hero-sub reveal rd2">We design year-round community sport infrastructure — more places to play, and better use of the land communities already have.</p>
     <div class="hero-cta reveal rd3">
       <a href="build.html" class="btn btn-light">Build with us
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
@@ -251,10 +265,10 @@ img,svg{display:block;}
 <section class="lmod">
   <div class="lmod-inner">
     <h2 class="reveal">Why we build</h2>
-    <p class="reveal rd1">Too many communities run out of places to play. We turn land into sport space people can use, run and come back to.</p>
+    <p class="reveal rd1">Too many communities run out of places to play. We design sport space people can use, run and come back to.</p>
     <div class="lmod-links reveal rd2"><a href="sports.html" class="tlink">Explore Play <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
   </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-why.jpg" alt="A Nine One community court in use during the day" width="1600" height="853" loading="lazy" decoding="async"></div></div>
+  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-why.jpg" alt="Concept visualisation — A Nine One community court in use during the day" width="1600" height="853" loading="lazy" decoding="async"></div></div>
 </section>
 
 <!-- ════════ INFRASTRUCTURE (light · alt) ════════ -->
@@ -264,17 +278,17 @@ img,svg{display:block;}
     <p class="reveal rd1">Courts, covered play, a digital layer and long-term operation — designed to last, not just to open.</p>
     <div class="lmod-links reveal rd2"><a href="ecosystem.html" class="tlink">See the system <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
   </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-philosophy.jpg" alt="The Nine One system of courts and covered play" width="1600" height="800" loading="lazy" decoding="async"></div></div>
+  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-philosophy.jpg" alt="Concept visualisation — The Nine One system of courts and covered play" width="1600" height="800" loading="lazy" decoding="async"></div></div>
 </section>
 
 <!-- ════════ NEW ZEALAND BASE (light) ════════ -->
 <section class="lmod">
   <div class="lmod-inner">
     <h2 class="reveal">New Zealand base, broader reach</h2>
-    <p class="reveal rd1">Built in New Zealand, with the capability to deliver beyond it.</p>
+    <p class="reveal rd1">Based in New Zealand, with the capability to deliver beyond it.</p>
     <div class="lmod-links reveal rd2"><a href="build.html" class="tlink">Build with us <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
   </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-origin.jpg" alt="A Nine One venue set in the New Zealand landscape" width="1600" height="900" loading="lazy" decoding="async"></div></div>
+  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-origin.jpg" alt="Concept visualisation — A Nine One venue set in the New Zealand landscape" width="1600" height="900" loading="lazy" decoding="async"></div></div>
 </section>
 
 <!-- ════════ LONG-TERM RESPONSIBILITY (light · alt) ════════ -->
@@ -284,13 +298,12 @@ img,svg{display:block;}
     <p class="reveal rd1">We plan for the life of a venue — how it's run, maintained and used for years, not just the day it opens.</p>
     <div class="lmod-links reveal rd2"><a href="build.html" class="tlink">Talk to us <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3l4 4-4 4"/></svg></a></div>
   </div>
-  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-direction.jpg" alt="A Nine One venue maintained and in use over time" width="1600" height="640" loading="lazy" decoding="async"></div></div>
+  <div class="lmod-fig reveal"><div class="frame"><img src="assets/images/opt/about-direction.jpg" alt="Concept visualisation — A Nine One venue maintained and in use over time" width="1600" height="640" loading="lazy" decoding="async"></div></div>
 </section>
 
 <!-- ════════ BUILD WITH US ════════ -->
 <section class="build">
   <div class="build-inner">
-    <span class="eyebrow reveal"><span class="dot"></span>Move Together</span>
     <h2 class="reveal rd1">Build something that lasts with us.</h2>
     <p class="reveal rd2">If you have land, a community and a goal, we'd like to hear about it.</p>
     <div class="build-cta reveal rd3">
@@ -305,7 +318,6 @@ img,svg{display:block;}
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-slogan">
-      <h2>Move Together<span class="accent">.</span></h2>
       <a href="build.html" class="f-cta">Build with us
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
@@ -313,14 +325,14 @@ img,svg{display:block;}
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand"><span class="brand-icon"><img src="assets/logo/nineone-stacked-white.svg" alt="Nine One" width="89" height="56"></span></a>
-        <p class="footer-tagline">Year-round community sport infrastructure — courts, communities and operators, built as one system.</p>
+        <p class="footer-tagline">Year-round community sport infrastructure — courts, covered play and operations, designed as one system.</p>
       </div>
       <div class="footer-col">
         <h4>Business</h4>
         <ul>
           <li><a href="sports.html">Play</a></li>
-          <li><a href="technologies.html">Technologies</a></li>
-          <li><a href="facility.html">Facility</a></li>
+          <li><a href="technologies.html">Technology</a></li>
+          <li><a href="airdome/index.html">Facility</a></li>
           <li><a href="ecosystem.html">Ecosystem</a></li>
         </ul>
       </div>
@@ -341,7 +353,6 @@ img,svg{display:block;}
     </div>
     <div class="footer-bottom">
       <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
-      <span class="legal">Move Together.</span>
     </div>
   </div>
 </footer>
