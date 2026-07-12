@@ -40,7 +40,9 @@ if (psOverview && psSpecs && specsSec) {
 // each clip plays once; on 'ended' the next fades in (ended video holds
 // its last frame underneath, so the fade is seamless). Cycles forever.
 const clips = Array.from(document.querySelectorAll('#hero-reel .heroclip'));
-if (clips.length > 1) {
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduceMotion) clips.forEach((v) => { v.pause(); v.currentTime = 0; });
+if (clips.length > 1 && !reduceMotion) {
   let cur = 0;
   clips.forEach((v, i) => {
     v.addEventListener('ended', () => {
@@ -56,6 +58,76 @@ if (clips.length > 1) {
   // if autoplay was blocked (e.g. power saving), start on first interaction
   document.addEventListener('click', () => { if (clips[cur].paused) clips[cur].play(); }, { once: true });
 }
+
+// ── 2b · project process gallery: Design / Install / First serve ──
+(function initProcessGallery(){
+  const gallery = document.querySelector('[data-process-gallery]');
+  if (!gallery) return;
+  const tabs = Array.from(gallery.querySelectorAll('[data-process-tab]'));
+  const images = Array.from(gallery.querySelectorAll('[data-process-image]'));
+  function select(key){
+    tabs.forEach((tab) => {
+      const active = tab.dataset.processTab === key;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', String(active));
+    });
+    images.forEach((image) => image.classList.toggle('is-active', image.dataset.processImage === key));
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => select(tab.dataset.processTab));
+    tab.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+      event.preventDefault();
+      const next = (index + (event.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+      tabs[next].focus();
+      select(tabs[next].dataset.processTab);
+    });
+  });
+})();
+
+// ── 2c · two-step facility enquiry form (Formspree-ready) ──
+(function initLeadForm(){
+  const form = document.getElementById('lead-form');
+  if (!form) return;
+  const modal = document.getElementById('lead-form-wrap');
+  let returnFocus = null;
+  const open = (trigger) => { returnFocus = trigger || document.activeElement; modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('modal-open'); form.querySelector('input:not(.hp)')?.focus(); };
+  const close = () => { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('modal-open'); returnFocus?.focus(); };
+  document.querySelectorAll('a[href="#lead-form-wrap"], a[href="#lead-form"]').forEach((link) => link.addEventListener('click', (event) => { event.preventDefault(); open(link); }));
+  modal.querySelector('[data-close-lead]')?.addEventListener('click', close);
+  modal.addEventListener('click', (event) => { if (event.target === modal) close(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && modal.classList.contains('is-open')) close(); });
+  modal.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const focusable = Array.from(modal.querySelectorAll('button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [href]')).filter((el) => !el.hidden && el.offsetParent !== null);
+    if (!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
+  const steps = Array.from(form.querySelectorAll('[data-lead-step]'));
+  const thanks = form.querySelector('[data-lead-thanks]');
+  const showStep = (index) => steps.forEach((step, i) => {
+    const active = i === index;
+    step.classList.toggle('is-active', active);
+    step.hidden = !active;
+  });
+  form.querySelector('[data-lead-next]')?.addEventListener('click', () => {
+    const fields = steps[0].querySelectorAll('input, select');
+    if (![...fields].every((field) => field.reportValidity())) return;
+    showStep(1);
+    steps[1].querySelector('input')?.focus();
+  });
+  form.querySelector('[data-lead-back]')?.addEventListener('click', () => showStep(0));
+  form.addEventListener('submit', (event) => {
+    if (!form.checkValidity()) { event.preventDefault(); return; }
+    if (!form.hasAttribute('data-formspree-pending')) return;
+    event.preventDefault();
+    steps.forEach((step) => { step.hidden = true; step.classList.remove('is-active'); });
+    form.querySelector('.lead-fine').hidden = true;
+    thanks.hidden = false;
+  });
+})();
 
 // ── 3 · facility cost indicator ──
 (function initEstimator(){
@@ -76,7 +148,7 @@ if (clips.length > 1) {
     const rate = area < 1000 ? 600 : area <= 3000 ? 450 : 350;
     const membrane = area * rate;
     const airCost = 20000;
-    const total = Math.round((membrane + airCost + 10000) / 1000) * 1000;
+    const total = membrane + airCost + 10000;
     const money = (value) => 'NZ$ ' + nf.format(value);
 
     el.lengthV.textContent = length + ' m';
@@ -111,7 +183,7 @@ if (clips.length > 1) {
 // closed, bounded circulation): fresh air rises at the centre inlet, is guided
 // up and over by the arched roof, sinks down the two sides, and returns along
 // the floor. Particles advect along the field; colour maps to air velocity
-// (deep ink-blue = slow → sky-blue → near-white = fast).
+// (Facility Violet deep = slow → Facility Violet hero → near-paper = fast).
 (function initFlow(){
   const cv = document.getElementById('flow');
   if (!cv) return;
@@ -193,6 +265,6 @@ if (clips.length > 1) {
     raf = requestAnimationFrame(frame);
   }
   build();
-  if (W){ raf = requestAnimationFrame(frame); }
-  let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { cancelAnimationFrame(raf); build(); if (W) raf = requestAnimationFrame(frame); }, 180); });
+  if (W && !reduceMotion){ raf = requestAnimationFrame(frame); }
+  let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { cancelAnimationFrame(raf); build(); if (W && !reduceMotion) raf = requestAnimationFrame(frame); }, 180); });
 })();

@@ -40,6 +40,7 @@ html{
   scroll-snap-type:y proximity;   /* soft snap — proximity so tall sections don't trap scroll */
   scroll-padding-top:calc(var(--psub-h) + 8px);   /* anchors clear the sticky product sub-nav */
 }
+section[id]{scroll-margin-top:calc(var(--nav-h) + var(--psub-h) + 8px);}
 @media(max-width:1024px){ html{scroll-padding-top:calc(var(--nav-h) + var(--psub-h) + 8px);} }
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:400;
   line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip;}
@@ -203,15 +204,21 @@ p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
 
 /* ── installation process strip (Tesla "Design / Installation / Power On":
    three steps under a top rule, final step emphasised with a bold ink rule) ── */
-.proc{max-width:var(--maxw);margin:clamp(40px,5vw,64px) auto 0;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);}
-.proc .step{border-top:1px solid #D9D8D2;padding-top:20px;}
-.proc .step:last-child{border-top:2px solid var(--ink);}
+.proc{max-width:var(--maxw);margin:clamp(40px,5vw,64px) auto 0;}
+.proc-stage{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:4px;background:var(--mist);}
+.proc-image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s cubic-bezier(.2,0,0,1);}
+.proc-image.is-active{opacity:1;}
+.proc-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);margin-top:clamp(28px,4vw,48px);}
+.proc .step{appearance:none;text-align:left;background:transparent;border:0;border-top:1px solid var(--greige);padding:20px 0 0;cursor:pointer;color:inherit;}
+.proc .step.is-active{border-top:2px solid var(--ink);padding-top:19px;}
+.proc .step:focus-visible{outline:2px solid var(--ink);outline-offset:6px;}
 .proc .step h3{font-size:17px;font-weight:500;line-height:20px;color:var(--ink);}
 .proc .step p{font-size:14px;font-weight:400;line-height:20px;color:#76766E;margin-top:10px;max-width:32ch;}
 @media(max-width:640px){
-  .proc{grid-template-columns:1fr;gap:0;margin-top:32px;}
+  .proc{margin-top:32px;}
+  .proc-tabs{grid-template-columns:1fr;gap:0;margin-top:24px;}
   .proc .step{padding:18px 0;}
+  .proc .step.is-active{padding-top:17px;}
 }
 
 /* ── engineered-air flow panel (our own animated, CFD-informed airflow;
@@ -327,8 +334,13 @@ p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
 .calc-disc{font-size:13px;line-height:1.6;color:#76766E;border-top:1px solid var(--hairline);padding-top:16px;}
 
 /* ── lead capture (Netlify) ── */
+.lead-section{display:none;position:fixed;inset:0;z-index:2000;align-items:center;justify-content:center;background:rgba(11,11,11,.48);padding:24px;}
+.lead-section.is-open{display:flex;}
+body.modal-open{overflow:hidden;}
 .lead{max-width:var(--maxw);margin:clamp(28px,4vw,44px) auto 0;background:#F4F4F1;border:1px solid var(--hairline);
   border-radius:16px;padding:clamp(24px,3vw,36px);}
+.lead-section .lead{position:relative;width:min(720px,100%);max-height:min(90vh,760px);overflow:auto;margin:0;box-shadow:0 24px 70px rgba(11,11,11,.24);}
+.lead-close{position:absolute;top:16px;right:18px;width:36px;height:36px;border:0;background:transparent;color:var(--ink);font-size:28px;line-height:1;cursor:pointer;}
 .lead-copy h3{font-size:clamp(19px,2.2vw,24px);font-weight:600;letter-spacing:-.01em;color:var(--ink);}
 .lead-copy p{font-size:15px;line-height:1.6;color:#76766E;margin-top:8px;max-width:64ch;}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
@@ -338,10 +350,22 @@ p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
 .lead-form input,.lead-form select{width:100%;height:44px;padding:0 12px;font:inherit;font-size:15px;
   border:1px solid #D9D8D2;border-radius:8px;background:#F4F4F1;color:var(--ink);}
 .lead-btn{margin-top:20px;width:auto;padding:0 26px;}
+.lead-step{display:none;}
+.lead-step.is-active{display:block;}
+.lead-step[hidden],.lead-thanks[hidden]{display:none;}
+.lead-section.is-open .lead-step[hidden]{display:block;}
+.lead-section.is-open [data-lead-next],.lead-section.is-open [data-lead-back]{display:none;}
+.lead-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.lead-actions .lead-btn{margin-top:20px;}
+.lead-form textarea{width:100%;padding:12px;font:inherit;font-size:15px;line-height:1.5;border:1px solid #D9D8D2;border-radius:8px;background:#F4F4F1;color:var(--ink);resize:vertical;}
+.lead-form label span{color:#76766E;font-weight:400;}
 .lead-fine{margin-top:14px;font-size:12px;line-height:1.55;color:#76766E;}
 .lead-thanks{padding:8px 2px;}
 .lead-thanks h3{font-size:clamp(19px,2.2vw,24px);font-weight:600;color:var(--ink);}
 .lead-thanks p{font-size:15px;line-height:1.6;color:#76766E;margin-top:8px;max-width:60ch;}
+
+/* Small body copy uses Ink for publication contrast; Graphite remains for labels and decoration. */
+.band-in > p,.proc .step p,.split-left p,.dura-text p,.specs-intro,.sc-desc,.calc-sub,.calc-note,.cmoney-pre,.calc-options small,.rc-label,.rc-val.is-note,.calc-disc,.lead-copy p,.lead-fine,.lead-thanks p,.footer nav a{color:var(--ink);}
 
 @media(max-width:640px){
   .calc{grid-template-columns:1fr;}

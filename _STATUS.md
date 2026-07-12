@@ -194,4 +194,9 @@
 
 ## 工作方式
 
+### 2026-07-13 Air Dome QA 修复
+- QA 修复 F2–F6 已执行：精确总价、正文对比度、锚点避让、分享图、modal 焦点回位/陷阱、reduced-motion。
+- F1 B1 仍开放：等待 Nicholas 提供真实 Formspree form ID；占位符保持不提交。
+- 待裁决：`2 months` 安装期真值；费率阶梯在 990m²→1,000m² 的跳变。
+
 PM 会话判断 / 拆活，网站的活派 **`web` 执行者**（代码在 `~/Projects`，文案在 OneDrive，遵守 Nine One CI）。工作流见 `_AI_Rules/Workflow.md`。
