@@ -326,6 +326,7 @@ p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
 .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .rescard{background:#F4F4F1;border:1px solid var(--hairline);border-radius:8px;padding:15px 16px;display:flex;flex-direction:column;gap:6px;min-height:78px;}
 .rc-label{font-size:12px;line-height:1.35;color:#76766E;}
+.effective-rate{font-family:var(--mono);font-size:11px;line-height:1.35;color:var(--ink);}
 .rc-val{font-size:clamp(19px,2vw,22px);font-weight:600;letter-spacing:-.01em;color:var(--ink);line-height:1.15;}
 .rc-val.is-note{font-size:13px;font-weight:500;color:#76766E;line-height:1.4;letter-spacing:0;}
 .rescard--wide{grid-column:1 / -1;}
@@ -363,6 +364,7 @@ body.modal-open{overflow:hidden;}
 .lead-thanks{padding:8px 2px;}
 .lead-thanks h3{font-size:clamp(19px,2.2vw,24px);font-weight:600;color:var(--ink);}
 .lead-thanks p{font-size:15px;line-height:1.6;color:#76766E;margin-top:8px;max-width:60ch;}
+.lead-error{margin-top:14px;color:#A12622;font-size:13px;line-height:1.5;}
 
 /* Small body copy uses Ink for publication contrast; Graphite remains for labels and decoration. */
 .band-in > p,.proc .step p,.split-left p,.dura-text p,.specs-intro,.sc-desc,.calc-sub,.calc-note,.cmoney-pre,.calc-options small,.rc-label,.rc-val.is-note,.calc-disc,.lead-copy p,.lead-fine,.lead-thanks p,.footer nav a{color:var(--ink);}

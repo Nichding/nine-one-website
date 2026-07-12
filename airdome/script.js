@@ -107,6 +107,7 @@ if (clips.length > 1 && !reduceMotion) {
   });
   const steps = Array.from(form.querySelectorAll('[data-lead-step]'));
   const thanks = form.querySelector('[data-lead-thanks]');
+  const error = form.querySelector('[data-lead-error]');
   const showStep = (index) => steps.forEach((step, i) => {
     const active = i === index;
     step.classList.toggle('is-active', active);
@@ -119,13 +120,19 @@ if (clips.length > 1 && !reduceMotion) {
     steps[1].querySelector('input')?.focus();
   });
   form.querySelector('[data-lead-back]')?.addEventListener('click', () => showStep(0));
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     if (!form.checkValidity()) { event.preventDefault(); return; }
-    if (!form.hasAttribute('data-formspree-pending')) return;
     event.preventDefault();
-    steps.forEach((step) => { step.hidden = true; step.classList.remove('is-active'); });
-    form.querySelector('.lead-fine').hidden = true;
-    thanks.hidden = false;
+    error.hidden = true;
+    try {
+      const response = await fetch(form.action, { method:'POST', headers:{Accept:'application/json'}, body:new FormData(form) });
+      if (!response.ok) throw new Error('Form submission failed');
+      steps.forEach((step) => { step.hidden = true; step.classList.remove('is-active'); });
+      form.querySelector('.lead-fine').hidden = true;
+      thanks.hidden = false;
+    } catch (submissionError) {
+      error.hidden = false;
+    }
   });
 })();
 
@@ -145,8 +152,10 @@ if (clips.length > 1 && !reduceMotion) {
     const length = Number(el.length.value);
     const width = Number(el.width.value);
     const area = length * width;
-    const rate = area < 1000 ? 600 : area <= 3000 ? 450 : 350;
-    const membrane = area * rate;
+    const membrane = Math.min(area, 1000) * 600
+      + Math.max(0, Math.min(area, 3000) - 1000) * 450
+      + Math.max(0, area - 3000) * 350;
+    const effectiveRate = Math.round(membrane / area);
     const airCost = 20000;
     const total = membrane + airCost + 10000;
     const money = (value) => 'NZ$ ' + nf.format(value);
@@ -156,11 +165,12 @@ if (clips.length > 1 && !reduceMotion) {
     el.footprint.textContent = 'Footprint: ' + nf.format(area) + ' m²';
     el.total.textContent = money(total) + ' +GST';
     el.membrane.textContent = money(membrane);
+    $('r-rate').textContent = 'Effective rate: NZ$ ' + nf.format(effectiveRate) + ' /m²';
     el.air.textContent = money(airCost);
     el.kit.textContent = money(10000);
 
     setHidden('m-length', length); setHidden('m-width', width);
-    setHidden('m-spec', rate); setHidden('m-fans', 2); setHidden('m-cost', total);
+    setHidden('m-spec', effectiveRate); setHidden('m-fans', 2); setHidden('m-cost', total);
   }
 
   el.length.addEventListener('input', calc);

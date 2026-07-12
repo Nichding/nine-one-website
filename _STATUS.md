@@ -197,6 +197,9 @@
 ### 2026-07-13 Air Dome QA 修复
 - QA 修复 F2–F6 已执行：精确总价、正文对比度、锚点避让、分享图、modal 焦点回位/陷阱、reduced-motion。
 - F1 B1 仍开放：等待 Nicholas 提供真实 Formspree form ID；占位符保持不提交。
-- 待裁决：`2 months` 安装期真值；费率阶梯在 990m²→1,000m² 的跳变。
+- ✅ `2 months` 安装期已由 Nicholas 确认（2026-07-12，口头裁决）——已确认真值现为三个：2 个月安装期 / 25 年 design life / 10 年 warranty。
+- 待裁决：费率阶梯在 990m²→1,000m²（$624k→$480k）与 3,000→3,100m² 的价格跳变，接受或改分段线性。
+- Air Dome 成本指示器收尾：Formspree endpoint `xpqvzaqb` 已接入并通过 QA 测试提交；费率改为 600/450/350 分段累进，B1 已关闭。
+- 页面 Blocker 清零；待发布动作：摘 noindex、进导航、合 PR。测试提交名为 `TEST — Codex QA`，需在 Formspree 后台确认后删除。
 
 PM 会话判断 / 拆活，网站的活派 **`web` 执行者**（代码在 `~/Projects`，文案在 OneDrive，遵守 Nine One CI）。工作流见 `_AI_Rules/Workflow.md`。
