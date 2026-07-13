@@ -194,6 +194,10 @@
 
 ## 工作方式
 
+### 2026-07-13 Homepage concept narrative
+- `home-concept.html` 已创建为独立 solarpanels-style 八屏概念稿，仅供 Nicholas + Claude 双审；未改正式 `index.html`，未进导航。
+- 概念稿待双审；通过后才进入正式首页开发。
+
 ### 2026-07-13 Homepage narrative rebuild
 - 首页已在 `redesign/home-narrative` 重构为设计品牌叙事：问题 → 核心观点 → 三系统 → 设计方法 → 结果 → 行动。
 - 新首页文案待 Nicholas 签字；未修改其他页面。
