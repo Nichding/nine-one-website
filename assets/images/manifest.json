@@ -30,12 +30,6 @@
     "added": "2026-06-25"
   },
   {
-    "file": "assets/images/opt/ecosystem-bg.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-25"
-  },
-  {
     "file": "assets/images/opt/ecosystem-data-layer.jpg",
     "status": "ai-concept",
     "source": "Nine One Website imagery library",
@@ -48,31 +42,7 @@
     "added": "2026-06-24"
   },
   {
-    "file": "assets/images/opt/facility-airdome-all-weather-01.jpg",
-    "status": "ai-concept",
-    "source": "Nine One Website imagery library",
-    "added": "2026-07-10"
-  },
-  {
-    "file": "assets/images/opt/facility-airdome-allyear-01.jpg",
-    "status": "ai-concept",
-    "source": "Nine One Website imagery library",
-    "added": "2026-07-10"
-  },
-  {
     "file": "assets/images/opt/facility-airdome-allyear-storm-01.jpg",
-    "status": "ai-concept",
-    "source": "Nine One Website imagery library",
-    "added": "2026-07-10"
-  },
-  {
-    "file": "assets/images/opt/facility-airdome-city-design-01.jpg",
-    "status": "ai-concept",
-    "source": "Nine One Website imagery library",
-    "added": "2026-07-10"
-  },
-  {
-    "file": "assets/images/opt/facility-airdome-cost-interior-01.jpg",
     "status": "ai-concept",
     "source": "Nine One Website imagery library",
     "added": "2026-07-10"
@@ -91,12 +61,6 @@
   },
   {
     "file": "assets/images/opt/facility-airdome-durability-3-control-01.jpg",
-    "status": "ai-concept",
-    "source": "Nine One Website imagery library",
-    "added": "2026-07-10"
-  },
-  {
-    "file": "assets/images/opt/facility-airdome-team-onsite-01.jpg",
     "status": "ai-concept",
     "source": "Nine One Website imagery library",
     "added": "2026-07-10"
@@ -258,24 +222,6 @@
     "added": "2026-06-24"
   },
   {
-    "file": "assets/images/opt/sports-court-4.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-24"
-  },
-  {
-    "file": "assets/images/opt/sports-court-5.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-24"
-  },
-  {
-    "file": "assets/images/opt/sports-court-6.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-24"
-  },
-  {
     "file": "assets/images/opt/sports-court-outdoor.jpg",
     "status": "reference",
     "source": "Legacy website reference asset",
@@ -288,19 +234,7 @@
     "added": "2026-06-24"
   },
   {
-    "file": "assets/images/opt/sports-hero-1.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-24"
-  },
-  {
     "file": "assets/images/opt/sports-lounge.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-24"
-  },
-  {
-    "file": "assets/images/opt/sports-main.jpg",
     "status": "reference",
     "source": "Legacy website reference asset",
     "added": "2026-06-24"
@@ -318,18 +252,6 @@
     "added": "2026-06-24"
   },
   {
-    "file": "assets/images/opt/sports-sub.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-24"
-  },
-  {
-    "file": "assets/images/opt/sports-sub2.jpg",
-    "status": "reference",
-    "source": "Legacy website reference asset",
-    "added": "2026-06-24"
-  },
-  {
     "file": "assets/images/opt/tech-hero.jpg",
     "status": "reference",
     "source": "Legacy website reference asset",
@@ -340,12 +262,6 @@
     "status": "ai-concept",
     "source": "Nine One Website imagery library",
     "added": "2026-06-25"
-  },
-  {
-    "file": "assets/images/opt/tech-visual.jpg",
-    "status": "ai-concept",
-    "source": "Nine One Website imagery library",
-    "added": "2026-06-24"
   },
   {
     "file": "assets/images/opt/facility-airdome-allyear-02.jpg",
@@ -376,5 +292,47 @@
     "status": "ai-concept",
     "source": "OpenAI generated concept visualisation",
     "added": "2026-07-11"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-aerial-pushin-poster.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-11"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-membrane-skyline-poster.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-11"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-process-design-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-12"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-process-first-serve-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-12"
+  },
+  {
+    "file": "assets/images/opt/facility-airdome-process-install-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-12"
+  },
+  {
+    "file": "assets/images/opt/home-problem-weather-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-13"
+  },
+  {
+    "file": "assets/images/opt/home-work-with-nineone-01.jpg",
+    "status": "ai-concept",
+    "source": "Nine One Website imagery library",
+    "added": "2026-07-13"
   }
 ]

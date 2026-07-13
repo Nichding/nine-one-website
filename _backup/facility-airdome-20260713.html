@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-page="facility">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine One Facility — Air Dome (LAYOUT DRAFT · Solar Roof 1:1)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<style>
+/* ════════════════════════════════════════════════
+   NINE ONE · FACILITY · AIR DOME — tesla.com/solarroof 1:1 layout (DRAFT)
+   Measured from the live page @1450px:
+   · hero: title 40px/500 centered ~16vh · bottom row = stat trio + outlined Order Now @~87vh
+   · section: full-bleed image → white band below: L(eyebrow 17/500 · h 28/500/lh36 · outlined btn 204×40/3px) R(para 14/400 #393c41)
+   · product bar: dark translucent, name left, CTA right
+   Media = labelled placeholder frames · numbers [__] to confirm
+   ════════════════════════════════════════════════ */
+:root{
+  --ink:#171a20; --body:#393c41; --paper:var(--master-paper); --graphite:var(--master-graphite); --grey:var(--master-greige);
+  --sky:var(--facility-hero); --inkblue:var(--facility-deep);
+  --line:rgba(23,26,32,.15); --line-inv:rgba(244,244,241,.22);
+  --barh:56px; --gut:clamp(20px,4vw,48px); --maxw:1152px;
+  --display:'Inter',system-ui,sans-serif; --mono:'Spline Sans Mono',ui-monospace,monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:#fff;color:var(--ink);font-family:var(--display);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip;}
+a{text-decoration:none;color:inherit;}
+img,svg{display:block;}
+
+/* ── product bar (Tesla: dark translucent, name left, CTA right) ── */
+.pbar{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--barh);display:flex;align-items:center;gap:28px;
+  padding:0 var(--gut);background:rgba(70,72,76,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;}
+.pbar-name{font-size:15px;font-weight:500;letter-spacing:.01em;white-space:nowrap;}
+.pbar-links{display:flex;gap:26px;margin-left:auto;align-items:center;}
+.pbar-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.9);}
+.pbar-cta{background:var(--ink);color:#fff;font-size:13px;font-weight:500;padding:9px 18px;border-radius:4px;}
+@media(max-width:760px){.pbar-links a:not(.pbar-cta){display:none;}}
+
+/* ── HERO (full viewport · title top-center 16vh · bottom stat row 87vh) ── */
+.hero{position:relative;height:100svh;overflow:hidden;}
+.hero-media{position:absolute;inset:0;}
+.ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#14202a,var(--inkblue));}
+.ph.lt{background:linear-gradient(160deg,var(--grey),#c7c6bf);}
+.ph.sky{background:linear-gradient(160deg,#bfe3f4,var(--sky));}
+.ph span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,244,241,.55);border:1px dashed rgba(244,244,241,.3);border-radius:6px;padding:9px 15px;text-align:center;}
+.ph.lt span,.ph.sky span{color:rgba(18,19,17,.45);border-color:rgba(18,19,17,.3);}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,11,.35),transparent 25%,transparent 62%,rgba(11,11,11,.55));}
+.hero h1{position:absolute;top:16vh;left:0;right:0;text-align:center;color:#fff;
+  font-size:40px;font-weight:500;line-height:1.2;letter-spacing:0;}
+.hero-foot{position:absolute;left:0;right:0;bottom:6vh;display:flex;align-items:center;justify-content:center;gap:clamp(28px,5vw,72px);flex-wrap:wrap;padding:0 var(--gut);}
+.stat{text-align:center;color:#fff;}
+.stat .n{font-size:28px;font-weight:500;line-height:1.15;}
+.stat .l{font-size:14px;font-weight:400;margin-top:4px;color:rgba(255,255,255,.92);}
+.btn{width:204px;height:40px;display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:500;border-radius:4px;transition:background .2s,color .2s;}
+.btn-outline-w{border:3px solid #fff;color:#fff;background:transparent;}
+.btn-outline-w:hover{background:#fff;color:var(--ink);}
+.btn-outline{border:3px solid var(--ink);color:var(--ink);background:transparent;}
+.btn-outline:hover{background:var(--ink);color:#fff;}
+.btn-solid{background:var(--ink);color:#fff;}
+@media(max-width:760px){.hero h1{font-size:28px;}.hero-foot{gap:20px;bottom:5vh;}.stat .n{font-size:22px;}}
+
+/* ── SECTION (Solar Roof pattern: full-bleed image → white band, 2 columns) ── */
+.sec-img{height:74vh;min-height:420px;}
+.band{background:#fff;padding:48px var(--gut) 64px;}
+.band-in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,80px);}
+.band .eyebrow{font-size:17px;font-weight:500;line-height:20px;color:var(--ink);}
+.band h2{font-size:28px;font-weight:500;line-height:36px;letter-spacing:0;margin-top:8px;max-width:16ch;}
+.band .btn{margin-top:24px;}
+.band p{font-size:14px;font-weight:400;line-height:20px;color:var(--body);max-width:60ch;}
+.band p + p{margin-top:12px;}
+.band p a{text-decoration:underline;}
+@media(max-width:760px){.band-in{grid-template-columns:1fr;gap:20px;}.sec-img{height:52vh;}}
+
+/* ── SPECS (kept — dark strip, Solar Roof "specs" vibe) ── */
+.specs{background:var(--ink);color:#fff;padding:72px var(--gut);}
+.specs-in{max-width:var(--maxw);margin:0 auto;}
+.specs .eyebrow{font-size:17px;font-weight:500;color:rgba(255,255,255,.85);}
+.specs h2{font-size:28px;font-weight:500;line-height:36px;margin-top:8px;}
+.specgrid{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line-inv);border:1px solid var(--line-inv);}
+.specgrid div{background:var(--ink);padding:18px 20px;}
+.specgrid .k{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);}
+.specgrid .v{font-family:var(--mono);font-size:17px;font-weight:500;margin-top:7px;}
+.specgrid .v.todo{color:var(--sky);}
+
+/* ── CALCULATOR (Solar Roof-style: left inputs / right results) ── */
+.calc{background:#fff;padding:72px var(--gut) 88px;border-top:1px solid var(--line);}
+.calc-in{max-width:var(--maxw);margin:0 auto;}
+.calc .eyebrow{font-size:17px;font-weight:500;}
+.calc h2{font-size:28px;font-weight:500;line-height:36px;margin-top:8px;}
+.calc-grid{margin-top:32px;display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,80px);}
+@media(max-width:760px){.calc-grid{grid-template-columns:1fr;}}
+.field{margin-bottom:14px;}
+.field label{display:block;font-size:12px;color:var(--body);margin-bottom:6px;}
+.field .inp{height:40px;border:1px solid var(--line);border-radius:4px;background:#fafafa;display:flex;align-items:center;padding:0 12px;color:var(--graphite);font-size:14px;}
+.out{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);}
+.out:last-child{border-bottom:0;}
+.out .lab{font-size:14px;color:var(--body);}
+.out .val{font-family:var(--mono);font-size:20px;font-weight:500;color:var(--inkblue);}
+.calc .disc{margin-top:18px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--graphite);}
+
+/* ── FOOTER ── */
+.footer{background:var(--ink);color:#fff;padding:64px var(--gut) 40px;}
+.footer-in{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
+.footer h3{font-size:28px;font-weight:500;}
+.footer small{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+</style>
+<link rel="stylesheet" href="css/ci-v2.css">
+</head>
+<body>
+<!-- ══ LAYOUT DRAFT · solarroof 1:1 · placeholder media · numbers [__] to confirm · copy pending §22 ══ -->
+
+<nav class="pbar">
+  <span class="pbar-name">Air Dome — Year-Round Covered Sport</span>
+  <div class="pbar-links">
+    <a href="#specs">Specs</a>
+    <a href="#calc">Estimate</a>
+    <a href="#order" class="pbar-cta">Order Air Dome</a>
+  </div>
+</nav>
+
+<!-- 1 · HERO — title 40px centered @16vh · bottom: stat trio + outlined Order Now -->
+<section class="hero" id="top">
+  <div class="hero-media"><div class="ph"><span>[ HERO — air dome at dusk · background video ]</span></div></div>
+  <div class="hero-scrim"></div>
+  <h1>Air Dome</h1>
+  <div class="hero-foot">
+    <div class="stat"><div class="n">Weeks</div><div class="l">To Install</div></div>
+    <div class="stat"><div class="n">365</div><div class="l">Days of Play</div></div>
+    <div class="stat"><div class="n">10-Year</div><div class="l">Warranty</div></div>
+    <a href="#order" class="btn btn-outline-w">Order Now</a>
+  </div>
+</section>
+
+<!-- 2 · DESIGN — image → white band (L: eyebrow/h/btn · R: para) -->
+<section>
+  <div class="sec-img"><div class="ph lt"><span>[ DESIGN — dome exterior + interior court, wide ]</span></div></div>
+  <div class="band">
+    <div class="band-in">
+      <div>
+        <div class="eyebrow">Design</div>
+        <h2>A Clear Span, Nothing in the Way</h2>
+        <a href="#order" class="btn btn-outline">Order Now</a>
+      </div>
+      <p>One engineered membrane span — no internal columns, no structure between players and the game. Soft, even daylight through the skin, sized to your site: from a single court to a whole facility.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · ALL YEAR -->
+<section>
+  <div class="sec-img"><div class="ph"><span>[ ALL YEAR — playing inside, weather outside ]</span></div></div>
+  <div class="band">
+    <div class="band-in">
+      <div>
+        <div class="eyebrow">All Year</div>
+        <h2>Every Day, Playable</h2>
+        <a href="#order" class="btn btn-outline">Order Now</a>
+      </div>
+      <p>Outdoor courts lose hours to rain, wind and winter dark. Under a dome the calendar is yours — morning to late, all seasons. Bookings hold, whatever the forecast says.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · DURABILITY -->
+<section>
+  <div class="sec-img"><div class="ph lt"><span>[ DURABILITY — membrane + steel anchor detail ]</span></div></div>
+  <div class="band">
+    <div class="band-in">
+      <div>
+        <div class="eyebrow">Durability</div>
+        <h2>Designed for a 25-Year Life</h2>
+        <a href="#order" class="btn btn-outline">Order Now</a>
+      </div>
+      <p>An engineered membrane over a steel anchoring system, specified for the wind and snow of its region and designed for a 25-year life cycle — with a 10-year warranty and a local team behind it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · INSTALLATION -->
+<section>
+  <div class="sec-img"><div class="ph sky"><span>[ INSTALLATION — dome going up on site ]</span></div></div>
+  <div class="band">
+    <div class="band-in">
+      <div>
+        <div class="eyebrow">Installation</div>
+        <h2>Up in Weeks, Not Months</h2>
+        <a href="#order" class="btn btn-outline">Order Now</a>
+      </div>
+      <p>A prepared base, an anchored perimeter, one clean install. One Nine One team runs the whole path — site review, consent, install, first serve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · COST -->
+<section>
+  <div class="sec-img"><div class="ph"><span>[ COST — dome glowing at dusk ]</span></div></div>
+  <div class="band">
+    <div class="band-in">
+      <div>
+        <div class="eyebrow">Cost</div>
+        <h2>A Fraction of a Permanent Build</h2>
+        <a href="#calc" class="btn btn-outline">Estimate Cost</a>
+      </div>
+      <p>A roofed hall is a multi-year, multi-million capital project. A dome covers the same courts for a fraction of that — with running costs you can see up front. Estimate yours below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · SPECS -->
+<section class="specs" id="specs">
+  <div class="specs-in">
+    <div class="eyebrow">Specs</div>
+    <h2>Air Dome Specifications</h2>
+    <div class="specgrid">
+      <div><div class="k">Clear span</div><div class="v todo">[ __ m ]</div></div>
+      <div><div class="k">Covered area</div><div class="v todo">[ __ m² ]</div></div>
+      <div><div class="k">Membrane</div><div class="v">PVC / PTFE</div></div>
+      <div><div class="k">Wind &amp; snow</div><div class="v todo">[ region-rated ]</div></div>
+      <div><div class="k">Install time</div><div class="v todo">~[ __ ] wks</div></div>
+      <div><div class="k">Design life</div><div class="v">25 yrs</div></div><div><div class="k">Warranty</div><div class="v">10 yrs</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · CALCULATOR -->
+<section class="calc" id="calc">
+  <div class="calc-in">
+    <div class="eyebrow">Estimate</div>
+    <h2>See What a Dome Does for Your Site</h2>
+    <div class="calc-grid">
+      <div>
+        <div class="field"><label>Site size / court count</label><div class="inp">2 courts · 40 × 20 m</div></div>
+        <div class="field"><label>Sport</label><div class="inp">Padel / tennis / multi-use…</div></div>
+        <div class="field"><label>Region</label><div class="inp">Auckland…</div></div>
+      </div>
+      <div>
+        <div class="out"><span class="lab">Cover cost (from)</span><span class="val">NZD $—</span></div>
+        <div class="out"><span class="lab">Install time</span><span class="val">— wks</span></div>
+        <div class="out"><span class="lab">Extra playable hours / yr</span><span class="val">— h</span></div>
+        <div class="out"><span class="lab">Simple payback</span><span class="val">— yrs</span></div>
+      </div>
+    </div>
+    <p class="disc">Preview — logic to wire · internal cost factors stay private</p>
+  </div>
+</section>
+
+<!-- 9 · ORDER band -->
+<section class="band" id="order" style="padding:88px var(--gut);border-top:1px solid var(--line);">
+  <div class="band-in">
+    <div>
+      <div class="eyebrow">Order</div>
+      <h2>Cover Your Site</h2>
+      <a href="build.html" class="btn btn-solid" style="margin-top:24px;">Plan a Facility</a>
+    </div>
+    <p>Tell us the site and the sport. We'll come back with a plan you can act on — span, spec, timeline and cost.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-in">
+    <h3>Move Together.</h3>
+    <small>© 2026 Nine One Sports Ltd · Facility</small>
+  </div>
+</footer>
+</body>
+</html>
