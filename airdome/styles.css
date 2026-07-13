@@ -76,15 +76,15 @@ p{font-size:clamp(16px,1.15vw,18px);font-weight:400;line-height:1.5;}
   display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;}
 .brand-icon{display:flex;align-items:center;}
-.brand-icon img{height:40px;width:auto;display:block;}
+.brand-icon img{height:32px;width:32px;display:block;}
 .nav-menu{display:flex;align-items:center;gap:40px;}
 .nav-links{display:flex;align-items:center;gap:34px;list-style:none;margin:0;padding:0;}
 .nav-links a{font-size:13px;font-weight:500;color:var(--graphite);letter-spacing:.02em;transition:color .2s;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a.active{color:var(--ink);font-weight:600;}
-.nav-cta{display:inline-flex;align-items:center;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink);background:transparent;border:1.5px solid var(--ink);border-radius:4px;padding:11px 22px;transition:background .2s,color .2s;}
-.nav-cta:hover{background:var(--ink);color:var(--paper);}
+.nav-cta{display:inline-flex;align-items:center;font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;
+  color:var(--paper);background:var(--ink);border:1px solid var(--ink);border-radius:4px;padding:12px 20px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:var(--black);color:var(--paper);}
 .nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;
   flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .2s cubic-bezier(0.2,0,0,1),opacity .2s cubic-bezier(0.2,0,0,1);}
@@ -401,8 +401,8 @@ body.modal-open{overflow:hidden;}
 /* CI V2 Facility context */
 .footer{background:var(--fac-night);color:var(--white)}
 .footer nav a,.footer nav a:hover{color:var(--white)}
-.btn-primary,.nav-cta,.psub-cta{background:var(--fac-hero);color:var(--white);border-color:var(--fac-hero)}
-.btn-primary:hover,.nav-cta:hover,.psub-cta:hover{background:var(--fac-strong);color:var(--white)}
+.btn-primary,.psub-cta{background:var(--fac-hero);color:var(--white);border-color:var(--fac-hero)}
+.btn-primary:hover,.psub-cta:hover{background:var(--fac-strong);color:var(--white)}
 main p,section p{color:var(--ink)}
 
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal,.reveal-on .reveal{opacity:1!important;transform:none!important}}
