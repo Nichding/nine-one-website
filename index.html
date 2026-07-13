@@ -180,12 +180,15 @@
 .action-actions{justify-content:flex-start;gap:8px;margin-top:32px;}
 .action-actions .cta,.action-actions .cta.outline{width:200px;min-width:200px;height:40px;background:var(--ink);border-color:var(--ink);color:var(--paper);}
 .action-actions .cta.outline{background:transparent;color:var(--ink);}
-.footer{padding:64px var(--text-gutter) 28px;}
-.slogan{font-size:clamp(44px,5vw,72px);font-weight:500;line-height:1;letter-spacing:0;padding-bottom:48px;}
-.footer-contact{display:flex;flex-direction:column;gap:8px;padding:28px 0;border-bottom:1px solid rgba(244,244,241,.2);font-size:20px;line-height:28px;}
-.footer-contact span{font:500 13px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--greige);}
-.footer-contact a{text-decoration:underline;text-underline-offset:4px;}
-.legal{max-width:none;padding-top:24px;}
+.footer{background:var(--paper);color:var(--ink);padding:64px var(--text-gutter) 28px;border-top:1px solid var(--greige);}
+.footer-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,420px);gap:64px;padding-bottom:56px;}
+.footer-brand{display:flex;flex-direction:column;align-items:flex-start;gap:20px;}
+.slogan{font-size:clamp(36px,3.3vw,48px);font-weight:500;line-height:1.08;letter-spacing:0;padding:0;border:0;}
+.footer-brand a{font-size:20px;line-height:28px;text-decoration:underline;text-underline-offset:4px;}
+.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 32px;align-content:start;padding-top:8px;font-size:16px;line-height:24px;}
+.footer-nav a:hover,.footer-brand a:hover{color:var(--graphite);}
+.footer-bottom{display:flex;justify-content:space-between;gap:24px;padding-top:24px;border-top:1px solid var(--greige);font:500 13px/1.4 var(--mono);letter-spacing:.04em;color:var(--graphite);}
+@media(max-width:640px){.footer{padding:48px 24px 24px}.footer-top{grid-template-columns:1fr;gap:40px;padding-bottom:40px}.slogan{font-size:36px}.footer-nav{grid-template-columns:1fr 1fr}.footer-bottom{display:block;line-height:2}.footer-bottom span{display:block;}}
 @media(max-width:1024px){.point .beats{gap:32px}.solution .cards{gap:16px}.facility-cards{gap:16px}}
 @media(max-width:640px){:root{--media-gutter:24px;--text-gutter:24px}.hero{height:92dvh;min-height:92dvh}.hero-copy{padding-inline:24px}.hero h1{font-size:clamp(40px,9vw,64px);line-height:1.08}.hero p,.solution p,.point .beat p,.step p,.action p{font-size:18px;line-height:26px}.hero-copy > div:last-child{flex-direction:column;width:100%}.hero-copy > div:last-child .cta{width:100%;min-width:0}.point{padding-block:72px}.point h2,.point .close-line,.solution h2,.action h2{font-size:40px;line-height:46px}.point .beats,.solution .cards,.facility-cards{grid-template-columns:1fr;gap:32px}.solution,.solution.play{padding:0 0 96px}.solution.play{padding-top:48px}.solution .text-wrap,.action .text-wrap{margin-top:32px}.solution.play .card{min-height:0}.action{padding-bottom:72px}.action-actions{flex-direction:column}.action-actions .cta,.action-actions .cta.outline{width:100%;min-width:0}.point .beat h3,.step h3,.solution.play .card h3,.facility-card strong{font-size:24px;line-height:31px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none}.solution-media,.hero-media{transition:none}}
@@ -200,6 +203,6 @@
 <section class="solution tech" id="technology"><div class="media-wrap"><div class="solution-media"><img src="assets/images/opt/ecosystem-data-layer.jpg" alt="Concept visualisation — Nine One Technology data layer for facility operations" width="1600" height="893" loading="lazy" decoding="async"></div></div><div class="text-wrap"><div class="solution-copy"><div class="eyebrow">Nine One Technology</div><h2>Technology should make sport more human.</h2><p>At Nine One, technology is not another system wrapped around the game. It is a way for sport to learn from every session, make progress visible, keep moments worth sharing and bring people back together to play.</p><a class="cta" href="technologies.html">Explore Technology →</a></div></div></section>
 <section class="screen action" id="plan"><div class="media-wrap"><div class="action-media"><img src="assets/images/opt/home-work-with-nineone-01.jpg" alt="Concept visualisation — proposed community sports site with an Air Dome at first light" width="1672" height="941" loading="lazy" decoding="async"></div></div><div class="text-wrap"><div class="action-grid"><div class="eyebrow">Start here</div><h2>Work with Nine One.</h2><p>Tell us about the site, the community and the sport.</p><div class="action-actions"><a class="cta" href="build.html">Plan a site</a><a class="cta outline" href="build.html">Schedule a consultation</a></div></div></div></section>
 </main>
-<footer class="footer"><div class="slogan">Move Together.</div><div class="footer-contact"><span>Contact</span><a href="mailto:nicholas.ding@nineonesports.co.nz">nicholas.ding@nineonesports.co.nz</a></div><div class="legal"><span>© 2026</span><span>Nine One Sports Ltd</span></div></footer>
+<footer class="footer"><div class="footer-top"><div class="footer-brand"><div class="slogan">Move Together.</div><a href="mailto:nicholas.ding@nineonesports.co.nz">nicholas.ding@nineonesports.co.nz</a></div><nav class="footer-nav" aria-label="Footer navigation"><a href="sports.html">Play</a><a href="technologies.html">Technology</a><a href="airdome/index.html">Facility</a><a href="about.html">About</a><a href="build.html">Plan a facility</a></nav></div><div class="footer-bottom"><span>© 2026 Nine One Sports Ltd</span><span>New Zealand</span></div></footer>
 <script>const media=matchMedia('(prefers-reduced-motion: reduce)');const video=document.querySelector('video');if(media.matches){video.pause();video.removeAttribute('autoplay');}</script>
 </body></html>
