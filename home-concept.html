@@ -10,7 +10,7 @@
 /* Solar Panels layout constants: only Hero is full-bleed; content media sits in Paper. */
 .hero{min-height:100vh;}
 .solution{min-height:0;display:block;background:var(--paper);color:var(--ink);padding:clamp(72px,9vw,128px) 0;scroll-snap-align:start;}
-.solution-media{position:relative;inset:auto;width:min(91vw,1200px);height:auto;aspect-ratio:2/1;margin:0 auto;border-radius:8px;overflow:hidden;background:var(--mist);}
+.solution-media{position:relative;inset:auto;width:calc(100% - (2 * clamp(20px,3.3vw,56px)));height:auto;aspect-ratio:2/1;margin:0 auto;border-radius:8px;overflow:hidden;background:var(--mist);}
 .solution-media::after{display:none;}
 .solution-media img{border-radius:8px;object-fit:cover;}
 .solution-copy{max-width:900px;margin:clamp(42px,6vw,72px) auto 0;padding:0 var(--gut);color:var(--ink);}
@@ -21,7 +21,7 @@
 .solution .cards{margin-top:34px;}
 .solution .card{background:var(--mist);border:1px solid var(--greige);color:var(--ink);}
 .solution .card h3{color:var(--ink);}.solution .card p{color:var(--ink);}
-@media(max-width:760px){.solution-media{width:91vw;height:auto;aspect-ratio:2/1;border-radius:8px}.solution-media img{border-radius:8px}.solution-copy{padding:0 20px}.solution .cards{grid-template-columns:1fr;}.solution .card{min-height:0;}}
+@media(max-width:760px){.solution-media{width:calc(100% - (2 * clamp(20px,3.3vw,56px)));height:auto;aspect-ratio:2/1;border-radius:8px}.solution-media img{border-radius:8px}.solution-copy{padding:0 20px}.solution .cards{grid-template-columns:1fr;}.solution .card{min-height:0;}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none}.solution-media,.hero-media{transition:none}}
 </style></head>
 <body>
