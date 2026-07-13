@@ -199,6 +199,7 @@
 - 概念稿待双审；通过后才进入正式首页开发。
 - 概念稿版式已套用 solarpanels layout system：Hero 保持全幅；Play / Facility / Technology 媒体改为 90vw/1200px、约 70vh、Paper 容器圆角卡；文字移至媒体下方。
 - 媒体尺寸已进一步对齐：内容图 91vw/1200px、2:1、8px 圆角；Hero 100vh；文案与选图不变。
+- Hero 已改为公司定位叙事；文案待 Nicholas 签字。
 
 ### 2026-07-13 Homepage narrative rebuild
 - 首页已在 `redesign/home-narrative` 重构为设计品牌叙事：问题 → 核心观点 → 三系统 → 设计方法 → 结果 → 行动。
