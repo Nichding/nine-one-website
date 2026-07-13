@@ -41,11 +41,15 @@
 .cta{height:44px;padding:0 22px;font-size:14px;font-weight:500;letter-spacing:0;border-radius:4px;display:inline-flex;align-items:center;}
 .hero-copy > div:last-child{gap:8px;}
 .hero-copy > div:last-child .cta{width:220px;min-width:220px;justify-content:center;}
+/* Keep the complete Hero message as one centred group, slightly above the visual midpoint. */
+.hero-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateY(clamp(-72px,-7vh,-36px));}
+.hero-copy h1,.hero-copy p{margin-inline:auto;}
+.hero-copy > div:last-child{width:100%;align-items:center;}
 .solution .eyebrow{display:inline-flex;align-items:center;gap:8px;}
 .solution .eyebrow::before{content:"";display:inline-block;width:24px;height:3px;flex:0 0 24px;}
 .solution.play .eyebrow::before{background:var(--play-hero);}.solution.fac .eyebrow::before{background:var(--fac-hero);}.solution.tech .eyebrow::before{background:var(--tech-hero);}
 @media(max-width:760px){.solution-media{width:calc(100% - (2 * clamp(20px,3.3vw,56px)));height:auto;aspect-ratio:2/1;border-radius:8px}.solution-media img{border-radius:8px}.solution-copy{padding:0 20px}.solution .cards{grid-template-columns:1fr;}.solution .card{min-height:0;}}
-@media(max-width:760px){.hero h1{white-space:normal;font-size:48px;}}
+@media(max-width:760px){.hero h1{white-space:normal;font-size:48px;}.hero-copy{transform:translateY(-36px);}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none}.solution-media,.hero-media{transition:none}}
 </style></head>
 <body>
