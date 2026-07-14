@@ -3,6 +3,7 @@
 Updated: 2026-07-13
 
 - 2026-07-14: Technology 概念稿四张 -03 配图已强化智能球拍、球场感知与预订／数据界面表达；待 Nicholas 审阅。
+- 2026-07-14: AI court 图已按 Zhonglin padel court 参考重做为连续玻璃、上部网格与钢框的完整围护结构。
 
 - Production site: https://nineonesports.co.nz
 - Production branch: `main`
