@@ -334,5 +334,29 @@
     "status": "ai-concept",
     "source": "Nine One Website imagery library",
     "added": "2026-07-13"
+  },
+  {
+    "file": "assets/images/opt/tech-concept-hero-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology concept",
+    "added": "2026-07-14"
+  },
+  {
+    "file": "assets/images/opt/tech-concept-progress-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology concept",
+    "added": "2026-07-14"
+  },
+  {
+    "file": "assets/images/opt/tech-concept-play-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology concept",
+    "added": "2026-07-14"
+  },
+  {
+    "file": "assets/images/opt/tech-concept-social-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology concept",
+    "added": "2026-07-14"
   }
 ]
