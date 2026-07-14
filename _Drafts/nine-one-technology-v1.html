@@ -286,6 +286,73 @@
       .hero-copy .button { width:100%; flex:none; }
       .brand-band { min-height:220px; padding-block:72px; }
     }
+    /* Facility / Air Dome page language — the shared product-page system. */
+    .facility-hero { position:relative; min-height:100svh; display:flex; flex-direction:column; color:var(--white); overflow:hidden; }
+    .facility-hero .f-media { position:absolute; inset:0; z-index:0; }
+    .facility-hero .f-media::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgb(5 42 64 / .18),rgb(5 42 64 / .52)); }
+    .facility-hero .f-media img { width:100%; height:100%; object-fit:cover; }
+    .facility-hero .f-content { position:relative; z-index:1; width:100%; max-width:1200px; min-height:100svh; margin:0 auto; padding:14vh clamp(20px,4vw,48px) 5vh; display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .facility-hero h1 { margin-top:1vh; max-width:20ch; font-size:40px; line-height:48px; font-weight:500; }
+    .facility-hero .eyebrow { margin-top:12px; color:var(--white); font-size:17px; line-height:20px; }
+    .facility-hero .f-lower { max-width:640px; margin-top:auto; display:flex; flex-direction:column; align-items:center; gap:24px; }
+    .facility-hero p { max-width:58ch; color:var(--white); font-size:16px; line-height:24px; }
+    .f-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+    .f-btn { min-width:204px; height:40px; display:inline-flex; align-items:center; justify-content:center; border:3px solid var(--paper); border-radius:4px; color:var(--paper); font-size:14px; font-weight:500; }
+    .f-btn.primary { border-color:var(--tech-hero); background:var(--tech-hero); color:var(--tech-night); }
+    .f-split { display:grid; grid-template-columns:minmax(280px,3fr) 8fr; gap:clamp(24px,4vw,56px); align-items:start; background:var(--paper); }
+    .f-split-copy { padding:clamp(48px,8vh,96px) 0 48px clamp(20px,4vw,48px); }
+    .f-split-copy h2,.f-band h2,.f-dura-copy h2,.f-cta h2 { margin-top:8px; max-width:18ch; font-size:28px; font-weight:500; line-height:36px; }
+    .f-split-copy p,.f-band p,.f-dura-copy p,.f-cta p { margin-top:16px; max-width:60ch; color:var(--ink); font-size:14px; line-height:20px; }
+    .f-split-media { min-height:480px; height:min(96vh,900px); overflow:hidden; }
+    .f-split-media img { width:100%; height:100%; object-fit:cover; }
+    .f-image-band { background:var(--paper); }
+    .f-wide-media { height:74vh; min-height:420px; overflow:hidden; }
+    .f-wide-media img { width:100%; height:100%; object-fit:cover; }
+    .f-band { max-width:1200px; margin:0 auto; padding:48px clamp(20px,4vw,48px) 64px; display:grid; grid-template-columns:5fr 7fr; gap:clamp(28px,5vw,80px); align-items:start; }
+    .f-band .eyebrow,.f-split-copy .eyebrow,.f-dura-copy .eyebrow,.f-cta .eyebrow { color:var(--ink); font-size:17px; font-weight:500; line-height:20px; }
+    .f-dura { display:grid; grid-template-columns:7fr 3fr; align-items:stretch; background:var(--paper); }
+    .f-tript { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; min-height:460px; height:min(88vh,880px); }
+    .f-tript article { position:relative; overflow:hidden; }
+    .f-tript img { width:100%; height:100%; object-fit:cover; }
+    .f-tript figcaption { position:absolute; inset:auto 0 0; padding:40px 18px 18px; color:var(--paper); background:linear-gradient(to top,rgb(11 11 11 / .62),transparent); font:400 12px/1.3 var(--mono); letter-spacing:.06em; }
+    .f-dura-copy { display:flex; flex-direction:column; justify-content:center; padding:clamp(32px,5vw,64px); }
+    .f-dura-copy .tile-copy { margin-top:28px; display:grid; gap:14px; }
+    .f-dura-copy .tile-copy article { padding-top:14px; border-top:1px solid var(--greige); }
+    .f-dura-copy h3 { font-size:17px; line-height:20px; }
+    .f-dura-copy .tile-copy p { margin-top:6px; }
+    .f-process { max-width:1200px; margin:0 auto; padding:64px clamp(20px,4vw,48px); background:var(--paper); }
+    .f-process h2 { max-width:22ch; font-size:28px; line-height:36px; }
+    .f-process > p { margin-top:14px; max-width:62ch; font-size:14px; line-height:20px; color:var(--ink); }
+    .f-process-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,4vw,56px); margin-top:40px; }
+    .f-process-grid article { border-top:1px solid var(--greige); padding-top:20px; }
+    .f-process-grid h3 { font-size:17px; line-height:20px; }
+    .f-process-grid p { margin-top:10px; font-size:14px; line-height:20px; color:var(--ink); }
+    .f-brand { min-height:260px; display:flex; align-items:center; padding:72px clamp(20px,4vw,48px); background:var(--paper); }
+    .f-brand p { max-width:1200px; width:100%; margin:0 auto; font-size:40px; font-weight:500; line-height:48px; color:var(--ink); }
+    .f-cta { padding:96px clamp(20px,4vw,48px); background:var(--mist); }
+    .f-cta > div { max-width:1200px; margin:0 auto; }
+    .f-cta .f-actions { margin-top:24px; justify-content:flex-start; }
+    .facility-main .asset-tag { display:none; }
+    .facility-main .reveal { opacity:0; transform:translateY(18px); transition:opacity 300ms cubic-bezier(.2,0,0,1),transform 300ms cubic-bezier(.2,0,0,1); }
+    .facility-main .reveal.show { opacity:1; transform:none; }
+    @media(max-width:640px) {
+      .facility-hero .f-content { min-height:93svh; padding:12vh 20px 8vh; }
+      .f-split,.f-dura,.f-band { grid-template-columns:1fr; gap:0; }
+      .f-split-copy { padding:48px 20px 32px; }
+      .f-split-media { min-height:320px; height:60vh; }
+      .f-wide-media { min-height:300px; height:52vh; }
+      .f-band { padding:40px 20px; gap:20px; }
+      .f-tript { min-height:280px; height:44vh; }
+      .f-tript figcaption { padding:24px 12px 12px; font-size:11px; }
+      .f-dura-copy { padding:40px 20px; }
+      .f-process { padding:48px 20px; }
+      .f-process-grid { grid-template-columns:1fr; gap:0; margin-top:28px; }
+      .f-process-grid article { padding:18px 0; }
+      .f-brand { min-height:200px; padding:56px 20px; }
+      .f-cta { padding:64px 20px; }
+      .f-actions { flex-direction:column; width:100%; }
+      .f-btn { width:min(100%,320px); }
+    }
   </style>
 </head>
 <body>
@@ -296,82 +363,30 @@
       <a class="button ink nav-action" href="../build.html">Plan a facility</a>
     </div>
   </nav>
-  <main id="top">
-    <header class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow">Nine One Technology</div>
-          <h1>The intelligence that lives on your court.</h1>
-          <p>We plan, build and run the space, the courts and the intelligence as one system. Technology is the intelligence layer — and it starts on a court we own.</p>
-          <div class="actions"><a class="button tech" href="#contact">Book a court</a><a class="button ink" href="#contact">Talk to us</a></div>
-        </div>
-        <div class="hero-visual reveal"><img src="../assets/images/opt/tech-hero-04.jpg" alt="Concept visualisation — an open-air smart padel court with inward-facing cameras, ground sensors and live court data" width="1080" height="608" fetchpriority="high"><span class="asset-tag">AI concept — smart court</span></div>
-      </div>
+  <main id="top" class="facility-main">
+    <header class="facility-hero">
+      <div class="f-media"><img src="../assets/images/opt/tech-hero-04.jpg" alt="Concept visualisation — an open-air smart padel court with inward-facing cameras, ground sensors and live court data" width="1080" height="608" fetchpriority="high"></div>
+      <div class="f-content reveal"><h1>The intelligence that lives on your court.</h1><div class="eyebrow">Nine One Technology</div><div class="f-lower"><p>We plan, build and run the space, the courts and the intelligence as one system. Technology is the intelligence layer — and it starts on a court we own.</p><div class="f-actions"><a class="f-btn primary" href="#contact">Book a court</a><a class="f-btn" href="#contact">Talk to us</a></div></div></div>
     </header>
 
-    <section class="section" id="system">
-      <div class="shell intro reveal">
-        <div class="eyebrow">One system</div>
-        <h2>Not a set of apps. One system.</h2>
-        <p>Booking, the racket, the highlights, the coaching — people usually sell these as separate tools. We don't. Each one is a surface of the same system: the way you walk onto a court, the way a session is captured, understood, and kept. What lasts is not a video clip. It's your record — how you play, how you change, session after session.</p>
-        <div class="record-panel"><span>One record</span><strong>Every surface leads back to the same session.</strong></div>
-      </div>
-    </section>
+    <section class="f-split" id="system"><div class="f-split-copy reveal"><div class="eyebrow">One system</div><h2>Not a set of apps. One system.</h2><p>Booking, the racket, the highlights, the coaching — people usually sell these as separate tools. We don't. Each one is a surface of the same system: the way you walk onto a court, the way a session is captured, understood, and kept. What lasts is not a video clip. It's your record — how you play, how you change, session after session.</p><p><strong>One record</strong><br>Every surface leads back to the same session.</p></div><div class="f-split-media"><img src="../assets/images/opt/tech-app-04.jpg" alt="Concept visualisation — a clubhouse screen and phone showing court availability and venue insights" width="1080" height="608" loading="lazy" decoding="async"></div></section>
 
-    <section class="section tint" id="court">
-      <div class="shell court-layout">
-        <div class="scene has-image reveal"><img src="../assets/images/opt/tech-aicourt-05.jpg" alt="Concept visualisation — an open-air padel court with inward-facing cameras and an integrated live replay layer" width="1080" height="608" loading="lazy" decoding="async"><span class="asset-tag">AI concept — integrated court data</span></div>
-        <div class="reveal">
-          <div class="eyebrow">Where it starts</div>
-          <h2>Most data starts with a download. Ours starts with a court.</h2>
-          <p>Nine One builds and runs its own courts and spaces. So the entry point isn't an app you have to be talked into — it's the court you already booked. The intelligence sits on top of a place we own, not one we borrow.</p>
-          <p class="anchor">Powered by Nine One Play courts and Nine One Facility spaces.</p>
-        </div>
-      </div>
-    </section>
+    <section class="f-image-band" id="court"><div class="f-wide-media"><img src="../assets/images/opt/tech-aicourt-05.jpg" alt="Concept visualisation — an open-air padel court with inward-facing cameras and an integrated live replay layer" width="1080" height="608" loading="lazy" decoding="async"></div><div class="f-band reveal"><div><div class="eyebrow">Where it starts</div><h2>Most data starts with a download. Ours starts with a court.</h2><a class="f-btn primary" href="#contact">Book a court</a></div><div><p>Nine One builds and runs its own courts and spaces. So the entry point isn't an app you have to be talked into — it's the court you already booked. The intelligence sits on top of a place we own, not one we borrow.</p><p><strong>Powered by Nine One Play courts and Nine One Facility spaces.</strong></p></div></div></section>
 
-    <section class="section" id="capture">
-      <div class="shell">
-        <div class="capture-head reveal"><div><div class="eyebrow">Every session, captured</div><h2>Walk in. It's already recording your game.</h2></div><p>From the moment you book, the session becomes data. Court-side capture and the racket read what happens — the rallies, the swings, the movement — without you setting anything up. The hardware isn't here to win a spec sheet. It's here to be good enough, at the right places, for this sport.</p></div>
-        <div class="tile-grid">
-          <article class="function-tile reveal"><div class="visual-mini"><i class="icon" data-lucide="calendar-check" aria-hidden="true"></i></div><div><h3>Booking</h3><p>One tap to a court. The record starts here.</p></div><span class="asset-tag">Reference - booking interface</span></article>
-          <article class="function-tile reveal"><div class="visual-mini has-image"><img src="../assets/images/opt/tech-gear-04.jpg" alt="Concept visualisation — smart padel rackets with handle sensors and a phone showing session analytics" width="1080" height="608" loading="lazy" decoding="async"></div><div><h3>Nine One SmartRacket</h3><p>Reads every swing, so nothing gets lost.</p></div><span class="asset-tag">AI concept — racket and session data</span></article>
-          <article class="function-tile reveal"><div class="visual-mini"><i class="icon" data-lucide="video" aria-hidden="true"></i></div><div><h3>Court-side capture</h3><p>Films the session. No tripod, no fuss.</p></div><span class="asset-tag">AI-concept - capture hardware detail</span></article>
-        </div>
-      </div>
-    </section>
+    <section class="f-dura" id="capture"><div class="f-tript"><article><img src="../assets/images/opt/tech-app-04.jpg" alt="Concept visualisation — booking and venue insight interface" width="1080" height="608" loading="lazy" decoding="async"><figcaption>Booking</figcaption></article><article><img src="../assets/images/opt/tech-gear-04.jpg" alt="Concept visualisation — smart padel rackets with handle sensors and a phone showing session analytics" width="1080" height="608" loading="lazy" decoding="async"><figcaption>Nine One SmartRacket</figcaption></article><article><img src="../assets/images/opt/tech-aicourt-05.jpg" alt="Concept visualisation — court-side cameras and live replay data" width="1080" height="608" loading="lazy" decoding="async"><figcaption>Court-side capture</figcaption></article></div><div class="f-dura-copy reveal"><div class="eyebrow">Every session, captured</div><h2>Walk in. It's already recording your game.</h2><p>From the moment you book, the session becomes data. Court-side capture and the racket read what happens — the rallies, the swings, the movement — without you setting anything up. The hardware isn't here to win a spec sheet. It's here to be good enough, at the right places, for this sport.</p><div class="tile-copy"><article><h3>Booking</h3><p>One tap to a court. The record starts here.</p></article><article><h3>Nine One SmartRacket</h3><p>Reads every swing, so nothing gets lost.</p></article><article><h3>Court-side capture</h3><p>Films the session. No tripod, no fuss.</p></article></div></div></section>
 
-    <section class="section mist" id="understand">
-      <div class="shell intro reveal"><div class="eyebrow">Understood, not just recorded</div><h2>The point isn't the footage. It's knowing why.</h2><p>Anyone can cut a highlight. Harder - and more useful - is understanding the rally: why that point was won, where the swing broke down, what to fix first. The system turns a two-hour session into the moments worth keeping, and into feedback you can act on next time.</p></div>
-      <div class="shell understand-grid">
-        <article class="ui-tile reveal"><div class="ui-window"><div class="ui-top"><span>Session edit</span><span>Capture</span></div><div class="ui-bars"><span style="height:42%"></span><span style="height:76%"></span><span style="height:58%"></span><span style="height:92%"></span><span style="height:68%"></span></div></div><h3>AI Highlights</h3><p>Two hours in. The best of it, out.</p><span class="asset-tag">Reference - interface mock</span></article>
-        <article class="ui-tile reveal"><div class="ui-window"><div class="ui-top"><span>Swing path</span><span>Review</span></div><div class="ui-path"></div><div class="ui-line short"></div></div><h3>Motion analysis</h3><p>See the swing you can't feel.</p><span class="asset-tag">Reference - interface mock</span></article>
-        <article class="ui-tile reveal"><div class="ui-window"><div class="ui-top"><span>Next session</span><span>Guide</span></div><div class="ui-prompt">Review the moment. Keep the next practice focused.</div><div class="ui-line"></div></div><h3>AI Coaching</h3><p>Not just a score. What to work on next.</p><span class="asset-tag">Reference - interface mock</span></article>
-      </div>
-    </section>
+    <section class="f-image-band" id="understand"><div class="f-wide-media"><img src="../assets/images/opt/tech-aicourt-05.jpg" alt="Concept visualisation — a court with integrated replay and motion data" width="1080" height="608" loading="lazy" decoding="async"></div><div class="f-process reveal"><div class="eyebrow">Understood, not just recorded</div><h2>The point isn't the footage. It's knowing why.</h2><p>Anyone can cut a highlight. Harder - and more useful - is understanding the rally: why that point was won, where the swing broke down, what to fix first. The system turns a two-hour session into the moments worth keeping, and into feedback you can act on next time.</p><div class="f-process-grid"><article><h3>AI Highlights</h3><p>Two hours in. The best of it, out.</p></article><article><h3>Motion analysis</h3><p>See the swing you can't feel.</p></article><article><h3>AI Coaching</h3><p>Not just a score. What to work on next.</p></article></div></div></section>
 
-    <section class="section" id="record">
-      <div class="shell sustain-grid">
-        <div class="reveal"><div class="eyebrow">Your movement, over time</div><h2>One session is a video. A hundred is a story.</h2><p>Every session adds to one place: your movement record. How your serve changed over three months. The mistake you keep making. When you actually got better. This is the part you can't get anywhere else — and the part you'd never want to leave behind.</p></div>
-        <div class="chart reveal" aria-label="Placeholder chart showing a movement record over time"><div class="chart-head"><span>Movement record</span><span>Placeholder view</span></div><svg viewBox="0 0 460 246" role="img" aria-label="Illustrative movement record chart"><path class="chart-grid" d="M0 42H460M0 100H460M0 158H460M0 216H460"></path><path class="chart-line" d="M0 205 C58 182,75 165,116 171 S170 143,202 150 S268 111,300 125 S360 66,396 82 S425 55,460 42"></path><circle class="chart-dot" cx="116" cy="171" r="5"></circle><circle class="chart-dot" cx="300" cy="125" r="5"></circle><circle class="chart-dot" cx="460" cy="42" r="5"></circle></svg><p class="chart-note">Illustrative record view. Data ownership statement is not enabled.</p><span class="asset-tag">Reference - chart component</span></div>
-      </div>
-      <!-- GATE:OFF. Your data is stored in New Zealand and belongs to you. We don't sell it, and you can take it with you. -->
-    </section>
+    <section class="f-split" id="record"><div class="f-split-copy reveal"><div class="eyebrow">Your movement, over time</div><h2>One session is a video. A hundred is a story.</h2><p>Every session adds to one place: your movement record. How your serve changed over three months. The mistake you keep making. When you actually got better. This is the part you can't get anywhere else — and the part you'd never want to leave behind.</p><p>Illustrative record view. Data ownership statement is not enabled.</p></div><div class="f-split-media"><img src="../assets/images/opt/tech-app-04.jpg" alt="Concept visualisation — session and venue data displayed as a product interface" width="1080" height="608" loading="lazy" decoding="async"></div></section>
+    <!-- GATE:OFF. Your data is stored in New Zealand and belongs to you. We don't sell it, and you can take it with you. -->
 
-    <section class="connect tint">
-      <div class="shell connect-in"><div class="eyebrow reveal">Together</div><div class="reveal"><h2>Better on your own. More fun with everyone.</h2><p>Find a partner. Compare notes. Share the point that finally worked. The record makes you better; the people make you come back.</p></div></div>
-    </section>
+    <section class="f-image-band"><div class="f-wide-media"><img src="../assets/images/opt/tech-hero-04.jpg" alt="Concept visualisation — a smart padel court at dusk" width="1080" height="608" loading="lazy" decoding="async"></div><div class="f-band reveal"><div><div class="eyebrow">Together</div><h2>Better on your own. More fun with everyone.</h2></div><p>Find a partner. Compare notes. Share the point that finally worked. The record makes you better; the people make you come back.</p></div></section>
 
-    <section class="brand-band" aria-label="Nine One brand close"><div class="shell"><p>Move Together.</p></div></section>
+    <section class="f-brand" aria-label="Nine One brand close"><p>Move Together.</p></section>
 
-    <section class="operators" id="operators">
-      <div class="shell operator-grid">
-        <div class="operator-visual has-image reveal"><img src="../assets/images/opt/tech-app-04.jpg" alt="Concept visualisation — a clubhouse screen and phone showing court availability and venue insights" width="1080" height="608" loading="lazy" decoding="async"><span class="asset-tag">AI concept — venue insight system</span></div>
-        <div class="operator-copy reveal"><div class="eyebrow">For operators</div><h2>Turn your courts into a smart venue.</h2><p>We bring booking, capture and highlights to your courts as one platform — so members get more from every session, and you get three levers on utilisation: off-peak pricing, event scheduling, retention.</p><div class="actions"><a class="button tech" href="#contact">Partner with us</a></div></div>
-      </div>
-    </section>
+    <section class="f-image-band" id="operators"><div class="f-wide-media"><img src="../assets/images/opt/tech-app-04.jpg" alt="Concept visualisation — a clubhouse screen and phone showing court availability and venue insights" width="1080" height="608" loading="lazy" decoding="async"></div><div class="f-band reveal"><div><div class="eyebrow">For operators</div><h2>Turn your courts into a smart venue.</h2><a class="f-btn primary" href="#contact">Partner with us</a></div><p>We bring booking, capture and highlights to your courts as one platform — so members get more from every session, and you get three levers on utilisation: off-peak pricing, event scheduling, retention.</p></div></section>
 
-    <section class="footer-cta" id="contact"><div class="shell reveal"><h2>Your next session is worth keeping.</h2><div class="actions"><a class="button tech" href="mailto:hello@nineonesports.co.nz?subject=Book%20a%20court">Book a court</a><a class="button ink" href="mailto:hello@nineonesports.co.nz?subject=Talk%20to%20Nine%20One">Talk to us</a></div></div></section>
+    <section class="f-cta" id="contact"><div class="reveal"><h2>Your next session is worth keeping.</h2><div class="f-actions"><a class="f-btn primary" href="mailto:hello@nineonesports.co.nz?subject=Book%20a%20court">Book a court</a><a class="f-btn" style="border-color:var(--ink);color:var(--ink)" href="mailto:hello@nineonesports.co.nz?subject=Talk%20to%20Nine%20One">Talk to us</a></div></div></section>
   </main>
   <footer><div class="shell footer-in"><a href="#top" aria-label="Back to top"><img src="../assets/logo/nineone-mark-ink.svg" alt="Nine One mark" width="36" height="36"></a><span>© 2026 Nine One Sports Ltd</span></div></footer>
   <script>
