@@ -353,6 +353,34 @@
       .f-actions { flex-direction:column; width:100%; }
       .f-btn { width:min(100%,320px); }
     }
+    /* From One system onward: Solar Panels media frame + editorial copy below. */
+    :root { --solar-media-edge:clamp(24px,3.3vw,56px); --solar-copy-edge:clamp(24px,11.3vw,162px); }
+    .facility-main > .f-split,.facility-main > .f-image-band,.facility-main > .f-dura { display:flex; flex-direction:column; gap:0; padding:64px 0 160px; background:var(--paper); }
+    .facility-main .f-split-media,.facility-main .f-wide-media,.facility-main .f-tript { width:calc(100% - (var(--solar-media-edge) * 2)); height:auto; min-height:0; aspect-ratio:2 / 1; margin:0 var(--solar-media-edge); overflow:hidden; border-radius:8px; }
+    .facility-main .f-split-media { order:-1; }
+    .facility-main .f-split-media img,.facility-main .f-wide-media img,.facility-main .f-tript img { width:100%; height:100%; object-fit:cover; }
+    .facility-main .f-split-copy,.facility-main .f-band,.facility-main .f-dura-copy,.facility-main .f-process { width:100%; max-width:none; margin:0; padding:48px var(--solar-copy-edge) 0; background:var(--paper); }
+    .facility-main .f-split-copy,.facility-main .f-dura-copy { display:block; }
+    .facility-main .f-band { display:block; }
+    .facility-main .f-band > div + div { margin-top:4px; }
+    .facility-main .f-band h2,.facility-main .f-split-copy h2,.facility-main .f-dura-copy h2,.facility-main .f-process h2 { max-width:24ch; }
+    .facility-main .f-band p,.facility-main .f-split-copy p,.facility-main .f-dura-copy p,.facility-main .f-process > p { max-width:68ch; }
+    .facility-main .f-tript { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--paper); }
+    .facility-main .f-tript article { min-width:0; }
+    .facility-main .f-tript figcaption { padding:28px 16px 14px; }
+    .facility-main .f-dura-copy .tile-copy { max-width:68ch; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .facility-main .f-dura-copy .tile-copy article { min-width:0; }
+    .facility-main .f-process-grid { max-width:68ch; }
+    .facility-main #understand .f-process { padding-top:48px; }
+    .facility-main .f-brand { min-height:200px; padding:72px var(--solar-copy-edge); }
+    .facility-main .f-brand p { max-width:68ch; }
+    @media(max-width:640px) {
+      .facility-main > .f-split,.facility-main > .f-image-band,.facility-main > .f-dura { padding:40px 0 96px; }
+      .facility-main .f-split-media,.facility-main .f-wide-media,.facility-main .f-tript { width:calc(100% - (var(--solar-media-edge) * 2)); height:auto; min-height:0; aspect-ratio:2 / 1; margin-inline:var(--solar-media-edge); }
+      .facility-main .f-split-copy,.facility-main .f-band,.facility-main .f-dura-copy,.facility-main .f-process { padding:32px var(--solar-copy-edge) 0; }
+      .facility-main .f-dura-copy .tile-copy { grid-template-columns:1fr; gap:0; }
+      .facility-main .f-dura-copy .tile-copy article { padding:18px 0; }
+    }
   </style>
 </head>
 <body>

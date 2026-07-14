@@ -2,7 +2,7 @@
 
 Updated: 2026-07-13
 
-- 2026-07-14: Technology V1 (`_Drafts/nine-one-technology-v1.html`) 已改为与 Facility / Air Dome 一致的产品页语言：Hero 媒体、左右分栏、全幅图＋Paper 信息带、三联模块与流程区；逐帧视频交互留待后续，待 Nicholas 审阅。旧 `technology-concept.html` 已归档至 `_backup/technology-concept-superseded-20260714.html`。
+- 2026-07-14: Technology V1 (`_Drafts/nine-one-technology-v1.html`) 采用 Facility / Air Dome 的产品页语言；Hero 保持 Facility 形式，`One system` 起改为 Solar Panels 式图片近满宽、左右留白、文字置于图下的统一节奏。逐帧视频交互留待后续，待 Nicholas 审阅。旧 `technology-concept.html` 已归档至 `_backup/technology-concept-superseded-20260714.html`。
 - 2026-07-14: Technology 概念稿四张 -03 配图已强化智能球拍、球场感知与预订／数据界面表达；待 Nicholas 审阅。
 - 2026-07-14: AI court 图已按 Zhonglin padel court 参考重做为连续玻璃、上部网格与钢框的完整围护结构。
 - 2026-07-14: AI court 主图已重做为显形埋入式科技版本：地面下压力传感阵列、立柱摄像头阵列和实时数据层同框；待 Nicholas 审阅。
