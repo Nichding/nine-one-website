@@ -6,6 +6,8 @@ Updated: 2026-07-13
 - 2026-07-14: AI court 图已按 Zhonglin padel court 参考重做为连续玻璃、上部网格与钢框的完整围护结构。
 - 2026-07-14: AI court 主图已重做为显形埋入式科技版本：地面下压力传感阵列、立柱摄像头阵列和实时数据层同框；待 Nicholas 审阅。
 - 2026-07-14: AI court 摄像头已校正为围护内侧安装、镜头及扫描范围均朝向场内。
+- 2026-07-14: AI court 已按 Zhonglin 供应商模板再次校正为真实无顶 padel court：低位玻璃、其余网格围护与正常入口，不采用封闭玻璃盒子结构。
+- 2026-07-14: AI court 最终版保留上述真实结构，并在内侧横梁下清晰安装六枚向场内追踪的摄像头。
 
 - Production site: https://nineonesports.co.nz
 - Production branch: `main`
