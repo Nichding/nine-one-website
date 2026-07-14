@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#F4F4F1">
+  <title>Nine One Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Spline+Sans+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <style>
+    :root {
+      --paper:#F4F4F1; --mist:#ECEBE6; --greige:#D9D8D2; --stone:#A8A69D; --graphite:#76766E; --ink:#15140F; --black:#0B0B0B; --white:#FFFFFF;
+      --tech-tint:#E6F4FB; --tech-light:#B8E0F5; --tech-soft:#6FC2EA; --tech-hero:#0E9BDE; --tech-strong:#0077B4; --tech-deep:#02557C; --tech-night:#052A40;
+      --sans:Inter,Arial,sans-serif; --mono:"Spline Sans Mono",monospace; --page:min(1200px,calc(100% - 48px));
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--sans); font-size:16px; line-height:1.55; overflow-x:hidden; }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    img { display:block; max-width:100%; }
+    h1,h2,h3,p { margin:0; }
+    h1 { font-size:48px; line-height:1.08; font-weight:500; letter-spacing:-.025em; }
+    h2 { font-size:28px; line-height:1.18; font-weight:500; letter-spacing:-.018em; }
+    h3 { font-size:16px; line-height:1.3; font-weight:500; }
+    p { max-width:64ch; }
+    .shell { width:var(--page); margin-inline:auto; }
+    .eyebrow { font:500 12px/1.2 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--tech-strong); }
+    .asset-tag { display:inline-flex; align-items:center; gap:6px; min-height:24px; padding:4px 8px; border:1px solid var(--tech-light); border-radius:4px; background:var(--paper); color:var(--tech-deep); font:500 10px/1 var(--mono); letter-spacing:.04em; text-transform:uppercase; }
+    .asset-tag::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--tech-hero); }
+    .button { min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:0 20px; border:1px solid transparent; border-radius:4px; font-size:13px; font-weight:500; white-space:nowrap; transition:transform 200ms cubic-bezier(.2,0,0,1),background 200ms cubic-bezier(.2,0,0,1); }
+    .button:focus-visible, a:focus-visible { outline:3px solid var(--tech-soft); outline-offset:3px; }
+    .button:active { transform:translateY(1px); }
+    .button.tech { background:var(--tech-hero); color:var(--tech-night); }
+    .button.ink { background:var(--ink); color:var(--paper); }
+    .button.outline { border-color:var(--ink); color:var(--ink); }
+    .nav { height:72px; border-bottom:1px solid var(--greige); background:rgb(244 244 241 / .94); position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); }
+    .nav-in { height:100%; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; }
+    .brand-mark img { width:44px; height:44px; }
+    .nav-links { display:flex; gap:28px; font-size:13px; color:var(--graphite); }
+    .nav-links a[aria-current="page"] { color:var(--ink); }
+    .nav-action { justify-self:end; }
+    .hero { padding:88px 0 96px; background:var(--paper); }
+    .hero-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:24px; align-items:center; }
+    .hero-copy { padding-block:24px; }
+    .hero-copy { grid-column:span 7; }
+    .hero-copy .eyebrow { margin-bottom:20px; }
+    .hero-copy p { margin-top:20px; font-size:16px; }
+    .actions { margin-top:28px; display:flex; flex-wrap:wrap; gap:10px; }
+    .hero-visual { grid-column:span 5; min-height:420px; padding:24px; display:flex; align-items:flex-end; justify-content:flex-start; border-radius:16px; background:var(--tech-tint); border:1px solid var(--tech-light); position:relative; overflow:hidden; }
+    .hero-visual::before { content:""; position:absolute; inset:13% 12%; border:1px solid var(--tech-light); border-radius:8px; background:linear-gradient(135deg,rgb(255 255 255 / .6),rgb(230 244 251 / .2)); }
+    .hero-visual::after { content:""; position:absolute; width:62%; aspect-ratio:1; right:-14%; top:-18%; border:1px solid var(--tech-soft); border-radius:50%; opacity:.55; }
+    .hero-visual .asset-tag { position:relative; z-index:1; }
+    .section { padding:96px 0; }
+    .section.tint { background:var(--tech-tint); }
+    .section.mist { background:var(--mist); }
+    .intro { max-width:760px; }
+    .intro .eyebrow { margin-bottom:16px; }
+    .intro p { margin-top:16px; }
+    .record-panel { margin-top:40px; min-height:168px; padding:24px; display:grid; align-content:end; border-top:1px solid var(--tech-light); background:linear-gradient(90deg,var(--tech-tint),var(--paper)); }
+    .record-panel span { font:500 12px/1.3 var(--mono); color:var(--tech-deep); }
+    .record-panel strong { margin-top:10px; max-width:22ch; font-size:28px; line-height:1.2; font-weight:500; }
+    .court-layout { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:24px; align-items:center; }
+    .court-layout > :first-child { grid-column:span 5; }
+    .court-layout > :last-child { grid-column:span 7; padding-left:40px; }
+    .scene { min-height:350px; padding:20px; display:flex; align-items:flex-end; border:1px solid var(--tech-light); border-radius:16px; background:var(--tech-tint); position:relative; overflow:hidden; }
+    .scene::before { content:""; position:absolute; inset:17% 12%; border:2px solid var(--tech-strong); border-radius:4px; }
+    .scene::after { content:""; position:absolute; left:12%; right:12%; top:50%; border-top:1px solid var(--tech-strong); }
+    .scene .asset-tag { position:relative; z-index:1; }
+    .anchor { margin-top:24px; font:500 12px/1.5 var(--mono); color:var(--tech-deep); }
+    .capture-head { display:flex; justify-content:space-between; gap:32px; align-items:end; }
+    .capture-head p { margin-top:16px; }
+    .tile-grid { margin-top:40px; display:grid; grid-template-columns:1.1fr .9fr 1fr; gap:16px; }
+    .function-tile { min-height:300px; padding:20px; border:1px solid var(--greige); border-radius:8px; background:var(--paper); display:flex; flex-direction:column; justify-content:space-between; }
+    .function-tile:nth-child(2) { background:var(--tech-tint); border-color:var(--tech-light); }
+    .visual-mini { min-height:132px; padding:12px; border-radius:4px; border:1px solid var(--tech-light); background:rgb(255 255 255 / .45); display:flex; align-items:flex-end; }
+    .function-tile h3 { margin-top:20px; }
+    .function-tile p { margin-top:8px; font-size:14px; line-height:1.5; }
+    .icon { width:24px; height:24px; color:var(--tech-deep); stroke-width:2; }
+    .understand-grid { margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .ui-tile { min-height:310px; padding:18px; border-radius:8px; background:var(--paper); border:1px solid var(--tech-light); display:flex; flex-direction:column; }
+    .ui-window { flex:1; min-height:160px; padding:14px; border-radius:4px; background:var(--tech-tint); color:var(--tech-deep); display:flex; flex-direction:column; justify-content:space-between; }
+    .ui-top { display:flex; justify-content:space-between; font:500 10px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .ui-line { height:8px; border-radius:4px; background:var(--tech-light); }
+    .ui-line.short { width:48%; }
+    .ui-bars { display:flex; align-items:end; gap:7px; height:76px; }
+    .ui-bars span { flex:1; background:var(--tech-soft); border-radius:2px 2px 0 0; }
+    .ui-path { height:76px; border:1px solid var(--tech-light); border-radius:4px; background:linear-gradient(135deg,transparent 48%,var(--tech-soft) 49% 51%,transparent 52%); }
+    .ui-prompt { padding:12px; border:1px solid var(--tech-light); border-radius:4px; font-size:12px; line-height:1.35; }
+    .ui-tile h3 { margin-top:18px; }
+    .ui-tile p { margin-top:8px; font-size:14px; line-height:1.5; }
+    .sustain-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:24px; align-items:center; }
+    .sustain-grid > :first-child { grid-column:span 7; }
+    .sustain-grid > :last-child { grid-column:span 5; }
+    .chart { min-height:350px; padding:24px; border-radius:16px; background:var(--paper); border:1px solid var(--tech-light); }
+    .chart-head { display:flex; justify-content:space-between; align-items:center; font:500 11px/1 var(--mono); color:var(--tech-deep); text-transform:uppercase; letter-spacing:.08em; }
+    .chart svg { width:100%; height:246px; margin-top:24px; overflow:visible; }
+    .chart-grid { stroke:var(--tech-light); stroke-width:1; }
+    .chart-line { fill:none; stroke:var(--tech-hero); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+    .chart-dot { fill:var(--tech-strong); }
+    .chart-note { margin-top:12px; color:var(--graphite); font-size:13px; }
+    .connect { padding:112px 0; }
+    .connect-in { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:24px; align-items:end; }
+    .connect-in > :first-child { grid-column:span 5; }
+    .connect-in > :last-child { grid-column:span 7; padding-left:40px; }
+    .connect p { font-size:20px; line-height:1.45; max-width:28ch; }
+    .brand-band { padding:72px 0; background:var(--tech-night); color:var(--white); }
+    .brand-band p { font-size:48px; line-height:1.05; font-weight:500; letter-spacing:-.025em; }
+    .operators { padding:96px 0; }
+    .operator-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:24px; align-items:center; }
+    .operator-grid > :first-child { grid-column:span 5; }
+    .operator-grid > :last-child { grid-column:span 7; padding-left:40px; }
+    .operator-visual { min-height:330px; padding:20px; display:flex; align-items:flex-end; border-radius:16px; border:1px solid var(--tech-light); background:var(--tech-tint); position:relative; overflow:hidden; }
+    .operator-visual::before { content:""; position:absolute; width:72%; aspect-ratio:3/2; right:12%; top:14%; border:1px solid var(--tech-strong); border-radius:8px; background:rgb(255 255 255 / .36); }
+    .operator-visual .asset-tag { position:relative; z-index:1; }
+    .operator-copy p { margin-top:16px; }
+    .footer-cta { padding:96px 0; background:var(--mist); }
+    .footer-cta .actions { margin-top:24px; }
+    footer { padding:36px 0; border-top:1px solid var(--greige); }
+    .footer-in { display:flex; justify-content:space-between; align-items:center; gap:24px; color:var(--graphite); font:400 12px/1.5 var(--mono); }
+    .footer-in img { width:36px; height:36px; }
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity 300ms cubic-bezier(.2,0,0,1),transform 300ms cubic-bezier(.2,0,0,1); }
+    .reveal.show { opacity:1; transform:translateY(0); }
+    @media (max-width:1024px) {
+      .hero-grid,.court-layout,.sustain-grid,.connect-in,.operator-grid { grid-template-columns:1fr; gap:36px; }
+      .hero-copy,.hero-visual,.court-layout > :first-child,.court-layout > :last-child,.sustain-grid > :first-child,.sustain-grid > :last-child,.connect-in > :first-child,.connect-in > :last-child,.operator-grid > :first-child,.operator-grid > :last-child { grid-column:auto; padding-left:0; }
+      .hero-visual { min-height:300px; order:-1; }
+      .tile-grid { grid-template-columns:repeat(3,1fr); }
+      .capture-head { display:block; }
+    }
+    @media (max-width:640px) {
+      :root { --page:min(100% - 40px,1200px); }
+      .nav { height:64px; }
+      .nav-in { grid-template-columns:1fr auto; }
+      .nav-links { display:none; }
+      .brand-mark img { width:40px; height:40px; }
+      .nav-action { min-height:38px; padding-inline:14px; }
+      .hero,.section,.operators,.footer-cta { padding-block:64px; }
+      h1 { font-size:40px; }
+      h2 { font-size:28px; }
+      .hero-visual,.scene,.chart,.operator-visual { min-height:260px; }
+      .tile-grid,.understand-grid { grid-template-columns:1fr; }
+      .function-tile,.ui-tile { min-height:250px; }
+      .connect { padding-block:80px; }
+      .connect p { font-size:18px; }
+      .brand-band { padding-block:56px; }
+      .brand-band p { font-size:40px; }
+      .footer-in { align-items:flex-start; flex-direction:column; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .reveal { opacity:1; transform:none; transition:none; } }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="shell nav-in">
+      <a class="brand-mark" href="#top" aria-label="Nine One Technology home"><img src="../assets/logo/nineone-mark-ink.svg" alt="Nine One mark" width="44" height="44"></a>
+      <div class="nav-links" aria-label="Sections"><a href="#system">System</a><a href="#court">Court</a><a href="#capture">Capture</a><a href="#operators">Operators</a></div>
+      <a class="button tech nav-action" href="#contact">Book a court</a>
+    </div>
+  </nav>
+  <main id="top">
+    <header class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Nine One Technology</div>
+          <h1>The intelligence that lives on your court.</h1>
+          <p>We plan, build and run the space, the courts and the intelligence as one system. Technology is the intelligence layer — and it starts on a court we own.</p>
+          <div class="actions"><a class="button tech" href="#contact">Book a court</a><a class="button ink" href="#contact">Talk to us</a></div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Photography placeholder for athletes in motion on a court"><span class="asset-tag">Restricted placeholder - hero action photography</span></div>
+      </div>
+    </header>
+
+    <section class="section" id="system">
+      <div class="shell intro reveal">
+        <div class="eyebrow">One system</div>
+        <h2>Not a set of apps. One system.</h2>
+        <p>Booking, the racket, the highlights, the coaching — people usually sell these as separate tools. We don't. Each one is a surface of the same system: the way you walk onto a court, the way a session is captured, understood, and kept. What lasts is not a video clip. It's your record — how you play, how you change, session after session.</p>
+        <div class="record-panel"><span>One record</span><strong>Every surface leads back to the same session.</strong></div>
+      </div>
+    </section>
+
+    <section class="section tint" id="court">
+      <div class="shell court-layout">
+        <div class="scene reveal" aria-label="Empty court visual placeholder"><span class="asset-tag">AI-concept placeholder - empty court or dome at warm dusk</span></div>
+        <div class="reveal">
+          <div class="eyebrow">Where it starts</div>
+          <h2>Most data starts with a download. Ours starts with a court.</h2>
+          <p>Nine One builds and runs its own courts and spaces. So the entry point isn't an app you have to be talked into — it's the court you already booked. The intelligence sits on top of a place we own, not one we borrow.</p>
+          <p class="anchor">Powered by Nine One Play courts and Nine One Facility spaces.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capture">
+      <div class="shell">
+        <div class="capture-head reveal"><div><div class="eyebrow">Every session, captured</div><h2>Walk in. It's already recording your game.</h2></div><p>From the moment you book, the session becomes data. Court-side capture and the racket read what happens — the rallies, the swings, the movement — without you setting anything up. The hardware isn't here to win a spec sheet. It's here to be good enough, at the right places, for this sport.</p></div>
+        <div class="tile-grid">
+          <article class="function-tile reveal"><div class="visual-mini"><i class="icon" data-lucide="calendar-check" aria-hidden="true"></i></div><div><h3>Booking</h3><p>One tap to a court. The record starts here.</p></div><span class="asset-tag">Reference - booking interface</span></article>
+          <article class="function-tile reveal"><div class="visual-mini"><i class="icon" data-lucide="audio-lines" aria-hidden="true"></i></div><div><h3>Nine One SmartRacket</h3><p>Reads every swing, so nothing gets lost.</p></div><span class="asset-tag">AI-concept - racket handle detail</span></article>
+          <article class="function-tile reveal"><div class="visual-mini"><i class="icon" data-lucide="video" aria-hidden="true"></i></div><div><h3>Court-side capture</h3><p>Films the session. No tripod, no fuss.</p></div><span class="asset-tag">AI-concept - capture hardware detail</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mist" id="understand">
+      <div class="shell intro reveal"><div class="eyebrow">Understood, not just recorded</div><h2>The point isn't the footage. It's knowing why.</h2><p>Anyone can cut a highlight. Harder - and more useful - is understanding the rally: why that point was won, where the swing broke down, what to fix first. The system turns a two-hour session into the moments worth keeping, and into feedback you can act on next time.</p></div>
+      <div class="shell understand-grid">
+        <article class="ui-tile reveal"><div class="ui-window"><div class="ui-top"><span>Session edit</span><span>Capture</span></div><div class="ui-bars"><span style="height:42%"></span><span style="height:76%"></span><span style="height:58%"></span><span style="height:92%"></span><span style="height:68%"></span></div></div><h3>AI Highlights</h3><p>Two hours in. The best of it, out.</p><span class="asset-tag">Reference - interface mock</span></article>
+        <article class="ui-tile reveal"><div class="ui-window"><div class="ui-top"><span>Swing path</span><span>Review</span></div><div class="ui-path"></div><div class="ui-line short"></div></div><h3>Motion analysis</h3><p>See the swing you can't feel.</p><span class="asset-tag">Reference - interface mock</span></article>
+        <article class="ui-tile reveal"><div class="ui-window"><div class="ui-top"><span>Next session</span><span>Guide</span></div><div class="ui-prompt">Review the moment. Keep the next practice focused.</div><div class="ui-line"></div></div><h3>AI Coaching</h3><p>Not just a score. What to work on next.</p><span class="asset-tag">Reference - interface mock</span></article>
+      </div>
+    </section>
+
+    <section class="section" id="record">
+      <div class="shell sustain-grid">
+        <div class="reveal"><div class="eyebrow">Your movement, over time</div><h2>One session is a video. A hundred is a story.</h2><p>Every session adds to one place: your movement record. How your serve changed over three months. The mistake you keep making. When you actually got better. This is the part you can't get anywhere else — and the part you'd never want to leave behind.</p></div>
+        <div class="chart reveal" aria-label="Placeholder chart showing a movement record over time"><div class="chart-head"><span>Movement record</span><span>Placeholder view</span></div><svg viewBox="0 0 460 246" role="img" aria-label="Illustrative movement record chart"><path class="chart-grid" d="M0 42H460M0 100H460M0 158H460M0 216H460"></path><path class="chart-line" d="M0 205 C58 182,75 165,116 171 S170 143,202 150 S268 111,300 125 S360 66,396 82 S425 55,460 42"></path><circle class="chart-dot" cx="116" cy="171" r="5"></circle><circle class="chart-dot" cx="300" cy="125" r="5"></circle><circle class="chart-dot" cx="460" cy="42" r="5"></circle></svg><p class="chart-note">Illustrative record view. Data ownership statement is not enabled.</p><span class="asset-tag">Reference - chart component</span></div>
+      </div>
+      <!-- GATE:OFF. Your data is stored in New Zealand and belongs to you. We don't sell it, and you can take it with you. -->
+    </section>
+
+    <section class="connect tint">
+      <div class="shell connect-in"><div class="eyebrow reveal">Together</div><div class="reveal"><h2>Better on your own. More fun with everyone.</h2><p>Find a partner. Compare notes. Share the point that finally worked. The record makes you better; the people make you come back.</p></div></div>
+    </section>
+
+    <section class="brand-band" aria-label="Nine One brand close"><div class="shell"><p>Move Together.</p></div></section>
+
+    <section class="operators" id="operators">
+      <div class="shell operator-grid">
+        <div class="operator-visual reveal" aria-label="Venue interior photography placeholder"><span class="asset-tag">Restricted placeholder - venue interior and court screen</span></div>
+        <div class="operator-copy reveal"><div class="eyebrow">For operators</div><h2>Turn your courts into a smart venue.</h2><p>We bring booking, capture and highlights to your courts as one platform — so members get more from every session, and you get three levers on utilisation: off-peak pricing, event scheduling, retention.</p><div class="actions"><a class="button tech" href="#contact">Partner with us</a></div></div>
+      </div>
+    </section>
+
+    <section class="footer-cta" id="contact"><div class="shell reveal"><h2>Your next session is worth keeping.</h2><div class="actions"><a class="button tech" href="mailto:hello@nineonesports.co.nz?subject=Book%20a%20court">Book a court</a><a class="button ink" href="mailto:hello@nineonesports.co.nz?subject=Talk%20to%20Nine%20One">Talk to us</a></div></div></section>
+  </main>
+  <footer><div class="shell footer-in"><a href="#top" aria-label="Back to top"><img src="../assets/logo/nineone-mark-ink.svg" alt="Nine One mark" width="36" height="36"></a><span>© 2026 Nine One Sports Ltd</span></div></footer>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const items = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) { items.forEach((item) => item.classList.add('show')); return; }
+      const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('show'); observer.unobserve(entry.target); } }), { threshold: .12 });
+      items.forEach((item) => observer.observe(item));
+    });
+  </script>
+</body>
+</html>
