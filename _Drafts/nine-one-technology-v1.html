@@ -8,7 +8,7 @@
   <title>Nine One Technology</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Spline+Sans+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Spline+Sans+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <style>
     :root {
@@ -382,6 +382,24 @@
       .facility-main .f-split-copy,.facility-main .f-band,.facility-main .f-dura-copy,.facility-main .f-process { padding:32px var(--solar-copy-edge) 0; }
       .facility-main .f-dura-copy .tile-copy { grid-template-columns:1fr; gap:0; }
       .facility-main .f-dura-copy .tile-copy article { padding:18px 0; }
+    }
+    /* CI type scale, shared with the approved Home / Facility page family. */
+    .nav-links a,.nav-action { font-size:13px; font-weight:500; }
+    .nav-links a[aria-current="page"] { font-weight:500; }
+    .facility-main .eyebrow { font:500 12px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase; }
+    .facility-hero h1 { font-size:clamp(40px,6vw,64px); font-weight:500; line-height:1; letter-spacing:0; }
+    .facility-hero .eyebrow { font:500 12px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase; }
+    .facility-main .f-split-copy h2,.facility-main .f-band h2,.facility-main .f-dura-copy h2,.facility-main .f-process h2,.facility-main .f-cta h2 { font-size:48px; font-weight:500; line-height:56px; letter-spacing:0; }
+    .facility-main .f-split-copy p,.facility-main .f-band p,.facility-main .f-dura-copy p,.facility-main .f-process > p,.facility-main .f-cta p { font-size:20px; font-weight:400; line-height:28px; letter-spacing:0; }
+    .facility-main .f-dura-copy h3,.facility-main .f-process-grid h3 { font-size:24px; font-weight:500; line-height:31px; letter-spacing:0; }
+    .facility-main .f-dura-copy .tile-copy p,.facility-main .f-process-grid p { font-size:20px; font-weight:400; line-height:28px; }
+    .facility-main .f-tript figcaption { font:500 12px/1.4 var(--mono); letter-spacing:.06em; }
+    .f-btn { font-size:14px; font-weight:500; line-height:1; }
+    .f-brand p { font-size:48px; font-weight:500; line-height:56px; letter-spacing:0; }
+    @media(max-width:640px) {
+      .facility-main .f-split-copy h2,.facility-main .f-band h2,.facility-main .f-dura-copy h2,.facility-main .f-process h2,.facility-main .f-cta h2 { font-size:40px; line-height:46px; }
+      .facility-main .f-split-copy p,.facility-main .f-band p,.facility-main .f-dura-copy p,.facility-main .f-process > p,.facility-main .f-cta p,.facility-main .f-dura-copy .tile-copy p,.facility-main .f-process-grid p { font-size:18px; line-height:26px; }
+      .facility-main .f-brand p { font-size:40px; line-height:46px; }
     }
   </style>
 </head>
