@@ -406,5 +406,29 @@
     "status": "ai-concept",
     "source": "OpenAI image generation for Technology concept",
     "added": "2026-07-14"
+  },
+  {
+    "file": "assets/images/opt/tech-aicourt-05.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-14"
+  },
+  {
+    "file": "assets/images/opt/tech-app-04.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-14"
+  },
+  {
+    "file": "assets/images/opt/tech-gear-04.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-14"
+  },
+  {
+    "file": "assets/images/opt/tech-hero-04.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-14"
   }
 ]

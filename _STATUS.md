@@ -2,6 +2,7 @@
 
 Updated: 2026-07-13
 
+- 2026-07-14: Technology V1 (`_Drafts/nine-one-technology-v1.html`) 已改为 Solar Roof 式满幅电影版式：Hero 93vh，正文逐屏 100vh 影像叠字；逐帧视频交互留待后续，待 Nicholas 审阅。旧 `technology-concept.html` 已归档至 `_backup/technology-concept-superseded-20260714.html`。
 - 2026-07-14: Technology 概念稿四张 -03 配图已强化智能球拍、球场感知与预订／数据界面表达；待 Nicholas 审阅。
 - 2026-07-14: AI court 图已按 Zhonglin padel court 参考重做为连续玻璃、上部网格与钢框的完整围护结构。
 - 2026-07-14: AI court 主图已重做为显形埋入式科技版本：地面下压力传感阵列、立柱摄像头阵列和实时数据层同框；待 Nicholas 审阅。
