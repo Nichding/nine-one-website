@@ -8,6 +8,7 @@ Updated: 2026-07-13
 - 2026-07-15: Technology V1 的 `One system` 图片已重生成并替换：用单一挥拍场景清晰呈现球员、球拍传感器、朝内摄像头与场边记录设备的连接关系；素材登记在 `assets/images/manifest.json`。
 - 2026-07-15: Technology V1 的 `Built to capture` 三联图已全部重生成并替换：Booking system、SmartRacket、Smart infrastructure 各自对应独立的产品／场地画面；第三项显示名同步改为 Smart infrastructure。三张素材均已登记在 `assets/images/manifest.json`。
 - 2026-07-15: Technology V1 的 `Together` 图片已重生成并替换为赛后球友互动场景，突出人物、归属感和再回到球场的理由；无界面／搜索元素。
+- 2026-07-15: Technology V1 Hero 已按 Zhonglin 标准 padel court 结构重生成：蓝色人工草皮通铺、低位玻璃、上部网格、开放顶部；保留朝内摄像头、地面传感和克制的数据层。
 - 2026-07-14: Technology 概念稿四张 -03 配图已强化智能球拍、球场感知与预订／数据界面表达；待 Nicholas 审阅。
 - 2026-07-14: AI court 图已按 Zhonglin padel court 参考重做为连续玻璃、上部网格与钢框的完整围护结构。
 - 2026-07-14: AI court 主图已重做为显形埋入式科技版本：地面下压力传感阵列、立柱摄像头阵列和实时数据层同框；待 Nicholas 审阅。
