@@ -436,5 +436,23 @@
     "status": "ai-concept",
     "source": "OpenAI image generation for Technology V1",
     "added": "2026-07-15"
+  },
+  {
+    "file": "assets/images/opt/tech-booking-system-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-15"
+  },
+  {
+    "file": "assets/images/opt/tech-smart-racket-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-15"
+  },
+  {
+    "file": "assets/images/opt/tech-smart-infrastructure-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-15"
   }
 ]
