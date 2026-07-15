@@ -454,5 +454,11 @@
     "status": "ai-concept",
     "source": "OpenAI image generation for Technology V1",
     "added": "2026-07-15"
+  },
+  {
+    "file": "assets/images/opt/tech-together-01.jpg",
+    "status": "ai-concept",
+    "source": "OpenAI image generation for Technology V1",
+    "added": "2026-07-15"
   }
 ]
