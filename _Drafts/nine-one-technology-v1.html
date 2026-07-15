@@ -349,6 +349,8 @@
     /* From One system onward: Solar Panels media frame + editorial copy below. */
     :root { --solar-media-edge:clamp(24px,3.3vw,56px); --solar-copy-edge:clamp(24px,11.3vw,162px); }
     .facility-main > .f-split,.facility-main > .f-image-band,.facility-main > .f-dura { display:flex; flex-direction:column; gap:0; padding:64px 0 160px; background:var(--paper); }
+    /* Deliberate Paper transition from the hero into the first content image. */
+    .facility-main > #system { padding-top:clamp(96px,7vw,128px); }
     .facility-main #system,.facility-main #court,.facility-main #capture,.facility-main #understand,.facility-main #record,.facility-main #operators { min-height:0; height:auto; color:var(--ink); background:var(--paper); background-image:none; }
     .facility-main #system::before,.facility-main #court::before,.facility-main #capture::before,.facility-main #understand::before,.facility-main #record::before,.facility-main #operators::before { display:none; }
     .facility-main .f-split-media,.facility-main .f-wide-media,.facility-main .f-tript { width:calc(100% - (var(--solar-media-edge) * 2)); height:auto; min-height:0; aspect-ratio:2 / 1; margin:0 var(--solar-media-edge); overflow:hidden; border-radius:8px; }
@@ -371,6 +373,7 @@
     .facility-main .f-brand p { max-width:68ch; }
     @media(max-width:640px) {
       .facility-main > .f-split,.facility-main > .f-image-band,.facility-main > .f-dura { padding:40px 0 96px; }
+      .facility-main > #system { padding-top:64px; }
       .facility-main .f-split-media,.facility-main .f-wide-media,.facility-main .f-tript { width:calc(100% - (var(--solar-media-edge) * 2)); height:auto; min-height:0; aspect-ratio:2 / 1; margin-inline:var(--solar-media-edge); }
       .facility-main .f-split-copy,.facility-main .f-band,.facility-main .f-dura-copy,.facility-main .f-process { padding:32px var(--solar-copy-edge) 0; }
       .facility-main .f-dura-copy .tile-copy { grid-template-columns:1fr; gap:0; }
