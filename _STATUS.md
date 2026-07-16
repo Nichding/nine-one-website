@@ -29,3 +29,4 @@ Updated: 2026-07-13
 - The three Air Dome process images are production assets and were published in commit `e7c87c9`.
 
 - 2026-07-17: 排版系统已对齐 solarpanels，文字与图片未动。
+- 2026-07-17: 全站 header 已统一为 Apple 规格。

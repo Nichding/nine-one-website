@@ -197,26 +197,13 @@ main p,section p{color:var(--ink)}
 
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal,.reveal-on .reveal{opacity:1!important;transform:none!important}}
 </style>
+<link rel="stylesheet" href="assets/css/globalnav.css"><script src="assets/js/globalnav.js" defer></script>
 </head>
-<body>
+<body class="has-localnav">
 
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="brand" aria-label="Nine One home"><span class="brand-icon"><img src="assets/logo/nineone-mark-ink.svg" alt="Nine One mark" width="32" height="32"></span></a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <div class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="sports.html" class="active">Play</a></li>
-        <li><a href="technologies.html">Technology</a></li>
-        <li><a href="airdome/index.html">Facility</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-      <a href="build.html" class="nav-cta">Plan a facility</a>
-    </div>
-  </div>
-</nav>
+<nav class="globalnav" id="nav" aria-label="Main navigation"><div class="globalnav-inner"><a class="globalnav-logo" href="index.html" aria-label="Nine One home"><img src="assets/logo/nineone-mark-ink.svg" alt="Nine One mark" width="16" height="16"></a><a class="globalnav-link" href="sports.html" aria-current="page">Play</a><a class="globalnav-link" href="technologies.html">Technology</a><a class="globalnav-link" href="airdome/index.html">Facility</a><a class="globalnav-link" href="about.html">About</a><a class="globalnav-cta" href="build.html">Plan a facility</a><button class="globalnav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="globalnav-overlay"><span></span><span></span></button></div><div class="globalnav-overlay" id="globalnav-overlay" role="dialog" aria-modal="true" aria-label="Main navigation" aria-hidden="true"><a href="sports.html" aria-current="page">Play</a><a href="technologies.html">Technology</a><a href="airdome/index.html">Facility</a><a href="about.html">About</a><a class="globalnav-overlay-cta" href="build.html">Plan a facility</a></div></nav>
 
-<div class="psub" id="psub">
+<div class="localnav psub" id="psub">
   <div class="psub-inner">
     <a href="sports.html" class="psub-name">Nine One Play</a>
     <ul class="psub-links">
