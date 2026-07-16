@@ -2,6 +2,7 @@
 
 Updated: 2026-07-13
 
+- 2026-07-16: Technology 页完成文案与叙事统一：`#system` 改为“问题＋承诺”，将 progress vanished 情绪钩子提前；`#understand` 保留唯一三能力说明并统一为图上文下；`#record` 与 `#where-we-are` 文案分别贴合追踪球场图与四人分享图；完整 `Nine One Intelligence` 降至 4 处。`#court` 新增真实主场 establishing 概念图 `tech-home-ground-v3.jpg`（OneDrive 母档 1672×941，网页版 1600×900）。390／1024／1440 已验证无横向溢出、互动正常、七段均图上文下；待 Nicholas 审阅。
 - 2026-07-15: Technology V1 文案升级为 Rally 主线：Rally 为 AI 引擎工作名，Hero、系统、捕捉、理解、个人记录、开发状态、社交与运营者叙事已统一；明确 Rally 仍在开发，保留「Illustrative record view」诚实注。页面结构、布局、图片、导航均未改，待 Nicholas 定工作名与审阅。
 - 2026-07-15: Technology V1 (`_Drafts/nine-one-technology-v1.html`) 采用 Facility / Air Dome 的产品页语言；Hero 保持 Facility 形式，`One system` 起改为 Solar Panels 式图片近满宽、左右留白、文字置于图下的统一节奏。字体已按 CI 与 Home／Facility 统一：Inter 仅 400／500、Spline Sans Mono 用于标签；Hero 40–64px、内容标题 48px／56px、正文 20px／28px、卡片标题 24px／31px、CTA 14px／500。逐帧视频交互留待后续，待 Nicholas 审阅。旧 `technology-concept.html` 已归档至 `_backup/technology-concept-superseded-20260714.html`。
 - 2026-07-15: Technology V1 文案已按 V2 English-only 定稿更新：新增 `Where we are` 诚实状态区块；功能描述统一为正在建造语态；SEO title 与 description 已写入，同时继续维持 noindex。布局、图片插槽、配色和 GATE:OFF 数据归属声明未改；待 Nicholas 审阅。
