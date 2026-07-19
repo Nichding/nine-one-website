@@ -2,6 +2,23 @@
 
 Updated: 2026-07-13
 
+- 2026-07-16: Technology 页完成文案与叙事统一：`#system` 改为“问题＋承诺”，将 progress vanished 情绪钩子提前；`#understand` 保留唯一三能力说明并统一为图上文下；`#record` 与 `#where-we-are` 文案分别贴合追踪球场图与四人分享图；完整 `Nine One Intelligence` 降至 4 处。`#court` 真实主场 establishing 概念图已精修至 `tech-home-ground-v5.jpg`：移除会所楼梯与球场之间多余的独立玻璃隔断，以连续暖灰铺装自然衔接，并将中部灯柱移至球场围护外侧的侧边硬质铺装上（OneDrive 母档 1672×941，网页版 1600×900）。390／1024／1440 已验证无横向溢出、互动正常、七段均图上文下；待 Nicholas 审阅。
+- 2026-07-15: Technology V1 文案升级为 Rally 主线：Rally 为 AI 引擎工作名，Hero、系统、捕捉、理解、个人记录、开发状态、社交与运营者叙事已统一；明确 Rally 仍在开发，保留「Illustrative record view」诚实注。页面结构、布局、图片、导航均未改，待 Nicholas 定工作名与审阅。
+- 2026-07-15: Technology V1 (`_Drafts/nine-one-technology-v1.html`) 采用 Facility / Air Dome 的产品页语言；Hero 保持 Facility 形式，`One system` 起改为 Solar Panels 式图片近满宽、左右留白、文字置于图下的统一节奏。字体已按 CI 与 Home／Facility 统一：Inter 仅 400／500、Spline Sans Mono 用于标签；Hero 40–64px、内容标题 48px／56px、正文 20px／28px、卡片标题 24px／31px、CTA 14px／500。逐帧视频交互留待后续，待 Nicholas 审阅。旧 `technology-concept.html` 已归档至 `_backup/technology-concept-superseded-20260714.html`。
+- 2026-07-15: Technology V1 文案已按 V2 English-only 定稿更新：新增 `Where we are` 诚实状态区块；功能描述统一为正在建造语态；SEO title 与 description 已写入，同时继续维持 noindex。布局、图片插槽、配色和 GATE:OFF 数据归属声明未改；待 Nicholas 审阅。
+- 2026-07-15: Technology V1 图片已重新编排：11 个内容版位均使用不同图片，复用旧版的挥拍运动员画面与既有科技、球场、社交素材；旧 CSS 中失效的重复背景引用已清理。未生成新图、未删除任何素材；待 Nicholas 审阅。
+- 2026-07-15: Technology V1 的 `One system` 图片已重生成并替换：用单一挥拍场景清晰呈现球员、球拍传感器、朝内摄像头与场边记录设备的连接关系；素材登记在 `assets/images/manifest.json`。
+- 2026-07-15: Technology V1 的 `Built to capture` 三联图已全部重生成并替换：Booking system、SmartRacket、Smart infrastructure 各自对应独立的产品／场地画面；第三项显示名同步改为 Smart infrastructure。三张素材均已登记在 `assets/images/manifest.json`。
+- 2026-07-15: Technology V1 的 `Together` 图片已重生成并替换为赛后球友互动场景，突出人物、归属感和再回到球场的理由；无界面／搜索元素。
+- 2026-07-15: Technology V1 Hero 已按 Zhonglin 标准 padel court 结构重生成：蓝色人工草皮通铺、低位玻璃、上部网格、开放顶部；保留朝内摄像头、地面传感和克制的数据层。
+- 2026-07-14: Technology 概念稿四张 -03 配图已强化智能球拍、球场感知与预订／数据界面表达；待 Nicholas 审阅。
+- 2026-07-14: AI court 图已按 Zhonglin padel court 参考重做为连续玻璃、上部网格与钢框的完整围护结构。
+- 2026-07-14: AI court 主图已重做为显形埋入式科技版本：地面下压力传感阵列、立柱摄像头阵列和实时数据层同框；待 Nicholas 审阅。
+- 2026-07-14: AI court 摄像头已校正为围护内侧安装、镜头及扫描范围均朝向场内。
+- 2026-07-14: AI court 已按 Zhonglin 供应商模板再次校正为真实无顶 padel court：低位玻璃、其余网格围护与正常入口，不采用封闭玻璃盒子结构。
+- 2026-07-14: AI court 最终版保留上述真实结构，并在内侧横梁下清晰安装六枚向场内追踪的摄像头。
+- 2026-07-14: AI court 已以 Zhonglin `zl-020` 为球场结构基础重做，叠加山谷黄昏环境与可见传感／数据层。
+
 - Production site: https://nineonesports.co.nz
 - Production branch: `main`
 - Homepage: `index.html` is the approved design-brand homepage.
@@ -10,3 +27,6 @@ Updated: 2026-07-13
 - All active media lives in `assets/images/opt/` and is registered in `assets/images/manifest.json`.
 - Legacy pages, raw image sources, experiments and prior handover records are archived under `_backup/` and are not part of the active site structure.
 - The three Air Dome process images are production assets and were published in commit `e7c87c9`.
+
+- 2026-07-17: 排版系统已对齐 solarpanels，文字与图片未动。
+- 2026-07-17: 全站 header 已统一为 Apple 规格。

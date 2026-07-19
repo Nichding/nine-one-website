@@ -26,3 +26,19 @@ nine-one-app-research/
 # Vendor / editor
 .vscode/
 .claude/
+
+# Local Netlify folder
+.netlify
+
+# Node / secrets (safety)
+node_modules/
+**/node_modules/
+.env
+.env.*
+!.env.example
+
+# Superseded drafts & backup media (kept on disk, not in repo)
+_backup/
+**/_backup/
+_Drafts/
+**/_Drafts/
