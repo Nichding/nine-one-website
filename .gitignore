@@ -26,3 +26,13 @@ nine-one-app-research/
 # Vendor / editor
 .vscode/
 .claude/
+
+# Local Netlify folder
+.netlify
+
+# Node / secrets (safety)
+node_modules/
+**/node_modules/
+.env
+.env.*
+!.env.example

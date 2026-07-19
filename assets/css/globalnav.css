@@ -9,8 +9,8 @@ html:has(.localnav) { scroll-padding-top:calc(var(--globalnav-height) + var(--lo
 .globalnav *, .globalnav *::before, .globalnav *::after { box-sizing:border-box; }
 .globalnav a { text-decoration:none; }
 .globalnav-inner { width:min(1024px,calc(100% - 48px)); height:100%; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
-.globalnav-logo { width:16px; height:16px; display:grid; place-items:center; flex:0 0 16px; }
-.globalnav-logo img { display:block; width:16px; height:16px; }
+.globalnav-logo { width:23px; height:16px; display:grid; place-items:center; flex:0 0 23px; }
+.globalnav-logo img { display:block; width:auto; height:16px; max-width:23px; }
 .globalnav-link { color:#15140F; font:400 12px/1 Inter,Arial,sans-serif; letter-spacing:-.01em; white-space:nowrap; opacity:.8; transition:opacity .2s; }
 .globalnav-link:hover,.globalnav-link[aria-current="page"] { opacity:1; }
 .globalnav-cta { min-height:26px; display:inline-flex; align-items:center; justify-content:center; padding:4px 12px; border-radius:4px; background:#15140F; color:#F4F4F1; font:400 12px/1 Inter,Arial,sans-serif; letter-spacing:-.01em; white-space:nowrap; transition:opacity .2s; }

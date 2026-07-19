@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVWD4QKPGJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-NVWD4QKPGJ");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine One Sports — NZ Sports Infrastructure & Intelligent Movement Platform</title>
+<meta name="description" content="Nine One Sports — New Zealand's leading sports infrastructure and intelligent movement platform. Padel courts, smart rackets, club systems and AI analytics. Move Together.">
+<link rel="canonical" href="https://nineonesports.co.nz/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nine One Sports">
+<meta property="og:title" content="Nine One Sports — NZ Sports Infrastructure & Intelligent Movement Platform">
+<meta property="og:description" content="Nine One Sports — New Zealand's leading sports infrastructure and intelligent movement platform. Padel courts, smart rackets, club systems and AI analytics. Move Together.">
+<meta property="og:url" content="https://nineonesports.co.nz/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<style>
+/* ════════════════════════════════════════════════
+   NINE ONE · Home · Tier 4 Master · V2.0.1
+   60% Soft White / 30% Black / 10% Accent
+   Inter only · Light-led · Calm Movement
+   ════════════════════════════════════════════════ */
+:root{
+  /* ── Neutral core · CI tokens ── */
+  --black:#0B0B0B;
+  --paper:#F4F4F1;
+  --white:#F4F4F1;            /* alias → paper (legacy refs) */
+  --sand:#ECEBE6;            /* subtle greige for alternating sections */
+  --ink:#121311;
+  --graphite:#76766E;
+  --muted:#A6A7A1;
+  --warmgrey:#D9D8D2;
+  --line:#E7E6E1;
+  /* ── Three yogurt sparks · accents only · ≤15% · never body text ── */
+  --play:#F6BE83;  --play-ink:#5E3411;
+  --tech:#D4F25A;  --tech-ink:#2C340A;
+  --fac:#93D2F0;   --fac-ink:#0E3B57;
+  --lime:#D4F25A;            /* legacy alias → tech green */
+  --blue:#93D2F0;            /* legacy alias → facility blue */
+  --nav-h:110px;
+  --gut:64px;
+  --maxw:1440px;
+  --display:'Inter',sans-serif;
+  --mono:'Spline Sans Mono',ui-monospace,monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--white);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit;}
+img,svg{display:block;}
+
+.shell{max-width:var(--maxw);margin:0 auto;}
+
+/* ─── EYEBROW ─── */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;line-height:1.4;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--graphite);
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);flex:none;}
+
+/* ════════ NAV ════════ */
+.nav{
+  position:static;
+  height:var(--nav-h);
+  background:var(--white);
+  border-bottom:1px solid transparent;
+}
+.nav-inner{
+  max-width:var(--maxw);margin:0 auto;height:100%;
+  padding:0 var(--gut);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-icon{width:42px;height:auto;display:block;}
+.nav-inner .brand-icon{width:148px;}
+.nav-inner .brand-word{display:none;}
+.brand-icon svg{width:100%;height:auto;display:block;}
+.brand-word{
+  font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);
+}
+.nav-links{display:flex;align-items:center;gap:38px;list-style:none;}
+.nav-links a{
+  font-size:15px;font-weight:500;color:var(--graphite);
+  letter-spacing:-0.005em;transition:color .2s;position:relative;
+}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a.active{color:var(--ink);font-weight:600;}
+.nav-cta{
+  font-size:15px;font-weight:600;letter-spacing:-0.005em;
+  color:var(--ink);background:transparent;
+  border:1.5px solid var(--ink);border-radius:999px;
+  padding:11px 24px;transition:background .2s,color .2s;
+}
+.nav-cta:hover{background:var(--ink);color:var(--white);}
+
+/* ════════ HERO (single full-bleed image · text overlaid, Aesop-quiet) ════════ */
+.hero{position:relative;}
+.hero-figure{position:relative;width:100%;height:90vh;min-height:600px;overflow:hidden;}
+.hero-figure img{width:100%;height:100%;object-fit:cover;display:block;}
+.hero-overlay{position:absolute;left:64px;bottom:80px;z-index:3;max-width:760px;}
+.hero-eyebrow{display:block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,245,243,0.85);
+  margin-bottom:24px;text-shadow:0 1px 4px rgba(0,0,0,0.4);}
+.hero h1{font-family:'Inter',sans-serif;font-size:clamp(78px,7vw,96px);font-weight:900;font-style:normal;
+  line-height:0.98;letter-spacing:-0.025em;text-transform:none;color:var(--paper);margin:0;
+  text-shadow:0 1px 4px rgba(0,0,0,0.4);}
+.hero-link{display:inline-block;margin-top:32px;font-family:'Inter',sans-serif;font-size:12px;
+  font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,245,243,0.85);
+  text-shadow:0 1px 4px rgba(0,0,0,0.4);border-bottom:1px solid transparent;padding-bottom:3px;
+  transition:border-color .25s ease;}
+.hero-link:hover{border-bottom-color:rgba(245,245,243,0.85);}
+
+/* ─── editorial eyebrow ─── */
+.ed-eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:12px;font-weight:600;
+  letter-spacing:0.16em;text-transform:uppercase;color:var(--graphite);}
+.ed-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex:none;}
+.ed-eyebrow .dot.play{background:var(--play);}
+.ed-eyebrow .dot.tech{background:var(--tech);}
+.ed-eyebrow .dot.fac{background:var(--fac);}
+
+/* ─── editorial text link ─── */
+.ed-link{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);}
+.ed-link svg{width:22px;height:12px;stroke:var(--ink);transition:transform .25s ease;}
+.ed-link:hover svg{transform:translateX(7px);}
+.ed-link.lime svg{stroke:var(--lime);}
+.ed-link.blue svg{stroke:var(--blue);}
+
+/* ════════ EDITORIAL SECTIONS (alternating image / text) ════════ */
+.ed-sec{width:100%;border-top:1px solid var(--line);}
+.ed-sec.sand{background:var(--sand);}
+.ed-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:80vh;}
+.ed-figure{position:relative;overflow:hidden;min-height:480px;}
+.ed-figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ed-panel{display:flex;flex-direction:column;justify-content:center;
+  padding:120px clamp(48px,7vw,112px);}
+.ed-title{font-size:clamp(40px,4vw,54px);font-weight:800;line-height:1.07;letter-spacing:-0.015em;
+  color:var(--ink);margin:24px 0 26px;max-width:18ch;}
+.ed-body{font-size:17px;line-height:1.72;color:var(--ink);max-width:44ch;margin-bottom:36px;}
+
+@media(max-width:900px){
+  .hero-figure{height:78vh;min-height:480px;}
+  .hero-overlay{left:var(--gut);bottom:56px;}
+  .ed-grid{grid-template-columns:1fr;min-height:0;}
+  .ed-grid .ed-figure{order:-1;min-height:62vh;}
+  .ed-grid.img-right .ed-figure{order:-1;}
+  .ed-panel{padding:72px var(--gut);}
+}
+
+/* ════════ FOOTER ════════ */
+.footer{background:var(--black);color:var(--white);}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:104px var(--gut) 48px;}
+.footer-slogan{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:40px;
+  padding-bottom:80px;border-bottom:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;
+}
+.footer-slogan h2{
+  font-size:108px;font-weight:900;line-height:0.92;letter-spacing:-0.03em;color:var(--white);
+}
+.footer-slogan h2 .accent{color:var(--lime);}
+.footer-slogan .f-cta{
+  display:inline-flex;align-items:center;gap:10px;flex:none;margin-bottom:14px;
+  font-size:15px;font-weight:600;color:var(--black);background:var(--white);
+  padding:14px 28px;border-radius:999px;transition:background .2s;
+}
+.footer-slogan .f-cta:hover{background:var(--tech);color:var(--tech-ink);}
+.footer-slogan .f-cta svg{width:15px;height:15px;}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr repeat(2,0.8fr) 1fr;gap:48px;
+  padding:80px 0 80px;
+}
+.footer-brand .brand-word{color:var(--white);}
+.footer-brand .brand-icon svg path{fill:var(--white);}
+.footer-brand .brand-icon{width:148px;}
+.footer-brand .brand-word{display:none;}
+.footer-tagline{font-size:15px;color:#A6A7A1;line-height:1.6;margin-top:20px;max-width:30ch;}
+.footer-col h4{
+  font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+  color:#A6A7A1;margin-bottom:22px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.footer-col a{font-size:16px;color:var(--white);opacity:0.78;transition:opacity .2s;}
+.footer-col a:hover{opacity:1;}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding-top:32px;border-top:1px solid rgba(245,245,243,0.12);flex-wrap:wrap;
+}
+.footer-bottom .meta{font-family:var(--mono);font-size:12px;color:#A6A7A1;letter-spacing:0.04em;}
+.footer-bottom .legal{display:flex;gap:26px;}
+.footer-bottom .legal a{font-family:var(--mono);font-size:12px;color:#A6A7A1;letter-spacing:0.04em;transition:color .2s;}
+.footer-bottom .legal a:hover{color:var(--white);}
+
+/* ─── reveal (transform-only rise; content stays fully visible) ─── */
+.reveal{opacity:1;transform:none;transition:transform .7s cubic-bezier(.22,.61,.36,1);}
+.reveal-on .reveal{transform:translateY(20px);}
+.reveal-on .reveal.visible{transform:none;}
+.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.3s;}
+
+@media(max-width:1100px){
+  .footer-slogan h2{font-size:72px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ════════ V2.0.2 TYPOGRAPHY — global lightening (Calm Premium · Inter only) ════════ */
+h1{font-size:clamp(40px,5vw,64px)!important;font-weight:500!important;line-height:1.05!important;letter-spacing:-0.015em!important;}
+h2{font-size:clamp(28px,3vw,40px)!important;font-weight:600!important;line-height:1.15!important;letter-spacing:-0.01em!important;}
+h3,.tfeat-title{font-size:clamp(18px,1.6vw,22px)!important;font-weight:600!important;line-height:1.25!important;letter-spacing:-0.005em!important;}
+.footer-slogan h2{font-size:clamp(36px,4.5vw,56px)!important;font-weight:500!important;line-height:1.0!important;letter-spacing:-0.02em!important;}
+.eyebrow,.a-eyebrow,.ed-eyebrow,.hero-eyebrow,.thero-eyebrow,.ehero-eyebrow,.ctype-title,.thumb-label,.tfeat-eyebrow,.snum,.adir-label,.l-small,.footer-col h4,.ph-label{font-family:var(--mono)!important;font-size:10.5px!important;font-weight:500!important;letter-spacing:0.12em!important;line-height:1.4!important;}
+.nav-links a{font-size:13px!important;font-weight:500!important;letter-spacing:0.04em!important;text-transform:none!important;}
+.nav-cta,.hero-link,.thero-link,.ehero-link,.f-cta{font-size:11.5px!important;font-weight:500!important;letter-spacing:0.16em!important;text-transform:uppercase!important;}
+.alink,.ed-link,.btn{font-weight:500!important;}
+.thumb-desc,.ctype-desc,.wcard-desc,.adir-desc,.tfeat-desc,.acard p,.dual-box p{font-size:14.5px!important;font-weight:400!important;line-height:1.65!important;}
+.shero-sub,.s-body,.t-body2,.ed-body,.awhy-body{font-size:17px!important;font-weight:400!important;line-height:1.6!important;}
+
+/* ── nav menu (desktop group) + mobile drawer ── */
+.nav-menu{display:flex;align-items:center;gap:40px;}
+.nav-toggle{display:none;width:44px;height:44px;background:transparent;border:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;z-index:1101;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .25s ease;}
+.nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.is-open .nav-toggle span:nth-child(2){opacity:0;}
+.nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:1080px){
+  .nav{position:sticky;top:0;z-index:1100;}
+  .nav-toggle{display:flex;}
+  .nav-menu{position:fixed;inset:var(--nav-h) 0 0 0;width:100%;background:var(--white);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:26px;padding:36px 24px;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;overflow-y:auto;}
+  .nav.is-open .nav-menu{opacity:1;transform:none;pointer-events:auto;}
+  .nav-links{flex-direction:column;align-items:flex-start;gap:24px;width:100%;}
+  .nav-links a{font-size:18px!important;}
+  .nav-cta{display:block;width:100%;text-align:center;padding:14px 24px;}
+}
+@media(max-width:768px){
+  :root{--gut:24px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-slogan h2{font-size:42px!important;}
+}
+</style>
+<script>
+// Enable hidden-then-reveal only when motion is OK; default = content visible.
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reveal-on');}
+</script>
+</head>
+<body>
+
+<!-- ════════ NAV ════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand" aria-label="Nine One — Home">
+      <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
+<path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
+<path d="M8575 6693 c-112 -16 -253 -48 -330 -74 -219 -75 -447 -212 -583&#xA;-351 -139 -142 -268 -354 -327 -538 -24 -77 -28 -107 -37 -310 -11 -270 -1&#xA;-697 17 -755 7 -22 18 -68 25 -102 7 -35 17 -63 21 -63 5 0 9 -9 9 -21 0 -19&#xA;46 -128 59 -139 3 -3 17 -25 30 -50 80 -150 284 -351 446 -440 22 -12 45 -25&#xA;50 -29 11 -8 133 -59 202 -85 88 -32 250 -69 388 -86 104 -13 964 -13 1080 0&#xA;126 15 235 42 372 94 277 104 484 243 611 409 66 86 134 209 136 247 0 14 6&#xA;24 14 22 6 -1 12 3 12 8 0 6 9 30 20 52 11 23 20 54 20 69 0 15 3 35 6 44 6&#xA;13 9 14 16 3 7 -9 8 -3 5 17 -3 16 1 46 10 65 25 60 35 260 30 580 -5 318 -6&#xA;328 -57 480 -45 133 -106 259 -174 360 -56 82 -200 238 -266 285 -22 17 -62&#xA;45 -87 64 -69 51 -238 135 -347 171 -207 69 -244 72 -821 75 -286 2 -533 1&#xA;-550 -2z m715 -513 c186 -3 326 -27 470 -83 114 -45 269 -149 323 -219 14 -18&#xA;33 -42 43 -53 46 -51 124 -209 141 -285 53 -243 39 -752 -22 -820 -8 -9 -15&#xA;-22 -15 -29 0 -46 -95 -193 -181 -280 -86 -86 -239 -177 -329 -196 -19 -4 -40&#xA;-11 -45 -15 -6 -5 -62 -16 -125 -26 -169 -25 -747 -26 -909 -1 -63 9 -119 21&#xA;-125 26 -6 5 -29 13 -51 17 -52 9 -174 65 -244 111 -102 67 -232 224 -263 316&#xA;-6 18 -14 37 -18 42 -6 9 -32 91 -61 195 -14 52 -20 322 -8 425 4 39 10 96 14&#xA;128 3 32 13 77 21 99 8 22 14 48 14 56 0 9 21 59 48 111 38 77 63 112 137 186&#xA;110 113 250 205 365 242 85 27 265 51 395 52 71 1 131 3 132 5 2 2 38 2 81 0&#xA;42 -2 138 -4 212 -4z"></path>
+<path d="M6215 2460 c-146 -6 -180 -10 -243 -32 -134 -48 -217 -118 -280 -236&#xA;-52 -98 -65 -173 -66 -377 -1 -162 1 -188 23 -255 55 -176 130 -272 264 -339&#xA;141 -70 163 -72 810 -71 448 0 572 3 579 12 9 15 10 113 2 144 l-6 21 -561 -1&#xA;c-511 -1 -568 1 -627 17 -118 32 -208 105 -258 207 -27 54 -27 58 -27 250 0&#xA;227 12 281 76 354 91 104 162 120 529 120 303 1 344 -5 410 -62 52 -44 70 -84&#xA;70 -155 0 -88 -10 -118 -55 -162 -31 -32 -58 -47 -111 -63 -64 -20 -92 -21&#xA;-363 -21 -207 1 -297 -3 -305 -11 -17 -17 -14 -129 4 -140 19 -12 603 -12 685&#xA;0 178 25 289 119 329 278 46 182 -18 370 -150 448 -106 62 -163 74 -369 78&#xA;-104 1 -266 0 -360 -4z"></path>
+<path d="M12860 2458 c-258 -26 -432 -156 -495 -370 -19 -67 -27 -315 -14&#xA;-431 18 -155 77 -278 176 -367 66 -60 132 -94 228 -119 76 -20 104 -21 674&#xA;-21 426 0 597 3 601 11 8 12 4 148 -4 156 -3 3 -265 6 -583 7 l-578 2 -75 29&#xA;c-105 41 -187 123 -221 221 -22 62 -24 86 -24 234 1 191 13 260 59 327 39 56&#xA;120 104 209 124 84 19 604 18 662 -1 115 -37 171 -144 139 -267 -18 -67 -35&#xA;-95 -82 -125 -76 -50 -135 -58 -428 -58 -148 0 -274 -4 -281 -8 -16 -10 -33&#xA;-57 -33 -92 0 -62 -3 -62 384 -58 l351 3 66 31 c174 83 246 226 218 433 -21&#xA;153 -119 263 -286 321 -54 19 -86 21 -329 23 -148 1 -298 -1 -334 -5z"></path>
+<path d="M1780 2436 c-165 -43 -274 -124 -335 -249 -60 -126 -65 -173 -62&#xA;-619 1 -218 5 -399 8 -402 8 -9 176 -14 189 -6 5 3 10 172 12 430 l3 425 38&#xA;77 c45 92 95 138 182 163 100 30 671 25 775 -7 67 -20 139 -86 172 -158 30&#xA;-65 37 -160 37 -567 l1 -363 101 0 101 0 -5 433 c-3 283 -8 447 -16 476 -20&#xA;76 -76 184 -117 226 -49 50 -124 100 -178 118 -135 47 -139 48 -488 46 -310&#xA;-1 -339 -2 -418 -23z"></path>
+<path d="M3306 2444 c-3 -9 -6 -301 -6 -650 l0 -634 95 0 95 0 0 621 0 621&#xA;-27 29 c-25 26 -34 29 -89 29 -47 0 -63 -4 -68 -16z"></path>
+<path d="M4230 2450 c-168 -29 -289 -100 -360 -210 -55 -85 -71 -156 -80 -340&#xA;-8 -185 -8 -725 0 -734 7 -7 187 -13 193 -6 3 3 7 203 9 445 3 434 3 441 26&#xA;490 26 56 111 142 151 152 14 3 32 11 40 17 32 25 672 14 772 -14 44 -12 155&#xA;-124 165 -166 4 -16 12 -32 18 -36 8 -5 13 -145 16 -450 l5 -443 75 -3 c41 -2&#xA;85 0 97 3 l23 5 0 378 c-1 474 -6 540 -56 641 -46 94 -125 174 -214 218 -63&#xA;31 -70 32 -202 34 -75 1 -142 5 -148 9 -6 4 34 7 89 6 56 -1 101 2 101 7 0 9&#xA;-661 7 -720 -3z"></path>
+<path d="M9155 2450 c-22 -4 -31 -8 -20 -10 11 -2 -25 -6 -81 -10 -87 -6 -110&#xA;-12 -161 -39 -128 -68 -205 -163 -249 -306 -16 -51 -19 -94 -19 -290 0 -199 3&#xA;-238 19 -290 53 -165 165 -275 340 -332 69 -23 80 -24 427 -23 384 0 430 5&#xA;552 60 71 32 171 130 207 204 49 102 59 175 56 411 -3 178 -6 219 -23 270 -38&#xA;112 -98 198 -182 254 -94 64 -141 81 -228 83 -65 1 -70 2 -33 7 39 5 42 7 20&#xA;13 -32 10 -571 8 -625 -2z m575 -185 c76 -10 131 -35 189 -90 90 -84 111 -155&#xA;112 -384 1 -221 -27 -315 -117 -390 -77 -63 -101 -66 -484 -66 -307 0 -351 2&#xA;-402 18 -74 24 -139 82 -175 155 l-28 57 0 230 c0 219 1 232 23 280 26 57 70&#xA;106 126 142 48 31 83 43 161 53 67 8 510 5 595 -5z"></path>
+<path d="M10930 2449 c-30 -4 -75 -12 -100 -18 -159 -36 -290 -176 -330 -351&#xA;-11 -53 -26 -853 -16 -893 6 -27 7 -27 96 -27 79 0 90 2 91 18 0 9 0 114 -1&#xA;232 -1 274 16 590 35 656 9 31 31 69 56 98 75 85 139 105 355 113 167 6 484&#xA;-10 565 -28 59 -13 145 -87 177 -153 30 -60 40 -196 41 -591 0 -159 1 -305 1&#xA;-322 l0 -33 84 0 c62 0 89 4 100 15 12 13 15 58 15 283 1 353 -12 589 -37 667&#xA;-36 116 -106 203 -212 265 -77 45 -96 49 -217 52 -51 1 -93 6 -93 11 0 5 27 7&#xA;59 5 33 -2 58 -1 55 4 -6 10 -649 8 -724 -3z"></path>
+</g>
+</svg></span>
+      <span class="brand-word"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="sports.html">Play</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="facility.html">Facility</a></li>
+        <li><a href="ecosystem.html">Ecosystem</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a href="build.html" class="nav-cta">Build with us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ HERO ════════ -->
+<header class="hero" data-screen-label="Hero">
+  <div class="hero-figure">
+    <img src="assets/images/home-hero.jpg" alt="Single outdoor padel court at golden hour with a woman walking past, players mid-rally, a modern clubhouse and lake landscape behind">
+  </div>
+  <div class="hero-overlay">
+    <span class="hero-eyebrow reveal">Nine One Sports</span>
+    <h1 class="reveal rd1">Move Together.</h1>
+    <a href="build.html" class="hero-link reveal rd2">Start a project —</a>
+  </div>
+</header>
+
+<!-- ════════ 01 · SPORTS (image left / text right) ════════ -->
+<section class="ed-sec" id="sports" data-screen-label="01 Sports">
+  <div class="ed-grid">
+    <div class="ed-figure reveal">
+      <img src="assets/images/sports-clubhouse.jpg" alt="NINE ONE tropical clubhouse at golden hour with palm trees, glass courts and illuminated branding">
+    </div>
+    <div class="ed-panel">
+      <span class="ed-eyebrow reveal"><span class="dot play"></span>01</span>
+      <h2 class="ed-title reveal rd1">Play</h2>
+      <p class="ed-body reveal rd2">Connection starts with space. We build the courts where it happens.</p>
+      <a href="sports.html" class="ed-link play reveal rd2">Build With Us
+        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 02 · TECHNOLOGIES (text left / image right) ════════ -->
+<section class="ed-sec sand" id="technology" data-screen-label="02 Technologies">
+  <div class="ed-grid img-right">
+    <div class="ed-panel">
+      <span class="ed-eyebrow reveal"><span class="dot tech"></span>02</span>
+      <h2 class="ed-title reveal rd1">Technologies</h2>
+      <p class="ed-body reveal rd2">Technology should deepen movement, not distract from it. That's what we build.</p>
+      <a href="technologies.html" class="ed-link tech reveal rd2">Explore Technologies
+        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
+      </a>
+    </div>
+    <div class="ed-figure reveal">
+      <img src="assets/images/tech-rooftop-experience.jpg" alt="Rooftop lounge at golden hour with players, a smart racket and dashboard device on the table, city skyline and padel courts behind">
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 03 · FACILITY (image left / text right) ════════ -->
+<section class="ed-sec" id="facility" data-screen-label="03 Facility">
+  <div class="ed-grid">
+    <div class="ed-figure reveal">
+      <img src="assets/images/facility-dome.jpg" alt="NINE ONE white air-dome padel facility at dusk — all-weather membrane structure">
+    </div>
+    <div class="ed-panel">
+      <span class="ed-eyebrow reveal"><span class="dot fac"></span>03</span>
+      <h2 class="ed-title reveal rd1">Facility</h2>
+      <p class="ed-body reveal rd2">Space to play, all year. The structures that hold a sport up — air-domes, membranes, space.</p>
+      <a href="facility.html" class="ed-link reveal rd2">Explore Facility
+        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 04 · ECOSYSTEM (text left / image right) ════════ -->
+<section class="ed-sec sand" id="ecosystem" data-screen-label="04 Ecosystem">
+  <div class="ed-grid img-right">
+    <div class="ed-panel">
+      <span class="ed-eyebrow reveal"><span class="dot"></span>04</span>
+      <h2 class="ed-title reveal rd1">Ecosystem</h2>
+      <p class="ed-body reveal rd2">Every court. Every player. Every movement. <strong style="font-weight:600;">Connected.</strong></p>
+      <a href="ecosystem.html" class="ed-link reveal rd2">Explore Ecosystem
+        <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h19M15 1l5 5-5 5"/></svg>
+      </a>
+    </div>
+    <div class="ed-figure reveal">
+      <img src="assets/images/ecosystem-data-layer.jpg" alt="Padel player mid-action with skeleton motion tracking and performance dashboard overlays">
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-slogan">
+      <h2>Move Together<span class="accent">.</span></h2>
+      <a href="build.html" class="f-cta">Build with Us
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand">
+          <span class="brand-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1600" height="946" viewBox="0 0 1600 946" preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(0.000000,946.000000) scale(0.100000,-0.100000)" fill="#0A0A0A" stroke="none">
+<path d="M4800 8564 c-270 -32 -407 -80 -605 -211 -129 -86 -312 -266 -389&#xA;-384 -31 -47 -56 -93 -56 -101 0 -8 -9 -23 -20 -33 -11 -10 -17 -22 -14 -27 3&#xA;-5 -2 -18 -11 -28 -10 -11 -21 -40 -26 -65 -5 -25 -15 -61 -23 -78 -8 -18 -16&#xA;-39 -18 -47 -2 -8 -6 -17 -10 -20 -3 -3 -16 -72 -29 -155 -22 -144 -23 -181&#xA;-27 -899 -2 -412 0 -752 5 -756 6 -7 475 -15 571 -11 l22 1 0 738 c0 787 5&#xA;879 51 1002 70 186 183 322 362 433 188 118 265 131 757 132 206 0 407 -3 445&#xA;-7 104 -11 187 -28 210 -42 11 -8 35 -17 52 -20 17 -4 37 -14 44 -22 6 -8 16&#xA;-14 22 -14 23 0 154 -100 216 -165 70 -74 131 -157 131 -179 0 -8 6 -19 14&#xA;-25 8 -7 18 -27 22 -44 3 -18 10 -37 15 -43 5 -6 19 -42 31 -80 l22 -69 1&#xA;-795 0 -795 298 -3 297 -2 -1 737 c-1 860 -9 977 -76 1173 -134 395 -436 698&#xA;-838 839 -161 57 -196 60 -830 65 -319 2 -596 3 -615 0z"></path>
+<path d="M8575 6693 c-112 -16 -253 -48 -330 -74 -219 -75 -447 -212 -583&#xA;-351 -139 -142 -268 -354 -327 -538 -24 -77 -28 -107 -37 -310 -11 -270 -1&#xA;-697 17 -755 7 -22 18 -68 25 -102 7 -35 17 -63 21 -63 5 0 9 -9 9 -21 0 -19&#xA;46 -128 59 -139 3 -3 17 -25 30 -50 80 -150 284 -351 446 -440 22 -12 45 -25&#xA;50 -29 11 -8 133 -59 202 -85 88 -32 250 -69 388 -86 104 -13 964 -13 1080 0&#xA;126 15 235 42 372 94 277 104 484 243 611 409 66 86 134 209 136 247 0 14 6&#xA;24 14 22 6 -1 12 3 12 8 0 6 9 30 20 52 11 23 20 54 20 69 0 15 3 35 6 44 6&#xA;13 9 14 16 3 7 -9 8 -3 5 17 -3 16 1 46 10 65 25 60 35 260 30 580 -5 318 -6&#xA;328 -57 480 -45 133 -106 259 -174 360 -56 82 -200 238 -266 285 -22 17 -62&#xA;45 -87 64 -69 51 -238 135 -347 171 -207 69 -244 72 -821 75 -286 2 -533 1&#xA;-550 -2z m715 -513 c186 -3 326 -27 470 -83 114 -45 269 -149 323 -219 14 -18&#xA;33 -42 43 -53 46 -51 124 -209 141 -285 53 -243 39 -752 -22 -820 -8 -9 -15&#xA;-22 -15 -29 0 -46 -95 -193 -181 -280 -86 -86 -239 -177 -329 -196 -19 -4 -40&#xA;-11 -45 -15 -6 -5 -62 -16 -125 -26 -169 -25 -747 -26 -909 -1 -63 9 -119 21&#xA;-125 26 -6 5 -29 13 -51 17 -52 9 -174 65 -244 111 -102 67 -232 224 -263 316&#xA;-6 18 -14 37 -18 42 -6 9 -32 91 -61 195 -14 52 -20 322 -8 425 4 39 10 96 14&#xA;128 3 32 13 77 21 99 8 22 14 48 14 56 0 9 21 59 48 111 38 77 63 112 137 186&#xA;110 113 250 205 365 242 85 27 265 51 395 52 71 1 131 3 132 5 2 2 38 2 81 0&#xA;42 -2 138 -4 212 -4z"></path>
+<path d="M6215 2460 c-146 -6 -180 -10 -243 -32 -134 -48 -217 -118 -280 -236&#xA;-52 -98 -65 -173 -66 -377 -1 -162 1 -188 23 -255 55 -176 130 -272 264 -339&#xA;141 -70 163 -72 810 -71 448 0 572 3 579 12 9 15 10 113 2 144 l-6 21 -561 -1&#xA;c-511 -1 -568 1 -627 17 -118 32 -208 105 -258 207 -27 54 -27 58 -27 250 0&#xA;227 12 281 76 354 91 104 162 120 529 120 303 1 344 -5 410 -62 52 -44 70 -84&#xA;70 -155 0 -88 -10 -118 -55 -162 -31 -32 -58 -47 -111 -63 -64 -20 -92 -21&#xA;-363 -21 -207 1 -297 -3 -305 -11 -17 -17 -14 -129 4 -140 19 -12 603 -12 685&#xA;0 178 25 289 119 329 278 46 182 -18 370 -150 448 -106 62 -163 74 -369 78&#xA;-104 1 -266 0 -360 -4z"></path>
+<path d="M12860 2458 c-258 -26 -432 -156 -495 -370 -19 -67 -27 -315 -14&#xA;-431 18 -155 77 -278 176 -367 66 -60 132 -94 228 -119 76 -20 104 -21 674&#xA;-21 426 0 597 3 601 11 8 12 4 148 -4 156 -3 3 -265 6 -583 7 l-578 2 -75 29&#xA;c-105 41 -187 123 -221 221 -22 62 -24 86 -24 234 1 191 13 260 59 327 39 56&#xA;120 104 209 124 84 19 604 18 662 -1 115 -37 171 -144 139 -267 -18 -67 -35&#xA;-95 -82 -125 -76 -50 -135 -58 -428 -58 -148 0 -274 -4 -281 -8 -16 -10 -33&#xA;-57 -33 -92 0 -62 -3 -62 384 -58 l351 3 66 31 c174 83 246 226 218 433 -21&#xA;153 -119 263 -286 321 -54 19 -86 21 -329 23 -148 1 -298 -1 -334 -5z"></path>
+<path d="M1780 2436 c-165 -43 -274 -124 -335 -249 -60 -126 -65 -173 -62&#xA;-619 1 -218 5 -399 8 -402 8 -9 176 -14 189 -6 5 3 10 172 12 430 l3 425 38&#xA;77 c45 92 95 138 182 163 100 30 671 25 775 -7 67 -20 139 -86 172 -158 30&#xA;-65 37 -160 37 -567 l1 -363 101 0 101 0 -5 433 c-3 283 -8 447 -16 476 -20&#xA;76 -76 184 -117 226 -49 50 -124 100 -178 118 -135 47 -139 48 -488 46 -310&#xA;-1 -339 -2 -418 -23z"></path>
+<path d="M3306 2444 c-3 -9 -6 -301 -6 -650 l0 -634 95 0 95 0 0 621 0 621&#xA;-27 29 c-25 26 -34 29 -89 29 -47 0 -63 -4 -68 -16z"></path>
+<path d="M4230 2450 c-168 -29 -289 -100 -360 -210 -55 -85 -71 -156 -80 -340&#xA;-8 -185 -8 -725 0 -734 7 -7 187 -13 193 -6 3 3 7 203 9 445 3 434 3 441 26&#xA;490 26 56 111 142 151 152 14 3 32 11 40 17 32 25 672 14 772 -14 44 -12 155&#xA;-124 165 -166 4 -16 12 -32 18 -36 8 -5 13 -145 16 -450 l5 -443 75 -3 c41 -2&#xA;85 0 97 3 l23 5 0 378 c-1 474 -6 540 -56 641 -46 94 -125 174 -214 218 -63&#xA;31 -70 32 -202 34 -75 1 -142 5 -148 9 -6 4 34 7 89 6 56 -1 101 2 101 7 0 9&#xA;-661 7 -720 -3z"></path>
+<path d="M9155 2450 c-22 -4 -31 -8 -20 -10 11 -2 -25 -6 -81 -10 -87 -6 -110&#xA;-12 -161 -39 -128 -68 -205 -163 -249 -306 -16 -51 -19 -94 -19 -290 0 -199 3&#xA;-238 19 -290 53 -165 165 -275 340 -332 69 -23 80 -24 427 -23 384 0 430 5&#xA;552 60 71 32 171 130 207 204 49 102 59 175 56 411 -3 178 -6 219 -23 270 -38&#xA;112 -98 198 -182 254 -94 64 -141 81 -228 83 -65 1 -70 2 -33 7 39 5 42 7 20&#xA;13 -32 10 -571 8 -625 -2z m575 -185 c76 -10 131 -35 189 -90 90 -84 111 -155&#xA;112 -384 1 -221 -27 -315 -117 -390 -77 -63 -101 -66 -484 -66 -307 0 -351 2&#xA;-402 18 -74 24 -139 82 -175 155 l-28 57 0 230 c0 219 1 232 23 280 26 57 70&#xA;106 126 142 48 31 83 43 161 53 67 8 510 5 595 -5z"></path>
+<path d="M10930 2449 c-30 -4 -75 -12 -100 -18 -159 -36 -290 -176 -330 -351&#xA;-11 -53 -26 -853 -16 -893 6 -27 7 -27 96 -27 79 0 90 2 91 18 0 9 0 114 -1&#xA;232 -1 274 16 590 35 656 9 31 31 69 56 98 75 85 139 105 355 113 167 6 484&#xA;-10 565 -28 59 -13 145 -87 177 -153 30 -60 40 -196 41 -591 0 -159 1 -305 1&#xA;-322 l0 -33 84 0 c62 0 89 4 100 15 12 13 15 58 15 283 1 353 -12 589 -37 667&#xA;-36 116 -106 203 -212 265 -77 45 -96 49 -217 52 -51 1 -93 6 -93 11 0 5 27 7&#xA;59 5 33 -2 58 -1 55 4 -6 10 -649 8 -724 -3z"></path>
+</g>
+</svg></span>
+          </a>
+      </div>
+      <div class="footer-col">
+        <h4>Business</h4>
+        <ul>
+          <li><a href="#sports">Play</a></li>
+          <li><a href="technologies.html">Technologies</a></li>
+          <li><a href="facility.html">Facility</a></li>
+          <li><a href="#ecosystem">Ecosystem</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="build.html">Build with Us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/company/nine-one-sports" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#">nineonesports.co.nz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="meta">© 2026 NINE ONE · Nine One Sports Ltd · Nine One Technologies Ltd</span>
+      <div class="legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F5F5F3"/><text x="50" y="58" font-family="Inter,sans-serif" font-size="30" font-weight="900" fill="#0A0A0A" text-anchor="middle">no</text></svg>
+</template>
+
+<script>
+// reveal on scroll — with robust fallbacks so content is never stuck hidden
+const els=[...document.querySelectorAll('.reveal')];
+const show=el=>el.classList.add('visible');
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:0.08});
+els.forEach(el=>io.observe(el));
+// 1) reveal anything already in or above the viewport on first paint
+requestAnimationFrame(()=>{const vh=innerHeight||800;els.forEach(el=>{if(el.getBoundingClientRect().top<vh*0.92){show(el);io.unobserve(el);}});});
+// 2) safety net: if the observer never fires, reveal everything
+setTimeout(()=>els.forEach(show),1500);
+// mobile nav drawer
+const nav=document.getElementById('nav');
+const navToggle=document.querySelector('.nav-toggle');
+if(navToggle){
+  navToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',open);});
+  document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false');}));
+}
+</script>
+</body>
+</html>
